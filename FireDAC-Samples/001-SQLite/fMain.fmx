@@ -1,0 +1,206 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object StringGrid1: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 376.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowCount = 77
+    Viewport.Width = 620.000000000000000000
+    Viewport.Height = 335.000000000000000000
+  end
+  object BindNavigator1: TBindNavigator
+    Align = Bottom
+    Position.Y = 455.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DataSource = BindSourceDB1
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 376.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 79.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Label1: TLabel
+      Align = Top
+      AutoSize = True
+      Size.Width = 320.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Beverages'
+      TabOrder = 1
+    end
+    object Label2: TLabel
+      Align = Top
+      AutoSize = True
+      Position.Y = 16.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Soft drinks, coffees, teas, beers, and ales'
+      TabOrder = 2
+    end
+    object Panel2: TPanel
+      Align = MostRight
+      Position.X = 320.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 79.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Label4: TLabel
+        Align = Top
+        AutoSize = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Exotic Liquids'
+        TabOrder = 1
+      end
+      object Label5: TLabel
+        Align = Top
+        AutoSize = True
+        Position.Y = 16.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Charlotte Cooper'
+        TabOrder = 2
+      end
+    end
+    object Label3: TLabel
+      Align = Bottom
+      AutoSize = True
+      Position.Y = 63.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      Text = '1'
+      TabOrder = 4
+    end
+  end
+  object Sqlite_demoConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=SQLite_Demo')
+    Connected = True
+    LoginPrompt = False
+    Left = 150
+    Top = 113
+  end
+  object ProductsTable: TFDQuery
+    Active = True
+    Connection = Sqlite_demoConnection
+    SQL.Strings = (
+      'SELECT * FROM Products')
+    Left = 158
+    Top = 49
+  end
+  object CategoriesTable: TFDQuery
+    Active = True
+    IndexFieldNames = 'CategoryID'
+    MasterSource = DataSource1
+    MasterFields = 'CategoryID'
+    Connection = Sqlite_demoConnection
+    SQL.Strings = (
+      'SELECT * FROM Categories')
+    Left = 159
+    Top = 181
+  end
+  object SuppliersTable: TFDQuery
+    Active = True
+    IndexFieldNames = 'SupplierID'
+    MasterSource = DataSource1
+    MasterFields = 'SupplierID'
+    Connection = Sqlite_demoConnection
+    SQL.Strings = (
+      'SELECT * FROM Suppliers')
+    Left = 153
+    Top = 265
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ProductsTable
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB2
+      FieldName = 'CategoryName'
+      Component = Label1
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText2: TLinkPropertyToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB2
+      FieldName = 'Description'
+      Component = Label2
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText3: TLinkPropertyToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB2
+      FieldName = 'CategoryID'
+      Component = Label3
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText4: TLinkPropertyToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB3
+      FieldName = 'CompanyName'
+      Component = Label4
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText5: TLinkPropertyToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB3
+      FieldName = 'ContactName'
+      Component = Label5
+      ComponentProperty = 'Text'
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ProductsTable
+    Left = 312
+    Top = 232
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = CategoriesTable
+    ScopeMappings = <>
+    Left = 320
+    Top = 240
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = SuppliersTable
+    ScopeMappings = <>
+    Left = 328
+    Top = 248
+  end
+end
