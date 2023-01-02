@@ -1,0 +1,3 @@
+[submodule "Libraries/librairies"]
+	path = Libraries/librairies
+	url = https://github.com/DeveloppeurPascal/librairies.git
