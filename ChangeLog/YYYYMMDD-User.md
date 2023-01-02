@@ -1,4 +1,4 @@
-# YYYYMMDD - USER
+# YYYYMMDD - [USER](https://github.com/XXX_USER_XXX)
 
 General comments
 
