@@ -1,0 +1,108 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object BindNavigator1: TBindNavigator
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnClick = BindNavigator1Click
+    DataSource = BindSourceDB1
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object Layout1: TLayout
+    Align = Top
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Position.Y = 44.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object CheckBox1: TCheckBox
+      Align = Left
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 25.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Size.Width = 595.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object StringGrid1: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 386.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    RowCount = 0
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 361.000000000000000000
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule2.FDMemTable1
+    ScopeMappings = <>
+    Left = 96
+    Top = 304
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'coche'
+      Control = CheckBox1
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'libelle'
+      Control = Edit1
+      Track = False
+    end
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <
+        item
+          MemberName = 'coche'
+          ColumnStyle = 'CheckColumn'
+        end
+        item
+          MemberName = 'libelle'
+          Width = 500
+          ColumnStyle = 'StringColumn'
+        end
+        item
+          MemberName = 'id'
+          Visible = False
+        end>
+    end
+  end
+end

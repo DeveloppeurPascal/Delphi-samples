@@ -1,0 +1,15 @@
+﻿[FDMemTable1coche]
+Coordinates=103,1,113,33
+
+[FDMemTable1libelle]
+Coordinates=235,1,113,33
+
+[FDMemTable1]
+Coordinates=10,10,84,105
+
+[FDMemTable1id]
+Coordinates=103,53,93,33
+
+[FDStanStorageXMLLink1]
+Coordinates=113,1,137,33
+
