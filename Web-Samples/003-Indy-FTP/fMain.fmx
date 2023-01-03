@@ -1,0 +1,80 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Connection'
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      
+        'change User/Password and Host on IdFTP1 component before running' +
+        ' the program.')
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 432.000000000000000000
+  end
+  object Button2: TButton
+    Align = Top
+    Position.Y = 22.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Listage des Dossiers/Fichiers'
+    OnClick = Button2Click
+  end
+  object IdFTP1: TIdFTP
+    OnStatus = IdFTP1Status
+    OnDisconnected = IdFTP1Disconnected
+    OnWork = IdFTP1Work
+    OnWorkBegin = IdFTP1WorkBegin
+    OnWorkEnd = IdFTP1WorkEnd
+    OnConnected = IdFTP1Connected
+    Host = 'localhost'
+    ConnectTimeout = 0
+    Username = 'test'
+    NATKeepAlive.UseKeepAlive = False
+    NATKeepAlive.IdleTimeMS = 0
+    NATKeepAlive.IntervalMS = 0
+    ProxySettings.ProxyType = fpcmNone
+    ProxySettings.Port = 0
+    OnTLSNotAvailable = IdFTP1TLSNotAvailable
+    OnBannerBeforeLogin = IdFTP1BannerBeforeLogin
+    OnBannerAfterLogin = IdFTP1BannerAfterLogin
+    OnBannerWarning = IdFTP1BannerWarning
+    OnBeforeGet = IdFTP1BeforeGet
+    OnBeforePut = IdFTP1BeforePut
+    OnAfterClientLogin = IdFTP1AfterClientLogin
+    OnCreateFTPList = IdFTP1CreateFTPList
+    OnAfterGet = IdFTP1AfterGet
+    OnAfterPut = IdFTP1AfterPut
+    OnNeedAccount = IdFTP1NeedAccount
+    OnCustomFTPProxy = IdFTP1CustomFTPProxy
+    OnDataChannelCreate = IdFTP1DataChannelCreate
+    OnDataChannelDestroy = IdFTP1DataChannelDestroy
+    OnRetrievedDir = IdFTP1RetrievedDir
+    OnDirParseStart = IdFTP1DirParseStart
+    OnDirParseEnd = IdFTP1DirParseEnd
+    Left = 304
+    Top = 224
+  end
+end
