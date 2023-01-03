@@ -1,0 +1,30 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #144
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Align = Center
+    PopupMenu = PopupMenu1
+    TabOrder = 1
+    Text = 'Button1'
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 336
+    Top = 128
+    object MenuItem1: TMenuItem
+      Text = 'MenuItem1'
+    end
+    object MenuItem2: TMenuItem
+      Text = 'MenuItem2'
+    end
+    object MenuItem3: TMenuItem
+      Text = 'MenuItem3'
+    end
+  end
+end
