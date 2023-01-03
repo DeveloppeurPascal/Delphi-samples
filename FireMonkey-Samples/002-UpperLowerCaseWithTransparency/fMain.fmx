@@ -1,0 +1,56 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 5.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.VertAlign = Leading
+    Text = 'Label1'
+    TabOrder = 0
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      TabOrder = 0
+      Position.Y = 22.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Button1: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    TabOrder = 1
+    Text = 'Majuscules'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Anchors = [akTop, akRight]
+    Position.X = 552.000000000000000000
+    Position.Y = 56.000000000000000000
+    TabOrder = 2
+    Text = 'Minuscules'
+    OnClick = Button2Click
+  end
+  object Switch1: TSwitch
+    Align = Center
+    IsChecked = False
+    TabOrder = 4
+    OnSwitch = Switch1Switch
+  end
+end
