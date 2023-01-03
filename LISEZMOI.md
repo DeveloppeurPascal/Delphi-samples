@@ -22,6 +22,8 @@ Ce dépôt de code dépend des dépôts suivants :
 
 Certains projets ont besoin des bases de données de démo installées avec les exempls optionnels de Delphi. Si vous ne les avez pas, vous les trouverez dans le menu "Outils / Gérer les plateformes" puis l'onglet "Autres options" et enfin la rubrique "Samples" à installer.
 
+L'exemple FireDAC-Samples/003-CDataRSS utilise le driver FireDAC RSS de CData disponible à l'adresse https://cdata.com/drivers/rss/firedac/
+
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 
 Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://github.com/DeveloppeurPascal/Delphi-samples) et [d'ouvrir un ticket](https://github.com/DeveloppeurPascal/Delphi-samples/issues).

@@ -1,0 +1,259 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 886
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  ShowFullScreenIcon = True
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object StringGrid1: TStringGrid
+    Align = Top
+    CanFocus = True
+    ClipChildren = True
+    Position.Y = 50.000000000000000000
+    Size.Width = 886.000000000000000000
+    Size.Height = 151.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowCount = 0
+    Viewport.Width = 882.000000000000000000
+    Viewport.Height = 126.000000000000000000
+  end
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 886.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object Button1: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 181.818115234375000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Developpeur-Pascal.fr'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 413.636230468750000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 181.818115234375000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'SerialStreameur.fr'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 211.818115234375000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 181.818115234375000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Embarcadero.com'
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 796.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Quitter'
+      OnClick = Button4Click
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 4
+      ReturnKeyType = Search
+      Position.X = 608.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 176.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Filtrer la liste'
+      KillFocusByReturn = True
+      OnChange = Edit1Change
+      OnClick = Edit1Click
+    end
+  end
+  object WebBrowser1: TWebBrowser
+    Align = Client
+    Size.Width = 886.000000000000000000
+    Size.Height = 260.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Splitter1: TSplitter
+    Align = Top
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 201.000000000000000000
+    Size.Width = 886.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'URI=https://developpeur-pascal.fr/rss.php'
+      'DriverID=CDataRSS')
+    Connected = True
+    LoginPrompt = False
+    Left = 160
+    Top = 176
+  end
+  object FDPhysCDataRSSDriverLink1: TFDPhysCDataRSSDriverLink
+    DriverID = 'CDataRSS'
+    Left = 152
+    Top = 232
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from rssfeed')
+    Left = 272
+    Top = 176
+    object FDQuery1PubDate: TSQLTimeStampField
+      FieldName = 'PubDate'
+      Origin = 'PubDate'
+      ReadOnly = True
+    end
+    object FDQuery1Title: TWideStringField
+      FieldName = 'Title'
+      Origin = 'Title'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1Guid: TWideStringField
+      FieldName = 'Guid'
+      Origin = 'Guid'
+      ReadOnly = True
+      Required = True
+      Size = 255
+    end
+    object FDQuery1Link: TWideStringField
+      FieldName = 'Link'
+      Origin = 'Link'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedDescription: TWideStringField
+      FieldName = 'FeedDescription'
+      Origin = 'FeedDescription'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedImageLink: TWideStringField
+      FieldName = 'FeedImageLink'
+      Origin = 'FeedImageLink'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedImageTitle: TWideStringField
+      FieldName = 'FeedImageTitle'
+      Origin = 'FeedImageTitle'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedImageUrl: TWideStringField
+      FieldName = 'FeedImageUrl'
+      Origin = 'FeedImageUrl'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedLanguage: TWideStringField
+      FieldName = 'FeedLanguage'
+      Origin = 'FeedLanguage'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedLastBuildDate: TSQLTimeStampField
+      FieldName = 'FeedLastBuildDate'
+      Origin = 'FeedLastBuildDate'
+      ReadOnly = True
+    end
+    object FDQuery1FeedLink: TWideStringField
+      FieldName = 'FeedLink'
+      Origin = 'FeedLink'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedLinkHref: TWideStringField
+      FieldName = 'FeedLinkHref'
+      Origin = 'FeedLinkHref'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedLinkRel: TWideStringField
+      FieldName = 'FeedLinkRel'
+      Origin = 'FeedLinkRel'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedLinkType: TWideStringField
+      FieldName = 'FeedLinkType'
+      Origin = 'FeedLinkType'
+      ReadOnly = True
+      Size = 2000
+    end
+    object FDQuery1FeedTitle: TWideStringField
+      FieldName = 'FeedTitle'
+      Origin = 'FeedTitle'
+      ReadOnly = True
+      Size = 2000
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDQuery1
+    ScopeMappings = <>
+    Left = 312
+    Top = 232
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+    object LinkPropertyToFieldURL: TLinkPropertyToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'Link'
+      Component = WebBrowser1
+      ComponentProperty = 'URL'
+    end
+  end
+end

@@ -23,6 +23,8 @@ This project depends on :
 
 Some projects needs sample databases installed as option with Delphi samples. If you don't have them, you'll find them in menu "Tools / Manage plateforms" then tab item "other options" and "samples" to install.
 
+The sample FireDAC-Samples/003-CDataRSS uses the FireDAC RSS driver from CData available at https://cdata.com/drivers/rss/firedac/
+
 ## How to ask a new feature, report a bug or a security issue ?
 
 If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/Delphi-samples) and [open a new issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues).
