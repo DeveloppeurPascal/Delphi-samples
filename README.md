@@ -31,6 +31,10 @@ The sample IoT-Samples\004-Arduino-Mastermind uses "[AsyncPro for VCL](https://g
 
 The sample IoT-Samples\005-Joystick uses "[Radiant Shape](https://getitnow.embarcadero.com/bonus-radiant-shapes/)" components from GetIt, "[CommunicationLab](https://mitov.com/products/communicationlab)" library from [Boian Mitov](https://mitov.com/) and [Visuino IDE](https://www.visuino.com/) for the Arduino program.
 
+The sample Web-Samples\011-UniGUI uses [UniGUI](http://www.unigui.com/).
+
+The sample Web-Samples\012-UniGUI-Database uses [UniGUI](http://www.unigui.com/).
+
 ## How to ask a new feature, report a bug or a security issue ?
 
 If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/Delphi-samples) and [open a new issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues).

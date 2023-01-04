@@ -30,6 +30,10 @@ L'exemple IoT-Samples\004-Arduino-Mastermind utilise les composants "[AsyncPro f
 
 L'exemple IoT-Samples\005-Joystick utilise les composants "[Radiant Shape](https://getitnow.embarcadero.com/bonus-radiant-shapes/)" disponibles sur GetIt, la librairie "[CommunicationLab](https://mitov.com/products/communicationlab)" de [Boian Mitov](https://mitov.com/) et l'[IDE Visuino](https://www.visuino.com/) pour le programme Arduino.
 
+L'exemple Web-Samples\011-UniGUI utilise [UniGUI](http://www.unigui.com/).
+
+L'exemple Web-Samples\012-UniGUI-Database utilise [UniGUI](http://www.unigui.com/).
+
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 
 Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://github.com/DeveloppeurPascal/Delphi-samples) et [d'ouvrir un ticket](https://github.com/DeveloppeurPascal/Delphi-samples/issues).
