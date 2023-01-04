@@ -1,0 +1,71 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object stick: TRadiantCircle
+    Fill.Color = claCrimson
+    Position.X = 264.000000000000000000
+    Position.Y = 120.000000000000000000
+  end
+  object CLComPort1: TCLComPort
+    OutputPin.Form = Form1
+    OutputPin.SinkPins = (
+      Form1.CLUnpacket1.InputPin)
+    Port = 'COM4'
+    Left = 32
+    Top = 128
+  end
+  object CLUnpacket1: TCLUnpacket
+    InputPin.Form = Form1
+    InputPin.SourcePin = Form1.CLComPort1.OutputPin
+    HeadMarker.Bytes.__Serialized__ = (
+      x_Data
+      'VVU=')
+    Elements.Items = <
+      item
+        _ = TSLFloatSplitStructureElement
+        Name = 'x'
+        OutputPin.Form = Form1
+        OutputPin.SinkPins = (
+          Form1.SLGenericRealValue1.InputPin)
+      end
+      item
+        _ = TSLFloatSplitStructureElement
+        Name = 'y'
+        OutputPin.Form = Form1
+        OutputPin.SinkPins = (
+          Form1.SLGenericRealValue2.InputPin)
+      end
+      item
+        _ = TSLBooleanSplitStructureElement
+        Name = 'btn'
+      end>
+    Left = 32
+    Top = 64
+  end
+  object SLGenericRealValue1: TSLGenericRealValue
+    InputPin.Form = Form1
+    InputPin.SourcePin = (
+      Form1.CLUnpacket1.Elements._Item0.OutputPin
+      'Form1.CLUnpacket1.Elements.x.OutputPin')
+    OnProcessData = SLGenericRealValue1ProcessData
+    Left = 144
+    Top = 192
+  end
+  object SLGenericRealValue2: TSLGenericRealValue
+    InputPin.Form = Form1
+    InputPin.SourcePin = (
+      Form1.CLUnpacket1.Elements._Item1.OutputPin
+      'Form1.CLUnpacket1.Elements.y.OutputPin')
+    OnProcessData = SLGenericRealValue2ProcessData
+    Left = 136
+    Top = 256
+  end
+end

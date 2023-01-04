@@ -1,0 +1,190 @@
+<OPEN WIRE DIAGRAM VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT Arduino>
+    <X 256/>
+    <INSTANCE object Arduino: TArduinoBoard
+  Modules.Items = <
+    item
+      _ = TArduinoEEPROMModule
+    end\>
+  BoardType = 'Arduino Nano'
+  AnalogInputReference = Default
+  Serial.Items = <
+    item
+      _ = TArduinoHardwareSerial
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePins = (
+        __OpenWireRootUnit__.Packet1.OutputPin)
+    end\>
+  AnalogInput.Items = <
+    item
+      _ = TArduinoAnalogOptionalAsDigitalInputChannel
+    end
+    item
+      _ = TArduinoAnalogOptionalAsDigitalInputChannel
+    end\>
+  I2CChannels.Items = <
+    item
+      _ = TArduinoI2C
+    end\>
+  SPIChannels.Items = <
+    item
+      _ = TArduinoSPI
+    end\>
+  Digital.Items = <
+    item
+      _ = TArduinoAdditionalDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalInterruptChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMInterruptChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+      IsPullUp = True
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        __OpenWireRootUnit__.Inverter1.InputPin)
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMSPI0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSPI0Channel
+      DigitalInputPin.Form = __OpenWireRootUnit__
+      DigitalInputPin.SourcePin = __OpenWireRootUnit__.Inverter1.OutputPin
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.Packet1.Elements._Item0.InputPin
+          '__OpenWireRootUnit__.Packet1.Elements.Analog(Binary)1.InputPin'))
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.Packet1.Elements._Item1.InputPin
+          '__OpenWireRootUnit__.Packet1.Elements.Analog(Binary)2.InputPin'))
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalI2C0Channel
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT Packet1>
+    <X 576/>
+    <INSTANCE object Packet1: TArduinoPacket
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Arduino.Serial._Item0.InputPin
+      '__OpenWireRootUnit__.Arduino.Serial[0].InputPin'))
+  Elements.Items = <
+    item
+      _ = TArduinoAnalogBinaryPacketElement
+      Name = 'Analog(Binary)1'
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePin = (
+        __OpenWireRootUnit__.Arduino.Digital._Item14.OutputPin
+        
+          '__OpenWireRootUnit__.Arduino.Digital.Digital[ 14 ]/AnalogIn[ 0 ]' +
+          '.OutputPin')
+      Visualization._D_Instrument = <
+        item
+          _ = TArduinoPacketElementFloatAngularGauge
+        end\>
+    end
+    item
+      _ = TArduinoAnalogBinaryPacketElement
+      Name = 'Analog(Binary)2'
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePin = (
+        __OpenWireRootUnit__.Arduino.Digital._Item15.OutputPin
+        
+          '__OpenWireRootUnit__.Arduino.Digital.Digital[ 15 ]/AnalogIn[ 1 ]' +
+          '.OutputPin')
+      Visualization._D_Instrument = <
+        item
+          _ = TArduinoPacketElementFloatAngularGauge
+        end\>
+    end
+    item
+      _ = TArduinoDigitalBinaryPacketElement
+      Name = 'Digital(Binary)1'
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePin = __OpenWireRootUnit__.Inverter1.OutputPin
+    end\>
+  HeadMarker.Bytes.__Serialized__ = (
+    x_Data
+    'VVU=')
+end
+/>
+    <Y 624/>
+  </COMPONENT>
+  <COMPONENT Inverter1>
+    <X 576/>
+    <INSTANCE object Inverter1: TArduinoBooleanInverter
+  OutputPin.Form = __OpenWireRootUnit__
+  OutputPin.SinkPins = (
+    (
+      __OpenWireRootUnit__.Packet1.Elements._Item2.InputPin
+      '__OpenWireRootUnit__.Packet1.Elements.Digital(Binary)1.InputPin')
+    (
+      __OpenWireRootUnit__.Arduino.Digital._Item13.DigitalInputPin
+      
+        '__OpenWireRootUnit__.Arduino.Digital.Digital(LED)(SPI-SCK)[ 13 ]' +
+        '.DigitalInputPin'))
+  InputPin.Form = __OpenWireRootUnit__
+  InputPin.SourcePin = (
+    __OpenWireRootUnit__.Arduino.Digital._Item4.OutputPin
+    '__OpenWireRootUnit__.Arduino.Digital.Digital[ 4 ].OutputPin')
+end
+/>
+    <Y 864/>
+  </COMPONENT>
+    <SELECTION Packet1/>
+    <BINDINGS object TOWPinBindingManager
+end
+/>
+</UNIT>

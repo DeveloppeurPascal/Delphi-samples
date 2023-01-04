@@ -1,0 +1,23 @@
+<VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT CLComPort1>
+    <X 256/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT CLUnpacket1>
+    <X 448/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT SLGenericRealValue1>
+    <X 656/>
+    <Y 384/>
+  </COMPONENT>
+  <COMPONENT SLGenericRealValue2>
+    <X 656/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT SLGenericFilter1>
+    <X 880/>
+    <Y 256/>
+  </COMPONENT>
+</UNIT>
