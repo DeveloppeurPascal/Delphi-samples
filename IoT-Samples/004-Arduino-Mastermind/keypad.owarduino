@@ -1,0 +1,283 @@
+<OPEN WIRE DIAGRAM VERSION 1/>
+<UNIT Unit1>
+  <COMPONENT Arduino>
+    <X 256/>
+    <INSTANCE object Arduino: TArduinoBoard
+  Modules.Items = <
+    item
+      _ = TArduinoEEPROMModule
+    end\>
+  BoardType = 'Arduino Nano'
+  AnalogInputReference = Default
+  Serial.Items = <
+    item
+      _ = TArduinoHardwareSerial
+      InputPin.Form = __OpenWireRootUnit__
+      InputPin.SourcePins = (
+        (
+          __OpenWireRootUnit__.Keypad1.Keys._Item0.OutputPin
+          '__OpenWireRootUnit__.Keypad1.Keys.CharacterKeyGroup1.OutputPin'))
+    end\>
+  AnalogInput.Items = <
+    item
+      _ = TArduinoAnalogOptionalAsDigitalInputChannel
+    end
+    item
+      _ = TArduinoAnalogOptionalAsDigitalInputChannel
+    end\>
+  I2CChannels.Items = <
+    item
+      _ = TArduinoI2C
+    end\>
+  SPIChannels.Items = <
+    item
+      _ = TArduinoSPI
+    end\>
+  Digital.Items = <
+    item
+      _ = TArduinoAdditionalDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSerial0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalInterruptChannel
+      DigitalInputPin.Form = __OpenWireRootUnit__
+      DigitalInputPin.SourcePin = (
+        __OpenWireRootUnit__.Keypad1.ColumnsOutputPins._Pin0
+        '__OpenWireRootUnit__.Keypad1.ColumnsOutputPins.Pin [0]')
+    end
+    item
+      _ = TArduinoBasicDigitalPWMInterruptChannel
+      DigitalInputPin.Form = __OpenWireRootUnit__
+      DigitalInputPin.SourcePin = (
+        __OpenWireRootUnit__.Keypad1.ColumnsOutputPins._Pin1
+        '__OpenWireRootUnit__.Keypad1.ColumnsOutputPins.Pin [1]')
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+      DigitalInputPin.Form = __OpenWireRootUnit__
+      DigitalInputPin.SourcePin = (
+        __OpenWireRootUnit__.Keypad1.ColumnsOutputPins._Pin2
+        '__OpenWireRootUnit__.Keypad1.ColumnsOutputPins.Pin [2]')
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+      DigitalInputPin.Form = __OpenWireRootUnit__
+      DigitalInputPin.SourcePin = (
+        __OpenWireRootUnit__.Keypad1.ColumnsOutputPins._Pin3
+        '__OpenWireRootUnit__.Keypad1.ColumnsOutputPins.Pin [3]')
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.Keypad1.RowsInputPins._Pin0
+          '__OpenWireRootUnit__.Keypad1.RowsInputPins.Pin [0]'))
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.Keypad1.RowsInputPins._Pin1
+          '__OpenWireRootUnit__.Keypad1.RowsInputPins.Pin [1]'))
+    end
+    item
+      _ = TArduinoAdditionalDigitalChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.Keypad1.RowsInputPins._Pin2
+          '__OpenWireRootUnit__.Keypad1.RowsInputPins.Pin [2]'))
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.Keypad1.RowsInputPins._Pin3
+          '__OpenWireRootUnit__.Keypad1.RowsInputPins.Pin [3]'))
+    end
+    item
+      _ = TArduinoBasicDigitalPWMChannel
+    end
+    item
+      _ = TArduinoBasicDigitalPWMSPI0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoAdditionalDigitalSPI0Channel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalChannel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalI2C0Channel
+    end
+    item
+      _ = TArduinoCombinedAnalogDigitalI2C0Channel
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+  <COMPONENT Keypad1>
+    <X 544/>
+    <INSTANCE object Keypad1: TArduinoKeypad
+  ColumnsOutputPins.Form = __OpenWireRootUnit__
+  ColumnsOutputPins.Pins = (
+    Sinks
+    (
+      (
+        __OpenWireRootUnit__.Arduino.Digital._Item2.DigitalInputPin
+        
+          '__OpenWireRootUnit__.Arduino.Digital.Digital[ 2 ].DigitalInputPi' +
+          'n'))
+    Sinks
+    (
+      (
+        __OpenWireRootUnit__.Arduino.Digital._Item3.DigitalInputPin
+        
+          '__OpenWireRootUnit__.Arduino.Digital.Digital[ 3 ].DigitalInputPi' +
+          'n'))
+    Sinks
+    (
+      (
+        __OpenWireRootUnit__.Arduino.Digital._Item4.DigitalInputPin
+        
+          '__OpenWireRootUnit__.Arduino.Digital.Digital[ 4 ].DigitalInputPi' +
+          'n'))
+    Sinks
+    (
+      (
+        __OpenWireRootUnit__.Arduino.Digital._Item5.DigitalInputPin
+        
+          '__OpenWireRootUnit__.Arduino.Digital.Digital[ 5 ].DigitalInputPi' +
+          'n')))
+  RowsInputPins.Form = __OpenWireRootUnit__
+  RowsInputPins.Pins = (
+    (
+      __OpenWireRootUnit__.Arduino.Digital._Item6.OutputPin
+      '__OpenWireRootUnit__.Arduino.Digital.Digital[ 6 ].OutputPin')
+    (
+      __OpenWireRootUnit__.Arduino.Digital._Item7.OutputPin
+      '__OpenWireRootUnit__.Arduino.Digital.Digital[ 7 ].OutputPin')
+    (
+      __OpenWireRootUnit__.Arduino.Digital._Item8.OutputPin
+      '__OpenWireRootUnit__.Arduino.Digital.Digital[ 8 ].OutputPin')
+    (
+      __OpenWireRootUnit__.Arduino.Digital._Item9.OutputPin
+      '__OpenWireRootUnit__.Arduino.Digital.Digital[ 9 ].OutputPin'))
+  Keys.Items = <
+    item
+      _ = TArduinoCharacterKeyGroup
+      Name = 'CharacterKeyGroup1'
+      OutputPin.Form = __OpenWireRootUnit__
+      OutputPin.SinkPins = (
+        (
+          __OpenWireRootUnit__.Arduino.Serial._Item0.InputPin
+          '__OpenWireRootUnit__.Arduino.Serial[0].InputPin'))
+      Keys.Items = <
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key1'
+          Character = 'D'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key2'
+          Character = '#'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key3'
+          Character = '0'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key4'
+          Character = '*'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key5'
+          Character = 'C'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key6'
+          Character = '9'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key7'
+          Character = '8'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key8'
+          Character = '7'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key9'
+          Character = 'B'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key10'
+          Character = '6'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key11'
+          Character = '5'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key12'
+          Character = '4'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key13'
+          Character = 'A'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key14'
+          Character = '3'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key15'
+          Character = '2'
+        end
+        item
+          _ = TArduinoCharKeypadKey
+          Name = 'Char Key16'
+          Character = '1'
+        end\>
+    end\>
+end
+/>
+    <Y 256/>
+  </COMPONENT>
+    <SELECTION Keypad1/>
+    <BINDINGS object TOWPinBindingManager
+end
+/>
+</UNIT>
