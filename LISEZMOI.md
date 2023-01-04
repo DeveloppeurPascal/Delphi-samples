@@ -22,7 +22,13 @@ Ce dépôt de code dépend des dépôts suivants :
 
 Certains projets ont besoin des bases de données de démo installées avec les exempls optionnels de Delphi. Si vous ne les avez pas, vous les trouverez dans le menu "Outils / Gérer les plateformes" puis l'onglet "Autres options" et enfin la rubrique "Samples" à installer.
 
-L'exemple FireDAC-Samples/003-CDataRSS utilise le driver FireDAC RSS de CData disponible à l'adresse https://cdata.com/drivers/rss/firedac/
+L'exemple FireDAC-Samples\003-CDataRSS utilise le [driver FireDAC RSS](https://cdata.com/drivers/rss/firedac/) de [CData](https://cdata.com/).
+
+L'exemple IoT-Samples\002-BeaconFence utilise les composants "[Beacon Fence](https://getitnow.embarcadero.com/beaconfence/)" disponibles sur GetIt.
+
+L'exemple IoT-Samples\004-Arduino-Mastermind utilise les composants "[AsyncPro for VCL](https://getitnow.embarcadero.com/AsyncPro-Sydney/)" disponibles sur GetIt et l'[IDE Visuino](https://www.visuino.com/) pour le programme Arduino.
+
+L'exemple IoT-Samples\005-Joystick utilise les composants "[Radiant Shape](https://getitnow.embarcadero.com/bonus-radiant-shapes/)" disponibles sur GetIt, la librairie "[CommunicationLab](https://mitov.com/products/communicationlab)" de [Boian Mitov](https://mitov.com/) et l'[IDE Visuino](https://www.visuino.com/) pour le programme Arduino.
 
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 

@@ -23,7 +23,13 @@ This project depends on :
 
 Some projects needs sample databases installed as option with Delphi samples. If you don't have them, you'll find them in menu "Tools / Manage plateforms" then tab item "other options" and "samples" to install.
 
-The sample FireDAC-Samples/003-CDataRSS uses the FireDAC RSS driver from CData available at https://cdata.com/drivers/rss/firedac/
+The sample FireDAC-Samples\003-CDataRSS uses the [FireDAC RSS driver](https://cdata.com/drivers/rss/firedac/) from [CData](https://cdata.com/).
+
+The sample IoT-Samples\002-BeaconFence uses "[Beacon Fence](https://getitnow.embarcadero.com/beaconfence/)" components from GetIt.
+
+The sample IoT-Samples\004-Arduino-Mastermind uses "[AsyncPro for VCL](https://getitnow.embarcadero.com/AsyncPro-Sydney/)" components from GetIt and [Visuino IDE](https://www.visuino.com/) for the Arduino program.
+
+The sample IoT-Samples\005-Joystick uses "[Radiant Shape](https://getitnow.embarcadero.com/bonus-radiant-shapes/)" components from GetIt, "[CommunicationLab](https://mitov.com/products/communicationlab)" library from [Boian Mitov](https://mitov.com/) and [Visuino IDE](https://www.visuino.com/) for the Arduino program.
 
 ## How to ask a new feature, report a bug or a security issue ?
 
