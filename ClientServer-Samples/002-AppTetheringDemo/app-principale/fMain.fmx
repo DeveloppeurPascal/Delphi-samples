@@ -1,0 +1,100 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object StringGrid1: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 455.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    RowCount = 0
+    OnCellClick = StringGrid1CellClick
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 430.000000000000000000
+  end
+  object BindNavigator1: TBindNavigator
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    DataSource = BindSourceDB1
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\PATRICK PREMARTIN\Documents\Presentation-RADSt' +
+        'udio-Delphi.db'
+      'DriverID=SQLite')
+    LoginPrompt = False
+    Left = 120
+    Top = 120
+  end
+  object FDTable1: TFDTable
+    IndexFieldNames = 'id'
+    Connection = FDConnection1
+    UpdateOptions.UpdateTableName = 'liste'
+    TableName = 'liste'
+    Left = 224
+    Top = 128
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDTable1
+    ScopeMappings = <>
+    Left = 120
+    Top = 208
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <
+        item
+          MemberName = 'coche'
+          Visible = False
+          ColumnStyle = 'CheckColumn'
+        end
+        item
+          MemberName = 'id'
+          Visible = False
+        end
+        item
+          MemberName = 'libelle'
+          Width = 500
+        end>
+    end
+  end
+  object TetheringManager1: TTetheringManager
+    Password = 'TestDemo'
+    Text = 'DemoDelphi2018'
+    AllowedAdapters = 'Network'
+    Left = 176
+    Top = 288
+  end
+  object TetheringAppProfile1: TTetheringAppProfile
+    Manager = TetheringManager1
+    Text = 'TetheringAppProfile1'
+    Group = 'DemoDelphi2018Tethering'
+    Actions = <>
+    Resources = <>
+    Left = 176
+    Top = 352
+  end
+end

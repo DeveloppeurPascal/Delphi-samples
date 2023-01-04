@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0E1ABB1B-BACA-47B1-B89A-19D3A7BFC1EA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="app-principale\CoursesDB.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="app-secondaire\ShowSelectedItem.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CoursesDB">
+        <MSBuild Projects="app-principale\CoursesDB.dproj"/>
+    </Target>
+    <Target Name="CoursesDB:Clean">
+        <MSBuild Projects="app-principale\CoursesDB.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CoursesDB:Make">
+        <MSBuild Projects="app-principale\CoursesDB.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ShowSelectedItem">
+        <MSBuild Projects="app-secondaire\ShowSelectedItem.dproj"/>
+    </Target>
+    <Target Name="ShowSelectedItem:Clean">
+        <MSBuild Projects="app-secondaire\ShowSelectedItem.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ShowSelectedItem:Make">
+        <MSBuild Projects="app-secondaire\ShowSelectedItem.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CoursesDB;ShowSelectedItem"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CoursesDB:Clean;ShowSelectedItem:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CoursesDB:Make;ShowSelectedItem:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
