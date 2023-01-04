@@ -1,0 +1,217 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object StringGrid1: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    RowCount = 0
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 405.000000000000000000
+  end
+  object FlowLayout1: TFlowLayout
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Justify = Left
+    JustifyLastLine = Left
+    FlowDirection = LeftToRight
+    object Label1: TLabel
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Text = 'Ville '#224' chercher'
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      KeyboardType = Alphabet
+      ReturnKeyType = Search
+      Position.X = 150.000000000000000000
+      Position.Y = 10.000000000000000000
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      OnChange = Edit1Change
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'UTF-8, *;q=0.8'
+    BaseURL = 'https://data.sncf.com'
+    Params = <>
+    RaiseExceptionOn500 = False
+    Left = 72
+    Top = 120
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <
+      item
+        Name = 'dataset'
+        Value = 'gares-pianos'
+      end
+      item
+        Name = 'rows'
+        Value = '100'
+      end
+      item
+        Name = 'facet'
+        Value = 'gare'
+      end
+      item
+        Name = 'q'
+      end>
+    Resource = 'api/records/1.0/search/'
+    Response = RESTResponse1
+    OnAfterExecute = RESTRequest1AfterExecute
+    SynchronizedEvents = False
+    Left = 72
+    Top = 176
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'application/json'
+    RootElement = 'records'
+    Left = 72
+    Top = 232
+  end
+  object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
+    Active = True
+    Dataset = FDMemTable1
+    FieldDefs = <>
+    Response = RESTResponse1
+    Left = 72
+    Top = 288
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    OnCalcFields = FDMemTable1CalcFields
+    FieldDefs = <
+      item
+        Name = 'datasetid'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'recordid'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'fields'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'record_timestamp'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'gare'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'pianos'
+        DataType = ftInteger
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 72
+    Top = 344
+    object FDMemTable1datasetid: TWideStringField
+      FieldName = 'datasetid'
+      Size = 255
+    end
+    object FDMemTable1recordid: TWideStringField
+      FieldName = 'recordid'
+      Size = 255
+    end
+    object FDMemTable1fields: TWideStringField
+      FieldName = 'fields'
+      Size = 255
+    end
+    object FDMemTable1record_timestamp: TWideStringField
+      FieldName = 'record_timestamp'
+      Size = 255
+    end
+    object FDMemTable1gare: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'gare'
+      Calculated = True
+    end
+    object FDMemTable1pianos: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'pianos'
+      Calculated = True
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 140
+    Top = 109
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <
+        item
+          MemberName = 'gare'
+          Width = 200
+        end
+        item
+          MemberName = 'pianos'
+          Width = 50
+        end
+        item
+          MemberName = 'datasetid'
+          Visible = False
+        end
+        item
+          MemberName = 'recordid'
+          Visible = False
+        end
+        item
+          MemberName = 'fields'
+          Width = 500
+        end
+        item
+          MemberName = 'record_timestamp'
+          Visible = False
+        end>
+    end
+  end
+end
