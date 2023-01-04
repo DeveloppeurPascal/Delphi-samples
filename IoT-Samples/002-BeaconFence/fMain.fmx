@@ -1,0 +1,138 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 432.000000000000000000
+  end
+  object Button1: TButton
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+  object Beacon1: TBeacon
+    Mode = Standard
+    ModeExtended = [iBeacons]
+    MonitorizedRegions = <>
+    SPC = 0.500000000000000000
+    OnBeaconEnter = Beacon1BeaconEnter
+    OnBeaconExit = Beacon1BeaconExit
+    Left = 40
+    Top = 64
+  end
+  object BeaconMapFencing1: TBeaconMapFencing
+    XMLMap = 
+      '<bundle><file path = "project" id = "A29ED3EF17414A0E90285B5AA2C' +
+      'D9214">PG9iamVjdCBjbGFzcyA9ICJUU2NlbmUiIHF1YWxpZmllZF9jbGFzcyA9I' +
+      'CJTeXN0ZW0uQmVhY29u'#13#10'LkZlbmNpbmcuU2NlbmUuQ2xhc3Nlcy5UU2NlbmUiPjx' +
+      'PcGFjaXR5PjE8L09wYWNpdHk+PENsaXBD'#13#10'aGlsZHJlbj5GYWxzZTwvQ2xpcENoa' +
+      'WxkcmVuPjxOYW1lPlNjZW5lPC9OYW1lPjxDaGlsZHJlbiBj'#13#10'b3VudCA9ICIyIj4' +
+      '8b2JqZWN0IGNsYXNzID0gIlRNYXAiIHF1YWxpZmllZF9jbGFzcyA9ICJTeXN0'#13#10'Z' +
+      'W0uQmVhY29uLkZlbmNpbmcuU2NlbmUuQmVhY29ucy5UTWFwIj48UmVwcmVzZW50Y' +
+      'XRpb25EaXNw'#13#10'bGFjZW1lbnQ+MHwwPC9SZXByZXNlbnRhdGlvbkRpc3BsYWNlbWV' +
+      'udD48RGVzY3JpcHRpb25MaXN0'#13#10'PjwvRGVzY3JpcHRpb25MaXN0PjxNZWFzdXJlV' +
+      'W5pdHM+Q2VudGltZXRlcnM8L01lYXN1cmVVbml0'#13#10'cz48RmlsbENvbG9yPjE3MHw' +
+      'xNTN8MTg3fDI1NTwvRmlsbENvbG9yPjxTdHJva2VDb2xvcj4wfDB8'#13#10'MHwyNTU8L' +
+      '1N0cm9rZUNvbG9yPjxTdHJva2VUaGlja25lc3M+MTwvU3Ryb2tlVGhpY2tuZXNzP' +
+      'jxC'#13#10'aXRtYXBQYXRoPjwvQml0bWFwUGF0aD48UmVjdD4wfDB8MTB8MTA8L1JlY3Q' +
+      '+PEVuYWJsZUZpbGw+'#13#10'VHJ1ZTwvRW5hYmxlRmlsbD48U2NhbGluZz4xfDE8L1NjY' +
+      'Wxpbmc+PERpc3BsYWNlbWVudD4wfDA8'#13#10'L0Rpc3BsYWNlbWVudD48Um90YXRpb24' +
+      '+MDwvUm90YXRpb24+PE9wYWNpdHk+MTwvT3BhY2l0eT48'#13#10'Q2xpcENoaWxkcmVuP' +
+      'kZhbHNlPC9DbGlwQ2hpbGRyZW4+PE5hbWU+TWFwIDA8L05hbWU+PENoaWxk'#13#10'cmV' +
+      'uIGNvdW50ID0gIjMiPjxvYmplY3QgY2xhc3MgPSAiVFpvbmVzTGF5ZXIiIHF1YWx' +
+      'pZmllZF9j'#13#10'bGFzcyA9ICJTeXN0ZW0uQmVhY29uLkZlbmNpbmcuU2NlbmUuQmVhY' +
+      '29ucy5UWm9uZXNMYXllciI+'#13#10'PE9wYWNpdHk+MTwvT3BhY2l0eT48Q2xpcENoaWx' +
+      'kcmVuPkZhbHNlPC9DbGlwQ2hpbGRyZW4+PE5h'#13#10'bWU+RDREQTYwNUFCOTAwNDU3M' +
+      '0I3RjkyMjBEQzQ5RjVFMzc8L05hbWU+PENoaWxkcmVuIGNvdW50'#13#10'ID0gIjAiPjB' +
+      '8MDwvQ2hpbGRyZW4+PElkPntENERBNjA1QS1COTAwLTQ1NzMtQjdGOS0yMjBEQzQ' +
+      '5'#13#10'RjVFMzd9PC9JZD48L29iamVjdD48b2JqZWN0IGNsYXNzID0gIlRCZWFjb25zT' +
+      'GF5ZXIiIHF1YWxp'#13#10'ZmllZF9jbGFzcyA9ICJTeXN0ZW0uQmVhY29uLkZlbmNpbmc' +
+      'uU2NlbmUuQmVhY29ucy5UQmVhY29u'#13#10'c0xheWVyIj48T3BhY2l0eT4xPC9PcGFja' +
+      'XR5PjxDbGlwQ2hpbGRyZW4+RmFsc2U8L0NsaXBDaGls'#13#10'ZHJlbj48TmFtZT43RDM' +
+      'xNUJCMTg4QzM0MzhDQTIzNkUzQUMzM0JDN0FCNjwvTmFtZT48Q2hpbGRy'#13#10'ZW4gY' +
+      '291bnQgPSAiMiI+PG9iamVjdCBjbGFzcyA9ICJUQmVhY29uIiBxdWFsaWZpZWRfY' +
+      '2xhc3Mg'#13#10'PSAiU3lzdGVtLkJlYWNvbi5GZW5jaW5nLlNjZW5lLkJlYWNvbnMuVEJ' +
+      'lYWNvbiI+PEdVSUQ+ezAw'#13#10'MDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwM' +
+      'DAwMH08L0dVSUQ+PE1ham9yPjA8L01ham9y'#13#10'PjxNaW5vcj4wPC9NaW5vcj48TWF' +
+      'udWZhY3R1cmVySUQ+LTE8L01hbnVmYWN0dXJlcklEPjxFZGR5'#13#10'TmFtZXNwYWNlP' +
+      'jAwMDAwMDAwMDAwMDAwMDAwMDAwPC9FZGR5TmFtZXNwYWNlPjxFZGR5SW5zdGFu'#13 +
+      #10'Y2U+MDAwMDAwMDAwMDAwPC9FZGR5SW5zdGFuY2U+PEtpbmRvZkJlYWNvbj5pQkF' +
+      'sdEJlYWNvbnM8'#13#10'L0tpbmRvZkJlYWNvbj48RGVzY3JpcHRpb25MaXN0PjwvRGVzY' +
+      '3JpcHRpb25MaXN0PjxVc2VUb1Bv'#13#10'c2l0aW9uaW5nPlRydWU8L1VzZVRvUG9zaXR' +
+      'pb25pbmc+PEZpbGxDb2xvcj4yNTV8MjU1fDI1NXwy'#13#10'NTU8L0ZpbGxDb2xvcj48U' +
+      '3Ryb2tlQ29sb3I+MHwwfDB8MjU1PC9TdHJva2VDb2xvcj48U3Ryb2tl'#13#10'VGhpY2t' +
+      'uZXNzPjE8L1N0cm9rZVRoaWNrbmVzcz48Qml0bWFwUGF0aD48L0JpdG1hcFBhdGg' +
+      '+PFJl'#13#10'Y3Q+LTAuNXwtMC41fDAuNXwwLjU8L1JlY3Q+PEVuYWJsZUZpbGw+VHJ1Z' +
+      'TwvRW5hYmxlRmlsbD48'#13#10'U2NhbGluZz4xfDE8L1NjYWxpbmc+PERpc3BsYWNlbWV' +
+      'udD4xLjQ2MzU5OTIwNTAxNzA5fDEuNTUx'#13#10'MzgwMTU3NDcwNzwvRGlzcGxhY2VtZ' +
+      'W50PjxSb3RhdGlvbj4wPC9Sb3RhdGlvbj48T3BhY2l0eT4w'#13#10'Ljg5OTk5OTk3NjE' +
+      '1ODE0MjwvT3BhY2l0eT48Q2xpcENoaWxkcmVuPkZhbHNlPC9DbGlwQ2hpbGRy'#13#10'Z' +
+      'W4+PE5hbWU+QmVhY29uMDwvTmFtZT48Q2hpbGRyZW4gY291bnQgPSAiMCI+MHwwP' +
+      'C9DaGlsZHJl'#13#10'bj48SWQ+e0ZCQjJENkU0LTdFRkYtNDE1NS1CQUY0LUM3RENFQjk' +
+      'zM0RBNX08L0lkPjwvb2JqZWN0'#13#10'PjxvYmplY3QgY2xhc3MgPSAiVEJlYWNvbiIgc' +
+      'XVhbGlmaWVkX2NsYXNzID0gIlN5c3RlbS5CZWFj'#13#10'b24uRmVuY2luZy5TY2VuZS5' +
+      'CZWFjb25zLlRCZWFjb24iPjxHVUlEPnswMDAwMDAwMC0wMDAwLTAw'#13#10'MDAtMDAwM' +
+      'C0wMDAwMDAwMDAwMDB9PC9HVUlEPjxNYWpvcj4wPC9NYWpvcj48TWlub3I+MDwvT' +
+      'Wlu'#13#10'b3I+PE1hbnVmYWN0dXJlcklEPi0xPC9NYW51ZmFjdHVyZXJJRD48RWRkeU5' +
+      'hbWVzcGFjZT4wMDAw'#13#10'MDAwMDAwMDAwMDAwMDAwMDwvRWRkeU5hbWVzcGFjZT48R' +
+      'WRkeUluc3RhbmNlPjAwMDAwMDAwMDAw'#13#10'MDwvRWRkeUluc3RhbmNlPjxLaW5kb2Z' +
+      'CZWFjb24+aUJBbHRCZWFjb25zPC9LaW5kb2ZCZWFjb24+'#13#10'PERlc2NyaXB0aW9uT' +
+      'GlzdD48L0Rlc2NyaXB0aW9uTGlzdD48VXNlVG9Qb3NpdGlvbmluZz5UcnVl'#13#10'PC9' +
+      'Vc2VUb1Bvc2l0aW9uaW5nPjxGaWxsQ29sb3I+MjU1fDI1NXwyNTV8MjU1PC9GaWx' +
+      'sQ29sb3I+'#13#10'PFN0cm9rZUNvbG9yPjB8MHwwfDI1NTwvU3Ryb2tlQ29sb3I+PFN0c' +
+      'm9rZVRoaWNrbmVzcz4xPC9T'#13#10'dHJva2VUaGlja25lc3M+PEJpdG1hcFBhdGg+PC9' +
+      'CaXRtYXBQYXRoPjxSZWN0Pi0wLjV8LTAuNXww'#13#10'LjV8MC41PC9SZWN0PjxFbmFib' +
+      'GVGaWxsPlRydWU8L0VuYWJsZUZpbGw+PFNjYWxpbmc+MXwxPC9T'#13#10'Y2FsaW5nPjx' +
+      'EaXNwbGFjZW1lbnQ+OC40NjExNTg3NTI0NDE0MXw4LjQ0ODYxOTg0MjUyOTM8L0R' +
+      'p'#13#10'c3BsYWNlbWVudD48Um90YXRpb24+MDwvUm90YXRpb24+PE9wYWNpdHk+MC44O' +
+      'Tk5OTk5NzYxNTgx'#13#10'NDI8L09wYWNpdHk+PENsaXBDaGlsZHJlbj5GYWxzZTwvQ2x' +
+      'pcENoaWxkcmVuPjxOYW1lPkJlYWNv'#13#10'bjE8L05hbWU+PENoaWxkcmVuIGNvdW50I' +
+      'D0gIjAiPjB8MDwvQ2hpbGRyZW4+PElkPns4OUNCNUZB'#13#10'RC02MUNELTQ4MjAtQkZ' +
+      'BRC0xRjc0M0E1RUYyNDV9PC9JZD48L29iamVjdD48L0NoaWxkcmVuPjxJ'#13#10'ZD57N' +
+      '0QzMTVCQjEtODhDMy00MzhDLUEyMzYtRTNBQzMzQkM3QUI2fTwvSWQ+PC9vYmplY' +
+      '3Q+PG9i'#13#10'amVjdCBjbGFzcyA9ICJUUGF0aHNMYXllciIgcXVhbGlmaWVkX2NsYXN' +
+      'zID0gIlN5c3RlbS5CZWFj'#13#10'b24uRmVuY2luZy5TY2VuZS5CZWFjb25zLlRQYXRoc' +
+      '0xheWVyIj48T3BhY2l0eT4xPC9PcGFjaXR5'#13#10'PjxDbGlwQ2hpbGRyZW4+RmFsc2U' +
+      '8L0NsaXBDaGlsZHJlbj48TmFtZT5BQTM4NDk5Nzk3QTY0MDNE'#13#10'OUQ0NEVGQUVDQ' +
+      '0Y5NDJCRTwvTmFtZT48Q2hpbGRyZW4gY291bnQgPSAiMCI+MHwwPC9DaGlsZHJl'#13 +
+      #10'bj48SWQ+e0FBMzg0OTk3LTk3QTYtNDAzRC05RDQ0LUVGQUVDQ0Y5NDJCRX08L0l' +
+      'kPjwvb2JqZWN0'#13#10'PjwvQ2hpbGRyZW4+PElkPns0ODQ3OTgwMC1GQzdGLTQ5QzUtO' +
+      'TBDRC05NTg5OTQ5OERCRjZ9PC9J'#13#10'ZD48L29iamVjdD48b2JqZWN0IGNsYXNzID0' +
+      'gIlRDb25uZWN0aW5nTm9kZXMiIHF1YWxpZmllZF9j'#13#10'bGFzcyA9ICJTeXN0ZW0uQ' +
+      'mVhY29uLkZlbmNpbmcuU2NlbmUuQmVhY29ucy5UQ29ubmVjdGluZ05v'#13#10'ZGVzIj4' +
+      '8Q29ubmVjdGlvbnMgY291bnQgPSAiMCI+MHwwPC9Db25uZWN0aW9ucz48T3BhY2l' +
+      '0eT4x'#13#10'PC9PcGFjaXR5PjxDbGlwQ2hpbGRyZW4+RmFsc2U8L0NsaXBDaGlsZHJlb' +
+      'j48TmFtZT5FOUZBODM0'#13#10'RDE4Q0Q0NzRCQjY2NzExRUE1N0I2RTdCQTwvTmFtZT4' +
+      '8Q2hpbGRyZW4gY291bnQgPSAiMCI+MHww'#13#10'PC9DaGlsZHJlbj48SWQ+e0U5RkE4M' +
+      'zRELTE4Q0QtNDc0Qi1CNjY3LTExRUE1N0I2RTdCQX08L0lk'#13#10'Pjwvb2JqZWN0Pjw' +
+      'vQ2hpbGRyZW4+PElkPns1RjcwMUMxMy02MkU2LTQzMTEtQjBDRi00QjY0OUZG'#13#10'O' +
+      'TBFRTJ9PC9JZD48L29iamVjdD4=</file></bundle>'
+    ParticleFilterOptions.SignalRelativeStdDev = 0.150000005960464500
+    ParticleFilterOptions.MotionThreshold = 4.000000000000000000
+    ParticleFilterOptions.CalibrationAverage = 0.330000000000000000
+    BeaconManagerOptions.SPC = 0.500000000000000000
+    MapOptions = []
+    FencingOptions.RawPositionRadius = 2.000000000000000000
+    FencingOptions.PathPositionRadius = 1.399999976158142000
+    Left = 136
+    Top = 64
+  end
+end
