@@ -1,0 +1,35 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 88.000000000000000000
+    Position.Y = 88.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 232.000000000000000000
+    Position.Y = 120.000000000000000000
+    TabOrder = 2
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+  object ListBox1: TListBox
+    Position.X = 80.000000000000000000
+    Position.Y = 176.000000000000000000
+    TabOrder = 3
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 196.000000000000000000
+  end
+end
