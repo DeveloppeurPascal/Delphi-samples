@@ -13,7 +13,7 @@ object Form1: TForm1
     Size.Width = 640.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
@@ -27,7 +27,7 @@ object Form1: TForm1
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 72.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -54,11 +54,6 @@ object Form1: TForm1
             Column = 0
             Control = Button1
             Row = 0
-          end
-          item
-            Column = 1
-            Control = Button2
-            Row = 0
           end>
         RowCollection = <
           item
@@ -77,21 +72,8 @@ object Form1: TForm1
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Text = 'Open'
+          Text = 'Appareils appair'#233's'
           OnClick = Button1Click
-        end
-        object Button2: TButton
-          Align = Client
-          Margins.Left = 10.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 10.000000000000000000
-          Margins.Bottom = 10.000000000000000000
-          Size.Width = 300.000000000000000000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          Text = 'Close'
-          OnClick = Button2Click
         end
       end
       object Memo1: TMemo
@@ -102,8 +84,8 @@ object Form1: TForm1
         Size.Height = 404.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        Viewport.Width = 636.000000000000000000
-        Viewport.Height = 400.000000000000000000
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 404.000000000000000000
       end
     end
     object TabItem2: TTabItem
@@ -177,12 +159,23 @@ object Form1: TForm1
           OnClick = Button4Click
         end
       end
+      object Memo3: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Size.Width = 640.000000000000000000
+        Size.Height = 404.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 404.000000000000000000
+      end
     end
     object TabItem3: TTabItem
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 59.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -249,6 +242,17 @@ object Form1: TForm1
           OnClick = Button6Click
         end
       end
+      object Memo2: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Size.Width = 640.000000000000000000
+        Size.Height = 404.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 404.000000000000000000
+      end
     end
   end
   object Bluetooth1: TBluetooth
@@ -258,14 +262,37 @@ object Form1: TForm1
   end
   object BluetoothLE1: TBluetoothLE
     Enabled = False
+    OnCharacteristicRead = BluetoothLE1CharacteristicRead
+    OnCharacteristicReadRequest = BluetoothLE1CharacteristicReadRequest
+    OnCharacteristicWrite = BluetoothLE1CharacteristicWrite
+    OnCharacteristicWriteRequest = BluetoothLE1CharacteristicWriteRequest
+    OnCharacteristicSubscribed = BluetoothLE1CharacteristicSubscribed
+    OnCharacteristicUnSubscribed = BluetoothLE1CharacteristicUnSubscribed
+    OnConnectedDevice = BluetoothLE1ConnectedDevice
+    OnDescriptorRead = BluetoothLE1DescriptorRead
+    OnDescriptorWrite = BluetoothLE1DescriptorWrite
+    OnConnect = BluetoothLE1Connect
+    OnDisconnect = BluetoothLE1Disconnect
+    OnDisconnectDevice = BluetoothLE1DisconnectDevice
+    OnDiscoverLEDevice = BluetoothLE1DiscoverLEDevice
+    OnServicesDiscovered = BluetoothLE1ServicesDiscovered
+    OnEndDiscoverDevices = BluetoothLE1EndDiscoverDevices
+    OnEndDiscoverServices = BluetoothLE1EndDiscoverServices
+    OnReadRSSI = BluetoothLE1ReadRSSI
+    OnReliableWriteCompleted = BluetoothLE1ReliableWriteCompleted
+    OnServiceAdded = BluetoothLE1ServiceAdded
     Left = 352
     Top = 8
   end
   object Beacon1: TBeacon
-    Mode = Standard
-    ModeExtended = [iBeacons]
+    ModeExtended = [iBeacons, AltBeacons, Eddystones]
     MonitorizedRegions = <>
     SPC = 0.500000000000000000
+    OnBeaconEnter = Beacon1BeaconEnter
+    OnBeaconExit = Beacon1BeaconExit
+    OnBeaconProximity = Beacon1BeaconProximity
+    OnParseServiceData = Beacon1ParseServiceData
+    OnBeaconError = Beacon1BeaconError
     Left = 424
     Top = 8
   end
