@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="Idemosservice" targetNamespace="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns1="urn:udemosIntf">
+  <types>
+    <xs:schema targetNamespace="urn:udemosIntf" xmlns="urn:udemosIntf">
+      <xs:simpleType name="TEnumTest">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="etNone"/>
+          <xs:enumeration value="etAFew"/>
+          <xs:enumeration value="etSome"/>
+          <xs:enumeration value="etAlot"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="TDoubleArray">
+        <xs:complexContent>
+          <xs:restriction base="soapenc:Array">
+            <sequence xmlns="http://www.w3.org/2001/XMLSchema"/>
+            <xs:attribute ref="soapenc:arrayType" n1:arrayType="xs:double[]" xmlns:n1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TMyEmployee">
+        <sequence xmlns="http://www.w3.org/2001/XMLSchema">
+          <xs:element name="LastName" type="xs:string"/>
+          <xs:element name="FirstName" type="xs:string"/>
+          <xs:element name="Salary" type="xs:double"/>
+        </sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="echoEnum0Request">
+    <part name="Value" type="ns1:TEnumTest"/>
+  </message>
+  <message name="echoEnum0Response">
+    <part name="return" type="ns1:TEnumTest"/>
+  </message>
+  <message name="echoDoubleArray1Request">
+    <part name="Value" type="ns1:TDoubleArray"/>
+  </message>
+  <message name="echoDoubleArray1Response">
+    <part name="return" type="ns1:TDoubleArray"/>
+  </message>
+  <message name="echoMyEmployee2Request">
+    <part name="Value" type="ns1:TMyEmployee"/>
+  </message>
+  <message name="echoMyEmployee2Response">
+    <part name="return" type="ns1:TMyEmployee"/>
+  </message>
+  <message name="echoDouble3Request">
+    <part name="Value" type="xs:double"/>
+  </message>
+  <message name="echoDouble3Response">
+    <part name="return" type="xs:double"/>
+  </message>
+  <portType name="Idemos">
+    <operation name="echoEnum">
+      <input message="tns:echoEnum0Request"/>
+      <output message="tns:echoEnum0Response"/>
+    </operation>
+    <operation name="echoDoubleArray">
+      <input message="tns:echoDoubleArray1Request"/>
+      <output message="tns:echoDoubleArray1Response"/>
+    </operation>
+    <operation name="echoMyEmployee">
+      <input message="tns:echoMyEmployee2Request"/>
+      <output message="tns:echoMyEmployee2Response"/>
+    </operation>
+    <operation name="echoDouble">
+      <input message="tns:echoDouble3Request"/>
+      <output message="tns:echoDouble3Response"/>
+    </operation>
+  </portType>
+  <binding name="Idemosbinding" type="tns:Idemos">
+    <binding xmlns="http://schemas.xmlsoap.org/wsdl/soap/" style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="echoEnum">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:udemosIntf-Idemos#echoEnum" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </output>
+    </operation>
+    <operation name="echoDoubleArray">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:udemosIntf-Idemos#echoDoubleArray" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </output>
+    </operation>
+    <operation name="echoMyEmployee">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:udemosIntf-Idemos#echoMyEmployee" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </output>
+    </operation>
+    <operation name="echoDouble">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:udemosIntf-Idemos#echoDouble" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:udemosIntf-Idemos"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="Idemosservice">
+    <port name="IdemosPort" binding="tns:Idemosbinding">
+      <address xmlns="http://schemas.xmlsoap.org/wsdl/soap/" location="http://localhost:8080/soap/Idemos"/>
+    </port>
+  </service>
+</definitions>
+

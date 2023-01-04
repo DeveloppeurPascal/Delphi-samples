@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1C0246F1-A5A3-49ED-A3F2-16379ABC061B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="client-ldemo\SOAPClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="serveur\SOAPServer.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SOAPClient">
+        <MSBuild Projects="client-ldemo\SOAPClient.dproj"/>
+    </Target>
+    <Target Name="SOAPClient:Clean">
+        <MSBuild Projects="client-ldemo\SOAPClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SOAPClient:Make">
+        <MSBuild Projects="client-ldemo\SOAPClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SOAPServer">
+        <MSBuild Projects="serveur\SOAPServer.dproj"/>
+    </Target>
+    <Target Name="SOAPServer:Clean">
+        <MSBuild Projects="serveur\SOAPServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SOAPServer:Make">
+        <MSBuild Projects="serveur\SOAPServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SOAPClient;SOAPServer"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SOAPClient:Clean;SOAPServer:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SOAPClient:Make;SOAPServer:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
