@@ -24,6 +24,10 @@ This project depends on :
 Some projects needs sample databases installed as option with Delphi samples. If you don't have them, you'll find them in menu "Tools / Manage plateforms" then tab item "other options" and "samples" to install.
 
 The sample FireDAC-Samples\003-CDataRSS uses the [FireDAC RSS driver](https://cdata.com/drivers/rss/firedac/) from [CData](https://cdata.com/).
+(if you use the evaluation release, compile in 64 bits, the 32 bits DLL is not available)
+
+The sample FireDAC-Samples\004-MultiDBSample uses the [FireDAC RSS driver](https://cdata.com/drivers/rss/firedac/) from [CData](https://cdata.com/).
+(if you use the evaluation release, compile in 64 bits, the 32 bits DLL is not available)
 
 The sample IoT-Samples\002-BeaconFence uses "[Beacon Fence](https://getitnow.embarcadero.com/beaconfence/)" components from GetIt.
 

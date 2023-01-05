@@ -23,6 +23,10 @@ Ce dépôt de code dépend des dépôts suivants :
 Certains projets ont besoin des bases de données de démo installées avec les exempls optionnels de Delphi. Si vous ne les avez pas, vous les trouverez dans le menu "Outils / Gérer les plateformes" puis l'onglet "Autres options" et enfin la rubrique "Samples" à installer.
 
 L'exemple FireDAC-Samples\003-CDataRSS utilise le [driver FireDAC RSS](https://cdata.com/drivers/rss/firedac/) de [CData](https://cdata.com/).
+(si vous utilisez la version d'évaluation, compilez en 64 bits car la version 32 bits de la DLL de CData est absente)
+
+L'exemple FireDAC-Samples\004-MultiDBSample utilise le [driver FireDAC RSS](https://cdata.com/drivers/rss/firedac/) de [CData](https://cdata.com/).
+(si vous utilisez la version d'évaluation, compilez en 64 bits car la version 32 bits de la DLL de CData est absente)
 
 L'exemple IoT-Samples\002-BeaconFence utilise les composants "[Beacon Fence](https://getitnow.embarcadero.com/beaconfence/)" disponibles sur GetIt.
 
