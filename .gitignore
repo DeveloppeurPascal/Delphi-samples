@@ -81,6 +81,7 @@ Android/
 Android64/
 iOSDevice64/
 Linux64/
+TMSWeb/
 
 # Private directory
 _PRIVATE/
