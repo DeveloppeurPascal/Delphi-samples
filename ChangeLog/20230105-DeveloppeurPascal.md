@@ -4,3 +4,5 @@
 
 * added an IoT samples project
 * added a FireDAC sample project
+* added a FMX sample project
+* added a VCL sample project
