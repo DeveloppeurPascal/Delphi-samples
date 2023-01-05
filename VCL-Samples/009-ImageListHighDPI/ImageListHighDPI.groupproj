@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A45417FD-1226-4A24-847C-AB31DA3329C9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TVirtualImageList\VirtualImageList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TImageList\ImageList.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VirtualImageList">
+        <MSBuild Projects="TVirtualImageList\VirtualImageList.dproj"/>
+    </Target>
+    <Target Name="VirtualImageList:Clean">
+        <MSBuild Projects="TVirtualImageList\VirtualImageList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VirtualImageList:Make">
+        <MSBuild Projects="TVirtualImageList\VirtualImageList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ImageList">
+        <MSBuild Projects="TImageList\ImageList.dproj"/>
+    </Target>
+    <Target Name="ImageList:Clean">
+        <MSBuild Projects="TImageList\ImageList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ImageList:Make">
+        <MSBuild Projects="TImageList\ImageList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VirtualImageList;ImageList"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VirtualImageList:Clean;ImageList:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VirtualImageList:Make;ImageList:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
