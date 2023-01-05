@@ -6,3 +6,4 @@
 * added a FireDAC sample project
 * added a FMX sample project
 * added a VCL sample project
+* added TMS Web core sample projects
