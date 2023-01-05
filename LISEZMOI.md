@@ -38,6 +38,10 @@ L'exemple Web-Samples\011-UniGUI utilise [UniGUI](http://www.unigui.com/).
 
 L'exemple Web-Samples\012-UniGUI-Database utilise [UniGUI](http://www.unigui.com/).
 
+L'exemple Web-Samples\013-TMSWebCore-HelloWorld utilise [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
+
+L'exemple Web-Samples\014-TMSWebCore-DisplayJSON utilise [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
+
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 
 Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://github.com/DeveloppeurPascal/Delphi-samples) et [d'ouvrir un ticket](https://github.com/DeveloppeurPascal/Delphi-samples/issues).

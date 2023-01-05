@@ -39,6 +39,10 @@ The sample Web-Samples\011-UniGUI uses [UniGUI](http://www.unigui.com/).
 
 The sample Web-Samples\012-UniGUI-Database uses [UniGUI](http://www.unigui.com/).
 
+The sample Web-Samples\013-TMSWebCore-HelloWorld uses [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
+
+The sample Web-Samples\014-TMSWebCore-DisplayJSON uses [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
+
 ## How to ask a new feature, report a bug or a security issue ?
 
 If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/Delphi-samples) and [open a new issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues).
