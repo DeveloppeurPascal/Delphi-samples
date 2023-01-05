@@ -1,5 +1,7 @@
 # Delphi sample projects
 
+[Cette page en français.](LISEZMOI.md)
+
 Set of projects demonstrating the features of the Delphi development environment, its libraries and its programming language.
 
 Some of the projects have been presented at conferences, on training courses or online coding sessions.

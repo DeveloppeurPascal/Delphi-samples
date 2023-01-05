@@ -1,5 +1,7 @@
 # Projets de démo sous Delphi
 
+[This page in english.](README.md)
+
 Ensemble de projets de démonstration des fonctionnalités de l'environnement de développement Delphi, ses librairies et son langage de programmation.
 
 Certains projets ont été présentés lors de conférences, sur des formations ou des sessions de codage en ligne.
