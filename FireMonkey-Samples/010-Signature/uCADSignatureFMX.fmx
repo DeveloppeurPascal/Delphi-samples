@@ -1,0 +1,19 @@
+object SignatureFMX: TSignatureFMX
+  Size.Width = 320.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object imgSignature: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Locked = True
+    Size.Width = 320.000000000000000000
+    Size.Height = 240.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseMove = imgSignatureMouseMove
+    OnMouseUp = imgSignatureMouseUp
+    OnMouseLeave = imgSignatureMouseLeave
+    OnResize = imgSignatureResize
+  end
+end

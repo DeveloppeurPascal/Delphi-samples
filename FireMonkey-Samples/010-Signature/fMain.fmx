@@ -1,0 +1,31 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  inline SignatureFMX1: TSignatureFMX
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    inherited imgSignature: TImage
+      Size.Width = 640.000000000000000000
+      Size.Height = 436.000000000000000000
+    end
+  end
+  object btnSaveImage: TButton
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'btnSaveImage'
+    OnClick = btnSaveImageClick
+  end
+end
