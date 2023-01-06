@@ -10,6 +10,8 @@ The programs are up to date with the [Community Edition](https://www.embarcadero
 
 You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
+A lot of code repositories show other Delphi project samples. Some of them are listed on [this page](OtherDelphiSampleRepositories.md). Be free to update it [with a PULL REQUEST](CONTRIBUTING.md) or by [filling an issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues).
+
 ## Install
 
 To download this project you better should use "git" command but you also can download a ZIP from [its GitHub repository](https://github.com/DeveloppeurPascal/Delphi-samples).

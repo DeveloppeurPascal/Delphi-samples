@@ -1,0 +1,19 @@
+# Other Delphi project samples repositories
+
+List of dome Delphi projects repositories (samples, demos and learning resources):
+
+* [Apprendre la programmation avec Delphi (french training, 2020)](https://github.com/DeveloppeurPascal/ApprendreLaProgrammationAvecDelphi)
+* [Cross platform samples](https://github.com/FMXExpress/Cross-Platform-Samples)
+* [Delphi CE Bootcamp (2018 edition)](https://github.com/Embarcadero/DelphiCEBootcamp)
+* [Embarcadero RAD Studio 11 demos](https://github.com/Embarcadero/RADStudio11Demos)
+* [Embarcadero RAD Studio demo kit](https://github.com/Embarcadero/RADStudio-DemoKit)
+* [Learn To Code Boot Camp 2022](https://github.com/LearnDelphiorg/BootCamp2022)
+* [Learn To Code Summer Camp 2021 (french edition)](https://github.com/DeveloppeurPascal/LearnToCodeSummerCamp2021)
+* [One shot tools](https://github.com/DeveloppeurPascal/one-shot-tools)
+* [Samples of Developpeur Pascal blog](https://github.com/DeveloppeurPascal/exemples)
+
+* try looking at "[delphi-sample](https://github.com/topics/delphi-sample)" topic on GitHub to find more samples on VCL, FireMonkey, Pascal Language...
+
+* try looking at "[delphi-game](https://github.com/topics/delphi-game)" topic on GitHub to find games developped in Delphi
+
+You know other samples repositories ? Please add them to this list (submit [an issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues) or a [PULL REQUEST](CONTRIBUTING.md)).

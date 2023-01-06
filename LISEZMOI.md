@@ -10,6 +10,8 @@ Les programmes sont à jour par rapport à la version [Community Edition](https:
 
 Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
 
+De nombreux dépôts de code proposent d'autres exemples de projets Delphi. Certains sont listés sur [cette page](OtherDelphiSampleRepositories.md). N'hésitez pas à la compléter en [la modifiant directement](CONTRIBUTING.md) ou en [soumettant un ticket](https://github.com/DeveloppeurPascal/Delphi-samples/issues).
+
 ## Installation
 
 Pour télécharger ce projet il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt GitHub](https://github.com/DeveloppeurPascal/Delphi-samples).
