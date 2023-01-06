@@ -1,0 +1,33 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Choix dans la liste'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object BlocAttenteChargement: TRectangle
+    Align = Contents
+    Fill.Color = claOrange
+    Opacity = 0.500000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    object BlocAttenteChargementAnimation: TAniIndicator
+      Align = Center
+      HitTest = False
+    end
+  end
+  object Button1: TButton
+    Align = Center
+    Size.Width = 177.000000000000000000
+    Size.Height = 92.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Choisir Un tarif'
+    OnClick = Button1Click
+  end
+end

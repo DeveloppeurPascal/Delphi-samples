@@ -1,0 +1,47 @@
+object ChoisirUnTarif: TChoisirUnTarif
+  Left = 0
+  Top = 0
+  Caption = 'Choisir un tarif'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object zoneCategories: TVertScrollBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Visible = False
+    Viewport.Width = 640.000000000000000000
+    Viewport.Height = 480.000000000000000000
+    object zoneCategoriesListe: TFlowLayout
+      Align = Top
+      Size.Width = 640.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Justify = Left
+      JustifyLastLine = Left
+      FlowDirection = LeftToRight
+    end
+  end
+  object ListeLignes: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    AlternatingColors = True
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    CanSwipeDelete = False
+    OnItemClick = ListeLignesItemClick
+  end
+end

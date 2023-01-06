@@ -1,0 +1,304 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  ActiveControl = tvArborescence
+  Caption = 'Gestion de la liste'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object BlocAttenteChargement: TRectangle
+    Align = Contents
+    Fill.Color = claOrange
+    Opacity = 0.500000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    object BlocAttenteChargementAnimation: TAniIndicator
+      Align = Center
+      HitTest = False
+    end
+  end
+  object tvArborescence: TTreeView
+    Align = Client
+    Size.Width = 297.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Sorted = True
+    OnChange = tvArborescenceChange
+    Viewport.Width = 297.000000000000000000
+    Viewport.Height = 480.000000000000000000
+  end
+  object Layout1: TLayout
+    Align = Right
+    Position.X = 312.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object GridPanelLayout1: TGridPanelLayout
+      Align = Top
+      Size.Width = 328.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ColumnCollection = <
+        item
+          Value = 33.000000000000000000
+        end
+        item
+          Value = 34.000000000000000000
+        end
+        item
+          Value = 33.000000000000000000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = btnAjouteFrere
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = btnAjouteDescendant
+          Row = 0
+        end
+        item
+          Column = 2
+          Control = btnSupprimeAvecSesDescendants
+          Row = 0
+        end>
+      RowCollection = <
+        item
+          Value = 100.000000000000000000
+        end>
+      object btnAjouteFrere: TButton
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 98.239997863769540000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '+ Item'
+        OnClick = btnAjouteFrereClick
+      end
+      object btnAjouteDescendant: TButton
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 101.519996643066400000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = '+ Descendant'
+        OnClick = btnAjouteDescendantClick
+      end
+      object btnSupprimeAvecSesDescendants: TButton
+        Align = Client
+        Enabled = False
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 98.240005493164060000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Supprime'
+        OnClick = btnSupprimeAvecSesDescendantsClick
+      end
+    end
+    object zoneDeSaisie: TLayout
+      Align = Top
+      Position.Y = 50.000000000000000000
+      Size.Width = 328.000000000000000000
+      Size.Height = 247.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lblLibelle: TLabel
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 318.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.VertAlign = Leading
+        Text = 'Libell'#233
+        TabOrder = 0
+        object edtLibelle: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Bottom
+          TabOrder = 3
+          Position.Y = 28.000000000000000000
+          Size.Width = 318.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Nom de la rubrique ou du tarif'
+        end
+      end
+      object lblPrix: TLabel
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 65.000000000000000000
+        Size.Width = 318.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.VertAlign = Leading
+        Text = 'Prix unitaire'
+        TabOrder = 1
+        object edtPrix: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Bottom
+          TabOrder = 3
+          Position.Y = 28.000000000000000000
+          Size.Width = 318.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Prix unitaire'
+        end
+      end
+      object lblNomFichier: TLabel
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 125.000000000000000000
+        Size.Width = 318.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.VertAlign = Leading
+        Text = 'Nom du fichier'
+        TabOrder = 2
+        object edtNomFichier: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Bottom
+          TabOrder = 3
+          Position.Y = 28.000000000000000000
+          Size.Width = 318.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Nom du fichier image associ'#233
+        end
+      end
+      object GridPanelLayout2: TGridPanelLayout
+        Align = Bottom
+        Position.Y = 197.000000000000000000
+        Size.Width = 328.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = btnOk
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = btnCancel
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        object btnOk: TButton
+          Align = Client
+          Default = True
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 154.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Valider'
+          OnClick = btnOkClick
+        end
+        object btnCancel: TButton
+          Align = Client
+          Cancel = True
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 154.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Annuler'
+          OnClick = btnCancelClick
+        end
+      end
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Right
+    Cursor = crHSplit
+    MinSize = 20.000000000000000000
+    Position.X = 297.000000000000000000
+    Size.Width = 15.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = dmDBCategories.tabCategories
+    ScopeMappings = <>
+    Left = 88
+    Top = 160
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'prix_unitaire'
+      Control = edtPrix
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'nom_fichier_image'
+      Control = edtNomFichier
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'libelle'
+      Control = edtLibelle
+      Track = False
+    end
+  end
+end

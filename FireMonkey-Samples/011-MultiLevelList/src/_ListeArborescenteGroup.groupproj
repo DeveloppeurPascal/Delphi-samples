@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{13522A16-386F-49E7-BEE1-BEF4BC8F803C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ListeArborescence.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParcourtDeLaListe.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ListeArborescence">
+        <MSBuild Projects="ListeArborescence.dproj"/>
+    </Target>
+    <Target Name="ListeArborescence:Clean">
+        <MSBuild Projects="ListeArborescence.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListeArborescence:Make">
+        <MSBuild Projects="ListeArborescence.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParcourtDeLaListe">
+        <MSBuild Projects="ParcourtDeLaListe.dproj"/>
+    </Target>
+    <Target Name="ParcourtDeLaListe:Clean">
+        <MSBuild Projects="ParcourtDeLaListe.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParcourtDeLaListe:Make">
+        <MSBuild Projects="ParcourtDeLaListe.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ListeArborescence;ParcourtDeLaListe"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ListeArborescence:Clean;ParcourtDeLaListe:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ListeArborescence:Make;ParcourtDeLaListe:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
