@@ -1,0 +1,174 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ScreenHome: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 3
+    object Label3: TLabel
+      Align = Bottom
+      Position.Y = 463.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Label3'
+      TabOrder = 0
+    end
+  end
+  object ScreenGame: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 2
+    object Label2: TLabel
+      Align = Right
+      Position.X = 520.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Label2'
+      TabOrder = 0
+    end
+  end
+  object ScreenCredit: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 1
+    object Label1: TLabel
+      Align = Top
+      Size.Width = 640.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Label1'
+      TabOrder = 0
+    end
+  end
+  object ScreenSettings: TLayout
+    Align = Contents
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 0
+    object Label4: TLabel
+      Align = Left
+      Size.Width = 120.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Label4'
+      TabOrder = 0
+    end
+  end
+  object Background: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claAzure
+      HitTest = False
+      Size.Width = 640.000000000000000000
+      Size.Height = 430.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object animHideScreen: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnFinish = animHideScreenFinish
+      PropertyName = 'Opacity'
+      StartValue = 1.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+    object animShowScreen: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnFinish = animShowScreenFinish
+      PropertyName = 'Opacity'
+      StartValue = 0.000000000000000000
+      StopValue = 1.000000000000000000
+    end
+  end
+  object Rectangle2: TRectangle
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object Button1: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 185.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Button2'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 275.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Button3'
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 95.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Button4'
+      OnClick = Button4Click
+    end
+  end
+end
