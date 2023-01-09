@@ -18,4 +18,6 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 
 * try looking at "[delphi-game](https://github.com/topics/delphi-game)" topic on GitHub to find games developped in Delphi
 
+* If you are looking for more than just samples but also libraries, components, full applications, game engines, ... you can go to the project [Fr0sT-Brutal/awesome-pascal](https://github.com/Fr0sT-Brutal/awesome-pascal) or the catalog [Torry Delphi Developers Library](https://torry.net).
+
 You know other samples repositories ? Please add them to this list (submit [an issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues) or a [PULL REQUEST](CONTRIBUTING.md)).
