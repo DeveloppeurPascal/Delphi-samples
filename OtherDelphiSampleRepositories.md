@@ -8,6 +8,7 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 * [Delphi FMX Game Snippets](https://github.com/DeveloppeurPascal/DelphiFMXGameSnippets)
 * [Embarcadero RAD Studio 11 demos](https://github.com/Embarcadero/RADStudio11Demos)
 * [Embarcadero RAD Studio demo kit](https://github.com/Embarcadero/RADStudio-DemoKit)
+* [Events](https://github.com/flrizzato/EVENTS) (code from in person events)
 * [Learn To Code Boot Camp 2022](https://github.com/LearnDelphiorg/BootCamp2022)
 * [Learn To Code Summer Camp 2021 (french edition)](https://github.com/DeveloppeurPascal/LearnToCodeSummerCamp2021)
 * [One shot tools](https://github.com/DeveloppeurPascal/one-shot-tools)
