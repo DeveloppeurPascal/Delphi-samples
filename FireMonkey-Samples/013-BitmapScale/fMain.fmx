@@ -1,0 +1,195 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 508
+  ClientWidth = 602
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object Image1: TImage
+    OnTap = Image1Tap
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 602.000000000000000000
+    Size.Height = 508.000000000000000000
+    Size.PlatformDefault = False
+    WrapMode = Original
+    OnMouseDown = Image1MouseDown
+  end
+  object Layout1: TLayout
+    Align = Contents
+    Size.Width = 602.000000000000000000
+    Size.Height = 508.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblAppSize: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 592.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblAppSize'
+      TabOrder = 0
+    end
+    object lblScreenSize: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 592.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblScreenSize'
+      TabOrder = 1
+    end
+    object lblBitmapScale: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 592.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblBitmapScale'
+      TabOrder = 3
+    end
+    object lblImageSize: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 59.000000000000000000
+      Size.Width = 592.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblImageSize'
+      TabOrder = 4
+    end
+    object lblImageBitmapSize: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 86.000000000000000000
+      Size.Width = 592.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblImageBitmapSize'
+      TabOrder = 6
+    end
+    object lblImageBitmapCanvasSize: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 113.000000000000000000
+      Size.Width = 592.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblImageBitmapCanvasSize'
+      TabOrder = 5
+    end
+    object lblDisplaysScale: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 167.000000000000000000
+      Size.Width = 592.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'lblBitmapScale'
+      TabOrder = 2
+    end
+    object GridPanelLayout1: TGridPanelLayout
+      Align = Bottom
+      Position.Y = 458.000000000000000000
+      Size.Width = 602.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      ColumnCollection = <
+        item
+          Value = 50.000000000000000000
+        end
+        item
+          Value = 50.000000000000000000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = lblMouseXY
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = lblTapXY
+          Row = 0
+        end>
+      RowCollection = <
+        item
+          Value = 100.000000000000000000
+        end>
+      object lblMouseXY: TLabel
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 291.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'lblMouseXY'
+        TabOrder = 0
+      end
+      object lblTapXY: TLabel
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 291.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'lblTapXY'
+        TabOrder = 1
+      end
+    end
+  end
+  object Rectangle1: TRectangle
+    Anchors = [akRight, akBottom]
+    HitTest = False
+    Position.X = 494.000000000000000000
+    Position.Y = 400.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 100.000000000000000000
+    Size.PlatformDefault = False
+  end
+end
