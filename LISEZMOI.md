@@ -54,7 +54,7 @@ Si vous avez trouvé une faille de sécurité n'en parlez pas en public avant qu
 
 Vous pouvez aussi cloner ce dépôt de code et participer à ses évolutions en soumettant vos modifications si vous le désirez. Lisez les explications dans le fichier [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Modèle de licence double (seulement pour mes projets, pas pour ce modèle de dépôt de code)
+## Modèle de licence double
 
 Ce projet est distribué sous licence [AGPL 3.0 ou ultérieure] (https://choosealicense.com/licenses/agpl-3.0/).
 
