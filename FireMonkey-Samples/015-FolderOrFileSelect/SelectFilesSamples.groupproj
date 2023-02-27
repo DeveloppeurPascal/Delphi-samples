@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{14FF7CF2-63EE-44C7-944D-7755E605F782}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FolderOrFileSelect.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FolderOrFileSelectWithFrame.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FolderOrFileSelect">
+        <MSBuild Projects="FolderOrFileSelect.dproj"/>
+    </Target>
+    <Target Name="FolderOrFileSelect:Clean">
+        <MSBuild Projects="FolderOrFileSelect.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FolderOrFileSelect:Make">
+        <MSBuild Projects="FolderOrFileSelect.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FolderOrFileSelectWithFrame">
+        <MSBuild Projects="FolderOrFileSelectWithFrame.dproj"/>
+    </Target>
+    <Target Name="FolderOrFileSelectWithFrame:Clean">
+        <MSBuild Projects="FolderOrFileSelectWithFrame.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FolderOrFileSelectWithFrame:Make">
+        <MSBuild Projects="FolderOrFileSelectWithFrame.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FolderOrFileSelect;FolderOrFileSelectWithFrame"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FolderOrFileSelect:Clean;FolderOrFileSelectWithFrame:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FolderOrFileSelect:Make;FolderOrFileSelectWithFrame:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
