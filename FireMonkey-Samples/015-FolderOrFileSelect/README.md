@@ -4,6 +4,8 @@
 
 Display of a browsable tree of files and folders with folder selection.
 
+These two examples were developed during [a live coding session on Twitch](https://www.twitch.tv/patrickpremartin). If you want to understand how to do the same at home rather than copying existing code, [the replay (in french)](https://serialstreameur.fr/faire-une-liste-de-selection-de-fichiers-et-dossiers-avec-firemonkey.html) is available on [Serial Streamer](https://serialstreameur.fr/). An auto captioned replay is [available on YouTube](https://youtu.be/vcA52gRbHec) if you need some text to understand the process.
+
 ## FolderOrFileSelect project
 
 This project shows the basic version for testing and running the list.

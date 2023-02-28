@@ -4,6 +4,8 @@
 
 Affichage d'une arborescence parcourable de fichiers et dossiers avec sélection d'un dossier.
 
+Ces deux exemples ont été développés lors d'[une session de codage en direct sur Twitch](https://www.twitch.tv/patrickpremartin). Si vous voulez comprendre comment pour faire pareil chez vous plutôt que copier du code existant, [la rediffusion](https://serialstreameur.fr/faire-une-liste-de-selection-de-fichiers-et-dossiers-avec-firemonkey.html) est disponible sur [Serial Streameur](https://serialstreameur.fr/).
+
 ## FolderOrFileSelect project
 
 Ce projet montre la version de base pour tests et fonctionnement de la liste.
