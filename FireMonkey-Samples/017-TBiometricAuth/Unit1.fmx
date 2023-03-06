@@ -1,0 +1,31 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Position.X = 120.000000000000000000
+    Position.Y = 136.000000000000000000
+    TabOrder = 1
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+  object BiometricAuth1: TBiometricAuth
+    AllowedAttempts = 0
+    BiometricStrengths = []
+    PromptConfirmationRequired = False
+    PromptDescription = 'Coucou'
+    PromptSubtitle = 'T'#39'es qui ?'
+    PromptTitle = 'titre qui dit un truc utile'
+    OnAuthenticateFail = BiometricAuth1AuthenticateFail
+    OnAuthenticateSuccess = BiometricAuth1AuthenticateSuccess
+    Left = 304
+    Top = 224
+  end
+end
