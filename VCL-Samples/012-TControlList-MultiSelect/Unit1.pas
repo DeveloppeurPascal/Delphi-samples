@@ -43,17 +43,32 @@ implementation
 
 {$R *.dfm}
 
+uses
+  System.Generics.Collections;
+
 procedure TForm1.Button1Click(Sender: TObject);
 var
   i: integer;
+  si: TList<integer>;
 begin
   Memo1.Lines.Clear;
-  for i := 0 to ControlList1.ItemCount - 1 do
-    if ControlList1.Selected[i] then
+  si := TList<integer>.create;
+  try
+    for i := 0 to ControlList1.ItemCount - 1 do
+      if ControlList1.Selected[i] then
+        si.Add(i);
+    for i := 0 to si.Count - 1 do
     begin
-      ControlList1.ItemIndex := i;
+      ControlList1.ItemIndex := si[i];
+      // It changes the actual selected index, not the best way to do.
+      // A better way is to check directly from the data source linked
+      // to the control by the index because it won't change the selection or
+      // the display of the TControlList like it does if you change the ItemIndex.
       Memo1.Lines.Add(Label1.Caption);
     end;
+  finally
+    si.Free;
+  end;
   ControlList1.ClearSelection;
 end;
 
