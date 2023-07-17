@@ -36,22 +36,29 @@ const
   PermissionAccessFineLocation = 'android.permission.ACCESS_FINE_LOCATION';
 begin
   PermissionsService.RequestPermissions([PermissionAccessFineLocation],
+{$IF CompilerVersion >= 35.0}
+    // after Delphi 11 Alexandria
+    procedure(const APermissions: TClassicStringDynArray;
+      const AGrantResults: TClassicPermissionStatusDynArray)
+{$ELSE}
+  // before Delphi 11 Alexandria
     procedure(const APermissions: TArray<string>;
-      const AGrantResults: TArray<TPermissionStatus>)
+    const AGrantResults: TArray<TPermissionStatus>)
+{$ENDIF}
+  begin
+    if (Length(AGrantResults) = 1) and
+      (AGrantResults[0] = TPermissionStatus.Granted) then
     begin
-      if (Length(AGrantResults) = 1) and
-        (AGrantResults[0] = TPermissionStatus.Granted) then
-      begin
-        Button1.Enabled := false;
-        LocationSensor1.Active := true;
-      end
-      else
-      begin
-        LocationSensor1.Active := false;
-        TDialogService.ShowMessage
-          ('Fonction GPS nécessaire pour ce programme, veuillez l''autoriser.');
-      end;
-    end);
+      Button1.Enabled := false;
+      LocationSensor1.Active := true;
+    end
+    else
+    begin
+      LocationSensor1.Active := false;
+      TDialogService.ShowMessage
+        ('Fonction GPS nécessaire pour ce programme, veuillez l''autoriser.');
+    end;
+  end);
 end;
 
 procedure TForm1.LocationSensor1LocationChanged(Sender: TObject;
