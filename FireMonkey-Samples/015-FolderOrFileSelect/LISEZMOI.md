@@ -4,7 +4,7 @@
 
 Affichage d'une arborescence parcourable de fichiers et dossiers avec sélection d'un dossier.
 
-Ces deux exemples ont été développés lors d'[une session de codage en direct sur Twitch](https://www.twitch.tv/patrickpremartin). Si vous voulez comprendre comment pour faire pareil chez vous plutôt que copier du code existant, [la rediffusion](https://serialstreameur.fr/faire-une-liste-de-selection-de-fichiers-et-dossiers-avec-firemonkey.html) est disponible sur [Serial Streameur](https://serialstreameur.fr/).
+Ces deux exemples ont été développés lors d'[une session de codage en direct sur Twitch](https://www.twitch.tv/patrickpremartin). Si vous voulez comprendre comment pour faire pareil chez vous plutôt que copier du code existant, [la rediffusion](https://serialstreameur.fr/faire-une-liste-de-selection-de-fichiers-et-dossiers-avec-firemonkey.html) est disponible sur [Serial Streameur](https://serialstreameur.fr/). Plus d'explications sont disponibles sur [le blog](https://developpeur-pascal.fr/faire-une-liste-de-selection-de-fichiers-et-dossiers-pour-un-projet-firemonkey.html).
 
 ## FolderOrFileSelect project
 
@@ -19,4 +19,4 @@ Ce projet utilise l'autre en transformant le résultat en cadre FMX réutilisabl
 Les images de fichiers et dossiers sont sous licence [Adobe Stock](https://vasur.fr/adobestock). Ne les utilisez pas en dehors de ce projet d'exemple.
 
 La liste d'images a été générée par 
-[Folder2FMXImageList](https://github.com/DeveloppeurPascal/Folder2FMXImageList).
+[Folder2FMXImageList](https://folder2fmximagelist.olfsoftware.fr/).
