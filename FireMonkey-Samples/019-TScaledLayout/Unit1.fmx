@@ -1,0 +1,86 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ScaledLayout1: TScaledLayout
+    OriginalWidth = 129.000000000000000000
+    OriginalHeight = 97.000000000000000000
+    Position.X = 160.000000000000000000
+    Position.Y = 160.000000000000000000
+    Size.Width = 321.000000000000000000
+    Size.Height = 105.000000000000000000
+    Size.PlatformDefault = False
+    object Button1: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 311.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Button1'
+    end
+    object Label1: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 311.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Label1'
+      TabOrder = 1
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 2
+      Position.X = 5.000000000000000000
+      Position.Y = 32.000000000000000000
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 311.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object TrackBar1: TTrackBar
+    Align = Top
+    CanParentFocus = True
+    Orientation = Horizontal
+    Size.Width = 640.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Value = 50.000000000000000000
+    OnTracking = TrackBar1Tracking
+  end
+  object TrackBar2: TTrackBar
+    Align = Top
+    CanParentFocus = True
+    Orientation = Horizontal
+    Position.Y = 19.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Value = 50.000000000000000000
+    OnTracking = TrackBar2Tracking
+  end
+end
