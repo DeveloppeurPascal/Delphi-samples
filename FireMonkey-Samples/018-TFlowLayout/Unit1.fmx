@@ -1,0 +1,178 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 754
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object VertScrollBox1: TVertScrollBox
+    Align = Contents
+    Size.Width = 754.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 754.000000000000000000
+    Viewport.Height = 480.000000000000000000
+    object FlowLayout1: TFlowLayout
+      Align = Top
+      Size.Width = 754.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Justify = Left
+      JustifyLastLine = Left
+      FlowDirection = LeftToRight
+      object Button1: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 13
+        Text = 'Button1'
+      end
+      object Button2: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 95.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 12
+        Text = 'Button1'
+      end
+      object Button3: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 185.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 11
+        Text = 'Button1'
+      end
+      object Button4: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 275.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 10
+        Text = 'Button1'
+      end
+      object Button5: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 365.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 9
+        Text = 'Button1'
+      end
+      object Button6: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 455.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 8
+        Text = 'Button1'
+      end
+      object Button7: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 545.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 7
+        Text = 'Button1'
+      end
+      object Button8: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 635.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 6
+        Text = 'Button1'
+      end
+      object Button9: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 37.000000000000000000
+        TabOrder = 5
+        Text = 'Button1'
+      end
+      object Button10: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 95.000000000000000000
+        Position.Y = 37.000000000000000000
+        TabOrder = 4
+        Text = 'Button1'
+      end
+      object Button11: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 185.000000000000000000
+        Position.Y = 37.000000000000000000
+        TabOrder = 3
+        Text = 'Button1'
+      end
+      object Button12: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 275.000000000000000000
+        Position.Y = 37.000000000000000000
+        TabOrder = 2
+        Text = 'Button1'
+      end
+      object Button13: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 365.000000000000000000
+        Position.Y = 37.000000000000000000
+        TabOrder = 1
+        Text = 'Button1'
+      end
+      object Button14: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 455.000000000000000000
+        Position.Y = 37.000000000000000000
+        TabOrder = 0
+        Text = 'Button1'
+      end
+    end
+    object Rectangle1: TRectangle
+      Align = Top
+      Position.Y = 49.000000000000000000
+      Size.Width = 754.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end
