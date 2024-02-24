@@ -19,6 +19,7 @@ Pour télécharger ce dépôt de code il est recommandé de passer par "git" mai
 Ce projet utilise des dépendances sous forme de sous modules. Ils seront absents du fichier ZIP. Vous devrez les télécharger à la main.
 
 * [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) doit être installé dans le sous dossier ./Libraries/librairies
+* [DeveloppeurPascal/Socket-Messaging-Library](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) doit être installé dans le sous dossier ./Libraries/Socket-Messaging-Library
 
 Certains projets ont besoin des bases de données de démo installées avec les exemples optionnels de Delphi. Si vous ne les avez pas, vous les trouverez dans le menu "Outils / Gérer les plateformes" puis l'onglet "Autres options" et enfin la rubrique "Samples" à installer.
 

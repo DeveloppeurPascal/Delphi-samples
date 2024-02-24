@@ -19,6 +19,7 @@ To download this code repository, we recommend using "git", but you can also dow
 This project uses dependencies in the form of sub-modules. They will be absent from the ZIP file. You'll have to download them by hand.
 
 * [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) must be installed in the ./Libraries/librairies subfolder.
+* [DeveloppeurPascal/Socket-Messaging-Library](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) must be installed in the ./Libraries/Socket-Messaging-Library subfolder.
 
 Some projects needs sample databases installed as option with Delphi samples. If you don't have them, you'll find them in menu "Tools / Manage plateforms" then tab item "other options" and "samples" to install.
 
