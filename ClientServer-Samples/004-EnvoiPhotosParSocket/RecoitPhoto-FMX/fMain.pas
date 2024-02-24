@@ -14,7 +14,8 @@ uses
   FMX.Graphics,
   FMX.Dialogs,
   FMX.StdCtrls,
-  Olf.Net.Socket.Messaging, SendPicturesOnANetworkWithSockets;
+  Olf.Net.Socket.Messaging,
+  SendPicturesOnANetworkWithSockets;
 
 type
   TfrmMain = class(TForm)
@@ -23,9 +24,9 @@ type
     procedure FormDestroy(Sender: TObject);
   private
     Client: TSendPicturesOnANetworkWithSocketsClient;
-  public
     procedure ReceiveSPNSendABitmapMessage(Const ASender
       : TOlfSMSrvConnectedClient; Const AMessage: TSPNSendABitmapMessage);
+  public
   end;
 
 var
@@ -50,7 +51,11 @@ end;
 procedure TfrmMain.ReceiveSPNSendABitmapMessage(const ASender
   : TOlfSMSrvConnectedClient; const AMessage: TSPNSendABitmapMessage);
 begin
-  ImageControl1.Bitmap.Assign(AMessage.Bitmap);
+  tthread.Synchronize(nil,
+    procedure
+    begin
+      ImageControl1.Bitmap.Assign(AMessage.Bitmap);
+    end);
   AMessage.Free;
 end;
 
