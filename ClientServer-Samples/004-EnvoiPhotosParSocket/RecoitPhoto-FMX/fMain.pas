@@ -51,12 +51,7 @@ end;
 procedure TfrmMain.ReceiveSPNSendABitmapMessage(const ASender
   : TOlfSMSrvConnectedClient; const AMessage: TSPNSendABitmapMessage);
 begin
-  tthread.Synchronize(nil,
-    procedure
-    begin
-      ImageControl1.Bitmap.Assign(AMessage.Bitmap);
-    end);
-  AMessage.Free;
+  ImageControl1.Bitmap.Assign(AMessage.Bitmap);
 end;
 
 initialization
