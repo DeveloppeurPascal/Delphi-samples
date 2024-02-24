@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9A03225D-3089-4361-BBE0-6D36BE1E8975}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PriseDePhoto-FMX\PictureSender_FMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RecoitPhoto-FMX\PictureReceiver_FMX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PictureSender_FMX">
+        <MSBuild Projects="PriseDePhoto-FMX\PictureSender_FMX.dproj"/>
+    </Target>
+    <Target Name="PictureSender_FMX:Clean">
+        <MSBuild Projects="PriseDePhoto-FMX\PictureSender_FMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PictureSender_FMX:Make">
+        <MSBuild Projects="PriseDePhoto-FMX\PictureSender_FMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PictureReceiver_FMX">
+        <MSBuild Projects="RecoitPhoto-FMX\PictureReceiver_FMX.dproj"/>
+    </Target>
+    <Target Name="PictureReceiver_FMX:Clean">
+        <MSBuild Projects="RecoitPhoto-FMX\PictureReceiver_FMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PictureReceiver_FMX:Make">
+        <MSBuild Projects="RecoitPhoto-FMX\PictureReceiver_FMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PictureSender_FMX;PictureReceiver_FMX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PictureSender_FMX:Clean;PictureReceiver_FMX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PictureSender_FMX:Make;PictureReceiver_FMX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
