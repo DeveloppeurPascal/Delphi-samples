@@ -5,7 +5,8 @@ uses
   FMX.Forms,
   fMain in 'fMain.pas' {fmrMain},
   SendPicturesOnANetworkWithSockets in '..\SendPicturesOnANetworkWithSockets.pas',
-  Olf.Net.Socket.Messaging in '..\..\..\Libraries\Socket-Messaging-Library\src\Olf.Net.Socket.Messaging.pas';
+  Olf.Net.Socket.Messaging in '..\..\..\Libraries\Socket-Messaging-Library\src\Olf.Net.Socket.Messaging.pas',
+  Olf.FMX.Streams in '..\..\..\Libraries\librairies\Olf.FMX.Streams.pas';
 
 {$R *.res}
 
