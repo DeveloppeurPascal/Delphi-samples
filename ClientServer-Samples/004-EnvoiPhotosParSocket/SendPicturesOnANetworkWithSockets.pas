@@ -3,14 +3,14 @@
 // ****************************************
 // * Send pictures on a network with sockets
 // ****************************************
-// 
+//
 // A server send a picture to connected clients
-// 
+//
 // ****************************************
 // File generator : Socket Messaging Code Generator (v1.0)
-// Website : https://socketmessaging.developpeur-pascal.fr/ 
+// Website : https://socketmessaging.developpeur-pascal.fr/
 // Generation date : 24/02/2024 20:11:32
-// 
+//
 // Don't do any change on this file. They will be erased by next generation !
 // ****************************************
 
@@ -25,7 +25,8 @@ interface
 uses
   FMX.Graphics,
   System.Classes,
-  Olf.Net.Socket.Messaging;
+  Olf.Net.Socket.Messaging,
+  Olf.FMX.Streams;
 
 type
   /// <summary>
@@ -36,6 +37,7 @@ type
     FBitmap: TBitmap;
     procedure SetBitmap(const Value: TBitmap);
   public
+    destructor Destroy; override;
     /// <summary>
     /// Bitmap
     /// </summary>
@@ -44,6 +46,7 @@ type
     /// </remarks>
     property Bitmap: TBitmap read FBitmap write SetBitmap;
     constructor Create; override;
+
     procedure LoadFromStream(Stream: TStream); override;
     procedure SaveToStream(Stream: TStream); override;
     function GetNewInstance: TOlfSMMessage; override;
@@ -93,7 +96,6 @@ begin
 end;
 
 {$ENDREGION}
-
 {$REGION 'TSendPicturesOnANetworkWithSocketsClient'}
 
 constructor TSendPicturesOnANetworkWithSocketsClient.Create;
@@ -103,8 +105,8 @@ begin
   SubscribeToMessage(1, onReceiveMessage1);
 end;
 
-procedure TSendPicturesOnANetworkWithSocketsClient.onReceiveMessage1(const ASender: TOlfSMSrvConnectedClient;
-const AMessage: TOlfSMMessage);
+procedure TSendPicturesOnANetworkWithSocketsClient.onReceiveMessage1
+  (const ASender: TOlfSMSrvConnectedClient; const AMessage: TOlfSMMessage);
 var
   msg: TSPNSendABitmapMessage;
 begin
@@ -116,7 +118,6 @@ begin
 end;
 
 {$ENDREGION}
-
 {$REGION 'TSPNSendABitmapMessage' }
 
 constructor TSPNSendABitmapMessage.Create;
@@ -124,6 +125,12 @@ begin
   inherited;
   MessageID := 1;
   FBitmap := TBitmap.Create;
+end;
+
+destructor TSPNSendABitmapMessage.Destroy;
+begin
+  FBitmap.Free;
+  inherited;
 end;
 
 function TSPNSendABitmapMessage.GetNewInstance: TOlfSMMessage;
@@ -134,13 +141,14 @@ end;
 procedure TSPNSendABitmapMessage.LoadFromStream(Stream: TStream);
 begin
   inherited;
-  FBitmap.LoadFromStream(Stream);
+  FBitmap.Free;
+  FBitmap := LoadBitmapFromStream(Stream);
 end;
 
 procedure TSPNSendABitmapMessage.SaveToStream(Stream: TStream);
 begin
   inherited;
-  FBitmap.SaveToStream(Stream);
+  SaveBitmapToStream(FBitmap, Stream);
 end;
 
 procedure TSPNSendABitmapMessage.SetBitmap(const Value: TBitmap);
