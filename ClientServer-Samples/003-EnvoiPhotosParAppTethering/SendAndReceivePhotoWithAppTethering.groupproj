@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4743AF4B-C2A8-41E2-A098-1E43396BD543}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PriseDePhotos-FMX\TakeAndSendPhotoWithAppTethering.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RecoitPhotos-FMX\ReceivePhotoFromAppTetheringFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RecoitPhotos-VCL\ReceivePhotoFromAppTetheringVCL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TakeAndSendPhotoWithAppTethering">
+        <MSBuild Projects="PriseDePhotos-FMX\TakeAndSendPhotoWithAppTethering.dproj"/>
+    </Target>
+    <Target Name="TakeAndSendPhotoWithAppTethering:Clean">
+        <MSBuild Projects="PriseDePhotos-FMX\TakeAndSendPhotoWithAppTethering.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TakeAndSendPhotoWithAppTethering:Make">
+        <MSBuild Projects="PriseDePhotos-FMX\TakeAndSendPhotoWithAppTethering.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReceivePhotoFromAppTetheringFMX">
+        <MSBuild Projects="RecoitPhotos-FMX\ReceivePhotoFromAppTetheringFMX.dproj"/>
+    </Target>
+    <Target Name="ReceivePhotoFromAppTetheringFMX:Clean">
+        <MSBuild Projects="RecoitPhotos-FMX\ReceivePhotoFromAppTetheringFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReceivePhotoFromAppTetheringFMX:Make">
+        <MSBuild Projects="RecoitPhotos-FMX\ReceivePhotoFromAppTetheringFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReceivePhotoFromAppTetheringVCL">
+        <MSBuild Projects="RecoitPhotos-VCL\ReceivePhotoFromAppTetheringVCL.dproj"/>
+    </Target>
+    <Target Name="ReceivePhotoFromAppTetheringVCL:Clean">
+        <MSBuild Projects="RecoitPhotos-VCL\ReceivePhotoFromAppTetheringVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReceivePhotoFromAppTetheringVCL:Make">
+        <MSBuild Projects="RecoitPhotos-VCL\ReceivePhotoFromAppTetheringVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TakeAndSendPhotoWithAppTethering:Clean;ReceivePhotoFromAppTetheringFMX:Clean;ReceivePhotoFromAppTetheringVCL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TakeAndSendPhotoWithAppTethering:Make;ReceivePhotoFromAppTetheringFMX:Make;ReceivePhotoFromAppTetheringVCL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
