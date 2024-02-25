@@ -4,3 +4,6 @@
 [submodule "Libraries/Socket-Messaging-Library"]
 	path = Libraries/Socket-Messaging-Library
 	url = https://github.com/DeveloppeurPascal/Socket-Messaging-Library.git
+[submodule "Libraries/ZXing.Delphi"]
+	path = Libraries/ZXing.Delphi
+	url = https://github.com/Spelt/ZXing.Delphi.git
