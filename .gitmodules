@@ -7,3 +7,6 @@
 [submodule "Libraries/ZXing.Delphi"]
 	path = Libraries/ZXing.Delphi
 	url = https://github.com/Spelt/ZXing.Delphi.git
+[submodule "Libraries/DelphiZXingQRCode"]
+	path = Libraries/DelphiZXingQRCode
+	url = https://github.com/foxitsoftware/DelphiZXingQRCode.git
