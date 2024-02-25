@@ -20,8 +20,14 @@ Ce projet utilise des dépendances sous forme de sous modules. Ils seront absent
 
 * [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) doit être installé dans le sous dossier ./Libraries/librairies
 * [DeveloppeurPascal/Socket-Messaging-Library](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) doit être installé dans le sous dossier ./Libraries/Socket-Messaging-Library
+* [Spelt/ZXing.Delphi](https://github.com/Spelt/ZXing.Delphi) doit être installé dans le sous dossier ./Libraries/ZXing.Delphi
+* [foxitsoftware/DelphiZXingQRCode](https://github.com/foxitsoftware/DelphiZXingQRCode) doit être installé dans le sous dossier ./Libraries/DelphiZXingQRCode
 
 Certains projets ont besoin des bases de données de démo installées avec les exemples optionnels de Delphi. Si vous ne les avez pas, vous les trouverez dans le menu "Outils / Gérer les plateformes" puis l'onglet "Autres options" et enfin la rubrique "Samples" à installer.
+
+L'exemple ClientServer-Samples\004-EnvoiPhotosParSocket utilise [la librairie Socket Messaging](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) pour la communication via socket sur un réseau TCP/IP.
+
+L'exemple ClientServer-Samples\005-SetupAMobileAppWithQRCode utilise [la librairie ZXing.Delphi](https://github.com/Spelt/ZXing.Delphi) pour le décodage d'un QR code et [la librairie DelphiZXingQRCode](https://github.com/foxitsoftware/DelphiZXingQRCode) pour la création d'un QR code.
 
 L'exemple FireDAC-Samples\003-CDataRSS utilise le [driver FireDAC RSS](https://cdata.com/drivers/rss/firedac/) de [CData](https://cdata.com/).
 (si vous utilisez la version d'évaluation, compilez en 64 bits car la version 32 bits de la DLL de CData est absente)
