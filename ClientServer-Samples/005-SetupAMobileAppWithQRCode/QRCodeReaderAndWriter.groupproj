@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{011E45C0-34DC-4077-AB22-A9F9DC4B0BBB}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="QRCodeGenerator-VCL\QRCodeGenerator_VCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="QRCodeReader-FMX\QRCodeReader_FMX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="QRCodeGenerator_VCL">
+        <MSBuild Projects="QRCodeGenerator-VCL\QRCodeGenerator_VCL.dproj"/>
+    </Target>
+    <Target Name="QRCodeGenerator_VCL:Clean">
+        <MSBuild Projects="QRCodeGenerator-VCL\QRCodeGenerator_VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="QRCodeGenerator_VCL:Make">
+        <MSBuild Projects="QRCodeGenerator-VCL\QRCodeGenerator_VCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="QRCodeReader_FMX">
+        <MSBuild Projects="QRCodeReader-FMX\QRCodeReader_FMX.dproj"/>
+    </Target>
+    <Target Name="QRCodeReader_FMX:Clean">
+        <MSBuild Projects="QRCodeReader-FMX\QRCodeReader_FMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="QRCodeReader_FMX:Make">
+        <MSBuild Projects="QRCodeReader-FMX\QRCodeReader_FMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="QRCodeGenerator_VCL;QRCodeReader_FMX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="QRCodeGenerator_VCL:Clean;QRCodeReader_FMX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="QRCodeGenerator_VCL:Make;QRCodeReader_FMX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
