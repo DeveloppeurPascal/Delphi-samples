@@ -1,11 +1,8 @@
 unit fMain;
 
-// TODO : update the manifest and permissions for Android
-// TODO : gérer la mise en background de l'application (cf FieFrapic)
 // TODO : ajouter un bouton de changement de caméra (front / back) (cf FieFrapic)
 // TODO : activer l'autofocus si disponible (cf FieFrapic)
 // TODO : ajouter un bouton pour activer le flash si disponible (cf FieFrapic)
-// TODO : si on est sur Android ou iOS, activer par défaut la caméra arrière
 
 interface
 
@@ -25,7 +22,9 @@ uses
   FMX.Memo,
   FMX.Controls.Presentation,
   FMX.StdCtrls,
-  FMX.Media;
+  FMX.Media,
+  System.Messaging,
+  FMX.Platform;
 
 type
   TfrmMain = class(TForm)
@@ -40,9 +39,12 @@ type
       const ATime: TMediaTime);
   private
     FisQRCaptureOn: boolean;
+    FWasCaptureOn: boolean;
     procedure SetisQRCaptureOn(const Value: boolean);
   protected
     ScanEnCours: boolean;
+    procedure ApplicationEventChangedHandler(const Sender: TObject;
+      const AMessage: TMessage);
   public
     property isQRCaptureOn: boolean read FisQRCaptureOn write SetisQRCaptureOn;
   end;
@@ -54,8 +56,28 @@ implementation
 
 {$R *.fmx}
 
-uses ZXing.ScanManager, ZXing.BarcodeFormat, ZXing.ReadResult;
+uses
+  ZXing.ScanManager,
+  ZXing.BarcodeFormat,
+  ZXing.ReadResult,
+  uChecksumVerif,
+  uConsts;
+
 { TForm1 }
+
+procedure TfrmMain.ApplicationEventChangedHandler(const Sender: TObject;
+  const AMessage: TMessage);
+begin
+  case TApplicationEventMessage(AMessage).Value.Event of
+    TApplicationEvent.WillBecomeInactive:
+      begin
+        FWasCaptureOn := isQRCaptureOn;
+        isQRCaptureOn := false;
+      end;
+    TApplicationEvent.BecameActive:
+      isQRCaptureOn := FWasCaptureOn;
+  end;
+end;
 
 procedure TfrmMain.btnStartCameraClick(Sender: TObject);
 begin
@@ -88,13 +110,42 @@ begin
                 try
                   tthread.Queue(nil,
                     procedure
+                    var
+                      ReceivedVerifCode, ReceivedText: string;
+                      tab: TArray<string>;
                     begin
-                      isQRCaptureOn := false;
-                      // TODO : controler le code de vérification
-                      Memo1.Lines.Clear;
-                      Memo1.Lines.Text := res.Text;
+                      try
+                        isQRCaptureOn := false;
+                        tab := res.text.Split([#9]);
+                        if (length(tab) = 2) then
+                        begin
+                          ReceivedVerifCode := tab[0];
+                          ReceivedText := tab[1];
+                        end
+                        else
+                        begin
+                          ReceivedVerifCode := '';
+                          ReceivedText := tab[0];
+                        end;
+                        if ChecksumVerif.check(ReceivedVerifCode, ReceivedText,
+                          CPrivateChecksumSalt1, CPrivateChecksumSalt2) then
+                        begin
+                          Memo1.Lines.Clear;
+                          Memo1.Lines.text := 'Tout est ok. Texte lu :' +
+                            slinebreak + slinebreak + ReceivedText;
+                        end
+                        else
+                        begin
+                          Memo1.Lines.Clear;
+                          Memo1.Lines.text :=
+                            'Mauvais code de controle. Texte reçu :' +
+                            slinebreak + slinebreak + ReceivedText;
+                        end;
+                      finally
+                        res.Free;
+                      end;
                     end);
-                finally
+                except
                   res.Free;
                 end;
             finally
@@ -114,6 +165,9 @@ end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
+  TMessageManager.DefaultManager.SubscribeToMessage(TApplicationEventMessage,
+    ApplicationEventChangedHandler);
+
   isQRCaptureOn := false;
   ScanEnCours := false;
   Memo1.Lines.Clear;
@@ -128,6 +182,31 @@ procedure TfrmMain.SetisQRCaptureOn(const Value: boolean);
 begin
   FisQRCaptureOn := Value;
 
+  if Value then
+  begin // Modification des réglages de la caméra si on va l'activer
+{$IF Defined(IOS) or Defined(ANDROID)}
+    // Forçage caméra arrière pour iOS et Android
+    if not(CameraComponent1.Kind = TCameraKind.BackCamera) then
+      try
+        if CameraComponent1.Active then
+          CameraComponent1.Active := false;
+        CameraComponent1.Kind := TCameraKind.BackCamera;
+      except
+        CameraComponent1.Kind := TCameraKind.default;
+      end;
+{$ENDIF}
+    // Activation de la meilleure qualité possible (lorsque c'est pris en charge)
+    if not(CameraComponent1.Quality = TVideoCaptureQuality.PhotoQuality) then
+      try
+        if CameraComponent1.Active then
+          CameraComponent1.Active := false;
+        CameraComponent1.Quality := TVideoCaptureQuality.PhotoQuality;
+      except
+        CameraComponent1.Quality := TVideoCaptureQuality.CaptureSettings;
+      end;
+  end;
+
+  // Activation (ou désactivation de la caméra)
   CameraComponent1.Active := FisQRCaptureOn;
 
   ImageControl1.Visible := CameraComponent1.Active;
