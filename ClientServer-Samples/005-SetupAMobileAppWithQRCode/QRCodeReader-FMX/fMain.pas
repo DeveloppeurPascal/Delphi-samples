@@ -168,6 +168,7 @@ begin
   TMessageManager.DefaultManager.SubscribeToMessage(TApplicationEventMessage,
     ApplicationEventChangedHandler);
 
+  FWasCaptureOn := false;
   isQRCaptureOn := false;
   ScanEnCours := false;
   Memo1.Lines.Clear;
