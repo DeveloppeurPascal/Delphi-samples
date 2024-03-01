@@ -2,8 +2,6 @@ unit fMain;
 
 interface
 
-// TODO : update the manifest and permissions for Android
-// TODO : gérer la mise en background de l'application (cf FieFrapic)
 // TODO : ajouter un bouton de changement de caméra (front / back) (cf FieFrapic)
 // TODO : activer l'autofocus si disponible (cf FieFrapic)
 // TODO : ajouter un bouton pour activer le flash si disponible (cf FieFrapic)
@@ -24,7 +22,9 @@ uses
   FMX.Controls.Presentation,
   FMX.StdCtrls,
   FMX.Layouts,
-  FMX.Media;
+  FMX.Media,
+  System.Messaging,
+  FMX.Platform;
 
 type
   TfrmMain = class(TForm)
@@ -41,8 +41,11 @@ type
     procedure FormDestroy(Sender: TObject);
   private
     FisCameraStarted: boolean;
+    FWasCaptureOn: boolean;
     procedure SetisCameraStarted(const Value: boolean);
   protected
+    procedure ApplicationEventChangedHandler(const Sender: TObject;
+      const AMessage: TMessage);
   public
     property isCameraStarted: boolean read FisCameraStarted
       write SetisCameraStarted;
@@ -57,6 +60,20 @@ implementation
 
 uses
   uDMAppTetheringSender;
+
+procedure TfrmMain.ApplicationEventChangedHandler(const Sender: TObject;
+  const AMessage: TMessage);
+begin
+  case TApplicationEventMessage(AMessage).Value.Event of
+    TApplicationEvent.WillBecomeInactive:
+      begin
+        FWasCaptureOn := isCameraStarted;
+        isCameraStarted := false;
+      end;
+    TApplicationEvent.BecameActive:
+      isCameraStarted := FWasCaptureOn;
+  end;
+end;
 
 procedure TfrmMain.btnSendPhotoClick(Sender: TObject);
 var
@@ -84,6 +101,7 @@ end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
+  FWasCaptureOn := false;
   isCameraStarted := false;
 end;
 
@@ -95,7 +113,18 @@ end;
 procedure TfrmMain.SetisCameraStarted(const Value: boolean);
 begin
   FisCameraStarted := Value;
+
+  if not(CameraComponent1.Quality = TVideoCaptureQuality.PhotoQuality) then
+    try
+      if CameraComponent1.Active then
+        CameraComponent1.Active := false;
+      CameraComponent1.Quality := TVideoCaptureQuality.PhotoQuality;
+    except
+      CameraComponent1.Quality := TVideoCaptureQuality.CaptureSettings;
+    end;
+
   CameraComponent1.Active := FisCameraStarted;
+
   if FisCameraStarted then
     btnStartStopCapture.Text := 'Stop the capture'
   else
