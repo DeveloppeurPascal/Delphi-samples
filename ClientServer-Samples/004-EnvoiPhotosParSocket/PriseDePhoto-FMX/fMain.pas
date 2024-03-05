@@ -51,8 +51,9 @@ var
 begin
   msg := TSPNSendABitmapMessage.Create;
   try
-    msg.Bitmap.Assign(ImageControl1.Bitmap);
+    msg.Bitmap := tbitmap.Create;
     try
+      msg.Bitmap.Assign(ImageControl1.Bitmap);
       Serveur.SendMessageToAll(msg);
     except
     end;
