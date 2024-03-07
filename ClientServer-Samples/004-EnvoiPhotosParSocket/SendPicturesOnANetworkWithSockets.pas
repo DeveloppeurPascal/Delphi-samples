@@ -9,7 +9,7 @@
 // ****************************************
 // File generator : Socket Messaging Code Generator (v1.1)
 // Website : https://smcodegenerator.olfsoftware.fr/ 
-// Generation date : 05/03/2024 19:15:56
+// Generation date : 07/03/2024 16:26:43
 // 
 // Don't do any change on this file. They will be erased by next generation !
 // ****************************************
@@ -49,6 +49,7 @@ type
     /// </remarks>
     property Bitmap: TBitmap read FBitmap write SetBitmap;
     constructor Create; override;
+    destructor Destroy; override;
     procedure LoadFromStream(Stream: TStream); override;
     procedure SaveToStream(Stream: TStream); override;
     function GetNewInstance: TOlfSMMessage; override;
@@ -175,8 +176,6 @@ end;
 
 procedure TSendPicturesOnANetworkWithSocketsClient.onReceiveMessage1(const ASender: TOlfSMSrvConnectedClient;
 const AMessage: TOlfSMMessage);
-var
-  msg: TSPNSendABitmapMessage;
 begin
   if not(AMessage is TSPNSendABitmapMessage) then
     exit;
@@ -194,6 +193,12 @@ begin
   inherited;
   MessageID := 1;
   FBitmap := nil;
+end;
+
+destructor TSPNSendABitmapMessage.Destroy;
+begin
+  FBitmap.Free;
+  inherited;
 end;
 
 function TSPNSendABitmapMessage.GetNewInstance: TOlfSMMessage;
