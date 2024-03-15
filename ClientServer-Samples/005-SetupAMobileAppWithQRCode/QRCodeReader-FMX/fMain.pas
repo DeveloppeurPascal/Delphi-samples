@@ -60,8 +60,8 @@ uses
   ZXing.ScanManager,
   ZXing.BarcodeFormat,
   ZXing.ReadResult,
-  uChecksumVerif,
-  uConsts;
+  uConsts,
+  Olf.RTL.Checksum;
 
 { TForm1 }
 

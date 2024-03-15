@@ -5,8 +5,6 @@ uses
   FMX.Forms,
   fMain in 'fMain.pas' {frmMain},
   uConsts in '..\uConsts.pas',
-  u_md5 in '..\..\..\Libraries\librairies\u_md5.pas',
-  uChecksumVerif in '..\..\..\Libraries\librairies\uChecksumVerif.pas',
   ZXing.ScanManager in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\ZXing.ScanManager.pas',
   ZXing.Datamatrix.DataMatrixReader in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\2D Barcodes\ZXing.Datamatrix.DataMatrixReader.pas',
   ZXing.QrCode.QRCodeReader in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\2D Barcodes\ZXing.QrCode.QRCodeReader.pas',
@@ -82,7 +80,9 @@ uses
   ZXing.OneD.UPCEANExtension5Support in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtension5Support.pas',
   ZXing.OneD.UPCEANExtensionSupport in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtensionSupport.pas',
   ZXing.OneD.UPCEANReader in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\1D Barcodes\ZXing.OneD.UPCEANReader.pas',
-  ZXing.OneD.UPCEReader in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\1D Barcodes\ZXing.OneD.UPCEReader.pas';
+  ZXing.OneD.UPCEReader in '..\..\..\Libraries\ZXing.Delphi\Lib\Classes\1D Barcodes\ZXing.OneD.UPCEReader.pas',
+  Olf.RTL.Checksum in '..\..\..\Libraries\librairies\src\Olf.RTL.Checksum.pas',
+  u_md5 in '..\..\..\Libraries\librairies\src\u_md5.pas';
 
 {$R *.res}
 
