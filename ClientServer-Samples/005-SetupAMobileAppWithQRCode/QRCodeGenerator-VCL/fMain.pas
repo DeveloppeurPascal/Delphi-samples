@@ -37,9 +37,9 @@ implementation
 {$R *.dfm}
 
 uses
-  uChecksumVerif,
   uConsts,
-  DelphiZXIngQRCode;
+  DelphiZXIngQRCode,
+  Olf.RTL.Checksum;
 
 procedure TfrmMain.Button1Click(Sender: TObject);
 begin

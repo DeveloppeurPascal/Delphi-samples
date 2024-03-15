@@ -3,10 +3,10 @@ program QRCodeGenerator_VCL;
 uses
   Vcl.Forms,
   fMain in 'fMain.pas' {frmMain},
-  uChecksumVerif in '..\..\..\Libraries\librairies\uChecksumVerif.pas',
-  u_md5 in '..\..\..\Libraries\librairies\u_md5.pas',
   uConsts in '..\uConsts.pas',
-  DelphiZXIngQRCode in '..\..\..\Libraries\DelphiZXingQRCode\Source\DelphiZXIngQRCode.pas';
+  DelphiZXIngQRCode in '..\..\..\Libraries\DelphiZXingQRCode\Source\DelphiZXIngQRCode.pas',
+  Olf.RTL.Checksum in '..\..\..\Libraries\librairies\src\Olf.RTL.Checksum.pas',
+  u_md5 in '..\..\..\Libraries\librairies\src\u_md5.pas';
 
 {$R *.res}
 
