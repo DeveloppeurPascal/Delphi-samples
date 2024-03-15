@@ -153,7 +153,7 @@ begin
               bmp.Free;
               ScanEnCours := false;
             end;
-          end);
+          end).Start;
       except
         bmp.Free;
       end;
@@ -205,6 +205,14 @@ begin
       except
         CameraComponent1.Quality := TVideoCaptureQuality.CaptureSettings;
       end;
+
+{$IFDEF ANDROID}
+    try
+      CameraComponent1.FocusMode := TFocusMode.ContinuousAutoFocus;
+    except
+      CameraComponent1.FocusMode := TFocusMode.AutoFocus;
+    end;
+{$ENDIF}
   end;
 
   // Activation (ou désactivation de la caméra)
