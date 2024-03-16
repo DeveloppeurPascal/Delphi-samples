@@ -102,10 +102,10 @@
             <Form>frmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\..\..\Libraries\librairies\uChecksumVerif.pas"/>
-        <DCCReference Include="..\..\..\Libraries\librairies\u_md5.pas"/>
         <DCCReference Include="..\uConsts.pas"/>
         <DCCReference Include="..\..\..\Libraries\DelphiZXingQRCode\Source\DelphiZXIngQRCode.pas"/>
+        <DCCReference Include="..\..\..\Libraries\librairies\src\Olf.RTL.Checksum.pas"/>
+        <DCCReference Include="..\..\..\Libraries\librairies\src\u_md5.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
