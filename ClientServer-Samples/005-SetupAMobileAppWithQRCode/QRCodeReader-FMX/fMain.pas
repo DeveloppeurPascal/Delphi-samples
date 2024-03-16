@@ -1,7 +1,6 @@
 unit fMain;
 
 // TODO : ajouter un bouton de changement de caméra (front / back) (cf FieFrapic)
-// TODO : activer l'autofocus si disponible (cf FieFrapic)
 // TODO : ajouter un bouton pour activer le flash si disponible (cf FieFrapic)
 
 interface
@@ -41,6 +40,8 @@ type
     FisQRCaptureOn: boolean;
     FWasCaptureOn: boolean;
     procedure SetisQRCaptureOn(const Value: boolean);
+    procedure ActivateTheCamera(const AskForPermission: boolean = true);
+    procedure ChangeCameraComponentStatus;
   protected
     ScanEnCours: boolean;
     procedure ApplicationEventChangedHandler(const Sender: TObject;
@@ -61,12 +62,86 @@ uses
   ZXing.BarcodeFormat,
   ZXing.ReadResult,
   uConsts,
-  Olf.RTL.Checksum;
+  Olf.RTL.Checksum,
+  System.Permissions,
+  FMX.DialogService;
 
 { TForm1 }
 
+procedure TfrmMain.ActivateTheCamera(const AskForPermission: boolean);
+begin
+  if AskForPermission then
+    TPermissionsService.DefaultService.RequestPermissions
+      (['android.permission.CAMERA'],
+      procedure(const APermissions: TClassicStringDynArray;
+        const AGrantResults: TClassicPermissionStatusDynArray)
+      var
+        i: integer;
+      begin
+        for i := 0 to length(AGrantResults) - 1 do
+          if (AGrantResults[i] = TPermissionStatus.Denied) then
+            raise exception.create
+              ('Permission nécessaire pour prendre une photo.');
+        ActivateTheCamera(false);
+      end,
+      procedure(const APermissions: TClassicStringDynArray;
+        const APostRationaleProc: TProc)
+      begin
+        TDialogService.showmessage
+          ('Il est nécessaire d''avoir cette autorisation pour prendre une photo.',
+          procedure(Const AModalResult: TModalResult)
+          begin
+            if assigned(APostRationaleProc) then
+              APostRationaleProc;
+          end);
+      end)
+  else
+  begin
+    // Activation de la caméra autorisée.
+    // On modifie ses réglages et on lance la prise de vidéo.
+
+{$IF Defined(IOS) or Defined(ANDROID)}
+    // Forçage caméra arrière pour iOS et Android
+    if not(CameraComponent1.Kind = TCameraKind.BackCamera) then
+      try
+        if CameraComponent1.Active then
+          CameraComponent1.Active := false;
+        CameraComponent1.Kind := TCameraKind.BackCamera;
+      except
+        CameraComponent1.Kind := TCameraKind.default;
+      end;
+{$ENDIF}
+    //
+    // Activation de la meilleure qualité possible (lorsque c'est pris en charge)
+    // Peut poser problème sur la détection de QR Code, toujours proposer un réglage manuel avec possibilité de descendre la résolution si le scan ne passe pas là
+    if not(CameraComponent1.Quality = TVideoCaptureQuality.PhotoQuality) then
+      try
+        if CameraComponent1.Active then
+          CameraComponent1.Active := false;
+        CameraComponent1.Quality := TVideoCaptureQuality.PhotoQuality;
+      except
+        CameraComponent1.Quality := TVideoCaptureQuality.CaptureSettings;
+      end;
+
+{$IFDEF ANDROID}
+    try
+      CameraComponent1.FocusMode := TFocusMode.ContinuousAutoFocus;
+    except
+      CameraComponent1.FocusMode := TFocusMode.AutoFocus;
+    end;
+{$ENDIF}
+    // Si la demande de permission a été déclenchée, WillBecomeActive se déclenchera en sortie de cette procédure,
+    // Par défaut il recoupera la caméra si on ne lui dit pas qu'elle était active.
+    FWasCaptureOn := true;
+    // Si la permission était déjà fournie, pas de perte de focus de l'application,
+    // donc on active la caméra, même si ça sera potentiellement fait deux fois.
+    FisQRCaptureOn := true;
+    ChangeCameraComponentStatus;
+  end;
+end;
+
 procedure TfrmMain.ApplicationEventChangedHandler(const Sender: TObject;
-  const AMessage: TMessage);
+const AMessage: TMessage);
 begin
   case TApplicationEventMessage(AMessage).Value.Event of
     TApplicationEvent.WillBecomeInactive:
@@ -79,13 +154,24 @@ begin
   end;
 end;
 
+procedure TfrmMain.ChangeCameraComponentStatus;
+begin
+  // Activation ou désactivation de la caméra
+  CameraComponent1.Active := FisQRCaptureOn;
+
+  // Changement de la visilité des composants qui en dépendent
+  ImageControl1.Visible := CameraComponent1.Active;
+  btnStartCamera.Visible := not CameraComponent1.Active;
+  Memo1.Visible := not CameraComponent1.Active;
+end;
+
 procedure TfrmMain.btnStartCameraClick(Sender: TObject);
 begin
   isQRCaptureOn := not isQRCaptureOn;
 end;
 
 procedure TfrmMain.CameraComponent1SampleBufferReady(Sender: TObject;
-  const ATime: TMediaTime);
+const ATime: TMediaTime);
 var
   bmp: tbitmap;
 begin
@@ -94,7 +180,7 @@ begin
   begin
     ScanEnCours := true;
     try
-      bmp := tbitmap.Create;
+      bmp := tbitmap.create;
       try
         bmp.Assign(ImageControl1.Bitmap);
         tthread.CreateAnonymousThread(
@@ -103,12 +189,12 @@ begin
             scan: TScanManager;
             res: TReadResult;
           begin
-            scan := TScanManager.Create(QR_CODE, nil);
+            scan := TScanManager.create(QR_CODE, nil);
             try
               res := scan.scan(bmp);
               if assigned(res) then
                 try
-                  tthread.Queue(nil,
+                  tthread.queue(nil,
                     procedure
                     var
                       ReceivedVerifCode, ReceivedText: string;
@@ -140,6 +226,7 @@ begin
                           Memo1.Lines.text :=
                             'Mauvais code de controle. Texte reçu :' +
                             slinebreak + slinebreak + ReceivedText;
+                          Memo1.Lines.Add('VerifCode : '+ReceivedVerifCode);
                         end;
                       finally
                         res.Free;
@@ -181,46 +268,13 @@ end;
 
 procedure TfrmMain.SetisQRCaptureOn(const Value: boolean);
 begin
-  FisQRCaptureOn := Value;
-
   if Value then
-  begin // Modification des réglages de la caméra si on va l'activer
-{$IF Defined(IOS) or Defined(ANDROID)}
-    // Forçage caméra arrière pour iOS et Android
-    if not(CameraComponent1.Kind = TCameraKind.BackCamera) then
-      try
-        if CameraComponent1.Active then
-          CameraComponent1.Active := false;
-        CameraComponent1.Kind := TCameraKind.BackCamera;
-      except
-        CameraComponent1.Kind := TCameraKind.default;
-      end;
-{$ENDIF}
-    // Activation de la meilleure qualité possible (lorsque c'est pris en charge)
-    if not(CameraComponent1.Quality = TVideoCaptureQuality.PhotoQuality) then
-      try
-        if CameraComponent1.Active then
-          CameraComponent1.Active := false;
-        CameraComponent1.Quality := TVideoCaptureQuality.PhotoQuality;
-      except
-        CameraComponent1.Quality := TVideoCaptureQuality.CaptureSettings;
-      end;
-
-{$IFDEF ANDROID}
-    try
-      CameraComponent1.FocusMode := TFocusMode.ContinuousAutoFocus;
-    except
-      CameraComponent1.FocusMode := TFocusMode.AutoFocus;
-    end;
-{$ENDIF}
+    ActivateTheCamera
+  else
+  begin
+    FisQRCaptureOn := Value;
+    ChangeCameraComponentStatus;
   end;
-
-  // Activation (ou désactivation de la caméra)
-  CameraComponent1.Active := FisQRCaptureOn;
-
-  ImageControl1.Visible := CameraComponent1.Active;
-  btnStartCamera.Visible := not CameraComponent1.Active;
-  Memo1.Visible := not CameraComponent1.Active;
 end;
 
 initialization
