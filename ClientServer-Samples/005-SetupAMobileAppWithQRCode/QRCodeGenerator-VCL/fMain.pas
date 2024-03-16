@@ -73,7 +73,10 @@ begin
       else
         Memo1.Lines.AddPair('KeyB' + i.tostring, 'true')
     end;
-  Text := Memo1.Lines.Text;
+  // Text utilise CRLF sous Windows, LineFeed (#10) semble poser problème à la récupération pour le calcul du checksum
+  // Text := Memo1.Lines.Text;
+  Text := Memo1.Lines.CommaText;
+  Memo1.Lines.Add(Text.Length.tostring);
 
   ChecksumVerifCode := ChecksumVerif.get(Text, CPrivateChecksumSalt1,
     CPrivateChecksumSalt2);
