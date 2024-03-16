@@ -4,6 +4,7 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 
 * [Apprendre la programmation avec Delphi (french training, 2020)](https://github.com/DeveloppeurPascal/ApprendreLaProgrammationAvecDelphi)
 * [Cross platform samples](https://github.com/FMXExpress/Cross-Platform-Samples)
+* [Delphi Acadey samples](https://github.com/flrizzato/DelphiAcademy)
 * [Delphi CE Bootcamp (2018 edition)](https://github.com/Embarcadero/DelphiCEBootcamp)
 * [Delphi Collection repositories](https://github.com/walwalwalides?tab=repositories&q=Delphi-Collection&type=&language=&sort=)
 * [Delphi FMX Game Snippets](https://github.com/DeveloppeurPascal/DelphiFMXGameSnippets)
