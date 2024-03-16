@@ -217,8 +217,9 @@ begin
                           CPrivateChecksumSalt1, CPrivateChecksumSalt2) then
                         begin
                           Memo1.Lines.Clear;
-                          Memo1.Lines.text := 'Tout est ok. Texte lu :' +
-                            slinebreak + slinebreak + ReceivedText;
+                          Memo1.Lines.CommaText := ReceivedText;
+                          Memo1.Lines.Insert(0, '');
+                          Memo1.Lines.Insert(0, 'Tout est ok. Texte lu :');
                         end
                         else
                         begin
@@ -226,8 +227,9 @@ begin
                           Memo1.Lines.text :=
                             'Mauvais code de controle. Texte reçu :' +
                             slinebreak + slinebreak + ReceivedText;
-                          Memo1.Lines.Add('VerifCode : '+ReceivedVerifCode);
+                          Memo1.Lines.Add('VerifCode : ' + ReceivedVerifCode);
                         end;
+                        Memo1.Lines.Add(ReceivedText.length.ToString);
                       finally
                         res.Free;
                       end;
