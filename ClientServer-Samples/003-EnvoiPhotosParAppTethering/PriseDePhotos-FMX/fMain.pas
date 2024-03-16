@@ -3,7 +3,6 @@ unit fMain;
 interface
 
 // TODO : ajouter un bouton de changement de caméra (front / back) (cf FieFrapic)
-// TODO : activer l'autofocus si disponible (cf FieFrapic)
 // TODO : ajouter un bouton pour activer le flash si disponible (cf FieFrapic)
 // TODO : proposer la récupération d'une photo depuis la librairie de l'appareil
 // TODO : ajouter une option de partage de la photo (cf FieFrapic)
@@ -46,6 +45,8 @@ type
   protected
     procedure ApplicationEventChangedHandler(const Sender: TObject;
       const AMessage: TMessage);
+    procedure StartCamera(Const AskForPermission: boolean = true);
+    procedure UpdateCameraStatus;
   public
     property isCameraStarted: boolean read FisCameraStarted
       write SetisCameraStarted;
@@ -59,6 +60,8 @@ implementation
 {$R *.fmx}
 
 uses
+  System.Permissions,
+  FMX.DialogService,
   uDMAppTetheringSender;
 
 procedure TfrmMain.ApplicationEventChangedHandler(const Sender: TObject;
@@ -112,17 +115,89 @@ end;
 
 procedure TfrmMain.SetisCameraStarted(const Value: boolean);
 begin
-  FisCameraStarted := Value;
+  if Value then
+    StartCamera
+  else
+  begin
+    FisCameraStarted := Value;
+    UpdateCameraStatus;
+  end;
+end;
 
-  if not(CameraComponent1.Quality = TVideoCaptureQuality.PhotoQuality) then
+procedure TfrmMain.StartCamera(const AskForPermission: boolean);
+begin
+  if AskForPermission then
+    TPermissionsService.DefaultService.RequestPermissions
+      (['android.permission.CAMERA'],
+      procedure(const APermissions: TClassicStringDynArray;
+        const AGrantResults: TClassicPermissionStatusDynArray)
+      var
+        i: integer;
+      begin
+        for i := 0 to length(AGrantResults) - 1 do
+          if (AGrantResults[i] = TPermissionStatus.Denied) then
+            raise exception.create
+              ('Permission nécessaire pour prendre une photo.');
+        StartCamera(false);
+      end,
+      procedure(const APermissions: TClassicStringDynArray;
+        const APostRationaleProc: TProc)
+      begin
+        TDialogService.showmessage
+          ('Il est nécessaire d''avoir cette autorisation pour prendre une photo.',
+          procedure(Const AModalResult: TModalResult)
+          begin
+            if assigned(APostRationaleProc) then
+              APostRationaleProc;
+          end);
+      end)
+  else
+  begin
+    // Activation de la caméra autorisée.
+    // On modifie ses réglages et on lance la prise de vidéo.
+
+{$IF Defined(IOS) or Defined(ANDROID)}
+    // Forçage caméra arrière pour iOS et Android
+    if not(CameraComponent1.Kind = TCameraKind.BackCamera) then
+      try
+        if CameraComponent1.Active then
+          CameraComponent1.Active := false;
+        CameraComponent1.Kind := TCameraKind.BackCamera;
+      except
+        CameraComponent1.Kind := TCameraKind.default;
+      end;
+{$ENDIF}
+    //
+    // Activation de la meilleure qualité possible (lorsque c'est pris en charge)
+    // Peut poser problème sur la détection de QR Code, toujours proposer un réglage manuel avec possibilité de descendre la résolution si le scan ne passe pas là
+    if not(CameraComponent1.Quality = TVideoCaptureQuality.PhotoQuality) then
+      try
+        if CameraComponent1.Active then
+          CameraComponent1.Active := false;
+        CameraComponent1.Quality := TVideoCaptureQuality.PhotoQuality;
+      except
+        CameraComponent1.Quality := TVideoCaptureQuality.CaptureSettings;
+      end;
+
+{$IFDEF ANDROID}
     try
-      if CameraComponent1.Active then
-        CameraComponent1.Active := false;
-      CameraComponent1.Quality := TVideoCaptureQuality.PhotoQuality;
+      CameraComponent1.FocusMode := TFocusMode.ContinuousAutoFocus;
     except
-      CameraComponent1.Quality := TVideoCaptureQuality.CaptureSettings;
+      CameraComponent1.FocusMode := TFocusMode.AutoFocus;
     end;
+{$ENDIF}
+    // Si la demande de permission a été déclenchée, WillBecomeActive se déclenchera en sortie de cette procédure,
+    // Par défaut il recoupera la caméra si on ne lui dit pas qu'elle était active.
+    FWasCaptureOn := true;
+    // Si la permission était déjà fournie, pas de perte de focus de l'application,
+    // donc on active la caméra, même si ça sera potentiellement fait deux fois.
+    FisCameraStarted := true;
+    UpdateCameraStatus;
+  end;
+end;
 
+procedure TfrmMain.UpdateCameraStatus;
+begin
   CameraComponent1.Active := FisCameraStarted;
 
   if FisCameraStarted then
