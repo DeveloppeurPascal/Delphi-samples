@@ -104,6 +104,9 @@ end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
+  TMessageManager.DefaultManager.SubscribeToMessage(TApplicationEventMessage,
+    ApplicationEventChangedHandler);
+
   FWasCaptureOn := false;
   isCameraStarted := false;
 end;
@@ -136,7 +139,7 @@ begin
       begin
         for i := 0 to length(AGrantResults) - 1 do
           if (AGrantResults[i] = TPermissionStatus.Denied) then
-            raise exception.create
+            raise exception.Create
               ('Permission nécessaire pour prendre une photo.');
         StartCamera(false);
       end,
