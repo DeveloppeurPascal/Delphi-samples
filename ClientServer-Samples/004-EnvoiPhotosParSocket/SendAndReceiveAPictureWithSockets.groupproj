@@ -9,6 +9,9 @@
         <Projects Include="RecoitPhoto-FMX\PictureReceiver_FMX.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="RecoitPhoto-VCL\PictureReceiver_VCL.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="PictureReceiver_FMX:Make">
         <MSBuild Projects="RecoitPhoto-FMX\PictureReceiver_FMX.dproj" Targets="Make"/>
     </Target>
+    <Target Name="PictureReceiver_VCL">
+        <MSBuild Projects="RecoitPhoto-VCL\PictureReceiver_VCL.dproj"/>
+    </Target>
+    <Target Name="PictureReceiver_VCL:Clean">
+        <MSBuild Projects="RecoitPhoto-VCL\PictureReceiver_VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PictureReceiver_VCL:Make">
+        <MSBuild Projects="RecoitPhoto-VCL\PictureReceiver_VCL.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PictureSender_FMX;PictureReceiver_FMX"/>
+        <CallTarget Targets="PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PictureSender_FMX:Clean;PictureReceiver_FMX:Clean"/>
+        <CallTarget Targets="PictureSender_FMX:Clean;PictureReceiver_FMX:Clean;PictureReceiver_VCL:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PictureSender_FMX:Make;PictureReceiver_FMX:Make"/>
+        <CallTarget Targets="PictureSender_FMX:Make;PictureReceiver_FMX:Make;PictureReceiver_VCL:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
