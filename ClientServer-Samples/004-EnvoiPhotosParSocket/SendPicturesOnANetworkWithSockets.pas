@@ -9,7 +9,7 @@
 // ****************************************
 // File generator : Socket Messaging Code Generator (v1.1)
 // Website : https://smcodegenerator.olfsoftware.fr/ 
-// Generation date : 07/03/2024 16:26:43
+// Generation date : 27/03/2024 11:34:31
 // 
 // Don't do any change on this file. They will be erased by next generation !
 // ****************************************
@@ -34,7 +34,19 @@ uses
 
 type
   /// <summary>
-  /// Message ID 1: Send a bitmap
+  /// Message ID 3: Ask for image files instead of FMX bitmap
+  /// </summary>
+  TSPNAskForImageFilesInsteadOfFMXBitmapMessage = class(TOlfSMMessage)
+  private
+  public
+    constructor Create; override;
+    procedure LoadFromStream(Stream: TStream); override;
+    procedure SaveToStream(Stream: TStream); override;
+    function GetNewInstance: TOlfSMMessage; override;
+  end;
+
+  /// <summary>
+  /// Message ID 1: Send a FireMonkey bitmap
   /// </summary>
   TSPNSendABitmapMessage = class(TOlfSMMessage)
   private
@@ -45,9 +57,41 @@ type
     /// Bitmap
     /// </summary>
     /// <remarks>
-    /// Bitmap sent by the server to conected clients
+    /// Bitmap (in FireMonkey format) sent by the
+    /// server to conected clients
     /// </remarks>
     property Bitmap: TBitmap read FBitmap write SetBitmap;
+    constructor Create; override;
+    destructor Destroy; override;
+    procedure LoadFromStream(Stream: TStream); override;
+    procedure SaveToStream(Stream: TStream); override;
+    function GetNewInstance: TOlfSMMessage; override;
+  end;
+
+  /// <summary>
+  /// Message ID 2: Send an image file
+  /// </summary>
+  /// <remarks>
+  /// for VCL clients (because VCL bitmap can't load a FMX bitmap stream)
+  /// </remarks>
+  TSPNSendAnImageFileMessage = class(TOlfSMMessage)
+  private
+    FFileExtension: string;
+    FFileContent: TMyFileContent;
+    procedure SetFileExtension(const Value: string);
+    procedure SetFileContent(const Value: TMyFileContent);
+  public
+    /// <summary>
+    /// FileExtension
+    /// </summary>
+    /// <remarks>
+    /// Image file extension (without the dot)
+    /// </remarks>
+    property FileExtension: string read FFileExtension write SetFileExtension;
+    /// <summary>
+    /// FileContent
+    /// </summary>
+    property FileContent: TMyFileContent read FFileContent write SetFileContent;
     constructor Create; override;
     destructor Destroy; override;
     procedure LoadFromStream(Stream: TStream); override;
@@ -58,7 +102,11 @@ type
   TSendPicturesOnANetworkWithSocketsServer = class(TOlfSMServer)
   private
   protected
+    procedure onReceiveMessage3(Const ASender: TOlfSMSrvConnectedClient;
+      Const AMessage: TOlfSMMessage);
   public
+    onReceiveSPNAskForImageFilesInsteadOfFMXBitmapMessage
+      : TOlfSMReceivedMessageEvent<TSPNAskForImageFilesInsteadOfFMXBitmapMessage>;
     constructor Create; override;
   end;
 
@@ -67,9 +115,13 @@ type
   protected
     procedure onReceiveMessage1(Const ASender: TOlfSMSrvConnectedClient;
       Const AMessage: TOlfSMMessage);
+    procedure onReceiveMessage2(Const ASender: TOlfSMSrvConnectedClient;
+      Const AMessage: TOlfSMMessage);
   public
     onReceiveSPNSendABitmapMessage
       : TOlfSMReceivedMessageEvent<TSPNSendABitmapMessage>;
+    onReceiveSPNSendAnImageFileMessage
+      : TOlfSMReceivedMessageEvent<TSPNSendAnImageFileMessage>;
     constructor Create; override;
   end;
 
@@ -80,6 +132,69 @@ implementation
 
 uses
   System.SysUtils;
+
+{$REGION 'code from Olf.RTL.Streams'}
+
+procedure SaveStringToStream(AString: string; AStream: TStream;
+  AEncoding: TEncoding); overload;
+// From unit Olf.RTL.Streams.pas in repository :
+// https://github.com/DeveloppeurPascal/librairies
+var
+  StrLen: int64; // typeof(System.Classes.TStream.size)
+  StrStream: TStringStream;
+begin
+  StrStream := TStringStream.Create(AString, AEncoding);
+  try
+    StrLen := StrStream.Size;
+    AStream.write(StrLen, sizeof(StrLen));
+    if (StrLen > 0) then
+    begin
+      StrStream.Position := 0;
+      AStream.CopyFrom(StrStream);
+    end;
+  finally
+    StrStream.Free;
+  end;
+end;
+
+procedure SaveStringToStream(AString: string; AStream: TStream); overload;
+// From unit Olf.RTL.Streams.pas in repository :
+// https://github.com/DeveloppeurPascal/librairies
+begin
+  SaveStringToStream(AString, AStream, TEncoding.UTF8);
+end;
+
+function LoadStringFromStream(AStream: TStream; AEncoding: TEncoding)
+  : string; overload;
+// From unit Olf.RTL.Streams.pas in repository :
+// https://github.com/DeveloppeurPascal/librairies
+var
+  StrLen: int64; // typeof(System.Classes.TStream.size)
+  StrStream: TStringStream;
+begin
+  AStream.Read(StrLen, sizeof(StrLen));
+  if (StrLen > 0) then
+  begin
+    StrStream := TStringStream.Create('', AEncoding);
+    try
+      StrStream.CopyFrom(AStream, StrLen);
+      result := StrStream.DataString;
+    finally
+      StrStream.Free;
+    end;
+  end
+  else
+    result := '';
+end;
+
+function LoadStringFromStream(AStream: TStream): string; overload;
+// From unit Olf.RTL.Streams.pas in repository :
+// https://github.com/DeveloppeurPascal/librairies
+begin
+  result := LoadStringFromStream(AStream, TEncoding.UTF8);
+end;
+
+{$ENDREGION}
 
 {$REGION 'code from Olf.VCL.Streams and Olf.FMX.Streams for saving/loading a TBitmap in a stream with other things in it'}
 
@@ -148,11 +263,13 @@ end;
 
 procedure RegisterMessagesReceivedByTheServer(Const Server: TOlfSMServer);
 begin
+  Server.RegisterMessageToReceive(TSPNAskForImageFilesInsteadOfFMXBitmapMessage.Create);
 end;
 
 procedure RegisterMessagesReceivedByTheClient(Const Client: TOlfSMClient);
 begin
   Client.RegisterMessageToReceive(TSPNSendABitmapMessage.Create);
+  Client.RegisterMessageToReceive(TSPNSendAnImageFileMessage.Create);
 end;
 
 {$REGION 'TSendPicturesOnANetworkWithSocketsServer'}
@@ -161,6 +278,17 @@ constructor TSendPicturesOnANetworkWithSocketsServer.Create;
 begin
   inherited;
   RegisterMessagesReceivedByTheServer(self);
+  SubscribeToMessage(3, onReceiveMessage3);
+end;
+
+procedure TSendPicturesOnANetworkWithSocketsServer.onReceiveMessage3(const ASender: TOlfSMSrvConnectedClient;
+const AMessage: TOlfSMMessage);
+begin
+  if not(AMessage is TSPNAskForImageFilesInsteadOfFMXBitmapMessage) then
+    exit;
+  if not assigned(onReceiveSPNAskForImageFilesInsteadOfFMXBitmapMessage) then
+    exit;
+  onReceiveSPNAskForImageFilesInsteadOfFMXBitmapMessage(ASender, AMessage as TSPNAskForImageFilesInsteadOfFMXBitmapMessage);
 end;
 
 {$ENDREGION}
@@ -172,6 +300,7 @@ begin
   inherited;
   RegisterMessagesReceivedByTheClient(self);
   SubscribeToMessage(1, onReceiveMessage1);
+  SubscribeToMessage(2, onReceiveMessage2);
 end;
 
 procedure TSendPicturesOnANetworkWithSocketsClient.onReceiveMessage1(const ASender: TOlfSMSrvConnectedClient;
@@ -182,6 +311,41 @@ begin
   if not assigned(onReceiveSPNSendABitmapMessage) then
     exit;
   onReceiveSPNSendABitmapMessage(ASender, AMessage as TSPNSendABitmapMessage);
+end;
+
+procedure TSendPicturesOnANetworkWithSocketsClient.onReceiveMessage2(const ASender: TOlfSMSrvConnectedClient;
+const AMessage: TOlfSMMessage);
+begin
+  if not(AMessage is TSPNSendAnImageFileMessage) then
+    exit;
+  if not assigned(onReceiveSPNSendAnImageFileMessage) then
+    exit;
+  onReceiveSPNSendAnImageFileMessage(ASender, AMessage as TSPNSendAnImageFileMessage);
+end;
+
+{$ENDREGION}
+
+{$REGION 'TSPNAskForImageFilesInsteadOfFMXBitmapMessage' }
+
+constructor TSPNAskForImageFilesInsteadOfFMXBitmapMessage.Create;
+begin
+  inherited;
+  MessageID := 3;
+end;
+
+function TSPNAskForImageFilesInsteadOfFMXBitmapMessage.GetNewInstance: TOlfSMMessage;
+begin
+  result := TSPNAskForImageFilesInsteadOfFMXBitmapMessage.Create;
+end;
+
+procedure TSPNAskForImageFilesInsteadOfFMXBitmapMessage.LoadFromStream(Stream: TStream);
+begin
+  inherited;
+end;
+
+procedure TSPNAskForImageFilesInsteadOfFMXBitmapMessage.SaveToStream(Stream: TStream);
+begin
+  inherited;
 end;
 
 {$ENDREGION}
@@ -221,6 +385,53 @@ end;
 procedure TSPNSendABitmapMessage.SetBitmap(const Value: TBitmap);
 begin
   FBitmap := Value;
+end;
+
+{$ENDREGION}
+
+{$REGION 'TSPNSendAnImageFileMessage' }
+
+constructor TSPNSendAnImageFileMessage.Create;
+begin
+  inherited;
+  MessageID := 2;
+  FFileExtension := '';
+  FFileContent := nil;
+end;
+
+destructor TSPNSendAnImageFileMessage.Destroy;
+begin
+  FFileContent.Free;
+  inherited;
+end;
+
+function TSPNSendAnImageFileMessage.GetNewInstance: TOlfSMMessage;
+begin
+  result := TSPNSendAnImageFileMessage.Create;
+end;
+
+procedure TSPNSendAnImageFileMessage.LoadFromStream(Stream: TStream);
+begin
+  inherited;
+  FFileExtension := LoadStringFromStream(Stream);
+  FFileContent.LoadFromStream(Stream);
+end;
+
+procedure TSPNSendAnImageFileMessage.SaveToStream(Stream: TStream);
+begin
+  inherited;
+  SaveStringToStream(FFileExtension, Stream);
+  FFileContent.SaveToStream(Stream);
+end;
+
+procedure TSPNSendAnImageFileMessage.SetFileExtension(const Value: string);
+begin
+  FFileExtension := Value;
+end;
+
+procedure TSPNSendAnImageFileMessage.SetFileContent(const Value: TMyFileContent);
+begin
+  FFileContent := Value;
 end;
 
 {$ENDREGION}
