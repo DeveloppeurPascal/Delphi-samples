@@ -30,6 +30,9 @@ type
   private
     Serveur: TSendPicturesOnANetworkWithSocketsServer;
     procedure ClientConnected(Const AConnectedClient: TOlfSMSrvConnectedClient);
+    procedure ReceiveAskForImageFilesInsteadOfFMXBitmapMessage
+      (Const ASender: TOlfSMSrvConnectedClient;
+      Const AMessage: TSPNAskForImageFilesInsteadOfFMXBitmapMessage);
   public
     ImageList: TStringList;
     ImageIndex: integer;
@@ -43,19 +46,37 @@ implementation
 {$R *.fmx}
 
 uses
-  System.IOUtils;
+  System.IOUtils,
+  Olf.FileInMemory;
 
 procedure TfmrMain.btnSendThisPictureClick(Sender: TObject);
 var
   msg: TSPNSendABitmapMessage;
+  msgFile: TSPNSendAnImageFileMessage;
 begin
   msg := TSPNSendABitmapMessage.Create;
   try
     msg.Bitmap := tbitmap.Create;
     try
       msg.Bitmap.Assign(ImageControl1.Bitmap);
-      Serveur.SendMessageToAll(msg);
-    except
+      // Serveur.SendMessageToAll(msg);
+      msgFile := TSPNSendAnImageFileMessage.Create;
+      try
+        msgFile.FileExtension := tpath.GetExtension(ImageList[ImageIndex]);
+        msgFile.FileContent.LoadFromFile(ImageList[ImageIndex]);
+
+        Serveur.ForEachConnectedClient(
+          procedure(Const AConnectedClient: TOlfSMSrvConnectedClient)
+          begin
+            if AConnectedClient.TagBool then
+              AConnectedClient.SendMessage(msg)
+            else
+              AConnectedClient.SendMessage(msgFile)
+          end, false);
+      except
+      end;
+    finally
+      msgFile.Free;
     end;
   finally
     msg.Free;
@@ -65,6 +86,7 @@ end;
 procedure TfmrMain.ClientConnected(const AConnectedClient
   : TOlfSMSrvConnectedClient);
 begin
+  AConnectedClient.TagBool := true; // accept FMX bitmap by default
 {$IFDEF DEBUG}
   showmessage('new connected client.');
 {$ENDIF}
@@ -78,6 +100,8 @@ var
 begin
   Serveur := TSendPicturesOnANetworkWithSocketsServer.Create;
   Serveur.onClientConnected := ClientConnected;
+  Serveur.onReceiveSPNAskForImageFilesInsteadOfFMXBitmapMessage :=
+    ReceiveAskForImageFilesInsteadOfFMXBitmapMessage;
   Serveur.Listen('0.0.0.0', 8080);
 
   ImageList := TStringList.Create;
@@ -101,6 +125,13 @@ end;
 procedure TfmrMain.FormDestroy(Sender: TObject);
 begin
   ImageList.Free;
+end;
+
+procedure TfmrMain.ReceiveAskForImageFilesInsteadOfFMXBitmapMessage
+  (const ASender: TOlfSMSrvConnectedClient;
+const AMessage: TSPNAskForImageFilesInsteadOfFMXBitmapMessage);
+begin
+  ASender.TagBool := false; // accept only images files
 end;
 
 procedure TfmrMain.Timer1Timer(Sender: TObject);
