@@ -9,7 +9,7 @@
 // ****************************************
 // File generator : Socket Messaging Code Generator (v1.1)
 // Website : https://smcodegenerator.olfsoftware.fr/ 
-// Generation date : 27/03/2024 11:34:31
+// Generation date : 27/03/2024 12:41:00
 // 
 // Don't do any change on this file. They will be erased by next generation !
 // ****************************************
@@ -23,6 +23,7 @@
 interface
 
 uses
+  Olf.FileInMemory,
 {$IFDEF FRAMEWORK_VCL}
   VCL.Graphics,
 {$ENDIF}
@@ -77,21 +78,24 @@ type
   TSPNSendAnImageFileMessage = class(TOlfSMMessage)
   private
     FFileExtension: string;
-    FFileContent: TMyFileContent;
+    FFileContent: TOlfFileContent;
     procedure SetFileExtension(const Value: string);
-    procedure SetFileContent(const Value: TMyFileContent);
+    procedure SetFileContent(const Value: TOlfFileContent);
   public
     /// <summary>
     /// FileExtension
     /// </summary>
     /// <remarks>
-    /// Image file extension (without the dot)
+    /// Image file extension (with the dot)
     /// </remarks>
     property FileExtension: string read FFileExtension write SetFileExtension;
     /// <summary>
     /// FileContent
     /// </summary>
-    property FileContent: TMyFileContent read FFileContent write SetFileContent;
+    /// <remarks>
+    /// Content of the file as a memory stream
+    /// </remarks>
+    property FileContent: TOlfFileContent read FFileContent write SetFileContent;
     constructor Create; override;
     destructor Destroy; override;
     procedure LoadFromStream(Stream: TStream); override;
@@ -396,7 +400,7 @@ begin
   inherited;
   MessageID := 2;
   FFileExtension := '';
-  FFileContent := nil;
+  FFileContent := TOlfFileContent.Create;
 end;
 
 destructor TSPNSendAnImageFileMessage.Destroy;
@@ -429,7 +433,7 @@ begin
   FFileExtension := Value;
 end;
 
-procedure TSPNSendAnImageFileMessage.SetFileContent(const Value: TMyFileContent);
+procedure TSPNSendAnImageFileMessage.SetFileContent(const Value: TOlfFileContent);
 begin
   FFileContent := Value;
 end;
