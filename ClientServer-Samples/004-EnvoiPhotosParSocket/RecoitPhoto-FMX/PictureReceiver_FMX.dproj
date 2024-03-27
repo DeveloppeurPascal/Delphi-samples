@@ -280,6 +280,7 @@
         <DCCReference Include="..\SendPicturesOnANetworkWithSockets.pas"/>
         <DCCReference Include="..\..\..\Libraries\Socket-Messaging-Library\src\Olf.Net.Socket.Messaging.pas"/>
         <DCCReference Include="..\..\..\Libraries\librairies\Olf.FMX.Streams.pas"/>
+        <DCCReference Include="..\Olf.FileInMemory.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
