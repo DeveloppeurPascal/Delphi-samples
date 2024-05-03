@@ -42,7 +42,7 @@ uses
   System.IOUtils,
   Vcl.Imaging.jpeg,
   Vcl.Imaging.pngimage,
-  Olf.FileInMemory;
+  Olf.RTL.FileBuffer;
 
 procedure TForm1.ClientConnected(const AConnectedClient
   : TOlfSMSrvConnectedClient);
