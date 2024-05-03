@@ -27,6 +27,7 @@ type
     procedure btnSendThisPictureClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     Serveur: TSendPicturesOnANetworkWithSocketsServer;
     procedure ClientConnected(Const AConnectedClient: TOlfSMSrvConnectedClient);
@@ -47,7 +48,7 @@ implementation
 
 uses
   System.IOUtils,
-  Olf.FileInMemory;
+  Olf.RTL.FileBuffer;
 
 procedure TfmrMain.btnSendThisPictureClick(Sender: TObject);
 var
@@ -90,6 +91,11 @@ begin
 {$IFDEF DEBUG}
   showmessage('new connected client.');
 {$ENDIF}
+end;
+
+procedure TfmrMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Serveur.Free;
 end;
 
 procedure TfmrMain.FormCreate(Sender: TObject);

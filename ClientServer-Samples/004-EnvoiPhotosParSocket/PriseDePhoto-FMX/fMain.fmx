@@ -8,6 +8,7 @@ object fmrMain: TfmrMain
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnClose = FormClose
   OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object btnSendThisPicture: TButton
@@ -23,6 +24,7 @@ object fmrMain: TfmrMain
     Size.PlatformDefault = False
     TabOrder = 0
     Text = 'Send this picture'
+    TextSettings.Trimming = None
     OnClick = btnSendThisPictureClick
   end
   object ImageControl1: TImageControl
