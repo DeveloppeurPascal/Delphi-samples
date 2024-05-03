@@ -9,7 +9,7 @@
 // ****************************************
 // File generator : Socket Messaging Code Generator (v1.1)
 // Website : https://smcodegenerator.olfsoftware.fr/ 
-// Generation date : 27/03/2024 12:41:00
+// Generation date : 03/05/2024 20:15:00
 // 
 // Don't do any change on this file. They will be erased by next generation !
 // ****************************************
@@ -23,7 +23,7 @@
 interface
 
 uses
-  Olf.FileInMemory,
+  Olf.RTL.FileBuffer,
 {$IFDEF FRAMEWORK_VCL}
   VCL.Graphics,
 {$ENDIF}
@@ -78,9 +78,9 @@ type
   TSPNSendAnImageFileMessage = class(TOlfSMMessage)
   private
     FFileExtension: string;
-    FFileContent: TOlfFileContent;
+    FFileContent: TOlfFileBuffer;
     procedure SetFileExtension(const Value: string);
-    procedure SetFileContent(const Value: TOlfFileContent);
+    procedure SetFileContent(const Value: TOlfFileBuffer);
   public
     /// <summary>
     /// FileExtension
@@ -95,7 +95,7 @@ type
     /// <remarks>
     /// Content of the file as a memory stream
     /// </remarks>
-    property FileContent: TOlfFileContent read FFileContent write SetFileContent;
+    property FileContent: TOlfFileBuffer read FFileContent write SetFileContent;
     constructor Create; override;
     destructor Destroy; override;
     procedure LoadFromStream(Stream: TStream); override;
@@ -400,7 +400,7 @@ begin
   inherited;
   MessageID := 2;
   FFileExtension := '';
-  FFileContent := TOlfFileContent.Create;
+  FFileContent := TOlfFileBuffer.Create;
 end;
 
 destructor TSPNSendAnImageFileMessage.Destroy;
@@ -433,7 +433,7 @@ begin
   FFileExtension := Value;
 end;
 
-procedure TSPNSendAnImageFileMessage.SetFileContent(const Value: TOlfFileContent);
+procedure TSPNSendAnImageFileMessage.SetFileContent(const Value: TOlfFileBuffer);
 begin
   FFileContent := Value;
 end;
