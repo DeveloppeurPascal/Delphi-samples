@@ -1,0 +1,71 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Position.X = 152.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 257.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object DropDownEditButton1: TDropDownEditButton
+      Touch.InteractiveGestures = [LongTap]
+      CanFocus = False
+      Cursor = crArrow
+      TextSettings.Trimming = None
+      Size.Width = 28.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnClick = DropDownEditButton1Click
+    end
+    object EditButton1: TEditButton
+      Touch.InteractiveGestures = [LongTap]
+      CanFocus = False
+      Cursor = crArrow
+      TextSettings.Trimming = None
+      Position.X = 28.000000000000000000
+      Size.Width = 28.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'X'
+      OnClick = EditButton1Click
+    end
+  end
+  object Popup1: TPopup
+    Placement = BottomCenter
+    PlacementTarget = Edit1
+    Position.X = 128.000000000000000000
+    Position.Y = 264.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 169.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Calendar1: TCalendar
+      Date = 45442.000000000000000000
+      Size.Width = 180.000000000000000000
+      Size.Height = 160.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnDateSelected = Calendar1DateSelected
+    end
+  end
+  object Button1: TButton
+    Position.X = 424.000000000000000000
+    Position.Y = 152.000000000000000000
+    TabOrder = 2
+    Text = 'Button1'
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+end
