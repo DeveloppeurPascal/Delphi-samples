@@ -71,17 +71,24 @@ modules/
 # Mac Finder and Windows Explorer files
 .DS_Store
 Thumbs.db
+*.bak
+*.tmp
 
 # Delphi compiler directories
 Win32/
 Win64/
+OSX32/
 OSX64/
 OSXARM64/
 Android/
 Android64/
+iOSDevice32/
 iOSDevice64/
 Linux64/
+iOSSimulator/
+iOSSimARM64/
 TMSWeb/
 
 # Private directory
 _PRIVATE/
+_PRIVE/
