@@ -12,6 +12,12 @@ You don't know what Delphi is and where to download it ? You'll learn more [on t
 
 A lot of code repositories show other Delphi project samples. Some of them are listed on [this page](OtherDelphiSampleRepositories.md). Be free to update it [with a PULL REQUEST](CONTRIBUTING.md) or by [filling an issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues).
 
+## Talks and conferences
+
+### Twitch
+
+Follow my development streams of software, video games, mobile applications and websites on [my Twitch channel](https://www.twitch.tv/patrickpremartin) or as replays on [Serial Streameur](https://serialstreameur.fr) mostly in French.
+
 ## Source code installation
 
 To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its GitHub repository](https://github.com/DeveloppeurPascal/Delphi-samples).
