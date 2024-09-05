@@ -1,0 +1,53 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object btnDownloadAPDF: TButton
+    Align = Center
+    Size.Width = 160.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'btnDownloadAPDF'
+    TextSettings.Trimming = None
+    OnClick = btnDownloadAPDFClick
+  end
+  object btnOpenThePDF: TButton
+    Align = Center
+    Size.Width = 160.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'btnOpenThePDF'
+    TextSettings.Trimming = None
+    OnClick = btnOpenThePDFClick
+  end
+  object AniIndicator1: TAniIndicator
+    Align = Center
+  end
+  object lblEndOfGame: TLabel
+    Align = Center
+    AutoSize = True
+    Size.Width = 120.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'lblEndOfGame'
+    TabOrder = 3
+  end
+end
