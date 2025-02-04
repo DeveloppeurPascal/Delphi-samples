@@ -55,6 +55,12 @@ The sample Web-Samples\013-TMSWebCore-HelloWorld uses [TMS Web Core](https://www
 
 The sample Web-Samples\014-TMSWebCore-DisplayJSON uses [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
 
+# Documentation and support
+
+The project's technical documentation, generated with [DocInsight](https://devjetsoftware.com/products/documentation-insight/), is available in the ./docs folder and on [GitHub Pages](https://developpeurpascal.github.io/Delphi-samples). Further information and related links are available on [the project website](https://samples.developpeur-pascal.fr).
+
+If you need explanations or help in using this project in your own, please [contact me](https://developpeur-pascal.fr/nous-contacter.php). I can either direct you to an online resource, or offer you assistance on a fee-for-service basis. You can also contact me at a conference or an online presentation.
+
 ## Compatibility
 
 As an [Embarcadero MVP](https://www.embarcadero.com/resources/partners/mvp-directory), I benefit from the latest versions of [Delphi](https://www.embarcadero.com/products/delphi) and [C++ Builder](https://www.embarcadero.com/products/cbuilder) in [RAD Studio](https://www.embarcadero.com/products/rad-studio) as soon as they are released. I therefore work with these versions.
@@ -67,18 +73,18 @@ If you detect any anomalies on earlier versions, please don't hesitate to [repor
 
 ## License to use this code repository and its contents
 
-This source code is distributed under the [AGPL 3.0 or later license](https://choosealicense.com/licenses/agpl-3.0/).
+This source code is distributed under the [AGPL 3.0 or later](https://choosealicense.com/licenses/agpl-3.0/) license.
 
-You are generally free to use the contents of this code repository anywhere, provided that:
+You are free to use the contents of this code repository anywhere provided :
 * you mention it in your projects
-* distribute the modifications made to the files supplied in this project under the AGPL license (leaving the original copyright notices (author, link to this repository, license) which must be supplemented by your own)
+* distribute the modifications made to the files provided in this AGPL-licensed project (leaving the original copyright notices (author, link to this repository, license) must be supplemented by your own)
 * to distribute the source code of your creations under the AGPL license.
 
-If this license doesn't suit your needs, you can purchase the right to use this project under the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/) or a dedicated commercial license ([contact the author](https://developpeur-pascal.fr/nous-contacter.php) to explain your needs).
+If this license doesn't suit your needs (especially for a commercial project) I also offer [classic licenses for developers and companies](https://samples.developpeur-pascal.fr).
 
-These source codes are provided as is, without warranty of any kind.
+Some elements included in this repository may depend on third-party usage rights (images, sounds, etc.). They are not reusable in your projects unless otherwise stated.
 
-Certain elements included in this repository may be subject to third-party usage rights (images, sounds, etc.). They are not reusable in your projects unless otherwise stated.
+The source codes of this code repository as well as any compiled version are provided “as is” without warranty of any kind.
 
 ## How to ask a new feature, report a bug or a security issue ?
 
@@ -100,4 +106,6 @@ You can use one of those services :
 * [Liberapay](https://liberapay.com/PatrickPremartin)
 * [Paypal](https://www.paypal.com/paypalme/patrickpremartin)
 
-or if you speack french you can [subscribe to Zone Abo](https://zone-abo.fr/nos-abonnements.php) on a monthly or yearly basis and get a lot of resources as videos and articles.
+You can buy [my softwares](https://lic.olfsoftware.fr/products.php?lng=en), [my video games](https://lic.gamolf.fr/products.php?lng=en) or [a developer license for my libraries](https://lic.developpeur-pascal.fr/products.php?lng=en) if you use them in your projects.
+
+If you speak French [subscribe to Zone Abo](https://zone-abo.fr/nos-abonnements.php) to access my complete online archive (articles, videos, training videos, ebooks).
