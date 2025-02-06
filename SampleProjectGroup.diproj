@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project Version="1.0">
+  <Title>Delphi Sample Projects</Title>
+  <Summary>Delphi project samples for Windows, Mac, iOS, Android, Linux, internet of things and web</Summary>
+  <Author>Patrick PREMARTIN</Author>
+  <Email>patrick@premartin.fr</Email>
+  <Copyright>(c) 1995-2025 PATRICK PREMARTIN</Copyright>
+  <Comment/>
+  <Language>2057</Language>
+  <Charset>1</Charset>
+  <HeaderHtml>&lt;%TopicTitle%&gt;</HeaderHtml>
+  <FooterHtml>&lt;a href="https://samples.developpeur-pascal.fr" target="_blank"&gt;Delphi Sample Projects&lt;/a&gt; (c) 1995-2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
+  <CustomDefines/>
+  <ShowImplementationSection>false</ShowImplementationSection>
+  <ShowPrivateMembers>false</ShowPrivateMembers>
+  <ShowProtectedMembers>true</ShowProtectedMembers>
+  <ShowInheritedMembers>true</ShowInheritedMembers>
+  <ShowPropertyAccessors>true</ShowPropertyAccessors>
+  <FileNamePolicy>0</FileNamePolicy>
+  <CompilerVersion>27</CompilerVersion>
+  <TargetPlatform>0</TargetPlatform>
+  <Sources/>
+  <Outputs>
+    <Output Type="HTML">
+      <Active>true</Active>
+      <OutputDirectory>.\docs</OutputDirectory>
+    </Output>
+    <Output Type="CHM">
+      <Active>true</Active>
+      <OutputFileName>.\DelphiSampleProjects.chm</OutputFileName>
+    </Output>
+    <Output Type="MSHELP2">
+      <Active>false</Active>
+      <OutputFileName>build\docs\mshelp2\SampleProjectGroup.HxS</OutputFileName>
+      <Namespace>SampleProjectGroup</Namespace>
+      <TitleID>library</TitleID>
+    </Output>
+    <Output Type="HelpAndManual">
+      <Active>false</Active>
+      <OutputFileName>build\docs\hm\SampleProjectGroup.hmxp</OutputFileName>
+    </Output>
+  </Outputs>
+</Project>
