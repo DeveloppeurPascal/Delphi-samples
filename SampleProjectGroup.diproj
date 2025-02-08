@@ -169,7 +169,7 @@
       <OutputDirectory>.\docs</OutputDirectory>
     </Output>
     <Output Type="CHM">
-      <Active>true</Active>
+      <Active>false</Active>
       <OutputFileName>.\DelphiSampleProjects.chm</OutputFileName>
     </Output>
     <Output Type="MSHELP2">
