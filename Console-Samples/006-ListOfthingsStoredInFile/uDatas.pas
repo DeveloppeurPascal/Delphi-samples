@@ -1,9 +1,9 @@
 /// <summary>
 /// ***************************************************************************
 ///
-/// Delphi sample projects
+/// Delphi Sample Projects
 ///
-/// Copyright 2023-2024 Patrick Prémartin under AGPL 3.0 license.
+/// Copyright 1995-2025 Patrick Prémartin under AGPL 3.0 license.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -36,8 +36,8 @@
 /// https://github.com/DeveloppeurPascal/Delphi-samples
 ///
 /// ***************************************************************************
-/// File last update : 04/08/2024 09:03:36
-/// Signature : b0cf15c244cad2cb77277534cf970880d39305c7
+/// File last update : 2025-02-09T12:24:50.000+01:00
+/// Signature : e45f4dd057ac50c6d7c029872d2a8314bd40cc2e
 /// ***************************************************************************
 /// </summary>
 
