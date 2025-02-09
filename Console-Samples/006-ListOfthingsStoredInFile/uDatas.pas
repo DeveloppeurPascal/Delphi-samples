@@ -27,13 +27,13 @@
 /// ***************************************************************************
 ///
 /// Author(s) :
-///      Patrick PREMARTIN
+/// Patrick PREMARTIN
 ///
 /// Site :
-///      https://samples.developpeur-pascal.fr
+/// https://samples.developpeur-pascal.fr
 ///
 /// Project site :
-///      https://github.com/DeveloppeurPascal/Delphi-samples
+/// https://github.com/DeveloppeurPascal/Delphi-samples
 ///
 /// ***************************************************************************
 /// File last update : 04/08/2024 09:03:36
@@ -64,7 +64,8 @@ function lister: TListe;
 
 implementation
 
-uses system.ioutils;
+uses
+  system.ioutils;
 
 const
   FichName = 'Presentation-RADStudio-Delphi.rcd';

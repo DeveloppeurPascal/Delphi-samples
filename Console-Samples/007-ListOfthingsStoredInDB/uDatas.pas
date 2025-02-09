@@ -27,13 +27,13 @@
 /// ***************************************************************************
 ///
 /// Author(s) :
-///      Patrick PREMARTIN
+/// Patrick PREMARTIN
 ///
 /// Site :
-///      https://samples.developpeur-pascal.fr
+/// https://samples.developpeur-pascal.fr
 ///
 /// Project site :
-///      https://github.com/DeveloppeurPascal/Delphi-samples
+/// https://github.com/DeveloppeurPascal/Delphi-samples
 ///
 /// ***************************************************************************
 /// File last update : 04/08/2024 09:03:36
@@ -64,9 +64,28 @@ function lister: TListe;
 
 implementation
 
-uses system.sysutils, system.ioutils, FireDAC.Comp.Client, FireDAC.Phys.SQLite, FireDAC.UI.Intf, FireDAC.FMXUI.Wait, FireDAC.Stan.Intf, FireDAC.Comp.UI,
-  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, Data.DB,
-  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+uses
+  system.sysutils,
+  system.ioutils,
+  FireDAC.Comp.Client,
+  FireDAC.Phys.SQLite,
+  FireDAC.UI.Intf,
+  FireDAC.FMXUI.Wait,
+  FireDAC.Stan.Intf,
+  FireDAC.Comp.UI,
+  FireDAC.Stan.Option,
+  FireDAC.Stan.Error,
+  FireDAC.Phys.Intf,
+  FireDAC.Stan.Def,
+  FireDAC.Stan.Pool,
+  FireDAC.Stan.Async,
+  FireDAC.Phys,
+  Data.DB,
+  FireDAC.Stan.Param,
+  FireDAC.DatS,
+  FireDAC.DApt.Intf,
+  FireDAC.DApt,
+  FireDAC.Comp.DataSet;
 
 const
   FichName = 'Presentation-RADStudio-Delphi.db';
@@ -132,7 +151,8 @@ begin
       setlength(result, length(result) + 1);
       result[length(result) - 1].id := qry.FieldByName('id').AsInteger;
       result[length(result) - 1].libelle := qry.FieldByName('libelle').AsString;
-      result[length(result) - 1].coche := qry.FieldByName('coche').AsInteger = 1;
+      result[length(result) - 1].coche := qry.FieldByName('coche')
+        .AsInteger = 1;
     until not qry.FindNext;
 end;
 
@@ -158,10 +178,13 @@ begin
   connection.Connected := true;
   if not database_existante then
   begin
-    connection.ExecSQL('CREATE TABLE IF NOT EXISTS liste (' + 'id INTEGER PRIMARY Key, ' + 'libelle VARCHAR(50) DEFAULT "", ' +
+    connection.ExecSQL('CREATE TABLE IF NOT EXISTS liste (' +
+      'id INTEGER PRIMARY Key, ' + 'libelle VARCHAR(50) DEFAULT "", ' +
       'coche INTEGER DEFAULT 0' + ')');
-    connection.ExecSQL('CREATE INDEX IF NOT EXISTS liste_by_id ON liste (id,libelle)');
-    connection.ExecSQL('CREATE INDEX IF NOT EXISTS liste_by_libelle ON liste (libelle,id)');
+    connection.ExecSQL
+      ('CREATE INDEX IF NOT EXISTS liste_by_id ON liste (id,libelle)');
+    connection.ExecSQL
+      ('CREATE INDEX IF NOT EXISTS liste_by_libelle ON liste (libelle,id)');
   end;
   qry := tfdquery.create(nil);
   qry.connection := connection;
