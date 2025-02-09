@@ -59,7 +59,7 @@ procedure modifier(id: integer; libelle: string);
 procedure supprimer(id: integer);
 procedure cocher(id: integer);
 procedure decocher(id: integer);
-function estCoché(id: integer): boolean;
+function estCoche(id: integer): boolean;
 function lister: TListe;
 
 implementation
@@ -151,7 +151,7 @@ begin
   end;
 end;
 
-function estCoché(id: integer): boolean;
+function estCoche(id: integer): boolean;
 var
   num: integer;
 begin
