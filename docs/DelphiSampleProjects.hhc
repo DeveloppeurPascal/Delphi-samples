@@ -10075,8 +10075,8 @@
                                   <param name="Local" value="uDatas.decocher.html">
                                   </OBJECT>
                               <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="estCoché">
-                                  <param name="Local" value="uDatas.estCoché.html">
+                                  <param name="Name" value="estCoche">
+                                  <param name="Local" value="uDatas.estCoche.html">
                                   </OBJECT>
                               <LI> <OBJECT type="text/sitemap">
                                   <param name="Name" value="lister">
@@ -10172,8 +10172,8 @@
                                   <param name="Local" value="uDatas.decocher.html">
                                   </OBJECT>
                               <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="estCoché">
-                                  <param name="Local" value="uDatas.estCoché.html">
+                                  <param name="Name" value="estCoche">
+                                  <param name="Local" value="uDatas.estCoche.html">
                                   </OBJECT>
                               <LI> <OBJECT type="text/sitemap">
                                   <param name="Name" value="lister">
@@ -40940,6 +40940,10 @@
                           </UL>
                   </UL>
           </UL>
+      <LI> <OBJECT type="text/sitemap">
+          <param name="Name" value="StringComparison">
+          <param name="Local" value="StringComparison.html">
+          </OBJECT>
     </UL>
 </BODY>
 </HTML>
