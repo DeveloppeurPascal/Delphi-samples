@@ -162,6 +162,7 @@
     <Source>.\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dpr</Source>
     <Source>.\Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dpr</Source>
     <Source>.\Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dpr</Source>
+    <Source>.\Console-Samples\010-StringComparison\StringComparison.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
