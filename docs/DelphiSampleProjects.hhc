@@ -41610,6 +41610,88 @@
                           </UL>
                   </UL>
           </UL>
+      <LI> <OBJECT type="text/sitemap">
+          <param name="Name" value="FMXDragAndDropSample">
+          <param name="Local" value="FMXDragAndDropSample.html">
+          </OBJECT>
+          <UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="fMain">
+                  <param name="Local" value="fMain.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TForm1">
+                                  <param name="Local" value="fMain.TForm1.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FormCreate">
+                                                  <param name="Local" value="fMain.TForm1.FormCreate.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Image1MouseMove">
+                                                  <param name="Local" value="fMain.TForm1.Image1MouseMove.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ScrollBox1DragDrop">
+                                                  <param name="Local" value="fMain.TForm1.ScrollBox1DragDrop.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ScrollBox1DragOver">
+                                                  <param name="Local" value="fMain.TForm1.ScrollBox1DragOver.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Fields">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Image1">
+                                                  <param name="Local" value="fMain.TForm1.Image1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Image2">
+                                                  <param name="Local" value="fMain.TForm1.Image2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Layout1">
+                                                  <param name="Local" value="fMain.TForm1.Layout1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Rectangle1">
+                                                  <param name="Local" value="fMain.TForm1.Rectangle1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Rectangle2">
+                                                  <param name="Local" value="fMain.TForm1.Rectangle2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ScrollBox1">
+                                                  <param name="Local" value="fMain.TForm1.ScrollBox1.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Variables">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="Form1">
+                                  <param name="Local" value="fMain.Form1.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+          </UL>
     </UL>
 </BODY>
 </HTML>
