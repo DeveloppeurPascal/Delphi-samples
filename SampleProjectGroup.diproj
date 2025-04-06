@@ -164,6 +164,7 @@
     <Source>.\Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dpr</Source>
     <Source>.\Console-Samples\010-StringComparison\StringComparison.dpr</Source>
     <Source>.\FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\026-DragAndDrop\FMXDragAndDropSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
