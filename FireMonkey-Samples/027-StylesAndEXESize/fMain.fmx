@@ -1,0 +1,21 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object btnUseTheStyleBook: TButton
+    Align = Center
+    Size.Width = 201.000000000000000000
+    Size.Height = 52.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'btnUseTheStyleBook'
+    TextSettings.Trimming = None
+    OnClick = btnUseTheStyleBookClick
+  end
+end
