@@ -165,6 +165,7 @@
     <Source>.\Console-Samples\010-StringComparison\StringComparison.dpr</Source>
     <Source>.\FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dpr</Source>
     <Source>.\FireMonkey-Samples\026-DragAndDrop\FMXDragAndDropSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\027-StylesAndEXESize\StylesAndEXESizeSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
