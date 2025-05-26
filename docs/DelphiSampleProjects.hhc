@@ -7135,15 +7135,6 @@
                                           </UL>
                                   </UL>
                           </UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Variables">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="CODE_PATTERNS">
-                                  <param name="Local" value="ZXing.OneD.Code128Reader.CODE_PATTERNS.html">
-                                  </OBJECT>
-                          </UL>
                   </UL>
               <LI> <OBJECT type="text/sitemap">
                   <param name="Name" value="ZXing.OneD.Code39Reader">
@@ -7337,23 +7328,6 @@
                                   </OBJECT>
                                   <UL>
                                       <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Constants">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="LARGEST_DEFAULT_ALLOWED_LENGTH">
-                                                  <param name="Local" value="ZXing.OneD.ITFReader.TITFReader.LARGEST_DEFAULT_ALLOWED_LENGTH.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="N">
-                                                  <param name="Local" value="ZXing.OneD.ITFReader.TITFReader.N.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="W">
-                                                  <param name="Local" value="ZXing.OneD.ITFReader.TITFReader.W.html">
-                                                  </OBJECT>
-                                          </UL>
-                                      <LI> <OBJECT type="text/sitemap">
                                           <param name="Name" value="Methods">
                                           </OBJECT>
                                           <UL>
@@ -7379,6 +7353,15 @@
                                   <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.html">
                                   </OBJECT>
                                   <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Constants">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="INTEGER_MATH_SHIFT">
+                                                  <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.INTEGER_MATH_SHIFT.html">
+                                                  </OBJECT>
+                                          </UL>
                                       <LI> <OBJECT type="text/sitemap">
                                           <param name="Name" value="Methods">
                                           </OBJECT>
@@ -7410,36 +7393,27 @@
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="recordPattern">
+                                                  <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.recordPattern.html">
                                                   </OBJECT>
-                                                  <UL>
-                                                      <LI> <OBJECT type="text/sitemap">
-                                                          <param name="Name" value="recordPattern(IBitArray,Integer,TArray&lt;Integer&gt;)">
-                                                          <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.recordPattern(IBitArray,Integer,TArray(Integer)).html">
-                                                          </OBJECT>
-                                                      <LI> <OBJECT type="text/sitemap">
-                                                          <param name="Name" value="recordPattern(IBitArray,Integer,TArray&lt;Integer&gt;,Integer)">
-                                                          <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.recordPattern(IBitArray,Integer,TArray(Integer),Integer).html">
-                                                          </OBJECT>
-                                                  </UL>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="reset">
                                                   <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.reset.html">
                                                   </OBJECT>
                                           </UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Fields">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="INTEGER_MATH_SHIFT">
-                                                  <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.INTEGER_MATH_SHIFT.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="PATTERN_MATCH_RESULT_SCALE_FACTOR">
-                                                  <param name="Local" value="ZXing.OneD.OneDReader.TOneDReader.PATTERN_MATCH_RESULT_SCALE_FACTOR.html">
-                                                  </OBJECT>
-                                          </UL>
                                   </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Types">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TOneDPattern">
+                                  <param name="Local" value="ZXing.OneD.OneDReader.TOneDPattern.html">
+                                  </OBJECT>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TOneDPatterns">
+                                  <param name="Local" value="ZXing.OneD.OneDReader.TOneDPatterns.html">
+                                  </OBJECT>
                           </UL>
                   </UL>
               <LI> <OBJECT type="text/sitemap">
@@ -7456,6 +7430,19 @@
                                   <param name="Local" value="ZXing.OneD.UPCAReader.TUPCAReader.html">
                                   </OBJECT>
                                   <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Constructors">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Create">
+                                                  <param name="Local" value="ZXing.OneD.UPCAReader.TUPCAReader.Create.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Destroy">
+                                                  <param name="Local" value="ZXing.OneD.UPCAReader.TUPCAReader.Destroy.html">
+                                                  </OBJECT>
+                                          </UL>
                                       <LI> <OBJECT type="text/sitemap">
                                           <param name="Name" value="Methods">
                                           </OBJECT>
@@ -7556,6 +7543,19 @@
                                   </OBJECT>
                                   <UL>
                                       <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Constructors">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Create">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANExtensionSupport.TUPCEANExtensionSupport.Create.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Destroy">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANExtensionSupport.TUPCEANExtensionSupport.Destroy.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
                                           <param name="Name" value="Methods">
                                           </OBJECT>
                                           <UL>
@@ -7581,6 +7581,35 @@
                                   <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.html">
                                   </OBJECT>
                                   <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Constants">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="G_PATTERNS">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.G_PATTERNS.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="L_PATTERNS">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.L_PATTERNS.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MAX_AVG_VARIANCE">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.MAX_AVG_VARIANCE.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MAX_INDIVIDUAL_VARIANCE">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.MAX_INDIVIDUAL_VARIANCE.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MIDDLE_PATTERN">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.MIDDLE_PATTERN.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="START_END_PATTERN">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.START_END_PATTERN.html">
+                                                  </OBJECT>
+                                          </UL>
                                       <LI> <OBJECT type="text/sitemap">
                                           <param name="Name" value="Constructors">
                                           </OBJECT>
@@ -7624,54 +7653,20 @@
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="decodeRow">
+                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.decodeRow.html">
                                                   </OBJECT>
-                                                  <UL>
-                                                      <LI> <OBJECT type="text/sitemap">
-                                                          <param name="Name" value="decodeRow(Integer,IBitArray,TDictionary&lt;TDecodeHintType, TObject&gt;)">
-                                                          <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.decodeRow(Integer,IBitArray,TDictionary(TDecodeHintType,-TObject)).html">
-                                                          </OBJECT>
-                                                  </UL>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="findGuardPattern">
                                                   </OBJECT>
                                                   <UL>
                                                       <LI> <OBJECT type="text/sitemap">
-                                                          <param name="Name" value="findGuardPattern(IBitArray,Integer,Boolean,TArray&lt;Integer&gt;)">
-                                                          <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.findGuardPattern(IBitArray,Integer,Boolean,TArray(Integer)).html">
+                                                          <param name="Name" value="findGuardPattern(IBitArray,Integer,Boolean,TOneDPattern)">
+                                                          <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.findGuardPattern(IBitArray,Integer,Boolean,TOneDPattern).html">
                                                           </OBJECT>
                                                   </UL>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="findStartGuardPattern">
                                                   <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.findStartGuardPattern.html">
-                                                  </OBJECT>
-                                          </UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Fields">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="L_AND_G_PATTERNS">
-                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.L_AND_G_PATTERNS.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="L_PATTERNS">
-                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.L_PATTERNS.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="MAX_AVG_VARIANCE">
-                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.MAX_AVG_VARIANCE.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="MAX_INDIVIDUAL_VARIANCE">
-                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.MAX_INDIVIDUAL_VARIANCE.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="MIDDLE_PATTERN">
-                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.MIDDLE_PATTERN.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="START_END_PATTERN">
-                                                  <param name="Local" value="ZXing.OneD.UPCEANReader.TUPCEANReader.START_END_PATTERN.html">
                                                   </OBJECT>
                                           </UL>
                                   </UL>
@@ -11934,21 +11929,6 @@
                                   </UL>
                           </UL>
                   </UL>
-              <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_urlOpen">
-                  <param name="Local" value="u_urlOpen.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Routines">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="url_Open_In_Browser">
-                                  <param name="Local" value="u_urlOpen.url_Open_In_Browser.html">
-                                  </OBJECT>
-                          </UL>
-                  </UL>
           </UL>
       <LI> <OBJECT type="text/sitemap">
           <param name="Name" value="ListeArborescence">
@@ -12304,36 +12284,6 @@
                                   </OBJECT>
                           </UL>
                   </UL>
-              <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_download">
-                  <param name="Local" value="u_download.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Classes">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="tdownload_file">
-                                  <param name="Local" value="u_download.tdownload_file.html">
-                                  </OBJECT>
-                                  <UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Methods">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="download">
-                                                  <param name="Local" value="u_download.tdownload_file.download.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="temporaryFileName">
-                                                  <param name="Local" value="u_download.tdownload_file.temporaryFileName.html">
-                                                  </OBJECT>
-                                          </UL>
-                                  </UL>
-                          </UL>
-                  </UL>
           </UL>
       <LI> <OBJECT type="text/sitemap">
           <param name="Name" value="ParcourtDeLaListe">
@@ -12639,36 +12589,6 @@
                                   <param name="Name" value="frmMain">
                                   <param name="Local" value="uMainPourAffichage.frmMain.html">
                                   </OBJECT>
-                          </UL>
-                  </UL>
-              <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_download">
-                  <param name="Local" value="u_download.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Classes">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="tdownload_file">
-                                  <param name="Local" value="u_download.tdownload_file.html">
-                                  </OBJECT>
-                                  <UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Methods">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="download">
-                                                  <param name="Local" value="u_download.tdownload_file.download.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="temporaryFileName">
-                                                  <param name="Local" value="u_download.tdownload_file.temporaryFileName.html">
-                                                  </OBJECT>
-                                          </UL>
-                                  </UL>
                           </UL>
                   </UL>
           </UL>
@@ -14814,8 +14734,16 @@
                                           </OBJECT>
                                           <UL>
                                               <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AutoSize">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.AutoSize.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="Font">
                                                   <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.Font.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="HasPendingRefresh">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.HasPendingRefresh.html">
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="LetterSpacing">
@@ -14843,8 +14771,16 @@
                                                   <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.AjoutImageEtRetourneLargeur.html">
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="RefreshTexte">
-                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.RefreshTexte.html">
+                                                  <param name="Name" value="DefaultOnGetImageIndexOfUnknowChar">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.DefaultOnGetImageIndexOfUnknowChar.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="DoEndUpdate">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.DoEndUpdate.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Refresh">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.Refresh.html">
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="RetourneLargeur">
@@ -14971,8 +14907,16 @@
                                           </OBJECT>
                                           <UL>
                                               <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AutoSize">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.AutoSize.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="Font">
                                                   <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.Font.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="HasPendingRefresh">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.HasPendingRefresh.html">
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="LetterSpacing">
@@ -15000,8 +14944,16 @@
                                                   <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.AjoutImageEtRetourneLargeur.html">
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="RefreshTexte">
-                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.RefreshTexte.html">
+                                                  <param name="Name" value="DefaultOnGetImageIndexOfUnknowChar">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.DefaultOnGetImageIndexOfUnknowChar.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="DoEndUpdate">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.DoEndUpdate.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Refresh">
+                                                  <param name="Local" value="Olf.FMX.TextImageFrame.TOlfFMXTextImageFrame.Refresh.html">
                                                   </OBJECT>
                                               <LI> <OBJECT type="text/sitemap">
                                                   <param name="Name" value="RetourneLargeur">
@@ -39781,36 +39733,6 @@
                                   </OBJECT>
                           </UL>
                   </UL>
-              <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_download">
-                  <param name="Local" value="u_download.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Classes">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="tdownload_file">
-                                  <param name="Local" value="u_download.tdownload_file.html">
-                                  </OBJECT>
-                                  <UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Methods">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="download">
-                                                  <param name="Local" value="u_download.tdownload_file.download.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="temporaryFileName">
-                                                  <param name="Local" value="u_download.tdownload_file.temporaryFileName.html">
-                                                  </OBJECT>
-                                          </UL>
-                                  </UL>
-                          </UL>
-                  </UL>
           </UL>
       <LI> <OBJECT type="text/sitemap">
           <param name="Name" value="IWAjaxAndJavaScript">
@@ -40560,21 +40482,6 @@
                                   </OBJECT>
                           </UL>
                   </UL>
-              <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_urlOpen">
-                  <param name="Local" value="u_urlOpen.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Routines">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="url_Open_In_Browser">
-                                  <param name="Local" value="u_urlOpen.url_Open_In_Browser.html">
-                                  </OBJECT>
-                          </UL>
-                  </UL>
           </UL>
       <LI> <OBJECT type="text/sitemap">
           <param name="Name" value="UniGUIDatabaseSample">
@@ -40805,21 +40712,6 @@
                               <LI> <OBJECT type="text/sitemap">
                                   <param name="Name" value="UniForm2">
                                   <param name="Local" value="Unit2.UniForm2.html">
-                                  </OBJECT>
-                          </UL>
-                  </UL>
-              <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_urlOpen">
-                  <param name="Local" value="u_urlOpen.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Routines">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="url_Open_In_Browser">
-                                  <param name="Local" value="u_urlOpen.url_Open_In_Browser.html">
                                   </OBJECT>
                           </UL>
                   </UL>

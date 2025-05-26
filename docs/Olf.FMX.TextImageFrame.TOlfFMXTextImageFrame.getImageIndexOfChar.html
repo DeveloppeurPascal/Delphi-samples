@@ -68,6 +68,27 @@
 <h1 class="title">TOlf<wbr />FMXText<wbr />Image<wbr />Frame<wbr />.get<wbr />Image<wbr />Index<wbr />Of<wbr />Char Method</h1>
 <div id="mainSection">
 <div id="mainBody">
+<div id="summarySection" class="section">
+<input class="tagName" type="hidden" value="summary" />
+<div id="summaryHeader" class="sectionHeader">
+<div>
+<a href="javascript:void(0)" class="collapsibleAreaHref" title="Collapse">
+<span class="collapsibleAreaIcon collapsibleAreaExpanding">
+<!---->
+</span>
+<span class="collapsibleAreaTitle">Summary</span>
+</a>
+</div>
+</div>
+<div id="summaryContent" class="sectionContent" contenteditable="false">
+<p>
+Returns the index of the char in the image list.
+If it's not found this function can call the
+OnGetImageIndexOfUnknowCharIfNotFound event or do a default character
+swap to find the good one.
+</p>
+</div>
+</div>
 <strong>Unit</strong>:  <a href="Olf.FMX.TextImageFrame.html" title="">Olf.FMX.TextImageFrame</a><br />
 <div id="syntaxSection" class="section">
 <div id="syntaxHeader" class="sectionHeader">
@@ -81,7 +102,27 @@
 </div>
 </div>
 <div id="syntaxContent" class="sectionContent" contenteditable="false">
-<div class="codeSnippet" contenteditable="false"><input class="code" type="hidden" value="" /><div class="codeSnippetTabs"><div class="codeSnippetTabActive"><a>Delphi</a></div></div><div class="codeSnippetCodeContainer"><div class="codeSnippetCode"><pre class="delphi" contenteditable="false">function getImageIndexOfChar(AChar: string): integer</pre></div></div></div><div class="subSection"><h4 class="subHeading">Parameters</h4><dl id="parameters"><dt><span class="parameter">AChar</span></dt><dd>Type: <span title="">System.string</span><br /><p /></dd></dl></div><div class="subSection"><h4 class="subHeading">Return Value</h4><div id="returnsType">Type: <span class="returnType"><span title="">System.Integer</span></span></div><div id="returns" contenteditable="false"><p> </p></div></div>
+<div class="codeSnippet" contenteditable="false"><input class="code" type="hidden" value="" /><div class="codeSnippetTabs"><div class="codeSnippetTabActive"><a>Delphi</a></div></div><div class="codeSnippetCodeContainer"><div class="codeSnippetCode"><pre class="delphi" contenteditable="false">function getImageIndexOfChar(AChar: string; CallOnGetImageIndexOfUnknowCharIfNotFound: boolean): integer</pre></div></div></div><div class="subSection"><h4 class="subHeading">Parameters</h4><dl id="parameters"><dt><span class="parameter">AChar</span></dt><dd>Type: <span title="">System.string</span><br /><p /></dd><dt><span class="parameter">CallOnGetImageIndexOfUnknowCharIfNotFound</span></dt><dd>Type: <span title="">System.Boolean</span><br /><p /></dd></dl></div><div class="subSection"><h4 class="subHeading">Return Value</h4><div id="returnsType">Type: <span class="returnType"><span title="">System.Integer</span></span></div><div id="returns" contenteditable="false"><p> </p></div></div>
+</div>
+</div>
+<div id="remarksSection" class="section">
+<input class="tagName" type="hidden" value="remarks" />
+<div id="remarksHeader" class="sectionHeader">
+<div>
+<a href="javascript:void(0)" class="collapsibleAreaHref" title="Collapse">
+<span class="collapsibleAreaIcon collapsibleAreaExpanding">
+<!---->
+</span>
+<span class="collapsibleAreaTitle">Remarks</span>
+</a>
+</div>
+</div>
+<div id="remarksContent" class="sectionContent" contenteditable="false">
+<p>
+Don't use True for CallOnGetImageIndexOfUnknowCharIfNotFound in your
+OnGetImageIndexOfUnknowCharIfNotFound events or you'll have infinite
+loops.
+</p>
 </div>
 </div>
 </div>
