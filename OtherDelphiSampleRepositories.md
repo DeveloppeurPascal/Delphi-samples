@@ -7,6 +7,7 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 * [Delphi Acadey samples](https://github.com/flrizzato/DelphiAcademy)
 * [Delphi CE Bootcamp (2018 edition)](https://github.com/Embarcadero/DelphiCEBootcamp)
 * [Delphi Collection repositories](https://github.com/walwalwalides?tab=repositories&q=Delphi-Collection&type=&language=&sort=)
+* [Delphi Examples](https://github.com/marciomichelluzzi/delphiExamples)
 * [Delphi FMX Game Snippets](https://github.com/DeveloppeurPascal/DelphiFMXGameSnippets)
 * [Embarcadero RAD Studio 11 demos](https://github.com/Embarcadero/RADStudio11Demos)
 * [Embarcadero RAD Studio demo kit](https://github.com/Embarcadero/RADStudio-DemoKit)
