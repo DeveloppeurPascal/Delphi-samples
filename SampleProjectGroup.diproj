@@ -166,6 +166,10 @@
     <Source>.\FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dpr</Source>
     <Source>.\FireMonkey-Samples\026-DragAndDrop\FMXDragAndDropSample.dpr</Source>
     <Source>.\FireMonkey-Samples\027-StylesAndEXESize\StylesAndEXESizeSample.dpr</Source>
+    <Source>.\Console-Samples\011-Goto-Beurk\GotoSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\028-TParallel-LoopState-Break\ParallelFor.dpr</Source>
+    <Source>.\FireMonkey-Samples\029-LoadImageFromURLWithUILock\LoadImageFromURLWithUILockSample.dpr</Source>
+    <Source>.\Network-Samples\02-TURLStream\TURLStreamSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
