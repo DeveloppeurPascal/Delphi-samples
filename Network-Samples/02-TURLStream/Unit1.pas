@@ -95,4 +95,8 @@ begin
     end);
 end;
 
+initialization
+{$IFDEF DEBUG}
+ReportMemoryLeaksOnShutdown:=true;
+{$ENDIF}
 end.
