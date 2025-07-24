@@ -1,0 +1,55 @@
+object frmThirdWithCallBack: TfrmThirdWithCallBack
+  Left = 0
+  Top = 0
+  ActiveControl = btnOk
+  Caption = 'Form3'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = MostBottom
+    Position.Y = 430.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnOk: TButton
+      Align = Right
+      Default = True
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 325.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'btnOk'
+      TextSettings.Trimming = None
+      OnClick = btnOkClick
+    end
+    object btnCancel: TButton
+      Align = Right
+      Cancel = True
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 485.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'btnCancel'
+      TextSettings.Trimming = None
+      OnClick = btnCancelClick
+    end
+  end
+end
