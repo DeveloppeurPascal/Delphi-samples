@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{B170A256-5220-4B05-B4D2-7124B84DBA98}</ProjectGuid>
     </PropertyGroup>
@@ -51,7 +51,7 @@
         <Projects Include="Console-Samples\004-Loops\ForLoopSample.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Console-Samples\005-Structure-Prog-Console\Project1.dproj">
+        <Projects Include="Console-Samples\005-Structure-Prog-Console\StructureProgSample.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="Console-Samples\006-ListOfthingsStoredInFile\ListOfThings.dproj">
@@ -61,6 +61,15 @@
             <Dependencies/>
         </Projects>
         <Projects Include="Console-Samples\008-Generic-TList-sort\TListSortSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Console-Samples\009-TypeInferenceOnADecimalValue\TypeInferenceOnADecimalValueSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Console-Samples\010-StringComparison\StringComparison.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Console-Samples\011-Goto-Beurk\GotoSample.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="FireDAC-Samples\001-SQLite\FireDACSQLiteSample.dproj">
@@ -73,6 +82,12 @@
             <Dependencies/>
         </Projects>
         <Projects Include="FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\001-HelloWorld\HelloWorld.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="FireMonkey-Samples\002-UpperLowerCaseWithTransparency\UpperAndLowerCase.dproj">
@@ -129,6 +144,12 @@
         <Projects Include="FireMonkey-Samples\017-TBiometricAuth\TBiometricAuthSample.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="FireMonkey-Samples\018-TFlowLayout\TFlowLayoutSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\019-TScaledLayout\ScaledLayoutSample.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="FireMonkey-Samples\020-LogMainFormEvents\LogMainFormEvents.dproj">
             <Dependencies/>
         </Projects>
@@ -142,6 +163,24 @@
             <Dependencies/>
         </Projects>
         <Projects Include="FireMonkey-Samples\024-DownloadAndOpenAPDFFile\DownloadAndOpenAPDFFile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\025-CreateAndFindComponents\PlayWithComponents.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\026-DragAndDrop\FMXDragAndDropSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\027-StylesAndEXESize\StylesAndEXESizeSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\028-TParallel-LoopState-Break\ParallelFor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\029-LoadImageFromURLWithUILock\LoadImageFromURLWithUILockSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\030-MultiFormOnMobile\MultiFormOnMobile.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="IoT-Samples\001-BeaconDetect\BeaconDetector.dproj">
@@ -162,166 +201,13 @@
         <Projects Include="IoT-Samples\006-ShowBeaconInfos\ShowBeaconCharacteristics.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Libraries\DelphiZXingQRCode\TestApp\DelphiZXingQRCodeTestApp.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\FMX.TextImageFrame\DisplayTextByCode\DisplayTextByCode.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\FMX.TextImageFrame\UseLibraryAsTFrame\UseLibraryAsTFrame.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Others\Hash-MD5\MD5Sample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Checksum\ChecksumSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.CryptDecrypt\IDBCryptSample\IncDecByteCryptSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.CryptDecrypt\ShiftCryptDecryptSample\ShiftCryptDecryptSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.CryptDecrypt\SimpleCryptDecryptSample\CryptDecryptSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.CryptDecrypt\SwapCryptDecryptSample\SwapCryptDecryptSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.DateAndTime\TimeConversion\TimeConversionSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.DProjReader\DProjReaderSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.GenRandomID\RandomIDGenerator\RandomIDGenerator.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-FMX\GetSystemLanguageISOCode_FMX.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-VCL\GetSystemLanguageISOCode_VCL.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Maths\NumberBaseConvert\NumberBaseConvertSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Maths\SHL_SHR\SHL_SHR_Sample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Params\BeginAndEndUpdate\BeginEndUpdateParamSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Params\CryptDecryptEvents\CryptDecryptEventsSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Params\Events\ParamsEvents.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Params\ParamsSample\ParamsSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Params\RemoveAParameter\RemoveKeySample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Params\StorageFolderName\ParamsFolderTest.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Params\UsePortableMode\ParamsInPortableMode.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Streams\LoadAndSaveBitmap\LoadAndSaveBitmapInAStreamSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\FMX\FMXEmptyBitmapSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\VCL\VCLEmptyBitmapSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Streams\LoadAndSaveString\LoadAndSaveStringSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.Streams\LoadAndSaveWithSize\StreamWithSize.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\RTL.SystemAppearance\GetSystemTheme\GetSystemTheme.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Skia.SVGToBitmap\FMX\FMXSVGToBitmapSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Skia.SVGToBitmap\FMXAutoRegisterAndSVGMargins\FMXAutoRegisterAndSVGMarginsSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_AccessSVGSourcesByClassMethods\FMXSVGClassTest.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_With_SVGList\FMXShowSVGFromBitmapSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Skia.SVGToBitmap\VCL\VCLSVGToBitmapSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_SVGList_CreateImagesByCode\CreateImagesByCodeSampleProject.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_With_SVGList\VCLShowSVGFromBitmapSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleClient.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleServer.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\client\TchatClient.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\server\TchatServer.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Client\ClockClient.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Server\ClockServer.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\04-Bourrinage\Bourrinage.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\05-Tchat\Client\ChatSampleClient.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\05-Tchat\Server\ChatSampleServer.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Client\MultiUserDraw.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Server\MultiUserDrawServer.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\ZXing.Delphi\demo\aTestApp\FmxTestApp.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\ZXing.Delphi\demo\vclTestApp\vclTestApp.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\ZXing.Delphi\demo\webcam\Webcam.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\ZXing.Delphi\MemLeakTest\Leaktest.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\ZXing.Delphi\UnitTest\dUnitXTest.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="Libraries\ZXing.Delphi\UnitTest\Test\dUnitXTestTests.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="Network-Samples\01-TSocket\ClientServerSocketSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Network-Samples\02-TURLStream\TURLStreamSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCL-Samples\001-HelloWorld\HelloWorld.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="VCL-Samples\002-LiveBindings\LiveBindingsCalc.dproj">
@@ -366,6 +252,12 @@
         <Projects Include="VCL-Samples\014-TContolList-Biolife-CDS\TControlListBiolife.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="VCL-Samples\015-MVC-En-Delphi\DelphiMVCSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCL-Samples\016-Images-PNG-Transparentes\PNGWithAlphaLayerSample.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="VCL-Samples\017-ContactSheet\ContactSheetVCLSample.dproj">
             <Dependencies/>
         </Projects>
@@ -390,7 +282,25 @@
         <Projects Include="Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Console-Samples\010-StringComparison\StringComparison.dproj">
+        <Projects Include="Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Web-Samples\011-UniGUI\UniGUISample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -545,14 +455,14 @@
     <Target Name="ForLoopSample:Make">
         <MSBuild Projects="Console-Samples\004-Loops\ForLoopSample.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Project1">
-        <MSBuild Projects="Console-Samples\005-Structure-Prog-Console\Project1.dproj"/>
+    <Target Name="StructureProgSample">
+        <MSBuild Projects="Console-Samples\005-Structure-Prog-Console\StructureProgSample.dproj"/>
     </Target>
-    <Target Name="Project1:Clean">
-        <MSBuild Projects="Console-Samples\005-Structure-Prog-Console\Project1.dproj" Targets="Clean"/>
+    <Target Name="StructureProgSample:Clean">
+        <MSBuild Projects="Console-Samples\005-Structure-Prog-Console\StructureProgSample.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Project1:Make">
-        <MSBuild Projects="Console-Samples\005-Structure-Prog-Console\Project1.dproj" Targets="Make"/>
+    <Target Name="StructureProgSample:Make">
+        <MSBuild Projects="Console-Samples\005-Structure-Prog-Console\StructureProgSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="ListOfThings">
         <MSBuild Projects="Console-Samples\006-ListOfthingsStoredInFile\ListOfThings.dproj"/>
@@ -580,6 +490,33 @@
     </Target>
     <Target Name="TListSortSample:Make">
         <MSBuild Projects="Console-Samples\008-Generic-TList-sort\TListSortSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TypeInferenceOnADecimalValueSample">
+        <MSBuild Projects="Console-Samples\009-TypeInferenceOnADecimalValue\TypeInferenceOnADecimalValueSample.dproj"/>
+    </Target>
+    <Target Name="TypeInferenceOnADecimalValueSample:Clean">
+        <MSBuild Projects="Console-Samples\009-TypeInferenceOnADecimalValue\TypeInferenceOnADecimalValueSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TypeInferenceOnADecimalValueSample:Make">
+        <MSBuild Projects="Console-Samples\009-TypeInferenceOnADecimalValue\TypeInferenceOnADecimalValueSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StringComparison">
+        <MSBuild Projects="Console-Samples\010-StringComparison\StringComparison.dproj"/>
+    </Target>
+    <Target Name="StringComparison:Clean">
+        <MSBuild Projects="Console-Samples\010-StringComparison\StringComparison.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StringComparison:Make">
+        <MSBuild Projects="Console-Samples\010-StringComparison\StringComparison.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GotoSample">
+        <MSBuild Projects="Console-Samples\011-Goto-Beurk\GotoSample.dproj"/>
+    </Target>
+    <Target Name="GotoSample:Clean">
+        <MSBuild Projects="Console-Samples\011-Goto-Beurk\GotoSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GotoSample:Make">
+        <MSBuild Projects="Console-Samples\011-Goto-Beurk\GotoSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="FireDACSQLiteSample">
         <MSBuild Projects="FireDAC-Samples\001-SQLite\FireDACSQLiteSample.dproj"/>
@@ -616,6 +553,24 @@
     </Target>
     <Target Name="MultiDBSample:Make">
         <MSBuild Projects="FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SQLiteBlobsSample">
+        <MSBuild Projects="FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dproj"/>
+    </Target>
+    <Target Name="SQLiteBlobsSample:Clean">
+        <MSBuild Projects="FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SQLiteBlobsSample:Make">
+        <MSBuild Projects="FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWorld">
+        <MSBuild Projects="FireMonkey-Samples\001-HelloWorld\HelloWorld.dproj"/>
+    </Target>
+    <Target Name="HelloWorld:Clean">
+        <MSBuild Projects="FireMonkey-Samples\001-HelloWorld\HelloWorld.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorld:Make">
+        <MSBuild Projects="FireMonkey-Samples\001-HelloWorld\HelloWorld.dproj" Targets="Make"/>
     </Target>
     <Target Name="UpperAndLowerCase">
         <MSBuild Projects="FireMonkey-Samples\002-UpperLowerCaseWithTransparency\UpperAndLowerCase.dproj"/>
@@ -779,6 +734,24 @@
     <Target Name="TBiometricAuthSample:Make">
         <MSBuild Projects="FireMonkey-Samples\017-TBiometricAuth\TBiometricAuthSample.dproj" Targets="Make"/>
     </Target>
+    <Target Name="TFlowLayoutSample">
+        <MSBuild Projects="FireMonkey-Samples\018-TFlowLayout\TFlowLayoutSample.dproj"/>
+    </Target>
+    <Target Name="TFlowLayoutSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\018-TFlowLayout\TFlowLayoutSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TFlowLayoutSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\018-TFlowLayout\TFlowLayoutSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ScaledLayoutSample">
+        <MSBuild Projects="FireMonkey-Samples\019-TScaledLayout\ScaledLayoutSample.dproj"/>
+    </Target>
+    <Target Name="ScaledLayoutSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\019-TScaledLayout\ScaledLayoutSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ScaledLayoutSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\019-TScaledLayout\ScaledLayoutSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="LogMainFormEvents">
         <MSBuild Projects="FireMonkey-Samples\020-LogMainFormEvents\LogMainFormEvents.dproj"/>
     </Target>
@@ -823,6 +796,60 @@
     </Target>
     <Target Name="DownloadAndOpenAPDFFile:Make">
         <MSBuild Projects="FireMonkey-Samples\024-DownloadAndOpenAPDFFile\DownloadAndOpenAPDFFile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PlayWithComponents">
+        <MSBuild Projects="FireMonkey-Samples\025-CreateAndFindComponents\PlayWithComponents.dproj"/>
+    </Target>
+    <Target Name="PlayWithComponents:Clean">
+        <MSBuild Projects="FireMonkey-Samples\025-CreateAndFindComponents\PlayWithComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PlayWithComponents:Make">
+        <MSBuild Projects="FireMonkey-Samples\025-CreateAndFindComponents\PlayWithComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXDragAndDropSample">
+        <MSBuild Projects="FireMonkey-Samples\026-DragAndDrop\FMXDragAndDropSample.dproj"/>
+    </Target>
+    <Target Name="FMXDragAndDropSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\026-DragAndDrop\FMXDragAndDropSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXDragAndDropSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\026-DragAndDrop\FMXDragAndDropSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StylesAndEXESizeSample">
+        <MSBuild Projects="FireMonkey-Samples\027-StylesAndEXESize\StylesAndEXESizeSample.dproj"/>
+    </Target>
+    <Target Name="StylesAndEXESizeSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\027-StylesAndEXESize\StylesAndEXESizeSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StylesAndEXESizeSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\027-StylesAndEXESize\StylesAndEXESizeSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelFor">
+        <MSBuild Projects="FireMonkey-Samples\028-TParallel-LoopState-Break\ParallelFor.dproj"/>
+    </Target>
+    <Target Name="ParallelFor:Clean">
+        <MSBuild Projects="FireMonkey-Samples\028-TParallel-LoopState-Break\ParallelFor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelFor:Make">
+        <MSBuild Projects="FireMonkey-Samples\028-TParallel-LoopState-Break\ParallelFor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LoadImageFromURLWithUILockSample">
+        <MSBuild Projects="FireMonkey-Samples\029-LoadImageFromURLWithUILock\LoadImageFromURLWithUILockSample.dproj"/>
+    </Target>
+    <Target Name="LoadImageFromURLWithUILockSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\029-LoadImageFromURLWithUILock\LoadImageFromURLWithUILockSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LoadImageFromURLWithUILockSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\029-LoadImageFromURLWithUILock\LoadImageFromURLWithUILockSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MultiFormOnMobile">
+        <MSBuild Projects="FireMonkey-Samples\030-MultiFormOnMobile\MultiFormOnMobile.dproj"/>
+    </Target>
+    <Target Name="MultiFormOnMobile:Clean">
+        <MSBuild Projects="FireMonkey-Samples\030-MultiFormOnMobile\MultiFormOnMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultiFormOnMobile:Make">
+        <MSBuild Projects="FireMonkey-Samples\030-MultiFormOnMobile\MultiFormOnMobile.dproj" Targets="Make"/>
     </Target>
     <Target Name="BeaconDetector">
         <MSBuild Projects="IoT-Samples\001-BeaconDetect\BeaconDetector.dproj"/>
@@ -878,483 +905,6 @@
     <Target Name="ShowBeaconCharacteristics:Make">
         <MSBuild Projects="IoT-Samples\006-ShowBeaconInfos\ShowBeaconCharacteristics.dproj" Targets="Make"/>
     </Target>
-    <Target Name="DelphiZXingQRCodeTestApp">
-        <MSBuild Projects="Libraries\DelphiZXingQRCode\TestApp\DelphiZXingQRCodeTestApp.dproj"/>
-    </Target>
-    <Target Name="DelphiZXingQRCodeTestApp:Clean">
-        <MSBuild Projects="Libraries\DelphiZXingQRCode\TestApp\DelphiZXingQRCodeTestApp.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="DelphiZXingQRCodeTestApp:Make">
-        <MSBuild Projects="Libraries\DelphiZXingQRCode\TestApp\DelphiZXingQRCodeTestApp.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="DisplayTextByCode">
-        <MSBuild Projects="Libraries\librairies\samples\FMX.TextImageFrame\DisplayTextByCode\DisplayTextByCode.dproj"/>
-    </Target>
-    <Target Name="DisplayTextByCode:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\FMX.TextImageFrame\DisplayTextByCode\DisplayTextByCode.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="DisplayTextByCode:Make">
-        <MSBuild Projects="Libraries\librairies\samples\FMX.TextImageFrame\DisplayTextByCode\DisplayTextByCode.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="UseLibraryAsTFrame">
-        <MSBuild Projects="Libraries\librairies\samples\FMX.TextImageFrame\UseLibraryAsTFrame\UseLibraryAsTFrame.dproj"/>
-    </Target>
-    <Target Name="UseLibraryAsTFrame:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\FMX.TextImageFrame\UseLibraryAsTFrame\UseLibraryAsTFrame.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="UseLibraryAsTFrame:Make">
-        <MSBuild Projects="Libraries\librairies\samples\FMX.TextImageFrame\UseLibraryAsTFrame\UseLibraryAsTFrame.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="MD5Sample">
-        <MSBuild Projects="Libraries\librairies\samples\Others\Hash-MD5\MD5Sample.dproj"/>
-    </Target>
-    <Target Name="MD5Sample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Others\Hash-MD5\MD5Sample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="MD5Sample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Others\Hash-MD5\MD5Sample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ChecksumSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Checksum\ChecksumSample.dproj"/>
-    </Target>
-    <Target Name="ChecksumSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Checksum\ChecksumSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ChecksumSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Checksum\ChecksumSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="IncDecByteCryptSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\IDBCryptSample\IncDecByteCryptSample.dproj"/>
-    </Target>
-    <Target Name="IncDecByteCryptSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\IDBCryptSample\IncDecByteCryptSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="IncDecByteCryptSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\IDBCryptSample\IncDecByteCryptSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ShiftCryptDecryptSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\ShiftCryptDecryptSample\ShiftCryptDecryptSample.dproj"/>
-    </Target>
-    <Target Name="ShiftCryptDecryptSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\ShiftCryptDecryptSample\ShiftCryptDecryptSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ShiftCryptDecryptSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\ShiftCryptDecryptSample\ShiftCryptDecryptSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="CryptDecryptSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\SimpleCryptDecryptSample\CryptDecryptSample.dproj"/>
-    </Target>
-    <Target Name="CryptDecryptSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\SimpleCryptDecryptSample\CryptDecryptSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="CryptDecryptSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\SimpleCryptDecryptSample\CryptDecryptSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="SwapCryptDecryptSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\SwapCryptDecryptSample\SwapCryptDecryptSample.dproj"/>
-    </Target>
-    <Target Name="SwapCryptDecryptSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\SwapCryptDecryptSample\SwapCryptDecryptSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SwapCryptDecryptSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.CryptDecrypt\SwapCryptDecryptSample\SwapCryptDecryptSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="TimeConversionSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.DateAndTime\TimeConversion\TimeConversionSample.dproj"/>
-    </Target>
-    <Target Name="TimeConversionSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.DateAndTime\TimeConversion\TimeConversionSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="TimeConversionSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.DateAndTime\TimeConversion\TimeConversionSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="DProjReaderSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.DProjReader\DProjReaderSample.dproj"/>
-    </Target>
-    <Target Name="DProjReaderSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.DProjReader\DProjReaderSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="DProjReaderSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.DProjReader\DProjReaderSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="RandomIDGenerator">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.GenRandomID\RandomIDGenerator\RandomIDGenerator.dproj"/>
-    </Target>
-    <Target Name="RandomIDGenerator:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.GenRandomID\RandomIDGenerator\RandomIDGenerator.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="RandomIDGenerator:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.GenRandomID\RandomIDGenerator\RandomIDGenerator.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="GetSystemLanguageISOCode_FMX">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-FMX\GetSystemLanguageISOCode_FMX.dproj"/>
-    </Target>
-    <Target Name="GetSystemLanguageISOCode_FMX:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-FMX\GetSystemLanguageISOCode_FMX.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="GetSystemLanguageISOCode_FMX:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-FMX\GetSystemLanguageISOCode_FMX.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="GetSystemLanguageISOCode_VCL">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-VCL\GetSystemLanguageISOCode_VCL.dproj"/>
-    </Target>
-    <Target Name="GetSystemLanguageISOCode_VCL:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-VCL\GetSystemLanguageISOCode_VCL.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="GetSystemLanguageISOCode_VCL:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Language\GetSystemLanguageISOCode-VCL\GetSystemLanguageISOCode_VCL.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="NumberBaseConvertSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Maths\NumberBaseConvert\NumberBaseConvertSample.dproj"/>
-    </Target>
-    <Target Name="NumberBaseConvertSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Maths\NumberBaseConvert\NumberBaseConvertSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="NumberBaseConvertSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Maths\NumberBaseConvert\NumberBaseConvertSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="SHL_SHR_Sample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Maths\SHL_SHR\SHL_SHR_Sample.dproj"/>
-    </Target>
-    <Target Name="SHL_SHR_Sample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Maths\SHL_SHR\SHL_SHR_Sample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SHL_SHR_Sample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Maths\SHL_SHR\SHL_SHR_Sample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="BeginEndUpdateParamSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\BeginAndEndUpdate\BeginEndUpdateParamSample.dproj"/>
-    </Target>
-    <Target Name="BeginEndUpdateParamSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\BeginAndEndUpdate\BeginEndUpdateParamSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="BeginEndUpdateParamSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\BeginAndEndUpdate\BeginEndUpdateParamSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="CryptDecryptEventsSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\CryptDecryptEvents\CryptDecryptEventsSample.dproj"/>
-    </Target>
-    <Target Name="CryptDecryptEventsSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\CryptDecryptEvents\CryptDecryptEventsSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="CryptDecryptEventsSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\CryptDecryptEvents\CryptDecryptEventsSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ParamsEvents">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\Events\ParamsEvents.dproj"/>
-    </Target>
-    <Target Name="ParamsEvents:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\Events\ParamsEvents.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ParamsEvents:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\Events\ParamsEvents.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ParamsSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\ParamsSample\ParamsSample.dproj"/>
-    </Target>
-    <Target Name="ParamsSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\ParamsSample\ParamsSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ParamsSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\ParamsSample\ParamsSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="RemoveKeySample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\RemoveAParameter\RemoveKeySample.dproj"/>
-    </Target>
-    <Target Name="RemoveKeySample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\RemoveAParameter\RemoveKeySample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="RemoveKeySample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\RemoveAParameter\RemoveKeySample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ParamsFolderTest">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\StorageFolderName\ParamsFolderTest.dproj"/>
-    </Target>
-    <Target Name="ParamsFolderTest:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\StorageFolderName\ParamsFolderTest.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ParamsFolderTest:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\StorageFolderName\ParamsFolderTest.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ParamsInPortableMode">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\UsePortableMode\ParamsInPortableMode.dproj"/>
-    </Target>
-    <Target Name="ParamsInPortableMode:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\UsePortableMode\ParamsInPortableMode.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ParamsInPortableMode:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Params\UsePortableMode\ParamsInPortableMode.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="LoadAndSaveBitmapInAStreamSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveBitmap\LoadAndSaveBitmapInAStreamSample.dproj"/>
-    </Target>
-    <Target Name="LoadAndSaveBitmapInAStreamSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveBitmap\LoadAndSaveBitmapInAStreamSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="LoadAndSaveBitmapInAStreamSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveBitmap\LoadAndSaveBitmapInAStreamSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FMXEmptyBitmapSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\FMX\FMXEmptyBitmapSample.dproj"/>
-    </Target>
-    <Target Name="FMXEmptyBitmapSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\FMX\FMXEmptyBitmapSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FMXEmptyBitmapSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\FMX\FMXEmptyBitmapSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="VCLEmptyBitmapSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\VCL\VCLEmptyBitmapSample.dproj"/>
-    </Target>
-    <Target Name="VCLEmptyBitmapSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\VCL\VCLEmptyBitmapSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="VCLEmptyBitmapSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveEmptyBitmap\VCL\VCLEmptyBitmapSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="LoadAndSaveStringSample">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveString\LoadAndSaveStringSample.dproj"/>
-    </Target>
-    <Target Name="LoadAndSaveStringSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveString\LoadAndSaveStringSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="LoadAndSaveStringSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveString\LoadAndSaveStringSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="StreamWithSize">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveWithSize\StreamWithSize.dproj"/>
-    </Target>
-    <Target Name="StreamWithSize:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveWithSize\StreamWithSize.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="StreamWithSize:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.Streams\LoadAndSaveWithSize\StreamWithSize.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="GetSystemTheme">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.SystemAppearance\GetSystemTheme\GetSystemTheme.dproj"/>
-    </Target>
-    <Target Name="GetSystemTheme:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.SystemAppearance\GetSystemTheme\GetSystemTheme.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="GetSystemTheme:Make">
-        <MSBuild Projects="Libraries\librairies\samples\RTL.SystemAppearance\GetSystemTheme\GetSystemTheme.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FMXSVGToBitmapSample">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX\FMXSVGToBitmapSample.dproj"/>
-    </Target>
-    <Target Name="FMXSVGToBitmapSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX\FMXSVGToBitmapSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FMXSVGToBitmapSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX\FMXSVGToBitmapSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FMXAutoRegisterAndSVGMarginsSample">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMXAutoRegisterAndSVGMargins\FMXAutoRegisterAndSVGMarginsSample.dproj"/>
-    </Target>
-    <Target Name="FMXAutoRegisterAndSVGMarginsSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMXAutoRegisterAndSVGMargins\FMXAutoRegisterAndSVGMarginsSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FMXAutoRegisterAndSVGMarginsSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMXAutoRegisterAndSVGMargins\FMXAutoRegisterAndSVGMarginsSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FMXSVGClassTest">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_AccessSVGSourcesByClassMethods\FMXSVGClassTest.dproj"/>
-    </Target>
-    <Target Name="FMXSVGClassTest:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_AccessSVGSourcesByClassMethods\FMXSVGClassTest.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FMXSVGClassTest:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_AccessSVGSourcesByClassMethods\FMXSVGClassTest.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FMXShowSVGFromBitmapSample">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_With_SVGList\FMXShowSVGFromBitmapSample.dproj"/>
-    </Target>
-    <Target Name="FMXShowSVGFromBitmapSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_With_SVGList\FMXShowSVGFromBitmapSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FMXShowSVGFromBitmapSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\FMX_With_SVGList\FMXShowSVGFromBitmapSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="VCLSVGToBitmapSample">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL\VCLSVGToBitmapSample.dproj"/>
-    </Target>
-    <Target Name="VCLSVGToBitmapSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL\VCLSVGToBitmapSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="VCLSVGToBitmapSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL\VCLSVGToBitmapSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="CreateImagesByCodeSampleProject">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_SVGList_CreateImagesByCode\CreateImagesByCodeSampleProject.dproj"/>
-    </Target>
-    <Target Name="CreateImagesByCodeSampleProject:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_SVGList_CreateImagesByCode\CreateImagesByCodeSampleProject.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="CreateImagesByCodeSampleProject:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_SVGList_CreateImagesByCode\CreateImagesByCodeSampleProject.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="VCLShowSVGFromBitmapSample">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_With_SVGList\VCLShowSVGFromBitmapSample.dproj"/>
-    </Target>
-    <Target Name="VCLShowSVGFromBitmapSample:Clean">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_With_SVGList\VCLShowSVGFromBitmapSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="VCLShowSVGFromBitmapSample:Make">
-        <MSBuild Projects="Libraries\librairies\samples\Skia.SVGToBitmap\VCL_With_SVGList\VCLShowSVGFromBitmapSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FMXSampleClient">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleClient.dproj"/>
-    </Target>
-    <Target Name="FMXSampleClient:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleClient.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FMXSampleClient:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleClient.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FMXSampleServer">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleServer.dproj"/>
-    </Target>
-    <Target Name="FMXSampleServer:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleServer.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FMXSampleServer:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\01-fmx-client-server\FMXSampleServer.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="TchatClient">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\client\TchatClient.dproj"/>
-    </Target>
-    <Target Name="TchatClient:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\client\TchatClient.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="TchatClient:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\client\TchatClient.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="TchatServer">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\server\TchatServer.dproj"/>
-    </Target>
-    <Target Name="TchatServer:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\server\TchatServer.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="TchatServer:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\02-SalonDeDiscussion\server\TchatServer.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ClockClient">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Client\ClockClient.dproj"/>
-    </Target>
-    <Target Name="ClockClient:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Client\ClockClient.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ClockClient:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Client\ClockClient.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ClockServer">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Server\ClockServer.dproj"/>
-    </Target>
-    <Target Name="ClockServer:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Server\ClockServer.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ClockServer:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\03-Clock Server Sample\Server\ClockServer.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="Bourrinage">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\04-Bourrinage\Bourrinage.dproj"/>
-    </Target>
-    <Target Name="Bourrinage:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\04-Bourrinage\Bourrinage.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="Bourrinage:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\04-Bourrinage\Bourrinage.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ChatSampleClient">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\05-Tchat\Client\ChatSampleClient.dproj"/>
-    </Target>
-    <Target Name="ChatSampleClient:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\05-Tchat\Client\ChatSampleClient.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ChatSampleClient:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\05-Tchat\Client\ChatSampleClient.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="ChatSampleServer">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\05-Tchat\Server\ChatSampleServer.dproj"/>
-    </Target>
-    <Target Name="ChatSampleServer:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\05-Tchat\Server\ChatSampleServer.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ChatSampleServer:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\05-Tchat\Server\ChatSampleServer.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="MultiUserDraw">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Client\MultiUserDraw.dproj"/>
-    </Target>
-    <Target Name="MultiUserDraw:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Client\MultiUserDraw.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="MultiUserDraw:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Client\MultiUserDraw.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="MultiUserDrawServer">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Server\MultiUserDrawServer.dproj"/>
-    </Target>
-    <Target Name="MultiUserDrawServer:Clean">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Server\MultiUserDrawServer.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="MultiUserDrawServer:Make">
-        <MSBuild Projects="Libraries\Socket-Messaging-Library\samples\06-PixelWar\Server\MultiUserDrawServer.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="FmxTestApp">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\aTestApp\FmxTestApp.dproj"/>
-    </Target>
-    <Target Name="FmxTestApp:Clean">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\aTestApp\FmxTestApp.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="FmxTestApp:Make">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\aTestApp\FmxTestApp.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="vclTestApp">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\vclTestApp\vclTestApp.dproj"/>
-    </Target>
-    <Target Name="vclTestApp:Clean">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\vclTestApp\vclTestApp.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="vclTestApp:Make">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\vclTestApp\vclTestApp.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="Webcam">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\webcam\Webcam.dproj"/>
-    </Target>
-    <Target Name="Webcam:Clean">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\webcam\Webcam.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="Webcam:Make">
-        <MSBuild Projects="Libraries\ZXing.Delphi\demo\webcam\Webcam.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="Leaktest">
-        <MSBuild Projects="Libraries\ZXing.Delphi\MemLeakTest\Leaktest.dproj"/>
-    </Target>
-    <Target Name="Leaktest:Clean">
-        <MSBuild Projects="Libraries\ZXing.Delphi\MemLeakTest\Leaktest.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="Leaktest:Make">
-        <MSBuild Projects="Libraries\ZXing.Delphi\MemLeakTest\Leaktest.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="dUnitXTest">
-        <MSBuild Projects="Libraries\ZXing.Delphi\UnitTest\dUnitXTest.dproj"/>
-    </Target>
-    <Target Name="dUnitXTest:Clean">
-        <MSBuild Projects="Libraries\ZXing.Delphi\UnitTest\dUnitXTest.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="dUnitXTest:Make">
-        <MSBuild Projects="Libraries\ZXing.Delphi\UnitTest\dUnitXTest.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="dUnitXTestTests">
-        <MSBuild Projects="Libraries\ZXing.Delphi\UnitTest\Test\dUnitXTestTests.dproj"/>
-    </Target>
-    <Target Name="dUnitXTestTests:Clean">
-        <MSBuild Projects="Libraries\ZXing.Delphi\UnitTest\Test\dUnitXTestTests.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="dUnitXTestTests:Make">
-        <MSBuild Projects="Libraries\ZXing.Delphi\UnitTest\Test\dUnitXTestTests.dproj" Targets="Make"/>
-    </Target>
     <Target Name="ClientServerSocketSample">
         <MSBuild Projects="Network-Samples\01-TSocket\ClientServerSocketSample.dproj"/>
     </Target>
@@ -1363,6 +913,24 @@
     </Target>
     <Target Name="ClientServerSocketSample:Make">
         <MSBuild Projects="Network-Samples\01-TSocket\ClientServerSocketSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TURLStreamSample">
+        <MSBuild Projects="Network-Samples\02-TURLStream\TURLStreamSample.dproj"/>
+    </Target>
+    <Target Name="TURLStreamSample:Clean">
+        <MSBuild Projects="Network-Samples\02-TURLStream\TURLStreamSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TURLStreamSample:Make">
+        <MSBuild Projects="Network-Samples\02-TURLStream\TURLStreamSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWorld">
+        <MSBuild Projects="VCL-Samples\001-HelloWorld\HelloWorld.dproj"/>
+    </Target>
+    <Target Name="HelloWorld:Clean">
+        <MSBuild Projects="VCL-Samples\001-HelloWorld\HelloWorld.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorld:Make">
+        <MSBuild Projects="VCL-Samples\001-HelloWorld\HelloWorld.dproj" Targets="Make"/>
     </Target>
     <Target Name="LiveBindingsCalc">
         <MSBuild Projects="VCL-Samples\002-LiveBindings\LiveBindingsCalc.dproj"/>
@@ -1490,6 +1058,24 @@
     <Target Name="TControlListBiolife:Make">
         <MSBuild Projects="VCL-Samples\014-TContolList-Biolife-CDS\TControlListBiolife.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DelphiMVCSample">
+        <MSBuild Projects="VCL-Samples\015-MVC-En-Delphi\DelphiMVCSample.dproj"/>
+    </Target>
+    <Target Name="DelphiMVCSample:Clean">
+        <MSBuild Projects="VCL-Samples\015-MVC-En-Delphi\DelphiMVCSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiMVCSample:Make">
+        <MSBuild Projects="VCL-Samples\015-MVC-En-Delphi\DelphiMVCSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PNGWithAlphaLayerSample">
+        <MSBuild Projects="VCL-Samples\016-Images-PNG-Transparentes\PNGWithAlphaLayerSample.dproj"/>
+    </Target>
+    <Target Name="PNGWithAlphaLayerSample:Clean">
+        <MSBuild Projects="VCL-Samples\016-Images-PNG-Transparentes\PNGWithAlphaLayerSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PNGWithAlphaLayerSample:Make">
+        <MSBuild Projects="VCL-Samples\016-Images-PNG-Transparentes\PNGWithAlphaLayerSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="ContactSheetVCLSample">
         <MSBuild Projects="VCL-Samples\017-ContactSheet\ContactSheetVCLSample.dproj"/>
     </Target>
@@ -1562,23 +1148,77 @@
     <Target Name="RESTClientSNCF:Make">
         <MSBuild Projects="Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj" Targets="Make"/>
     </Target>
-    <Target Name="StringComparison">
-        <MSBuild Projects="Console-Samples\010-StringComparison\StringComparison.dproj"/>
+    <Target Name="DataSnapRPCServer">
+        <MSBuild Projects="Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj"/>
     </Target>
-    <Target Name="StringComparison:Clean">
-        <MSBuild Projects="Console-Samples\010-StringComparison\StringComparison.dproj" Targets="Clean"/>
+    <Target Name="DataSnapRPCServer:Clean">
+        <MSBuild Projects="Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="StringComparison:Make">
-        <MSBuild Projects="Console-Samples\010-StringComparison\StringComparison.dproj" Targets="Make"/>
+    <Target Name="DataSnapRPCServer:Make">
+        <MSBuild Projects="Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DumpRequest">
+        <MSBuild Projects="Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj"/>
+    </Target>
+    <Target Name="DumpRequest:Clean">
+        <MSBuild Projects="Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DumpRequest:Make">
+        <MSBuild Projects="Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WhoisClient">
+        <MSBuild Projects="Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj"/>
+    </Target>
+    <Target Name="WhoisClient:Clean">
+        <MSBuild Projects="Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WhoisClient:Make">
+        <MSBuild Projects="Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="UniGUISample">
+        <MSBuild Projects="Web-Samples\011-UniGUI\UniGUISample.dproj"/>
+    </Target>
+    <Target Name="UniGUISample:Clean">
+        <MSBuild Projects="Web-Samples\011-UniGUI\UniGUISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UniGUISample:Make">
+        <MSBuild Projects="Web-Samples\011-UniGUI\UniGUISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample">
+        <MSBuild Projects="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample:Clean">
+        <MSBuild Projects="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample:Make">
+        <MSBuild Projects="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWorld">
+        <MSBuild Projects="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj"/>
+    </Target>
+    <Target Name="HelloWorld:Clean">
+        <MSBuild Projects="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorld:Make">
+        <MSBuild Projects="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TMSWebCoreDelphiBooksSample">
+        <MSBuild Projects="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj"/>
+    </Target>
+    <Target Name="TMSWebCoreDelphiBooksSample:Clean">
+        <MSBuild Projects="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TMSWebCoreDelphiBooksSample:Make">
+        <MSBuild Projects="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="SOAPClient;SOAPServer;CoursesDB;ShowSelectedItem;TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL;PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL;QRCodeGenerator_VCL;QRCodeReader_FMX;HelloWorld;ConsoleMenu;Recursivity;ForLoopSample;Project1;ListOfThings;ListInDB;TListSortSample;FireDACSQLiteSample;InterbaseSample;CDataRSSDemo;MultiDBSample;UpperAndLowerCase;PopupMenuOnButton;MasterDetailApplication;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;DemoPermissionsAndroid;SignatureFMXDemo;ListeArborescence;ParcourtDeLaListe;ShowHideScreenAsLayout;BitmapScaleTests;DialogFMXSample;FolderOrFileSelect;FolderOrFileSelectWithFrame;TLabel_Shortcut_and_Tabulation;TBiometricAuthSample;LogMainFormEvents;ContactSheetFMXSample;ShowSVGInAFolderWithSkia4Delphi;CalendarInPopupSample;DownloadAndOpenAPDFFile;BeaconDetector;BeaconFenceDemo;SearchBTDevices;MastermindArduino;JoystickViewer;ShowBeaconCharacteristics;DelphiZXingQRCodeTestApp;DisplayTextByCode;UseLibraryAsTFrame;MD5Sample;ChecksumSample;IncDecByteCryptSample;ShiftCryptDecryptSample;CryptDecryptSample;SwapCryptDecryptSample;TimeConversionSample;DProjReaderSample;RandomIDGenerator;GetSystemLanguageISOCode_FMX;GetSystemLanguageISOCode_VCL;NumberBaseConvertSample;SHL_SHR_Sample;BeginEndUpdateParamSample;CryptDecryptEventsSample;ParamsEvents;ParamsSample;RemoveKeySample;ParamsFolderTest;ParamsInPortableMode;LoadAndSaveBitmapInAStreamSample;FMXEmptyBitmapSample;VCLEmptyBitmapSample;LoadAndSaveStringSample;StreamWithSize;GetSystemTheme;FMXSVGToBitmapSample;FMXAutoRegisterAndSVGMarginsSample;FMXSVGClassTest;FMXShowSVGFromBitmapSample;VCLSVGToBitmapSample;CreateImagesByCodeSampleProject;VCLShowSVGFromBitmapSample;FMXSampleClient;FMXSampleServer;TchatClient;TchatServer;ClockClient;ClockServer;Bourrinage;ChatSampleClient;ChatSampleServer;MultiUserDraw;MultiUserDrawServer;FmxTestApp;vclTestApp;Webcam;Leaktest;dUnitXTest;dUnitXTestTests;ClientServerSocketSample;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;VCLProjectStructure;LiveBindingsAndVCLStyles;ListOfthingsStoredInJSON;EditToListBoxSample;ImageList;VirtualImageList;DialogVCLSample;TNumberBox_MinValue;TControlList_MultiSelect;TTouchKeyboard_with_Style;TControlListBiolife;ContactSheetVCLSample;IntraWebDemo;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;DisplayImagesFromURL;IWAjaxAndJavaScript;RESTClientSNCF;StringComparison"/>
+        <CallTarget Targets="SOAPClient;SOAPServer;CoursesDB;ShowSelectedItem;TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL;PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL;QRCodeGenerator_VCL;QRCodeReader_FMX;HelloWorld;ConsoleMenu;Recursivity;ForLoopSample;StructureProgSample;ListOfThings;ListInDB;TListSortSample;TypeInferenceOnADecimalValueSample;StringComparison;GotoSample;FireDACSQLiteSample;InterbaseSample;CDataRSSDemo;MultiDBSample;SQLiteBlobsSample;HelloWorld;UpperAndLowerCase;PopupMenuOnButton;MasterDetailApplication;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;DemoPermissionsAndroid;SignatureFMXDemo;ListeArborescence;ParcourtDeLaListe;ShowHideScreenAsLayout;BitmapScaleTests;DialogFMXSample;FolderOrFileSelect;FolderOrFileSelectWithFrame;TLabel_Shortcut_and_Tabulation;TBiometricAuthSample;TFlowLayoutSample;ScaledLayoutSample;LogMainFormEvents;ContactSheetFMXSample;ShowSVGInAFolderWithSkia4Delphi;CalendarInPopupSample;DownloadAndOpenAPDFFile;PlayWithComponents;FMXDragAndDropSample;StylesAndEXESizeSample;ParallelFor;LoadImageFromURLWithUILockSample;MultiFormOnMobile;BeaconDetector;BeaconFenceDemo;SearchBTDevices;MastermindArduino;JoystickViewer;ShowBeaconCharacteristics;ClientServerSocketSample;TURLStreamSample;HelloWorld;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;VCLProjectStructure;LiveBindingsAndVCLStyles;ListOfthingsStoredInJSON;EditToListBoxSample;ImageList;VirtualImageList;DialogVCLSample;TNumberBox_MinValue;TControlList_MultiSelect;TTouchKeyboard_with_Style;TControlListBiolife;DelphiMVCSample;PNGWithAlphaLayerSample;ContactSheetVCLSample;IntraWebDemo;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;DisplayImagesFromURL;IWAjaxAndJavaScript;RESTClientSNCF;DataSnapRPCServer;DumpRequest;WhoisClient;UniGUISample;UniGUIDatabaseSample;HelloWorld;TMSWebCoreDelphiBooksSample"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="SOAPClient:Clean;SOAPServer:Clean;CoursesDB:Clean;ShowSelectedItem:Clean;TakeAndSendPhotoWithAppTethering:Clean;ReceivePhotoFromAppTetheringFMX:Clean;ReceivePhotoFromAppTetheringVCL:Clean;PictureSender_FMX:Clean;PictureReceiver_FMX:Clean;PictureReceiver_VCL:Clean;QRCodeGenerator_VCL:Clean;QRCodeReader_FMX:Clean;HelloWorld:Clean;ConsoleMenu:Clean;Recursivity:Clean;ForLoopSample:Clean;Project1:Clean;ListOfThings:Clean;ListInDB:Clean;TListSortSample:Clean;FireDACSQLiteSample:Clean;InterbaseSample:Clean;CDataRSSDemo:Clean;MultiDBSample:Clean;UpperAndLowerCase:Clean;PopupMenuOnButton:Clean;MasterDetailApplication:Clean;FMXProjectStructure:Clean;FMXStylesAnd3D:Clean;EffectsAndAnimations:Clean;ListOfthingsStoredInBdD:Clean;DemoPermissionsAndroid:Clean;SignatureFMXDemo:Clean;ListeArborescence:Clean;ParcourtDeLaListe:Clean;ShowHideScreenAsLayout:Clean;BitmapScaleTests:Clean;DialogFMXSample:Clean;FolderOrFileSelect:Clean;FolderOrFileSelectWithFrame:Clean;TLabel_Shortcut_and_Tabulation:Clean;TBiometricAuthSample:Clean;LogMainFormEvents:Clean;ContactSheetFMXSample:Clean;ShowSVGInAFolderWithSkia4Delphi:Clean;CalendarInPopupSample:Clean;DownloadAndOpenAPDFFile:Clean;BeaconDetector:Clean;BeaconFenceDemo:Clean;SearchBTDevices:Clean;MastermindArduino:Clean;JoystickViewer:Clean;ShowBeaconCharacteristics:Clean;DelphiZXingQRCodeTestApp:Clean;DisplayTextByCode:Clean;UseLibraryAsTFrame:Clean;MD5Sample:Clean;ChecksumSample:Clean;IncDecByteCryptSample:Clean;ShiftCryptDecryptSample:Clean;CryptDecryptSample:Clean;SwapCryptDecryptSample:Clean;TimeConversionSample:Clean;DProjReaderSample:Clean;RandomIDGenerator:Clean;GetSystemLanguageISOCode_FMX:Clean;GetSystemLanguageISOCode_VCL:Clean;NumberBaseConvertSample:Clean;SHL_SHR_Sample:Clean;BeginEndUpdateParamSample:Clean;CryptDecryptEventsSample:Clean;ParamsEvents:Clean;ParamsSample:Clean;RemoveKeySample:Clean;ParamsFolderTest:Clean;ParamsInPortableMode:Clean;LoadAndSaveBitmapInAStreamSample:Clean;FMXEmptyBitmapSample:Clean;VCLEmptyBitmapSample:Clean;LoadAndSaveStringSample:Clean;StreamWithSize:Clean;GetSystemTheme:Clean;FMXSVGToBitmapSample:Clean;FMXAutoRegisterAndSVGMarginsSample:Clean;FMXSVGClassTest:Clean;FMXShowSVGFromBitmapSample:Clean;VCLSVGToBitmapSample:Clean;CreateImagesByCodeSampleProject:Clean;VCLShowSVGFromBitmapSample:Clean;FMXSampleClient:Clean;FMXSampleServer:Clean;TchatClient:Clean;TchatServer:Clean;ClockClient:Clean;ClockServer:Clean;Bourrinage:Clean;ChatSampleClient:Clean;ChatSampleServer:Clean;MultiUserDraw:Clean;MultiUserDrawServer:Clean;FmxTestApp:Clean;vclTestApp:Clean;Webcam:Clean;Leaktest:Clean;dUnitXTest:Clean;dUnitXTestTests:Clean;ClientServerSocketSample:Clean;LiveBindingsCalc:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;VCLProjectStructure:Clean;LiveBindingsAndVCLStyles:Clean;ListOfthingsStoredInJSON:Clean;EditToListBoxSample:Clean;ImageList:Clean;VirtualImageList:Clean;DialogVCLSample:Clean;TNumberBox_MinValue:Clean;TControlList_MultiSelect:Clean;TTouchKeyboard_with_Style:Clean;TControlListBiolife:Clean;ContactSheetVCLSample:Clean;IntraWebDemo:Clean;WebBrokerDemo:Clean;DisplayFTPFileList:Clean;FrequentationMediathequePoitierAPIViewer:Clean;DisplayImagesFromURL:Clean;IWAjaxAndJavaScript:Clean;RESTClientSNCF:Clean;StringComparison:Clean"/>
+        <CallTarget Targets="SOAPClient:Clean;SOAPServer:Clean;CoursesDB:Clean;ShowSelectedItem:Clean;TakeAndSendPhotoWithAppTethering:Clean;ReceivePhotoFromAppTetheringFMX:Clean;ReceivePhotoFromAppTetheringVCL:Clean;PictureSender_FMX:Clean;PictureReceiver_FMX:Clean;PictureReceiver_VCL:Clean;QRCodeGenerator_VCL:Clean;QRCodeReader_FMX:Clean;HelloWorld:Clean;ConsoleMenu:Clean;Recursivity:Clean;ForLoopSample:Clean;StructureProgSample:Clean;ListOfThings:Clean;ListInDB:Clean;TListSortSample:Clean;TypeInferenceOnADecimalValueSample:Clean;StringComparison:Clean;GotoSample:Clean;FireDACSQLiteSample:Clean;InterbaseSample:Clean;CDataRSSDemo:Clean;MultiDBSample:Clean;SQLiteBlobsSample:Clean;HelloWorld:Clean;UpperAndLowerCase:Clean;PopupMenuOnButton:Clean;MasterDetailApplication:Clean;FMXProjectStructure:Clean;FMXStylesAnd3D:Clean;EffectsAndAnimations:Clean;ListOfthingsStoredInBdD:Clean;DemoPermissionsAndroid:Clean;SignatureFMXDemo:Clean;ListeArborescence:Clean;ParcourtDeLaListe:Clean;ShowHideScreenAsLayout:Clean;BitmapScaleTests:Clean;DialogFMXSample:Clean;FolderOrFileSelect:Clean;FolderOrFileSelectWithFrame:Clean;TLabel_Shortcut_and_Tabulation:Clean;TBiometricAuthSample:Clean;TFlowLayoutSample:Clean;ScaledLayoutSample:Clean;LogMainFormEvents:Clean;ContactSheetFMXSample:Clean;ShowSVGInAFolderWithSkia4Delphi:Clean;CalendarInPopupSample:Clean;DownloadAndOpenAPDFFile:Clean;PlayWithComponents:Clean;FMXDragAndDropSample:Clean;StylesAndEXESizeSample:Clean;ParallelFor:Clean;LoadImageFromURLWithUILockSample:Clean;MultiFormOnMobile:Clean;BeaconDetector:Clean;BeaconFenceDemo:Clean;SearchBTDevices:Clean;MastermindArduino:Clean;JoystickViewer:Clean;ShowBeaconCharacteristics:Clean;ClientServerSocketSample:Clean;TURLStreamSample:Clean;HelloWorld:Clean;LiveBindingsCalc:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;VCLProjectStructure:Clean;LiveBindingsAndVCLStyles:Clean;ListOfthingsStoredInJSON:Clean;EditToListBoxSample:Clean;ImageList:Clean;VirtualImageList:Clean;DialogVCLSample:Clean;TNumberBox_MinValue:Clean;TControlList_MultiSelect:Clean;TTouchKeyboard_with_Style:Clean;TControlListBiolife:Clean;DelphiMVCSample:Clean;PNGWithAlphaLayerSample:Clean;ContactSheetVCLSample:Clean;IntraWebDemo:Clean;WebBrokerDemo:Clean;DisplayFTPFileList:Clean;FrequentationMediathequePoitierAPIViewer:Clean;DisplayImagesFromURL:Clean;IWAjaxAndJavaScript:Clean;RESTClientSNCF:Clean;DataSnapRPCServer:Clean;DumpRequest:Clean;WhoisClient:Clean;UniGUISample:Clean;UniGUIDatabaseSample:Clean;HelloWorld:Clean;TMSWebCoreDelphiBooksSample:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="SOAPClient:Make;SOAPServer:Make;CoursesDB:Make;ShowSelectedItem:Make;TakeAndSendPhotoWithAppTethering:Make;ReceivePhotoFromAppTetheringFMX:Make;ReceivePhotoFromAppTetheringVCL:Make;PictureSender_FMX:Make;PictureReceiver_FMX:Make;PictureReceiver_VCL:Make;QRCodeGenerator_VCL:Make;QRCodeReader_FMX:Make;HelloWorld:Make;ConsoleMenu:Make;Recursivity:Make;ForLoopSample:Make;Project1:Make;ListOfThings:Make;ListInDB:Make;TListSortSample:Make;FireDACSQLiteSample:Make;InterbaseSample:Make;CDataRSSDemo:Make;MultiDBSample:Make;UpperAndLowerCase:Make;PopupMenuOnButton:Make;MasterDetailApplication:Make;FMXProjectStructure:Make;FMXStylesAnd3D:Make;EffectsAndAnimations:Make;ListOfthingsStoredInBdD:Make;DemoPermissionsAndroid:Make;SignatureFMXDemo:Make;ListeArborescence:Make;ParcourtDeLaListe:Make;ShowHideScreenAsLayout:Make;BitmapScaleTests:Make;DialogFMXSample:Make;FolderOrFileSelect:Make;FolderOrFileSelectWithFrame:Make;TLabel_Shortcut_and_Tabulation:Make;TBiometricAuthSample:Make;LogMainFormEvents:Make;ContactSheetFMXSample:Make;ShowSVGInAFolderWithSkia4Delphi:Make;CalendarInPopupSample:Make;DownloadAndOpenAPDFFile:Make;BeaconDetector:Make;BeaconFenceDemo:Make;SearchBTDevices:Make;MastermindArduino:Make;JoystickViewer:Make;ShowBeaconCharacteristics:Make;DelphiZXingQRCodeTestApp:Make;DisplayTextByCode:Make;UseLibraryAsTFrame:Make;MD5Sample:Make;ChecksumSample:Make;IncDecByteCryptSample:Make;ShiftCryptDecryptSample:Make;CryptDecryptSample:Make;SwapCryptDecryptSample:Make;TimeConversionSample:Make;DProjReaderSample:Make;RandomIDGenerator:Make;GetSystemLanguageISOCode_FMX:Make;GetSystemLanguageISOCode_VCL:Make;NumberBaseConvertSample:Make;SHL_SHR_Sample:Make;BeginEndUpdateParamSample:Make;CryptDecryptEventsSample:Make;ParamsEvents:Make;ParamsSample:Make;RemoveKeySample:Make;ParamsFolderTest:Make;ParamsInPortableMode:Make;LoadAndSaveBitmapInAStreamSample:Make;FMXEmptyBitmapSample:Make;VCLEmptyBitmapSample:Make;LoadAndSaveStringSample:Make;StreamWithSize:Make;GetSystemTheme:Make;FMXSVGToBitmapSample:Make;FMXAutoRegisterAndSVGMarginsSample:Make;FMXSVGClassTest:Make;FMXShowSVGFromBitmapSample:Make;VCLSVGToBitmapSample:Make;CreateImagesByCodeSampleProject:Make;VCLShowSVGFromBitmapSample:Make;FMXSampleClient:Make;FMXSampleServer:Make;TchatClient:Make;TchatServer:Make;ClockClient:Make;ClockServer:Make;Bourrinage:Make;ChatSampleClient:Make;ChatSampleServer:Make;MultiUserDraw:Make;MultiUserDrawServer:Make;FmxTestApp:Make;vclTestApp:Make;Webcam:Make;Leaktest:Make;dUnitXTest:Make;dUnitXTestTests:Make;ClientServerSocketSample:Make;LiveBindingsCalc:Make;MDIAPP:Make;SDIWithDialogBox:Make;VCLProjectStructure:Make;LiveBindingsAndVCLStyles:Make;ListOfthingsStoredInJSON:Make;EditToListBoxSample:Make;ImageList:Make;VirtualImageList:Make;DialogVCLSample:Make;TNumberBox_MinValue:Make;TControlList_MultiSelect:Make;TTouchKeyboard_with_Style:Make;TControlListBiolife:Make;ContactSheetVCLSample:Make;IntraWebDemo:Make;WebBrokerDemo:Make;DisplayFTPFileList:Make;FrequentationMediathequePoitierAPIViewer:Make;DisplayImagesFromURL:Make;IWAjaxAndJavaScript:Make;RESTClientSNCF:Make;StringComparison:Make"/>
+        <CallTarget Targets="SOAPClient:Make;SOAPServer:Make;CoursesDB:Make;ShowSelectedItem:Make;TakeAndSendPhotoWithAppTethering:Make;ReceivePhotoFromAppTetheringFMX:Make;ReceivePhotoFromAppTetheringVCL:Make;PictureSender_FMX:Make;PictureReceiver_FMX:Make;PictureReceiver_VCL:Make;QRCodeGenerator_VCL:Make;QRCodeReader_FMX:Make;HelloWorld:Make;ConsoleMenu:Make;Recursivity:Make;ForLoopSample:Make;StructureProgSample:Make;ListOfThings:Make;ListInDB:Make;TListSortSample:Make;TypeInferenceOnADecimalValueSample:Make;StringComparison:Make;GotoSample:Make;FireDACSQLiteSample:Make;InterbaseSample:Make;CDataRSSDemo:Make;MultiDBSample:Make;SQLiteBlobsSample:Make;HelloWorld:Make;UpperAndLowerCase:Make;PopupMenuOnButton:Make;MasterDetailApplication:Make;FMXProjectStructure:Make;FMXStylesAnd3D:Make;EffectsAndAnimations:Make;ListOfthingsStoredInBdD:Make;DemoPermissionsAndroid:Make;SignatureFMXDemo:Make;ListeArborescence:Make;ParcourtDeLaListe:Make;ShowHideScreenAsLayout:Make;BitmapScaleTests:Make;DialogFMXSample:Make;FolderOrFileSelect:Make;FolderOrFileSelectWithFrame:Make;TLabel_Shortcut_and_Tabulation:Make;TBiometricAuthSample:Make;TFlowLayoutSample:Make;ScaledLayoutSample:Make;LogMainFormEvents:Make;ContactSheetFMXSample:Make;ShowSVGInAFolderWithSkia4Delphi:Make;CalendarInPopupSample:Make;DownloadAndOpenAPDFFile:Make;PlayWithComponents:Make;FMXDragAndDropSample:Make;StylesAndEXESizeSample:Make;ParallelFor:Make;LoadImageFromURLWithUILockSample:Make;MultiFormOnMobile:Make;BeaconDetector:Make;BeaconFenceDemo:Make;SearchBTDevices:Make;MastermindArduino:Make;JoystickViewer:Make;ShowBeaconCharacteristics:Make;ClientServerSocketSample:Make;TURLStreamSample:Make;HelloWorld:Make;LiveBindingsCalc:Make;MDIAPP:Make;SDIWithDialogBox:Make;VCLProjectStructure:Make;LiveBindingsAndVCLStyles:Make;ListOfthingsStoredInJSON:Make;EditToListBoxSample:Make;ImageList:Make;VirtualImageList:Make;DialogVCLSample:Make;TNumberBox_MinValue:Make;TControlList_MultiSelect:Make;TTouchKeyboard_with_Style:Make;TControlListBiolife:Make;DelphiMVCSample:Make;PNGWithAlphaLayerSample:Make;ContactSheetVCLSample:Make;IntraWebDemo:Make;WebBrokerDemo:Make;DisplayFTPFileList:Make;FrequentationMediathequePoitierAPIViewer:Make;DisplayImagesFromURL:Make;IWAjaxAndJavaScript:Make;RESTClientSNCF:Make;DataSnapRPCServer:Make;DumpRequest:Make;WhoisClient:Make;UniGUISample:Make;UniGUIDatabaseSample:Make;HelloWorld:Make;TMSWebCoreDelphiBooksSample:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
