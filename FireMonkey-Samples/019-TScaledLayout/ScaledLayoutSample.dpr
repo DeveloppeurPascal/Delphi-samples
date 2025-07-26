@@ -41,7 +41,7 @@
   ***************************************************************************
 *)
 
-program Project1;
+program ScaledLayoutSample;
 
 uses
   System.StartUpCopy,
