@@ -41,7 +41,7 @@
   ***************************************************************************
 *)
 
-program Project1;
+program DelphiMVCSample;
 
 uses
   Vcl.Forms,
