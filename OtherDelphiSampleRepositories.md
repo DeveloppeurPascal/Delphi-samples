@@ -10,7 +10,13 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 * [Delphi Examples](https://github.com/marciomichelluzzi/delphiExamples)
 * [Delphi FMX Game Snippets](https://github.com/DeveloppeurPascal/DelphiFMXGameSnippets)
 * [Duck Journey Animation](https://github.com/DeveloppeurPascal/Duck-Animation-Sidaction2021)
-* [Embarcadero RAD Studio 11 demos](https://github.com/Embarcadero/RADStudio11Demos)
+* [Embarcadero RAD Studio 10.3 Rio demos](https://github.com/Embarcadero/RADStudio10.3Demos)
+* [Embarcadero RAD Studio 10.3.2 Rio demos](https://github.com/Embarcadero/RADStudio10.3.2Demos)
+* [Embarcadero RAD Studio 10.3.3 Rio demos](https://github.com/Embarcadero/RADStudio10.3.3Demos)
+* [Embarcadero RAD Studio 10.4 Sydney demos](https://github.com/Embarcadero/RADStudio10.4Demos)
+* [Embarcadero RAD Studio 11 Alexandria demos](https://github.com/Embarcadero/RADStudio11Demos)
+* [Embarcadero RAD Studio 12 Athens demos](https://github.com/Embarcadero/RADStudio12Demos)
+* [Embarcadero RAD Studio 13 Florence demos](https://github.com/Embarcadero/RADStudio13Demos)
 * [Embarcadero RAD Studio demo kit](https://github.com/Embarcadero/RADStudio-DemoKit)
 * [Events](https://github.com/flrizzato/EVENTS) (code from in person events)
 * [Examples with tutorials](https://github.com/viniciussanchez/examples)
@@ -22,6 +28,8 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 * [Looping Animation Demos](https://github.com/DeveloppeurPascal/LoopingAnimationDemo)
 * [One shot tools](https://github.com/DeveloppeurPascal/one-shot-tools)
 * [Samples of Developpeur Pascal blog](https://github.com/DeveloppeurPascal/exemples)
+* [RAD Server demos and doc](https://github.com/Embarcadero/RADServer-Docs)
+* [WebStencils official demos](https://github.com/Embarcadero/WebStencilsDemos)
 
 * try looking at "[delphi-sample](https://github.com/topics/delphi-sample)" topic on GitHub to find more samples on VCL, FireMonkey, Pascal Language...
 
