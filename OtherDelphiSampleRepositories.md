@@ -9,6 +9,7 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 * [Delphi Collection repositories](https://github.com/walwalwalides?tab=repositories&q=Delphi-Collection&type=&language=&sort=)
 * [Delphi Examples](https://github.com/marciomichelluzzi/delphiExamples)
 * [Delphi FMX Game Snippets](https://github.com/DeveloppeurPascal/DelphiFMXGameSnippets)
+* [Duck Journey Animation](https://github.com/DeveloppeurPascal/Duck-Animation-Sidaction2021)
 * [Embarcadero RAD Studio 11 demos](https://github.com/Embarcadero/RADStudio11Demos)
 * [Embarcadero RAD Studio demo kit](https://github.com/Embarcadero/RADStudio-DemoKit)
 * [Events](https://github.com/flrizzato/EVENTS) (code from in person events)
