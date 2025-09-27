@@ -41,7 +41,7 @@
   ***************************************************************************
 *)
 
-program HelloWorld;
+program HelloWorldVCL;
 
 uses
   Vcl.Forms,
