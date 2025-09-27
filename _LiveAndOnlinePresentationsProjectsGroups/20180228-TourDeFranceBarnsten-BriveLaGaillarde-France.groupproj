@@ -1,0 +1,228 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9A126D95-CD1F-44F5-82C1-7B3ADD63580D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Console-Samples\002-Menu\ConsoleMenu.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Console-Samples\003-Recursivity\Recursivity.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Console-Samples\004-Loops\ForLoopSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\002-LiveBindings\LiveBindingsCalc.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\003-MDI\MDIAPP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireMonkey-Samples\001-HelloWorld\HelloWorldFireMonkey.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireDAC-Samples\001-SQLite\FireDACSQLiteSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireMonkey-Samples\004-LiveBindingsAndPrototypeDatabase\MasterDetailApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\003-Indy-FTP\DisplayFTPFileList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\004-REST-API\FrequentationMediathequePoitierAPIViewer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HelloWorldConsole">
+        <MSBuild Projects="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj"/>
+    </Target>
+    <Target Name="HelloWorldConsole:Clean">
+        <MSBuild Projects="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorldConsole:Make">
+        <MSBuild Projects="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConsoleMenu">
+        <MSBuild Projects="..\Console-Samples\002-Menu\ConsoleMenu.dproj"/>
+    </Target>
+    <Target Name="ConsoleMenu:Clean">
+        <MSBuild Projects="..\Console-Samples\002-Menu\ConsoleMenu.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConsoleMenu:Make">
+        <MSBuild Projects="..\Console-Samples\002-Menu\ConsoleMenu.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Recursivity">
+        <MSBuild Projects="..\Console-Samples\003-Recursivity\Recursivity.dproj"/>
+    </Target>
+    <Target Name="Recursivity:Clean">
+        <MSBuild Projects="..\Console-Samples\003-Recursivity\Recursivity.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Recursivity:Make">
+        <MSBuild Projects="..\Console-Samples\003-Recursivity\Recursivity.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ForLoopSample">
+        <MSBuild Projects="..\Console-Samples\004-Loops\ForLoopSample.dproj"/>
+    </Target>
+    <Target Name="ForLoopSample:Clean">
+        <MSBuild Projects="..\Console-Samples\004-Loops\ForLoopSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ForLoopSample:Make">
+        <MSBuild Projects="..\Console-Samples\004-Loops\ForLoopSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWorldVCL">
+        <MSBuild Projects="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj"/>
+    </Target>
+    <Target Name="HelloWorldVCL:Clean">
+        <MSBuild Projects="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorldVCL:Make">
+        <MSBuild Projects="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LiveBindingsCalc">
+        <MSBuild Projects="..\VCL-Samples\002-LiveBindings\LiveBindingsCalc.dproj"/>
+    </Target>
+    <Target Name="LiveBindingsCalc:Clean">
+        <MSBuild Projects="..\VCL-Samples\002-LiveBindings\LiveBindingsCalc.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LiveBindingsCalc:Make">
+        <MSBuild Projects="..\VCL-Samples\002-LiveBindings\LiveBindingsCalc.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MDIAPP">
+        <MSBuild Projects="..\VCL-Samples\003-MDI\MDIAPP.dproj"/>
+    </Target>
+    <Target Name="MDIAPP:Clean">
+        <MSBuild Projects="..\VCL-Samples\003-MDI\MDIAPP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MDIAPP:Make">
+        <MSBuild Projects="..\VCL-Samples\003-MDI\MDIAPP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SDIWithDialogBox">
+        <MSBuild Projects="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj"/>
+    </Target>
+    <Target Name="SDIWithDialogBox:Clean">
+        <MSBuild Projects="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SDIWithDialogBox:Make">
+        <MSBuild Projects="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWorldFireMonkey">
+        <MSBuild Projects="..\FireMonkey-Samples\001-HelloWorld\HelloWorldFireMonkey.dproj"/>
+    </Target>
+    <Target Name="HelloWorldFireMonkey:Clean">
+        <MSBuild Projects="..\FireMonkey-Samples\001-HelloWorld\HelloWorldFireMonkey.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorldFireMonkey:Make">
+        <MSBuild Projects="..\FireMonkey-Samples\001-HelloWorld\HelloWorldFireMonkey.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DisplayImagesFromURL">
+        <MSBuild Projects="..\Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj"/>
+    </Target>
+    <Target Name="DisplayImagesFromURL:Clean">
+        <MSBuild Projects="..\Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DisplayImagesFromURL:Make">
+        <MSBuild Projects="..\Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FireDACSQLiteSample">
+        <MSBuild Projects="..\FireDAC-Samples\001-SQLite\FireDACSQLiteSample.dproj"/>
+    </Target>
+    <Target Name="FireDACSQLiteSample:Clean">
+        <MSBuild Projects="..\FireDAC-Samples\001-SQLite\FireDACSQLiteSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FireDACSQLiteSample:Make">
+        <MSBuild Projects="..\FireDAC-Samples\001-SQLite\FireDACSQLiteSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MasterDetailApplication">
+        <MSBuild Projects="..\FireMonkey-Samples\004-LiveBindingsAndPrototypeDatabase\MasterDetailApplication.dproj"/>
+    </Target>
+    <Target Name="MasterDetailApplication:Clean">
+        <MSBuild Projects="..\FireMonkey-Samples\004-LiveBindingsAndPrototypeDatabase\MasterDetailApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MasterDetailApplication:Make">
+        <MSBuild Projects="..\FireMonkey-Samples\004-LiveBindingsAndPrototypeDatabase\MasterDetailApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntraWebDemo">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj"/>
+    </Target>
+    <Target Name="IntraWebDemo:Clean">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntraWebDemo:Make">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WebBrokerDemo">
+        <MSBuild Projects="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj"/>
+    </Target>
+    <Target Name="WebBrokerDemo:Clean">
+        <MSBuild Projects="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WebBrokerDemo:Make">
+        <MSBuild Projects="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DisplayFTPFileList">
+        <MSBuild Projects="..\Web-Samples\003-Indy-FTP\DisplayFTPFileList.dproj"/>
+    </Target>
+    <Target Name="DisplayFTPFileList:Clean">
+        <MSBuild Projects="..\Web-Samples\003-Indy-FTP\DisplayFTPFileList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DisplayFTPFileList:Make">
+        <MSBuild Projects="..\Web-Samples\003-Indy-FTP\DisplayFTPFileList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FrequentationMediathequePoitierAPIViewer">
+        <MSBuild Projects="..\Web-Samples\004-REST-API\FrequentationMediathequePoitierAPIViewer.dproj"/>
+    </Target>
+    <Target Name="FrequentationMediathequePoitierAPIViewer:Clean">
+        <MSBuild Projects="..\Web-Samples\004-REST-API\FrequentationMediathequePoitierAPIViewer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FrequentationMediathequePoitierAPIViewer:Make">
+        <MSBuild Projects="..\Web-Samples\004-REST-API\FrequentationMediathequePoitierAPIViewer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BeaconDetector">
+        <MSBuild Projects="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj"/>
+    </Target>
+    <Target Name="BeaconDetector:Clean">
+        <MSBuild Projects="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BeaconDetector:Make">
+        <MSBuild Projects="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HelloWorldConsole;ConsoleMenu;Recursivity;ForLoopSample;HelloWorldVCL;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;HelloWorldFireMonkey;DisplayImagesFromURL;FireDACSQLiteSample;MasterDetailApplication;IntraWebDemo;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;BeaconDetector"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HelloWorldConsole:Clean;ConsoleMenu:Clean;Recursivity:Clean;ForLoopSample:Clean;HelloWorldVCL:Clean;LiveBindingsCalc:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;HelloWorldFireMonkey:Clean;DisplayImagesFromURL:Clean;FireDACSQLiteSample:Clean;MasterDetailApplication:Clean;IntraWebDemo:Clean;WebBrokerDemo:Clean;DisplayFTPFileList:Clean;FrequentationMediathequePoitierAPIViewer:Clean;BeaconDetector:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HelloWorldConsole:Make;ConsoleMenu:Make;Recursivity:Make;ForLoopSample:Make;HelloWorldVCL:Make;LiveBindingsCalc:Make;MDIAPP:Make;SDIWithDialogBox:Make;HelloWorldFireMonkey:Make;DisplayImagesFromURL:Make;FireDACSQLiteSample:Make;MasterDetailApplication:Make;IntraWebDemo:Make;WebBrokerDemo:Make;DisplayFTPFileList:Make;FrequentationMediathequePoitierAPIViewer:Make;BeaconDetector:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
