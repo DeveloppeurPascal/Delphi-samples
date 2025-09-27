@@ -41,7 +41,7 @@
   ***************************************************************************
 *)
 
-program HelloWorld;
+program HelloWorldConsole;
 
 {$APPTYPE CONSOLE}
 {$R *.res}
