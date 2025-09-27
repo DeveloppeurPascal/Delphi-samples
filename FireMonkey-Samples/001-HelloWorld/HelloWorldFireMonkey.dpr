@@ -41,7 +41,7 @@
   ***************************************************************************
 *)
 
-program HelloWorld;
+program HelloWorldFireMonkey;
 
 uses
   System.StartUpCopy,
