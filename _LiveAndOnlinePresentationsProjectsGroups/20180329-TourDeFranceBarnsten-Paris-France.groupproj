@@ -1,0 +1,348 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F06E1D2C-DE80-4787-B347-69B3CB19D5BC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Console-Samples\006-ListOfthingsStoredInFile\ListOfThings.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\003-MDI\MDIAPP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireMonkey-Samples\005-FMXProjectStructure\FMXProjectStructure.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireMonkey-Samples\006-FMXStylesAnd3D\FMXStylesAnd3D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireMonkey-Samples\008-ListOfthingsStoredInBdD\ListOfthingsStoredInBdD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireDAC-Samples\002-Interbase\InterbaseSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ClientServer-Samples\001-SOAP-Demo\client-ldemo\SOAPClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ClientServer-Samples\001-SOAP-Demo\serveur\SOAPServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ClientServer-Samples\002-AppTetheringDemo\app-principale\CoursesDB.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ClientServer-Samples\002-AppTetheringDemo\app-secondaire\ShowSelectedItem.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\011-UniGUI\UniGUISample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\IoT-Samples\005-Arduino-Joystick\JoystickViewer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\IoT-Samples\002-BeaconFence\BeaconFenceDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HelloWorldConsole">
+        <MSBuild Projects="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj"/>
+    </Target>
+    <Target Name="HelloWorldConsole:Clean">
+        <MSBuild Projects="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorldConsole:Make">
+        <MSBuild Projects="..\Console-Samples\001-HelloWorld\HelloWorldConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ListOfThings">
+        <MSBuild Projects="..\Console-Samples\006-ListOfthingsStoredInFile\ListOfThings.dproj"/>
+    </Target>
+    <Target Name="ListOfThings:Clean">
+        <MSBuild Projects="..\Console-Samples\006-ListOfthingsStoredInFile\ListOfThings.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListOfThings:Make">
+        <MSBuild Projects="..\Console-Samples\006-ListOfthingsStoredInFile\ListOfThings.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ListInDB">
+        <MSBuild Projects="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj"/>
+    </Target>
+    <Target Name="ListInDB:Clean">
+        <MSBuild Projects="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListInDB:Make">
+        <MSBuild Projects="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWorldVCL">
+        <MSBuild Projects="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj"/>
+    </Target>
+    <Target Name="HelloWorldVCL:Clean">
+        <MSBuild Projects="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorldVCL:Make">
+        <MSBuild Projects="..\VCL-Samples\001-HelloWorld\HelloWorldVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MDIAPP">
+        <MSBuild Projects="..\VCL-Samples\003-MDI\MDIAPP.dproj"/>
+    </Target>
+    <Target Name="MDIAPP:Clean">
+        <MSBuild Projects="..\VCL-Samples\003-MDI\MDIAPP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MDIAPP:Make">
+        <MSBuild Projects="..\VCL-Samples\003-MDI\MDIAPP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SDIWithDialogBox">
+        <MSBuild Projects="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj"/>
+    </Target>
+    <Target Name="SDIWithDialogBox:Clean">
+        <MSBuild Projects="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SDIWithDialogBox:Make">
+        <MSBuild Projects="..\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInJSON">
+        <MSBuild Projects="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInJSON:Clean">
+        <MSBuild Projects="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInJSON:Make">
+        <MSBuild Projects="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXProjectStructure">
+        <MSBuild Projects="..\FireMonkey-Samples\005-FMXProjectStructure\FMXProjectStructure.dproj"/>
+    </Target>
+    <Target Name="FMXProjectStructure:Clean">
+        <MSBuild Projects="..\FireMonkey-Samples\005-FMXProjectStructure\FMXProjectStructure.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXProjectStructure:Make">
+        <MSBuild Projects="..\FireMonkey-Samples\005-FMXProjectStructure\FMXProjectStructure.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXStylesAnd3D">
+        <MSBuild Projects="..\FireMonkey-Samples\006-FMXStylesAnd3D\FMXStylesAnd3D.dproj"/>
+    </Target>
+    <Target Name="FMXStylesAnd3D:Clean">
+        <MSBuild Projects="..\FireMonkey-Samples\006-FMXStylesAnd3D\FMXStylesAnd3D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXStylesAnd3D:Make">
+        <MSBuild Projects="..\FireMonkey-Samples\006-FMXStylesAnd3D\FMXStylesAnd3D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EffectsAndAnimations">
+        <MSBuild Projects="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj"/>
+    </Target>
+    <Target Name="EffectsAndAnimations:Clean">
+        <MSBuild Projects="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EffectsAndAnimations:Make">
+        <MSBuild Projects="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInBdD">
+        <MSBuild Projects="..\FireMonkey-Samples\008-ListOfthingsStoredInBdD\ListOfthingsStoredInBdD.dproj"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInBdD:Clean">
+        <MSBuild Projects="..\FireMonkey-Samples\008-ListOfthingsStoredInBdD\ListOfthingsStoredInBdD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInBdD:Make">
+        <MSBuild Projects="..\FireMonkey-Samples\008-ListOfthingsStoredInBdD\ListOfthingsStoredInBdD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="InterbaseSample">
+        <MSBuild Projects="..\FireDAC-Samples\002-Interbase\InterbaseSample.dproj"/>
+    </Target>
+    <Target Name="InterbaseSample:Clean">
+        <MSBuild Projects="..\FireDAC-Samples\002-Interbase\InterbaseSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="InterbaseSample:Make">
+        <MSBuild Projects="..\FireDAC-Samples\002-Interbase\InterbaseSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CDataRSSDemo">
+        <MSBuild Projects="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj"/>
+    </Target>
+    <Target Name="CDataRSSDemo:Clean">
+        <MSBuild Projects="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CDataRSSDemo:Make">
+        <MSBuild Projects="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntraWebDemo">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj"/>
+    </Target>
+    <Target Name="IntraWebDemo:Clean">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntraWebDemo:Make">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SOAPClient">
+        <MSBuild Projects="..\ClientServer-Samples\001-SOAP-Demo\client-ldemo\SOAPClient.dproj"/>
+    </Target>
+    <Target Name="SOAPClient:Clean">
+        <MSBuild Projects="..\ClientServer-Samples\001-SOAP-Demo\client-ldemo\SOAPClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SOAPClient:Make">
+        <MSBuild Projects="..\ClientServer-Samples\001-SOAP-Demo\client-ldemo\SOAPClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SOAPServer">
+        <MSBuild Projects="..\ClientServer-Samples\001-SOAP-Demo\serveur\SOAPServer.dproj"/>
+    </Target>
+    <Target Name="SOAPServer:Clean">
+        <MSBuild Projects="..\ClientServer-Samples\001-SOAP-Demo\serveur\SOAPServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SOAPServer:Make">
+        <MSBuild Projects="..\ClientServer-Samples\001-SOAP-Demo\serveur\SOAPServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RESTClientSNCF">
+        <MSBuild Projects="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj"/>
+    </Target>
+    <Target Name="RESTClientSNCF:Clean">
+        <MSBuild Projects="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RESTClientSNCF:Make">
+        <MSBuild Projects="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DataSnapRPCServer">
+        <MSBuild Projects="..\Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj"/>
+    </Target>
+    <Target Name="DataSnapRPCServer:Clean">
+        <MSBuild Projects="..\Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DataSnapRPCServer:Make">
+        <MSBuild Projects="..\Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DumpRequest">
+        <MSBuild Projects="..\Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj"/>
+    </Target>
+    <Target Name="DumpRequest:Clean">
+        <MSBuild Projects="..\Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DumpRequest:Make">
+        <MSBuild Projects="..\Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WhoisClient">
+        <MSBuild Projects="..\Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj"/>
+    </Target>
+    <Target Name="WhoisClient:Clean">
+        <MSBuild Projects="..\Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WhoisClient:Make">
+        <MSBuild Projects="..\Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CoursesDB">
+        <MSBuild Projects="..\ClientServer-Samples\002-AppTetheringDemo\app-principale\CoursesDB.dproj"/>
+    </Target>
+    <Target Name="CoursesDB:Clean">
+        <MSBuild Projects="..\ClientServer-Samples\002-AppTetheringDemo\app-principale\CoursesDB.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CoursesDB:Make">
+        <MSBuild Projects="..\ClientServer-Samples\002-AppTetheringDemo\app-principale\CoursesDB.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ShowSelectedItem">
+        <MSBuild Projects="..\ClientServer-Samples\002-AppTetheringDemo\app-secondaire\ShowSelectedItem.dproj"/>
+    </Target>
+    <Target Name="ShowSelectedItem:Clean">
+        <MSBuild Projects="..\ClientServer-Samples\002-AppTetheringDemo\app-secondaire\ShowSelectedItem.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ShowSelectedItem:Make">
+        <MSBuild Projects="..\ClientServer-Samples\002-AppTetheringDemo\app-secondaire\ShowSelectedItem.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="UniGUISample">
+        <MSBuild Projects="..\Web-Samples\011-UniGUI\UniGUISample.dproj"/>
+    </Target>
+    <Target Name="UniGUISample:Clean">
+        <MSBuild Projects="..\Web-Samples\011-UniGUI\UniGUISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UniGUISample:Make">
+        <MSBuild Projects="..\Web-Samples\011-UniGUI\UniGUISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample">
+        <MSBuild Projects="..\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample:Clean">
+        <MSBuild Projects="..\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample:Make">
+        <MSBuild Projects="..\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="JoystickViewer">
+        <MSBuild Projects="..\IoT-Samples\005-Arduino-Joystick\JoystickViewer.dproj"/>
+    </Target>
+    <Target Name="JoystickViewer:Clean">
+        <MSBuild Projects="..\IoT-Samples\005-Arduino-Joystick\JoystickViewer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="JoystickViewer:Make">
+        <MSBuild Projects="..\IoT-Samples\005-Arduino-Joystick\JoystickViewer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MastermindArduino">
+        <MSBuild Projects="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj"/>
+    </Target>
+    <Target Name="MastermindArduino:Clean">
+        <MSBuild Projects="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MastermindArduino:Make">
+        <MSBuild Projects="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BeaconFenceDemo">
+        <MSBuild Projects="..\IoT-Samples\002-BeaconFence\BeaconFenceDemo.dproj"/>
+    </Target>
+    <Target Name="BeaconFenceDemo:Clean">
+        <MSBuild Projects="..\IoT-Samples\002-BeaconFence\BeaconFenceDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BeaconFenceDemo:Make">
+        <MSBuild Projects="..\IoT-Samples\002-BeaconFence\BeaconFenceDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HelloWorldConsole;ListOfThings;ListInDB;HelloWorldVCL;MDIAPP;SDIWithDialogBox;ListOfthingsStoredInJSON;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;InterbaseSample;CDataRSSDemo;IntraWebDemo;SOAPClient;SOAPServer;RESTClientSNCF;DataSnapRPCServer;DumpRequest;WhoisClient;CoursesDB;ShowSelectedItem;UniGUISample;UniGUIDatabaseSample;JoystickViewer;MastermindArduino;BeaconFenceDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HelloWorldConsole:Clean;ListOfThings:Clean;ListInDB:Clean;HelloWorldVCL:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;ListOfthingsStoredInJSON:Clean;FMXProjectStructure:Clean;FMXStylesAnd3D:Clean;EffectsAndAnimations:Clean;ListOfthingsStoredInBdD:Clean;InterbaseSample:Clean;CDataRSSDemo:Clean;IntraWebDemo:Clean;SOAPClient:Clean;SOAPServer:Clean;RESTClientSNCF:Clean;DataSnapRPCServer:Clean;DumpRequest:Clean;WhoisClient:Clean;CoursesDB:Clean;ShowSelectedItem:Clean;UniGUISample:Clean;UniGUIDatabaseSample:Clean;JoystickViewer:Clean;MastermindArduino:Clean;BeaconFenceDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HelloWorldConsole:Make;ListOfThings:Make;ListInDB:Make;HelloWorldVCL:Make;MDIAPP:Make;SDIWithDialogBox:Make;ListOfthingsStoredInJSON:Make;FMXProjectStructure:Make;FMXStylesAnd3D:Make;EffectsAndAnimations:Make;ListOfthingsStoredInBdD:Make;InterbaseSample:Make;CDataRSSDemo:Make;IntraWebDemo:Make;SOAPClient:Make;SOAPServer:Make;RESTClientSNCF:Make;DataSnapRPCServer:Make;DumpRequest:Make;WhoisClient:Make;CoursesDB:Make;ShowSelectedItem:Make;UniGUISample:Make;UniGUIDatabaseSample:Make;JoystickViewer:Make;MastermindArduino:Make;BeaconFenceDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
