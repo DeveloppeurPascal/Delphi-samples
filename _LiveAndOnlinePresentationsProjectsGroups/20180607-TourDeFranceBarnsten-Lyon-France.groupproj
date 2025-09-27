@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9FB237DD-47EB-4EBC-830F-D9FAC20D4006}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ListInDB">
+        <MSBuild Projects="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj"/>
+    </Target>
+    <Target Name="ListInDB:Clean">
+        <MSBuild Projects="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListInDB:Make">
+        <MSBuild Projects="..\Console-Samples\007-ListOfthingsStoredInDB\ListInDB.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInJSON">
+        <MSBuild Projects="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInJSON:Clean">
+        <MSBuild Projects="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListOfthingsStoredInJSON:Make">
+        <MSBuild Projects="..\VCL-Samples\007-ListOfthingsStoredInJSON\ListOfthingsStoredInJSON.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EffectsAndAnimations">
+        <MSBuild Projects="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj"/>
+    </Target>
+    <Target Name="EffectsAndAnimations:Clean">
+        <MSBuild Projects="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EffectsAndAnimations:Make">
+        <MSBuild Projects="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MultiDBSample">
+        <MSBuild Projects="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj"/>
+    </Target>
+    <Target Name="MultiDBSample:Clean">
+        <MSBuild Projects="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultiDBSample:Make">
+        <MSBuild Projects="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntraWebDemo">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj"/>
+    </Target>
+    <Target Name="IntraWebDemo:Clean">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntraWebDemo:Make">
+        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WebBrokerDemo">
+        <MSBuild Projects="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj"/>
+    </Target>
+    <Target Name="WebBrokerDemo:Clean">
+        <MSBuild Projects="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WebBrokerDemo:Make">
+        <MSBuild Projects="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RESTClientSNCF">
+        <MSBuild Projects="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj"/>
+    </Target>
+    <Target Name="RESTClientSNCF:Clean">
+        <MSBuild Projects="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RESTClientSNCF:Make">
+        <MSBuild Projects="..\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MastermindArduino">
+        <MSBuild Projects="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj"/>
+    </Target>
+    <Target Name="MastermindArduino:Clean">
+        <MSBuild Projects="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MastermindArduino:Make">
+        <MSBuild Projects="..\IoT-Samples\004-Arduino-Mastermind\MastermindArduino.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BeaconDetector">
+        <MSBuild Projects="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj"/>
+    </Target>
+    <Target Name="BeaconDetector:Clean">
+        <MSBuild Projects="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BeaconDetector:Make">
+        <MSBuild Projects="..\IoT-Samples\001-BeaconDetect\BeaconDetector.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ListInDB;ListOfthingsStoredInJSON;EffectsAndAnimations;MultiDBSample;IntraWebDemo;WebBrokerDemo;RESTClientSNCF;MastermindArduino;BeaconDetector"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ListInDB:Clean;ListOfthingsStoredInJSON:Clean;EffectsAndAnimations:Clean;MultiDBSample:Clean;IntraWebDemo:Clean;WebBrokerDemo:Clean;RESTClientSNCF:Clean;MastermindArduino:Clean;BeaconDetector:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ListInDB:Make;ListOfthingsStoredInJSON:Make;EffectsAndAnimations:Make;MultiDBSample:Make;IntraWebDemo:Make;WebBrokerDemo:Make;RESTClientSNCF:Make;MastermindArduino:Make;BeaconDetector:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
