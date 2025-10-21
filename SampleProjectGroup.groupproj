@@ -255,9 +255,6 @@
         <Projects Include="VCL-Samples\017-ContactSheet\ContactSheetVCLSample.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="Web-Samples\002-WebBroker\WebBrokerDemo.dproj">
             <Dependencies/>
         </Projects>
@@ -270,9 +267,6 @@
         <Projects Include="Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj">
             <Dependencies/>
         </Projects>
@@ -283,18 +277,6 @@
             <Dependencies/>
         </Projects>
         <Projects Include="Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -1061,15 +1043,6 @@
     <Target Name="ContactSheetVCLSample:Make">
         <MSBuild Projects="VCL-Samples\017-ContactSheet\ContactSheetVCLSample.dproj" Targets="Make"/>
     </Target>
-    <Target Name="IntraWebDemo">
-        <MSBuild Projects="3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj"/>
-    </Target>
-    <Target Name="IntraWebDemo:Clean">
-        <MSBuild Projects="3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="IntraWebDemo:Make">
-        <MSBuild Projects="3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj" Targets="Make"/>
-    </Target>
     <Target Name="WebBrokerDemo">
         <MSBuild Projects="Web-Samples\002-WebBroker\WebBrokerDemo.dproj"/>
     </Target>
@@ -1105,15 +1078,6 @@
     </Target>
     <Target Name="DisplayImagesFromURL:Make">
         <MSBuild Projects="Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="IWAjaxAndJavaScript">
-        <MSBuild Projects="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj"/>
-    </Target>
-    <Target Name="IWAjaxAndJavaScript:Clean">
-        <MSBuild Projects="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="IWAjaxAndJavaScript:Make">
-        <MSBuild Projects="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Make"/>
     </Target>
     <Target Name="RESTClientSNCF">
         <MSBuild Projects="Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj"/>
@@ -1151,50 +1115,14 @@
     <Target Name="WhoisClient:Make">
         <MSBuild Projects="Web-Samples\010-Indy-WhoisClient\WhoisClient.dproj" Targets="Make"/>
     </Target>
-    <Target Name="UniGUISample">
-        <MSBuild Projects="3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj"/>
-    </Target>
-    <Target Name="UniGUISample:Clean">
-        <MSBuild Projects="3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="UniGUISample:Make">
-        <MSBuild Projects="3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="UniGUIDatabaseSample">
-        <MSBuild Projects="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj"/>
-    </Target>
-    <Target Name="UniGUIDatabaseSample:Clean">
-        <MSBuild Projects="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="UniGUIDatabaseSample:Make">
-        <MSBuild Projects="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="HelloWorld">
-        <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj"/>
-    </Target>
-    <Target Name="HelloWorld:Clean">
-        <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="HelloWorld:Make">
-        <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="TMSWebCoreDelphiBooksSample">
-        <MSBuild Projects="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj"/>
-    </Target>
-    <Target Name="TMSWebCoreDelphiBooksSample:Clean">
-        <MSBuild Projects="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="TMSWebCoreDelphiBooksSample:Make">
-        <MSBuild Projects="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Make"/>
-    </Target>
     <Target Name="Build">
-        <CallTarget Targets="SOAPClient;SOAPServer;CoursesDB;ShowSelectedItem;TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL;PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL;QRCodeGenerator_VCL;QRCodeReader_FMX;HelloWorldConsole;ConsoleMenu;Recursivity;ForLoopSample;StructureProgSample;ListOfThings;ListInDB;TListSortSample;TypeInferenceOnADecimalValueSample;StringComparison;GotoSample;FireDACSQLiteSample;InterbaseSample;SQLiteBlobsSample;HelloWorldFireMonkey;UpperAndLowerCase;PopupMenuOnButton;MasterDetailApplication;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;DemoPermissionsAndroid;SignatureFMXDemo;ListeArborescence;ParcourtDeLaListe;ShowHideScreenAsLayout;BitmapScaleTests;DialogFMXSample;FolderOrFileSelect;FolderOrFileSelectWithFrame;TLabel_Shortcut_and_Tabulation;TBiometricAuthSample;TFlowLayoutSample;ScaledLayoutSample;LogMainFormEvents;ContactSheetFMXSample;ShowSVGInAFolderWithSkia4Delphi;CalendarInPopupSample;DownloadAndOpenAPDFFile;PlayWithComponents;FMXDragAndDropSample;StylesAndEXESizeSample;ParallelFor;LoadImageFromURLWithUILockSample;MultiFormOnMobile;BeaconDetector;BeaconFenceDemo;SearchBTDevices;MastermindArduino;JoystickViewer;ShowBeaconCharacteristics;ClientServerSocketSample;TURLStreamSample;HelloWorldVCL;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;VCLProjectStructure;LiveBindingsAndVCLStyles;ListOfthingsStoredInJSON;EditToListBoxSample;ImageList;VirtualImageList;DialogVCLSample;TNumberBox_MinValue;TControlList_MultiSelect;TTouchKeyboard_with_Style;TControlListBiolife;DelphiMVCSample;PNGWithAlphaLayerSample;ContactSheetVCLSample;IntraWebDemo;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;DisplayImagesFromURL;IWAjaxAndJavaScript;RESTClientSNCF;DataSnapRPCServer;DumpRequest;WhoisClient;UniGUISample;UniGUIDatabaseSample;HelloWorld;TMSWebCoreDelphiBooksSample"/>
+        <CallTarget Targets="SOAPClient;SOAPServer;CoursesDB;ShowSelectedItem;TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL;PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL;QRCodeGenerator_VCL;QRCodeReader_FMX;HelloWorldConsole;ConsoleMenu;Recursivity;ForLoopSample;StructureProgSample;ListOfThings;ListInDB;TListSortSample;TypeInferenceOnADecimalValueSample;StringComparison;GotoSample;FireDACSQLiteSample;InterbaseSample;SQLiteBlobsSample;HelloWorldFireMonkey;UpperAndLowerCase;PopupMenuOnButton;MasterDetailApplication;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;DemoPermissionsAndroid;SignatureFMXDemo;ListeArborescence;ParcourtDeLaListe;ShowHideScreenAsLayout;BitmapScaleTests;DialogFMXSample;FolderOrFileSelect;FolderOrFileSelectWithFrame;TLabel_Shortcut_and_Tabulation;TBiometricAuthSample;TFlowLayoutSample;ScaledLayoutSample;LogMainFormEvents;ContactSheetFMXSample;ShowSVGInAFolderWithSkia4Delphi;CalendarInPopupSample;DownloadAndOpenAPDFFile;PlayWithComponents;FMXDragAndDropSample;StylesAndEXESizeSample;ParallelFor;LoadImageFromURLWithUILockSample;MultiFormOnMobile;BeaconDetector;BeaconFenceDemo;SearchBTDevices;MastermindArduino;JoystickViewer;ShowBeaconCharacteristics;ClientServerSocketSample;TURLStreamSample;HelloWorldVCL;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;VCLProjectStructure;LiveBindingsAndVCLStyles;ListOfthingsStoredInJSON;EditToListBoxSample;ImageList;VirtualImageList;DialogVCLSample;TNumberBox_MinValue;TControlList_MultiSelect;TTouchKeyboard_with_Style;TControlListBiolife;DelphiMVCSample;PNGWithAlphaLayerSample;ContactSheetVCLSample;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;DisplayImagesFromURL;RESTClientSNCF;DataSnapRPCServer;DumpRequest;WhoisClient"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="SOAPClient:Clean;SOAPServer:Clean;CoursesDB:Clean;ShowSelectedItem:Clean;TakeAndSendPhotoWithAppTethering:Clean;ReceivePhotoFromAppTetheringFMX:Clean;ReceivePhotoFromAppTetheringVCL:Clean;PictureSender_FMX:Clean;PictureReceiver_FMX:Clean;PictureReceiver_VCL:Clean;QRCodeGenerator_VCL:Clean;QRCodeReader_FMX:Clean;HelloWorldConsole:Clean;ConsoleMenu:Clean;Recursivity:Clean;ForLoopSample:Clean;StructureProgSample:Clean;ListOfThings:Clean;ListInDB:Clean;TListSortSample:Clean;TypeInferenceOnADecimalValueSample:Clean;StringComparison:Clean;GotoSample:Clean;FireDACSQLiteSample:Clean;InterbaseSample:Clean;SQLiteBlobsSample:Clean;HelloWorldFireMonkey:Clean;UpperAndLowerCase:Clean;PopupMenuOnButton:Clean;MasterDetailApplication:Clean;FMXProjectStructure:Clean;FMXStylesAnd3D:Clean;EffectsAndAnimations:Clean;ListOfthingsStoredInBdD:Clean;DemoPermissionsAndroid:Clean;SignatureFMXDemo:Clean;ListeArborescence:Clean;ParcourtDeLaListe:Clean;ShowHideScreenAsLayout:Clean;BitmapScaleTests:Clean;DialogFMXSample:Clean;FolderOrFileSelect:Clean;FolderOrFileSelectWithFrame:Clean;TLabel_Shortcut_and_Tabulation:Clean;TBiometricAuthSample:Clean;TFlowLayoutSample:Clean;ScaledLayoutSample:Clean;LogMainFormEvents:Clean;ContactSheetFMXSample:Clean;ShowSVGInAFolderWithSkia4Delphi:Clean;CalendarInPopupSample:Clean;DownloadAndOpenAPDFFile:Clean;PlayWithComponents:Clean;FMXDragAndDropSample:Clean;StylesAndEXESizeSample:Clean;ParallelFor:Clean;LoadImageFromURLWithUILockSample:Clean;MultiFormOnMobile:Clean;BeaconDetector:Clean;BeaconFenceDemo:Clean;SearchBTDevices:Clean;MastermindArduino:Clean;JoystickViewer:Clean;ShowBeaconCharacteristics:Clean;ClientServerSocketSample:Clean;TURLStreamSample:Clean;HelloWorldVCL:Clean;LiveBindingsCalc:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;VCLProjectStructure:Clean;LiveBindingsAndVCLStyles:Clean;ListOfthingsStoredInJSON:Clean;EditToListBoxSample:Clean;ImageList:Clean;VirtualImageList:Clean;DialogVCLSample:Clean;TNumberBox_MinValue:Clean;TControlList_MultiSelect:Clean;TTouchKeyboard_with_Style:Clean;TControlListBiolife:Clean;DelphiMVCSample:Clean;PNGWithAlphaLayerSample:Clean;ContactSheetVCLSample:Clean;IntraWebDemo:Clean;WebBrokerDemo:Clean;DisplayFTPFileList:Clean;FrequentationMediathequePoitierAPIViewer:Clean;DisplayImagesFromURL:Clean;IWAjaxAndJavaScript:Clean;RESTClientSNCF:Clean;DataSnapRPCServer:Clean;DumpRequest:Clean;WhoisClient:Clean;UniGUISample:Clean;UniGUIDatabaseSample:Clean;HelloWorld:Clean;TMSWebCoreDelphiBooksSample:Clean"/>
+        <CallTarget Targets="SOAPClient:Clean;SOAPServer:Clean;CoursesDB:Clean;ShowSelectedItem:Clean;TakeAndSendPhotoWithAppTethering:Clean;ReceivePhotoFromAppTetheringFMX:Clean;ReceivePhotoFromAppTetheringVCL:Clean;PictureSender_FMX:Clean;PictureReceiver_FMX:Clean;PictureReceiver_VCL:Clean;QRCodeGenerator_VCL:Clean;QRCodeReader_FMX:Clean;HelloWorldConsole:Clean;ConsoleMenu:Clean;Recursivity:Clean;ForLoopSample:Clean;StructureProgSample:Clean;ListOfThings:Clean;ListInDB:Clean;TListSortSample:Clean;TypeInferenceOnADecimalValueSample:Clean;StringComparison:Clean;GotoSample:Clean;FireDACSQLiteSample:Clean;InterbaseSample:Clean;SQLiteBlobsSample:Clean;HelloWorldFireMonkey:Clean;UpperAndLowerCase:Clean;PopupMenuOnButton:Clean;MasterDetailApplication:Clean;FMXProjectStructure:Clean;FMXStylesAnd3D:Clean;EffectsAndAnimations:Clean;ListOfthingsStoredInBdD:Clean;DemoPermissionsAndroid:Clean;SignatureFMXDemo:Clean;ListeArborescence:Clean;ParcourtDeLaListe:Clean;ShowHideScreenAsLayout:Clean;BitmapScaleTests:Clean;DialogFMXSample:Clean;FolderOrFileSelect:Clean;FolderOrFileSelectWithFrame:Clean;TLabel_Shortcut_and_Tabulation:Clean;TBiometricAuthSample:Clean;TFlowLayoutSample:Clean;ScaledLayoutSample:Clean;LogMainFormEvents:Clean;ContactSheetFMXSample:Clean;ShowSVGInAFolderWithSkia4Delphi:Clean;CalendarInPopupSample:Clean;DownloadAndOpenAPDFFile:Clean;PlayWithComponents:Clean;FMXDragAndDropSample:Clean;StylesAndEXESizeSample:Clean;ParallelFor:Clean;LoadImageFromURLWithUILockSample:Clean;MultiFormOnMobile:Clean;BeaconDetector:Clean;BeaconFenceDemo:Clean;SearchBTDevices:Clean;MastermindArduino:Clean;JoystickViewer:Clean;ShowBeaconCharacteristics:Clean;ClientServerSocketSample:Clean;TURLStreamSample:Clean;HelloWorldVCL:Clean;LiveBindingsCalc:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;VCLProjectStructure:Clean;LiveBindingsAndVCLStyles:Clean;ListOfthingsStoredInJSON:Clean;EditToListBoxSample:Clean;ImageList:Clean;VirtualImageList:Clean;DialogVCLSample:Clean;TNumberBox_MinValue:Clean;TControlList_MultiSelect:Clean;TTouchKeyboard_with_Style:Clean;TControlListBiolife:Clean;DelphiMVCSample:Clean;PNGWithAlphaLayerSample:Clean;ContactSheetVCLSample:Clean;WebBrokerDemo:Clean;DisplayFTPFileList:Clean;FrequentationMediathequePoitierAPIViewer:Clean;DisplayImagesFromURL:Clean;RESTClientSNCF:Clean;DataSnapRPCServer:Clean;DumpRequest:Clean;WhoisClient:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="SOAPClient:Make;SOAPServer:Make;CoursesDB:Make;ShowSelectedItem:Make;TakeAndSendPhotoWithAppTethering:Make;ReceivePhotoFromAppTetheringFMX:Make;ReceivePhotoFromAppTetheringVCL:Make;PictureSender_FMX:Make;PictureReceiver_FMX:Make;PictureReceiver_VCL:Make;QRCodeGenerator_VCL:Make;QRCodeReader_FMX:Make;HelloWorldConsole:Make;ConsoleMenu:Make;Recursivity:Make;ForLoopSample:Make;StructureProgSample:Make;ListOfThings:Make;ListInDB:Make;TListSortSample:Make;TypeInferenceOnADecimalValueSample:Make;StringComparison:Make;GotoSample:Make;FireDACSQLiteSample:Make;InterbaseSample:Make;SQLiteBlobsSample:Make;HelloWorldFireMonkey:Make;UpperAndLowerCase:Make;PopupMenuOnButton:Make;MasterDetailApplication:Make;FMXProjectStructure:Make;FMXStylesAnd3D:Make;EffectsAndAnimations:Make;ListOfthingsStoredInBdD:Make;DemoPermissionsAndroid:Make;SignatureFMXDemo:Make;ListeArborescence:Make;ParcourtDeLaListe:Make;ShowHideScreenAsLayout:Make;BitmapScaleTests:Make;DialogFMXSample:Make;FolderOrFileSelect:Make;FolderOrFileSelectWithFrame:Make;TLabel_Shortcut_and_Tabulation:Make;TBiometricAuthSample:Make;TFlowLayoutSample:Make;ScaledLayoutSample:Make;LogMainFormEvents:Make;ContactSheetFMXSample:Make;ShowSVGInAFolderWithSkia4Delphi:Make;CalendarInPopupSample:Make;DownloadAndOpenAPDFFile:Make;PlayWithComponents:Make;FMXDragAndDropSample:Make;StylesAndEXESizeSample:Make;ParallelFor:Make;LoadImageFromURLWithUILockSample:Make;MultiFormOnMobile:Make;BeaconDetector:Make;BeaconFenceDemo:Make;SearchBTDevices:Make;MastermindArduino:Make;JoystickViewer:Make;ShowBeaconCharacteristics:Make;ClientServerSocketSample:Make;TURLStreamSample:Make;HelloWorldVCL:Make;LiveBindingsCalc:Make;MDIAPP:Make;SDIWithDialogBox:Make;VCLProjectStructure:Make;LiveBindingsAndVCLStyles:Make;ListOfthingsStoredInJSON:Make;EditToListBoxSample:Make;ImageList:Make;VirtualImageList:Make;DialogVCLSample:Make;TNumberBox_MinValue:Make;TControlList_MultiSelect:Make;TTouchKeyboard_with_Style:Make;TControlListBiolife:Make;DelphiMVCSample:Make;PNGWithAlphaLayerSample:Make;ContactSheetVCLSample:Make;IntraWebDemo:Make;WebBrokerDemo:Make;DisplayFTPFileList:Make;FrequentationMediathequePoitierAPIViewer:Make;DisplayImagesFromURL:Make;IWAjaxAndJavaScript:Make;RESTClientSNCF:Make;DataSnapRPCServer:Make;DumpRequest:Make;WhoisClient:Make;UniGUISample:Make;UniGUIDatabaseSample:Make;HelloWorld:Make;TMSWebCoreDelphiBooksSample:Make"/>
+        <CallTarget Targets="SOAPClient:Make;SOAPServer:Make;CoursesDB:Make;ShowSelectedItem:Make;TakeAndSendPhotoWithAppTethering:Make;ReceivePhotoFromAppTetheringFMX:Make;ReceivePhotoFromAppTetheringVCL:Make;PictureSender_FMX:Make;PictureReceiver_FMX:Make;PictureReceiver_VCL:Make;QRCodeGenerator_VCL:Make;QRCodeReader_FMX:Make;HelloWorldConsole:Make;ConsoleMenu:Make;Recursivity:Make;ForLoopSample:Make;StructureProgSample:Make;ListOfThings:Make;ListInDB:Make;TListSortSample:Make;TypeInferenceOnADecimalValueSample:Make;StringComparison:Make;GotoSample:Make;FireDACSQLiteSample:Make;InterbaseSample:Make;SQLiteBlobsSample:Make;HelloWorldFireMonkey:Make;UpperAndLowerCase:Make;PopupMenuOnButton:Make;MasterDetailApplication:Make;FMXProjectStructure:Make;FMXStylesAnd3D:Make;EffectsAndAnimations:Make;ListOfthingsStoredInBdD:Make;DemoPermissionsAndroid:Make;SignatureFMXDemo:Make;ListeArborescence:Make;ParcourtDeLaListe:Make;ShowHideScreenAsLayout:Make;BitmapScaleTests:Make;DialogFMXSample:Make;FolderOrFileSelect:Make;FolderOrFileSelectWithFrame:Make;TLabel_Shortcut_and_Tabulation:Make;TBiometricAuthSample:Make;TFlowLayoutSample:Make;ScaledLayoutSample:Make;LogMainFormEvents:Make;ContactSheetFMXSample:Make;ShowSVGInAFolderWithSkia4Delphi:Make;CalendarInPopupSample:Make;DownloadAndOpenAPDFFile:Make;PlayWithComponents:Make;FMXDragAndDropSample:Make;StylesAndEXESizeSample:Make;ParallelFor:Make;LoadImageFromURLWithUILockSample:Make;MultiFormOnMobile:Make;BeaconDetector:Make;BeaconFenceDemo:Make;SearchBTDevices:Make;MastermindArduino:Make;JoystickViewer:Make;ShowBeaconCharacteristics:Make;ClientServerSocketSample:Make;TURLStreamSample:Make;HelloWorldVCL:Make;LiveBindingsCalc:Make;MDIAPP:Make;SDIWithDialogBox:Make;VCLProjectStructure:Make;LiveBindingsAndVCLStyles:Make;ListOfthingsStoredInJSON:Make;EditToListBoxSample:Make;ImageList:Make;VirtualImageList:Make;DialogVCLSample:Make;TNumberBox_MinValue:Make;TControlList_MultiSelect:Make;TTouchKeyboard_with_Style:Make;TControlListBiolife:Make;DelphiMVCSample:Make;PNGWithAlphaLayerSample:Make;ContactSheetVCLSample:Make;WebBrokerDemo:Make;DisplayFTPFileList:Make;FrequentationMediathequePoitierAPIViewer:Make;DisplayImagesFromURL:Make;RESTClientSNCF:Make;DataSnapRPCServer:Make;DumpRequest:Make;WhoisClient:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
