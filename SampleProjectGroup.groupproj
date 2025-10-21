@@ -288,7 +288,7 @@
         <Projects Include="3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj">
+        <Projects Include="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj">
@@ -1161,13 +1161,13 @@
         <MSBuild Projects="3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj" Targets="Make"/>
     </Target>
     <Target Name="UniGUIDatabaseSample">
-        <MSBuild Projects="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj"/>
+        <MSBuild Projects="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj"/>
     </Target>
     <Target Name="UniGUIDatabaseSample:Clean">
-        <MSBuild Projects="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Clean"/>
+        <MSBuild Projects="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Clean"/>
     </Target>
     <Target Name="UniGUIDatabaseSample:Make">
-        <MSBuild Projects="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Make"/>
+        <MSBuild Projects="3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="HelloWorld">
         <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj"/>
