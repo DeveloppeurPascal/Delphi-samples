@@ -270,7 +270,7 @@
         <Projects Include="Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Web-Samples\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj">
+        <Projects Include="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj">
@@ -1107,13 +1107,13 @@
         <MSBuild Projects="Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dproj" Targets="Make"/>
     </Target>
     <Target Name="IWAjaxAndJavaScript">
-        <MSBuild Projects="Web-Samples\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj"/>
+        <MSBuild Projects="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj"/>
     </Target>
     <Target Name="IWAjaxAndJavaScript:Clean">
-        <MSBuild Projects="Web-Samples\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Clean"/>
+        <MSBuild Projects="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Clean"/>
     </Target>
     <Target Name="IWAjaxAndJavaScript:Make">
-        <MSBuild Projects="Web-Samples\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Make"/>
+        <MSBuild Projects="3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Make"/>
     </Target>
     <Target Name="RESTClientSNCF">
         <MSBuild Projects="Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dproj"/>
