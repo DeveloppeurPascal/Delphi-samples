@@ -1,0 +1,48 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AA6A08E9-BD9C-48B5-B624-6262D14D5C48}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="011-uniGUI\UniGUISample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="012-uniGUI-Database\UniGUIDatabaseSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="UniGUISample">
+        <MSBuild Projects="011-uniGUI\UniGUISample.dproj"/>
+    </Target>
+    <Target Name="UniGUISample:Clean">
+        <MSBuild Projects="011-uniGUI\UniGUISample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UniGUISample:Make">
+        <MSBuild Projects="011-uniGUI\UniGUISample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample">
+        <MSBuild Projects="012-uniGUI-Database\UniGUIDatabaseSample.dproj"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample:Clean">
+        <MSBuild Projects="012-uniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UniGUIDatabaseSample:Make">
+        <MSBuild Projects="012-uniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="UniGUISample;UniGUIDatabaseSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="UniGUISample:Clean;UniGUIDatabaseSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="UniGUISample:Make;UniGUIDatabaseSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
