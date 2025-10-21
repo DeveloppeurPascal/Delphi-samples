@@ -1,0 +1,48 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{70E9C05F-12DB-4F18-8A64-FF85581457D9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="003-CDataRSS\CDataRSSDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="004-MultiDBSample\MultiDBSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CDataRSSDemo">
+        <MSBuild Projects="003-CDataRSS\CDataRSSDemo.dproj"/>
+    </Target>
+    <Target Name="CDataRSSDemo:Clean">
+        <MSBuild Projects="003-CDataRSS\CDataRSSDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CDataRSSDemo:Make">
+        <MSBuild Projects="003-CDataRSS\CDataRSSDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MultiDBSample">
+        <MSBuild Projects="004-MultiDBSample\MultiDBSample.dproj"/>
+    </Target>
+    <Target Name="MultiDBSample:Clean">
+        <MSBuild Projects="004-MultiDBSample\MultiDBSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultiDBSample:Make">
+        <MSBuild Projects="004-MultiDBSample\MultiDBSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CDataRSSDemo;MultiDBSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CDataRSSDemo:Clean;MultiDBSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CDataRSSDemo:Make;MultiDBSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
