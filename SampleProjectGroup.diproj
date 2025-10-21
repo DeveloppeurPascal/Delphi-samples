@@ -11,6 +11,7 @@
   <HeaderHtml>&lt;%TopicTitle%&gt;</HeaderHtml>
   <FooterHtml>&lt;a href="https://samples.developpeur-pascal.fr" target="_blank"&gt;Delphi Sample Projects&lt;/a&gt; (c) 1995-2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
   <CustomDefines/>
+  <GlobalSearchPaths>false</GlobalSearchPaths>
   <ShowImplementationSection>false</ShowImplementationSection>
   <ShowPrivateMembers>false</ShowPrivateMembers>
   <ShowProtectedMembers>true</ShowProtectedMembers>
@@ -32,7 +33,7 @@
     <Source>.\ClientServer-Samples\004-EnvoiPhotosParSocket\RecoitPhoto-VCL\PictureReceiver_VCL.dpr</Source>
     <Source>.\ClientServer-Samples\005-SetupAMobileAppWithQRCode\QRCodeGenerator-VCL\QRCodeGenerator_VCL.dpr</Source>
     <Source>.\ClientServer-Samples\005-SetupAMobileAppWithQRCode\QRCodeReader-FMX\QRCodeReader_FMX.dpr</Source>
-    <Source>.\Console-Samples\001-HelloWorld\HelloWorld.dpr</Source>
+    <Source>.\Console-Samples\001-HelloWorld\HelloWorldConsole.dpr</Source>
     <Source>.\Console-Samples\002-Menu\ConsoleMenu.dpr</Source>
     <Source>.\Console-Samples\003-Recursivity\Recursivity.dpr</Source>
     <Source>.\Console-Samples\004-Loops\ForLoopSample.dpr</Source>
@@ -45,10 +46,8 @@
     <Source>.\Console-Samples\011-Goto-Beurk\GotoSample.dpr</Source>
     <Source>.\FireDAC-Samples\001-SQLite\FireDACSQLiteSample.dpr</Source>
     <Source>.\FireDAC-Samples\002-Interbase\InterbaseSample.dpr</Source>
-    <Source>.\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dpr</Source>
-    <Source>.\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dpr</Source>
     <Source>.\FireDAC-Samples\005-SQLite-Blobs\SQLiteBlobsSample.dpr</Source>
-    <Source>.\FireMonkey-Samples\001-HelloWorld\HelloWorld.dpr</Source>
+    <Source>.\FireMonkey-Samples\001-HelloWorld\HelloWorldFireMonkey.dpr</Source>
     <Source>.\FireMonkey-Samples\002-UpperLowerCaseWithTransparency\UpperAndLowerCase.dpr</Source>
     <Source>.\FireMonkey-Samples\003-PopupMenuButton\PopupMenuOnButton.dpr</Source>
     <Source>.\FireMonkey-Samples\004-LiveBindingsAndPrototypeDatabase\MasterDetailApplication.dpr</Source>
@@ -88,7 +87,7 @@
     <Source>.\IoT-Samples\006-ShowBeaconInfos\ShowBeaconCharacteristics.dpr</Source>
     <Source>.\Network-Samples\01-TSocket\ClientServerSocketSample.dpr</Source>
     <Source>.\Network-Samples\02-TURLStream\TURLStreamSample.dpr</Source>
-    <Source>.\VCL-Samples\001-HelloWorld\HelloWorld.dpr</Source>
+    <Source>.\VCL-Samples\001-HelloWorld\HelloWorldVCL.dpr</Source>
     <Source>.\VCL-Samples\002-LiveBindings\LiveBindingsCalc.dpr</Source>
     <Source>.\VCL-Samples\003-MDI\MDIAPP.dpr</Source>
     <Source>.\VCL-Samples\004-SDI-and-Dialog-Box\SDIWithDialogBox.dpr</Source>
@@ -106,20 +105,20 @@
     <Source>.\VCL-Samples\015-MVC-En-Delphi\DelphiMVCSample.dpr</Source>
     <Source>.\VCL-Samples\016-Images-PNG-Transparentes\PNGWithAlphaLayerSample.dpr</Source>
     <Source>.\VCL-Samples\017-ContactSheet\ContactSheetVCLSample.dpr</Source>
-    <Source>.\Web-Samples\001-IntraWeb\IntraWebDemo.dpr</Source>
+    <Source>.\3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dpr</Source>
     <Source>.\Web-Samples\002-WebBroker\WebBrokerDemo.dpr</Source>
     <Source>.\Web-Samples\003-Indy-FTP\DisplayFTPFileList.dpr</Source>
     <Source>.\Web-Samples\004-REST-API\FrequentationMediathequePoitierAPIViewer.dpr</Source>
     <Source>.\Web-Samples\005-DisplayPhotosFromURL\delphi\DisplayImagesFromURL.dpr</Source>
-    <Source>.\Web-Samples\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dpr</Source>
+    <Source>.\3rdParty-Samples\Atozed\006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dpr</Source>
     <Source>.\Web-Samples\007-REST-API-SNCF\RESTClientSNCF.dpr</Source>
     <Source>.\Web-Samples\008-DataSnap-RPC-REST\DataSnapRPCServer.dpr</Source>
     <Source>.\Web-Samples\009-WebBroker-DumpRequest\DumpRequest.dpr</Source>
     <Source>.\Web-Samples\010-Indy-WhoisClient\WhoisClient.dpr</Source>
-    <Source>.\Web-Samples\011-UniGUI\UniGUISample.dpr</Source>
-    <Source>.\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dpr</Source>
-    <Source>.\Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dpr</Source>
-    <Source>.\Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dpr</Source>
+    <Source>.\3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dpr</Source>
+    <Source>.\3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dpr</Source>
+    <Source>.\3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dpr</Source>
+    <Source>.\3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
