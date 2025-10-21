@@ -294,7 +294,7 @@
         <Projects Include="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj">
+        <Projects Include="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -1179,13 +1179,13 @@
         <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Make"/>
     </Target>
     <Target Name="TMSWebCoreDelphiBooksSample">
-        <MSBuild Projects="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj"/>
+        <MSBuild Projects="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj"/>
     </Target>
     <Target Name="TMSWebCoreDelphiBooksSample:Clean">
-        <MSBuild Projects="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Clean"/>
+        <MSBuild Projects="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Clean"/>
     </Target>
     <Target Name="TMSWebCoreDelphiBooksSample:Make">
-        <MSBuild Projects="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Make"/>
+        <MSBuild Projects="3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
         <CallTarget Targets="SOAPClient;SOAPServer;CoursesDB;ShowSelectedItem;TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL;PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL;QRCodeGenerator_VCL;QRCodeReader_FMX;HelloWorldConsole;ConsoleMenu;Recursivity;ForLoopSample;StructureProgSample;ListOfThings;ListInDB;TListSortSample;TypeInferenceOnADecimalValueSample;StringComparison;GotoSample;FireDACSQLiteSample;InterbaseSample;SQLiteBlobsSample;HelloWorldFireMonkey;UpperAndLowerCase;PopupMenuOnButton;MasterDetailApplication;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;DemoPermissionsAndroid;SignatureFMXDemo;ListeArborescence;ParcourtDeLaListe;ShowHideScreenAsLayout;BitmapScaleTests;DialogFMXSample;FolderOrFileSelect;FolderOrFileSelectWithFrame;TLabel_Shortcut_and_Tabulation;TBiometricAuthSample;TFlowLayoutSample;ScaledLayoutSample;LogMainFormEvents;ContactSheetFMXSample;ShowSVGInAFolderWithSkia4Delphi;CalendarInPopupSample;DownloadAndOpenAPDFFile;PlayWithComponents;FMXDragAndDropSample;StylesAndEXESizeSample;ParallelFor;LoadImageFromURLWithUILockSample;MultiFormOnMobile;BeaconDetector;BeaconFenceDemo;SearchBTDevices;MastermindArduino;JoystickViewer;ShowBeaconCharacteristics;ClientServerSocketSample;TURLStreamSample;HelloWorldVCL;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;VCLProjectStructure;LiveBindingsAndVCLStyles;ListOfthingsStoredInJSON;EditToListBoxSample;ImageList;VirtualImageList;DialogVCLSample;TNumberBox_MinValue;TControlList_MultiSelect;TTouchKeyboard_with_Style;TControlListBiolife;DelphiMVCSample;PNGWithAlphaLayerSample;ContactSheetVCLSample;IntraWebDemo;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;DisplayImagesFromURL;IWAjaxAndJavaScript;RESTClientSNCF;DataSnapRPCServer;DumpRequest;WhoisClient;UniGUISample;UniGUIDatabaseSample;HelloWorld;TMSWebCoreDelphiBooksSample"/>
