@@ -39,7 +39,7 @@
         <Projects Include="..\FireDAC-Samples\002-Interbase\InterbaseSample.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj">
+        <Projects Include="..\3rdParty-Samples\CData\003-CDataRSS\CDataRSSDemo.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj">
@@ -201,13 +201,13 @@
         <MSBuild Projects="..\FireDAC-Samples\002-Interbase\InterbaseSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="CDataRSSDemo">
-        <MSBuild Projects="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj"/>
+        <MSBuild Projects="..\3rdParty-Samples\CData\003-CDataRSS\CDataRSSDemo.dproj"/>
     </Target>
     <Target Name="CDataRSSDemo:Clean">
-        <MSBuild Projects="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj" Targets="Clean"/>
+        <MSBuild Projects="..\3rdParty-Samples\CData\003-CDataRSS\CDataRSSDemo.dproj" Targets="Clean"/>
     </Target>
     <Target Name="CDataRSSDemo:Make">
-        <MSBuild Projects="..\FireDAC-Samples\003-CDataRSS\CDataRSSDemo.dproj" Targets="Make"/>
+        <MSBuild Projects="..\3rdParty-Samples\CData\003-CDataRSS\CDataRSSDemo.dproj" Targets="Make"/>
     </Target>
     <Target Name="IntraWebDemo">
         <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj"/>
