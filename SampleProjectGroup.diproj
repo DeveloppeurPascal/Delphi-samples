@@ -119,6 +119,8 @@
     <Source>.\3rdParty-Samples\uniGUI\012-uniGUI-Database\UniGUIDatabaseSample.dpr</Source>
     <Source>.\3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dpr</Source>
     <Source>.\3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dpr</Source>
+    <Source>.\3rdParty-Samples\CData\003-CDataRSS\CDataRSSDemo.dpr</Source>
+    <Source>.\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
