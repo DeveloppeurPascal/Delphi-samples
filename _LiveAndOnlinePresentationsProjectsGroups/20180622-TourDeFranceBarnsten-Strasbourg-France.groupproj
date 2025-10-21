@@ -15,7 +15,7 @@
         <Projects Include="..\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj">
+        <Projects Include="..\3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj">
@@ -75,13 +75,13 @@
         <MSBuild Projects="..\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="IntraWebDemo">
-        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj"/>
+        <MSBuild Projects="..\3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj"/>
     </Target>
     <Target Name="IntraWebDemo:Clean">
-        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Clean"/>
+        <MSBuild Projects="..\3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj" Targets="Clean"/>
     </Target>
     <Target Name="IntraWebDemo:Make">
-        <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj" Targets="Make"/>
+        <MSBuild Projects="..\3rdParty-Samples\Atozed\001-IntraWeb\IntraWebDemo.dproj" Targets="Make"/>
     </Target>
     <Target Name="WebBrokerDemo">
         <MSBuild Projects="..\Web-Samples\002-WebBroker\WebBrokerDemo.dproj"/>
