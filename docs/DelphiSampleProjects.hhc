@@ -19328,6 +19328,394 @@
                           </UL>
                   </UL>
           </UL>
+      <LI> <OBJECT type="text/sitemap">
+          <param name="Name" value="CDataRSSDemo">
+          <param name="Local" value="CDataRSSDemo.html">
+          </OBJECT>
+          <UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="fMain">
+                  <param name="Local" value="fMain.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TForm1">
+                                  <param name="Local" value="fMain.TForm1.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button1Click">
+                                                  <param name="Local" value="fMain.TForm1.Button1Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button2Click">
+                                                  <param name="Local" value="fMain.TForm1.Button2Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button3Click">
+                                                  <param name="Local" value="fMain.TForm1.Button3Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button4Click">
+                                                  <param name="Local" value="fMain.TForm1.Button4Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Edit1Change">
+                                                  <param name="Local" value="fMain.TForm1.Edit1Change.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Edit1Click">
+                                                  <param name="Local" value="fMain.TForm1.Edit1Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FormCreate">
+                                                  <param name="Local" value="fMain.TForm1.FormCreate.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Fields">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="BindSourceDB1">
+                                                  <param name="Local" value="fMain.TForm1.BindSourceDB1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="BindingsList1">
+                                                  <param name="Local" value="fMain.TForm1.BindingsList1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button1">
+                                                  <param name="Local" value="fMain.TForm1.Button1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button2">
+                                                  <param name="Local" value="fMain.TForm1.Button2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button3">
+                                                  <param name="Local" value="fMain.TForm1.Button3.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button4">
+                                                  <param name="Local" value="fMain.TForm1.Button4.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Edit1">
+                                                  <param name="Local" value="fMain.TForm1.Edit1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDConnection1">
+                                                  <param name="Local" value="fMain.TForm1.FDConnection1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDPhysCDataRSSDriverLink1">
+                                                  <param name="Local" value="fMain.TForm1.FDPhysCDataRSSDriverLink1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedDescription">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedDescription.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedImageLink">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedImageLink.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedImageTitle">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedImageTitle.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedImageUrl">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedImageUrl.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedLanguage">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedLanguage.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedLastBuildDate">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedLastBuildDate.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedLink">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedLink.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedLinkHref">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedLinkHref.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedLinkRel">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedLinkRel.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedLinkType">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedLinkType.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1FeedTitle">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1FeedTitle.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1Guid">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1Guid.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1Link">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1Link.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1PubDate">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1PubDate.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1Title">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1Title.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Layout1">
+                                                  <param name="Local" value="fMain.TForm1.Layout1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="LinkGridToDataSourceBindSourceDB1">
+                                                  <param name="Local" value="fMain.TForm1.LinkGridToDataSourceBindSourceDB1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="LinkPropertyToFieldURL">
+                                                  <param name="Local" value="fMain.TForm1.LinkPropertyToFieldURL.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Splitter1">
+                                                  <param name="Local" value="fMain.TForm1.Splitter1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="StringGrid1">
+                                                  <param name="Local" value="fMain.TForm1.StringGrid1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="WebBrowser1">
+                                                  <param name="Local" value="fMain.TForm1.WebBrowser1.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Variables">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="Form1">
+                                  <param name="Local" value="fMain.Form1.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+          </UL>
+      <LI> <OBJECT type="text/sitemap">
+          <param name="Name" value="MultiDBSample">
+          <param name="Local" value="MultiDBSample.html">
+          </OBJECT>
+          <UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="fMain">
+                  <param name="Local" value="fMain.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TForm1">
+                                  <param name="Local" value="fMain.TForm1.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button1Click">
+                                                  <param name="Local" value="fMain.TForm1.Button1Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button2Click">
+                                                  <param name="Local" value="fMain.TForm1.Button2Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button3Click">
+                                                  <param name="Local" value="fMain.TForm1.Button3Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button4Click">
+                                                  <param name="Local" value="fMain.TForm1.Button4Click.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery2AfterClose">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery2AfterClose.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="StringGrid1SelChanged">
+                                                  <param name="Local" value="fMain.TForm1.StringGrid1SelChanged.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Fields">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="BindNavigator2">
+                                                  <param name="Local" value="fMain.TForm1.BindNavigator2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="BindSourceDB1">
+                                                  <param name="Local" value="fMain.TForm1.BindSourceDB1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="BindSourceDB2">
+                                                  <param name="Local" value="fMain.TForm1.BindSourceDB2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="BindingsList1">
+                                                  <param name="Local" value="fMain.TForm1.BindingsList1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button1">
+                                                  <param name="Local" value="fMain.TForm1.Button1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button2">
+                                                  <param name="Local" value="fMain.TForm1.Button2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button3">
+                                                  <param name="Local" value="fMain.TForm1.Button3.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Button4">
+                                                  <param name="Local" value="fMain.TForm1.Button4.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="DbdemosConnection">
+                                                  <param name="Local" value="fMain.TForm1.DbdemosConnection.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="DeveloppeurpascalConnection">
+                                                  <param name="Local" value="fMain.TForm1.DeveloppeurpascalConnection.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Edit1">
+                                                  <param name="Local" value="fMain.TForm1.Edit1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="EmployeeConnection">
+                                                  <param name="Local" value="fMain.TForm1.EmployeeConnection.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDConnectionLocale">
+                                                  <param name="Local" value="fMain.TForm1.FDConnectionLocale.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDLocalSQL">
+                                                  <param name="Local" value="fMain.TForm1.FDLocalSQL.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDMemTable">
+                                                  <param name="Local" value="fMain.TForm1.FDMemTable.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDMemTableliste_tables">
+                                                  <param name="Local" value="fMain.TForm1.FDMemTableliste_tables.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDPhysCDataRSSDriverLink1">
+                                                  <param name="Local" value="fMain.TForm1.FDPhysCDataRSSDriverLink1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDPhysIBDriverLink1">
+                                                  <param name="Local" value="fMain.TForm1.FDPhysIBDriverLink1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDPhysMSAccessDriverLink1">
+                                                  <param name="Local" value="fMain.TForm1.FDPhysMSAccessDriverLink1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDPhysSQLiteDriverLink1">
+                                                  <param name="Local" value="fMain.TForm1.FDPhysSQLiteDriverLink1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery1">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FDQuery2">
+                                                  <param name="Local" value="fMain.TForm1.FDQuery2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Label1">
+                                                  <param name="Local" value="fMain.TForm1.Label1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Layout1">
+                                                  <param name="Local" value="fMain.TForm1.Layout1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Layout2">
+                                                  <param name="Local" value="fMain.TForm1.Layout2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Layout3">
+                                                  <param name="Local" value="fMain.TForm1.Layout3.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="LinkControlToPropertyliste_tables">
+                                                  <param name="Local" value="fMain.TForm1.LinkControlToPropertyliste_tables.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="LinkGridToDataSourceBindSourceDB1">
+                                                  <param name="Local" value="fMain.TForm1.LinkGridToDataSourceBindSourceDB1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="LinkGridToDataSourceBindSourceDB2">
+                                                  <param name="Local" value="fMain.TForm1.LinkGridToDataSourceBindSourceDB2.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Sqlite_demoConnection">
+                                                  <param name="Local" value="fMain.TForm1.Sqlite_demoConnection.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="StringGrid1">
+                                                  <param name="Local" value="fMain.TForm1.StringGrid1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="StringGrid2">
+                                                  <param name="Local" value="fMain.TForm1.StringGrid2.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Variables">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="Form1">
+                                  <param name="Local" value="fMain.Form1.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+          </UL>
     </UL>
 </BODY>
 </HTML>
