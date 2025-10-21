@@ -1,0 +1,48 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E02BEBAA-9E35-40CB-B3F9-A3FBDDE56FB8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="001-IntraWeb\IntraWebDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="IntraWebDemo">
+        <MSBuild Projects="001-IntraWeb\IntraWebDemo.dproj"/>
+    </Target>
+    <Target Name="IntraWebDemo:Clean">
+        <MSBuild Projects="001-IntraWeb\IntraWebDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntraWebDemo:Make">
+        <MSBuild Projects="001-IntraWeb\IntraWebDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IWAjaxAndJavaScript">
+        <MSBuild Projects="006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj"/>
+    </Target>
+    <Target Name="IWAjaxAndJavaScript:Clean">
+        <MSBuild Projects="006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IWAjaxAndJavaScript:Make">
+        <MSBuild Projects="006-IntraWeb-AjaxAndJavaScript\IWAjaxAndJavaScript.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="IntraWebDemo;IWAjaxAndJavaScript"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="IntraWebDemo:Clean;IWAjaxAndJavaScript:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="IntraWebDemo:Make;IWAjaxAndJavaScript:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
