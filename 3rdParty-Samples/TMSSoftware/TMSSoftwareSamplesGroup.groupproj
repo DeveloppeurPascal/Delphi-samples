@@ -1,0 +1,48 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DCAEB074-5A93-444F-83D0-836C0726F278}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="013-TMSWebCore-HelloWorld\HelloWorld.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HelloWorld">
+        <MSBuild Projects="013-TMSWebCore-HelloWorld\HelloWorld.dproj"/>
+    </Target>
+    <Target Name="HelloWorld:Clean">
+        <MSBuild Projects="013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWorld:Make">
+        <MSBuild Projects="013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TMSWebCoreDelphiBooksSample">
+        <MSBuild Projects="014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj"/>
+    </Target>
+    <Target Name="TMSWebCoreDelphiBooksSample:Clean">
+        <MSBuild Projects="014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TMSWebCoreDelphiBooksSample:Make">
+        <MSBuild Projects="014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HelloWorld;TMSWebCoreDelphiBooksSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HelloWorld:Clean;TMSWebCoreDelphiBooksSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HelloWorld:Make;TMSWebCoreDelphiBooksSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
