@@ -35,25 +35,11 @@ The sample ClientServer-Samples\004-EnvoiPhotosParSocket uses the [Socket Messag
 
 The ClientServer-Samples\005-SetupAMobileAppWithQRCode example uses the [ZXing.Delphi library](https://github.com/Spelt/ZXing.Delphi) to decode a QR code and the [DelphiZXingQRCode library](https://github.com/foxitsoftware/DelphiZXingQRCode) to create a QR code.
 
-The sample FireDAC-Samples\003-CDataRSS uses the [FireDAC RSS driver](https://cdata.com/drivers/rss/firedac/) from [CData](https://cdata.com/).
-(if you use the evaluation release, compile in 64 bits, the 32 bits DLL is not available)
-
-The sample FireDAC-Samples\004-MultiDBSample uses the [FireDAC RSS driver](https://cdata.com/drivers/rss/firedac/) from [CData](https://cdata.com/).
-(if you use the evaluation release, compile in 64 bits, the 32 bits DLL is not available)
-
 The sample IoT-Samples\002-BeaconFence uses "[Beacon Fence](https://getitnow.embarcadero.com/beaconfence/)" components from GetIt.
 
 The sample IoT-Samples\004-Arduino-Mastermind uses "[AsyncPro for VCL](https://getitnow.embarcadero.com/AsyncPro-Sydney/)" components from GetIt and [Visuino IDE](https://www.visuino.com/) for the Arduino program.
 
 The sample IoT-Samples\005-Joystick uses "[Radiant Shape](https://getitnow.embarcadero.com/bonus-radiant-shapes/)" components from GetIt, "[CommunicationLab](https://mitov.com/products/communicationlab)" library from [Boian Mitov](https://mitov.com/) and [Visuino IDE](https://www.visuino.com/) for the Arduino program.
-
-The sample Web-Samples\011-UniGUI uses [UniGUI](http://www.unigui.com/).
-
-The sample Web-Samples\012-UniGUI-Database uses [UniGUI](http://www.unigui.com/).
-
-The sample Web-Samples\013-TMSWebCore-HelloWorld uses [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
-
-The sample Web-Samples\014-TMSWebCore-DisplayJSON uses [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
 
 ## Documentation and support
 

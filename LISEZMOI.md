@@ -35,25 +35,11 @@ L'exemple ClientServer-Samples\004-EnvoiPhotosParSocket utilise [la librairie So
 
 L'exemple ClientServer-Samples\005-SetupAMobileAppWithQRCode utilise [la librairie ZXing.Delphi](https://github.com/Spelt/ZXing.Delphi) pour le décodage d'un QR code et [la librairie DelphiZXingQRCode](https://github.com/foxitsoftware/DelphiZXingQRCode) pour la création d'un QR code.
 
-L'exemple FireDAC-Samples\003-CDataRSS utilise le [driver FireDAC RSS](https://cdata.com/drivers/rss/firedac/) de [CData](https://cdata.com/).
-(si vous utilisez la version d'évaluation, compilez en 64 bits car la version 32 bits de la DLL de CData est absente)
-
-L'exemple FireDAC-Samples\004-MultiDBSample utilise le [driver FireDAC RSS](https://cdata.com/drivers/rss/firedac/) de [CData](https://cdata.com/).
-(si vous utilisez la version d'évaluation, compilez en 64 bits car la version 32 bits de la DLL de CData est absente)
-
 L'exemple IoT-Samples\002-BeaconFence utilise les composants "[Beacon Fence](https://getitnow.embarcadero.com/beaconfence/)" disponibles sur GetIt.
 
 L'exemple IoT-Samples\004-Arduino-Mastermind utilise les composants "[AsyncPro for VCL](https://getitnow.embarcadero.com/AsyncPro-Sydney/)" disponibles sur GetIt et l'[IDE Visuino](https://www.visuino.com/) pour le programme Arduino.
 
 L'exemple IoT-Samples\005-Joystick utilise les composants "[Radiant Shape](https://getitnow.embarcadero.com/bonus-radiant-shapes/)" disponibles sur GetIt, la librairie "[CommunicationLab](https://mitov.com/products/communicationlab)" de [Boian Mitov](https://mitov.com/) et l'[IDE Visuino](https://www.visuino.com/) pour le programme Arduino.
-
-L'exemple Web-Samples\011-UniGUI utilise [UniGUI](http://www.unigui.com/).
-
-L'exemple Web-Samples\012-UniGUI-Database utilise [UniGUI](http://www.unigui.com/).
-
-L'exemple Web-Samples\013-TMSWebCore-HelloWorld utilise [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
-
-L'exemple Web-Samples\014-TMSWebCore-DisplayJSON utilise [TMS Web Core](https://www.tmssoftware.com/site/tmswebcoreintro.asp).
 
 ## Documentation et assistance
 
