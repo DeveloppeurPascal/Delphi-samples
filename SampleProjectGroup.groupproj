@@ -291,7 +291,7 @@
         <Projects Include="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj">
+        <Projects Include="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj">
@@ -1170,13 +1170,13 @@
         <MSBuild Projects="Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="HelloWorld">
-        <MSBuild Projects="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj"/>
+        <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj"/>
     </Target>
     <Target Name="HelloWorld:Clean">
-        <MSBuild Projects="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Clean"/>
+        <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Clean"/>
     </Target>
     <Target Name="HelloWorld:Make">
-        <MSBuild Projects="Web-Samples\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Make"/>
+        <MSBuild Projects="3rdParty-Samples\TMSSoftware\013-TMSWebCore-HelloWorld\HelloWorld.dproj" Targets="Make"/>
     </Target>
     <Target Name="TMSWebCoreDelphiBooksSample">
         <MSBuild Projects="Web-Samples\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dproj"/>
