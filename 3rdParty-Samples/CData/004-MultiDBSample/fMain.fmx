@@ -1,0 +1,278 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Interbase'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 185.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Access'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 275.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'RSS'
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 95.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'SQLite'
+      OnClick = Button4Click
+    end
+  end
+  object Layout2: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object StringGrid1: TStringGrid
+      Align = Client
+      CanFocus = True
+      ClipChildren = True
+      Size.Width = 216.000000000000000000
+      Size.Height = 430.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnSelChanged = StringGrid1SelChanged
+      Viewport.Width = 212.000000000000000000
+      Viewport.Height = 405.000000000000000000
+    end
+    object Layout3: TLayout
+      Align = Right
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Padding.Left = 10.000000000000000000
+      Padding.Top = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Padding.Bottom = 10.000000000000000000
+      Position.X = 216.000000000000000000
+      Size.Width = 424.000000000000000000
+      Size.Height = 430.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label1: TLabel
+        Align = Top
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 404.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.VertAlign = Leading
+        Text = 'Label1'
+        TabOrder = 0
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Bottom
+          TabOrder = 0
+          ReadOnly = True
+          Position.Y = 22.000000000000000000
+          Size.Width = 404.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object StringGrid2: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Margins.Top = 5.000000000000000000
+        Size.Width = 404.000000000000000000
+        Size.Height = 336.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 400.000000000000000000
+        Viewport.Height = 311.000000000000000000
+      end
+      object BindNavigator2: TBindNavigator
+        Align = Bottom
+        Padding.Top = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 395.000000000000000000
+        Size.Width = 404.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DataSource = BindSourceDB2
+        xRadius = 4.000000000000000000
+        yRadius = 4.000000000000000000
+      end
+    end
+  end
+  object FDPhysCDataRSSDriverLink1: TFDPhysCDataRSSDriverLink
+    DriverID = 'CDataRSS'
+    Left = 536
+    Top = 368
+  end
+  object FDQuery1: TFDQuery
+    SQL.Strings = (
+      'show tables')
+    Left = 72
+    Top = 264
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDQuery1
+    ScopeMappings = <>
+    Left = 400
+    Top = 128
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 452
+    Top = 13
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB2
+      GridControl = StringGrid2
+      Columns = <>
+    end
+    object LinkControlToPropertyliste_tables: TLinkControlToProperty
+      Category = 'Liaisons rapides'
+      Control = Edit1
+      Track = False
+      Component = StringGrid1
+      ComponentProperty = 'liste_tables'
+    end
+  end
+  object DeveloppeurpascalConnection: TFDConnection
+    Params.Strings = (
+      'URI=https://www.developpeur-pascal.fr/feed/'
+      'DriverID=CDataRSS')
+    LoginPrompt = False
+    Left = 78
+    Top = 138
+  end
+  object FDQuery2: TFDQuery
+    AfterClose = FDQuery2AfterClose
+    Connection = DeveloppeurpascalConnection
+    Left = 400
+    Top = 192
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = FDQuery2
+    ScopeMappings = <>
+    Left = 560
+    Top = 16
+  end
+  object EmployeeConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=EMPLOYEE')
+    LoginPrompt = False
+    Left = 234
+    Top = 105
+  end
+  object FDPhysIBDriverLink1: TFDPhysIBDriverLink
+    Left = 560
+    Top = 288
+  end
+  object DbdemosConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=DBDEMOS')
+    LoginPrompt = False
+    Left = 101
+    Top = 81
+  end
+  object Sqlite_demoConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=SQLite_Demo')
+    LoginPrompt = False
+    Left = 226
+    Top = 189
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 408
+    Top = 344
+  end
+  object FDPhysMSAccessDriverLink1: TFDPhysMSAccessDriverLink
+    Left = 416
+    Top = 272
+  end
+  object FDLocalSQL: TFDLocalSQL
+    Connection = FDConnectionLocale
+    DataSets = <>
+    Left = 176
+    Top = 384
+  end
+  object FDMemTable: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    LocalSQL = FDLocalSQL
+    Left = 120
+    Top = 368
+    object FDMemTableliste_tables: TStringField
+      FieldName = 'liste_tables'
+    end
+  end
+  object FDConnectionLocale: TFDConnection
+    Params.Strings = (
+      'DriverID=SQLite')
+    Left = 48
+    Top = 384
+  end
+end

@@ -12,7 +12,7 @@
         <Projects Include="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj">
+        <Projects Include="..\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj">
@@ -66,13 +66,13 @@
         <MSBuild Projects="..\FireMonkey-Samples\007-EffectsAndAnimations\EffectsAndAnimations.dproj" Targets="Make"/>
     </Target>
     <Target Name="MultiDBSample">
-        <MSBuild Projects="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj"/>
+        <MSBuild Projects="..\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dproj"/>
     </Target>
     <Target Name="MultiDBSample:Clean">
-        <MSBuild Projects="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj" Targets="Clean"/>
+        <MSBuild Projects="..\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dproj" Targets="Clean"/>
     </Target>
     <Target Name="MultiDBSample:Make">
-        <MSBuild Projects="..\FireDAC-Samples\004-MultiDBSample\MultiDBSample.dproj" Targets="Make"/>
+        <MSBuild Projects="..\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="IntraWebDemo">
         <MSBuild Projects="..\Web-Samples\001-IntraWeb\IntraWebDemo.dproj"/>
