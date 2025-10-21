@@ -69,7 +69,7 @@
         <Projects Include="..\ClientServer-Samples\002-AppTetheringDemo\app-secondaire\ShowSelectedItem.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\Web-Samples\011-UniGUI\UniGUISample.dproj">
+        <Projects Include="..\3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="..\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj">
@@ -291,13 +291,13 @@
         <MSBuild Projects="..\ClientServer-Samples\002-AppTetheringDemo\app-secondaire\ShowSelectedItem.dproj" Targets="Make"/>
     </Target>
     <Target Name="UniGUISample">
-        <MSBuild Projects="..\Web-Samples\011-UniGUI\UniGUISample.dproj"/>
+        <MSBuild Projects="..\3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj"/>
     </Target>
     <Target Name="UniGUISample:Clean">
-        <MSBuild Projects="..\Web-Samples\011-UniGUI\UniGUISample.dproj" Targets="Clean"/>
+        <MSBuild Projects="..\3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj" Targets="Clean"/>
     </Target>
     <Target Name="UniGUISample:Make">
-        <MSBuild Projects="..\Web-Samples\011-UniGUI\UniGUISample.dproj" Targets="Make"/>
+        <MSBuild Projects="..\3rdParty-Samples\uniGUI\011-uniGUI\UniGUISample.dproj" Targets="Make"/>
     </Target>
     <Target Name="UniGUIDatabaseSample">
         <MSBuild Projects="..\Web-Samples\012-UniGUI-Database\UniGUIDatabaseSample.dproj"/>
