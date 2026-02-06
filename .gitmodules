@@ -1,0 +1,15 @@
+[submodule "lib-externes/AboutDialog-Delphi-Component"]
+	path = lib-externes/AboutDialog-Delphi-Component
+	url = https://github.com/DeveloppeurPascal/AboutDialog-Delphi-Component.git
+[submodule "lib-externes/librairies"]
+	path = lib-externes/librairies
+	url = https://github.com/DeveloppeurPascal/librairies.git
+[submodule "lib-externes/Socket-Messaging-Library"]
+	path = lib-externes/Socket-Messaging-Library
+	url = https://github.com/DeveloppeurPascal/Socket-Messaging-Library.git
+[submodule "lib-externes/ZXing.Delphi"]
+	path = lib-externes/ZXing.Delphi
+	url = https://github.com/Spelt/ZXing.Delphi.git
+[submodule "lib-externes/DelphiZXingQRCode"]
+	path = lib-externes/DelphiZXingQRCode
+	url = https://github.com/foxitsoftware/DelphiZXingQRCode.git
