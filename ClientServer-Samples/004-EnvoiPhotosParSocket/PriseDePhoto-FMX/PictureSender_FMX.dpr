@@ -2,16 +2,20 @@
   ***************************************************************************
 
   Delphi Sample Projects
+  Copyright (c) 1995-2026 Patrick PREMARTIN
 
-  Copyright 1995-2025 Patrick Prémartin under AGPL 3.0 license.
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-  DEALINGS IN THE SOFTWARE.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   ***************************************************************************
 
@@ -33,11 +37,11 @@
   https://samples.developpeur-pascal.fr
 
   Project site :
-  https://github.com/DeveloppeurPascal/Delphi-samples
+  https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-02-09T11:12:22.000+01:00
-  Signature : d65c1f0f7f15d2d9b16b6b5f7a5902c02b14dd0a
+  File last update : 2026-02-06T17:38:57.956+01:00
+  Signature : b0dd4530610ea3d1178a6b73a8e3d0742e7094f4
   ***************************************************************************
 *)
 
@@ -48,9 +52,9 @@ uses
   FMX.Forms,
   fMain in 'fMain.pas' {fmrMain},
   SendPicturesOnANetworkWithSockets in '..\SendPicturesOnANetworkWithSockets.pas',
-  Olf.Net.Socket.Messaging in '..\..\..\Libraries\Socket-Messaging-Library\src\Olf.Net.Socket.Messaging.pas',
-  Olf.FMX.Streams in '..\..\..\Libraries\librairies\src\Olf.FMX.Streams.pas',
-  Olf.RTL.FileBuffer in '..\..\..\Libraries\librairies\src\Olf.RTL.FileBuffer.pas';
+  Olf.Net.Socket.Messaging in '..\..\..\lib-externes\Socket-Messaging-Library\src\Olf.Net.Socket.Messaging.pas',
+  Olf.FMX.Streams in '..\..\..\lib-externes\librairies\src\Olf.FMX.Streams.pas',
+  Olf.RTL.FileBuffer in '..\..\..\lib-externes\librairies\src\Olf.RTL.FileBuffer.pas';
 
 {$R *.res}
 

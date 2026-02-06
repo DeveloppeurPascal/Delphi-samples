@@ -3,7 +3,7 @@
 [Cette page en français.](LISEZMOI.md)
 
 > [!WARNING]
-> Following Microsoft's decision to merge GitHub into its AI division in the summer of 2025, I have decided to stop maintaining the repositories here. I will update this repository from time to time by copying the missing changes from the main repository, which is now on [Codeberg](https://codeberg.org/PatrickPremartin/Delphi-samples).
+> Following Microsoft's decision to merge GitHub into its AI division in the summer of 2025, I have decided to stop maintaining the repositories here. I will update this repository from time to time by copying the missing changes from the main repository, which is now on [Codeberg](https://codeberg.org/DeveloppeurPascal/Delphi-samples).
 
 Set of projects demonstrating the features of the Delphi development environment, its libraries and its programming language.
 
@@ -13,7 +13,7 @@ The programs are up to date with the [Community Edition](https://www.embarcadero
 
 You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
-A lot of code repositories show other Delphi project samples. Some of them are listed on [this page](OtherDelphiSampleRepositories.md). Be free to update it [with a PULL REQUEST](CONTRIBUTING.md) or by [filling an issue](https://codeberg.org/PatrickPremartin/Delphi-samples/issues).
+A lot of code repositories show other Delphi project samples. Some of them are listed on [this page](OtherDelphiSampleRepositories.md). Be free to update it [with a PULL REQUEST](CONTRIBUTING.md) or by [filling an issue](https://codeberg.org/DeveloppeurPascal/Delphi-samples/issues).
 
 ## Talks and conferences
 
@@ -23,14 +23,15 @@ Follow my development streams of software, video games, mobile applications and 
 
 ## Source code installation
 
-To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its Codeberg repository](https://codeberg.org/PatrickPremartin/Delphi-samples).
+To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its Codeberg repository](https://codeberg.org/DeveloppeurPascal/Delphi-samples).
 
 This project uses dependencies in the form of sub-modules. They will be absent from the ZIP file. You'll have to download them by hand.
 
-* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) must be installed in the ./Libraries/librairies subfolder.
-* [DeveloppeurPascal/Socket-Messaging-Library](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) must be installed in the ./Libraries/Socket-Messaging-Library subfolder.
-* [Spelt/ZXing.Delphi](https://github.com/Spelt/ZXing.Delphi) must be installed in the ./Libraries/ZXing.Delphi subfolder.
-* [foxitsoftware/DelphiZXingQRCode](https://github.com/foxitsoftware/DelphiZXingQRCode) must be installed in the ./Libraries/DelphiZXingQRCode subfolder.
+* [DeveloppeurPascal/AboutDialog-Delphi-Component](https://github.com/DeveloppeurPascal/AboutDialog-Delphi-Component) must be installed in the ./lib-externes/AboutDialog-Delphi-Component subfolder.
+* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) must be installed in the ./lib-externes/librairies subfolder.
+* [DeveloppeurPascal/Socket-Messaging-Library](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) must be installed in the ./lib-externes/Socket-Messaging-Library subfolder.
+* [Spelt/ZXing.Delphi](https://github.com/Spelt/ZXing.Delphi) must be installed in the ./lib-externes/ZXing.Delphi subfolder.
+* [foxitsoftware/DelphiZXingQRCode](https://github.com/foxitsoftware/DelphiZXingQRCode) must be installed in the ./lib-externes/DelphiZXingQRCode subfolder.
 
 Some projects needs sample databases installed as option with Delphi samples. If you don't have them, you'll find them in menu "Tools / Manage plateforms" then tab item "other options" and "samples" to install.
 
@@ -64,7 +65,7 @@ Normally, my libraries and components should also run on at least the current ve
 
 There's no guarantee of compatibility with earlier versions, even though I try to keep my code clean and avoid using too many of the new ways of writing in it (type inference, inline var and multiline strings).
 
-If you detect any anomalies on earlier versions, please don't hesitate to [report them](https://codeberg.org/PatrickPremartin/Delphi-samples/issues) so that I can test and try to correct or provide a workaround.
+If you detect any anomalies on earlier versions, please don't hesitate to [report them](https://codeberg.org/DeveloppeurPascal/Delphi-samples/issues) so that I can test and try to correct or provide a workaround.
 
 ## License to use this code repository and its contents
 
@@ -83,7 +84,7 @@ The source codes of this code repository as well as any compiled version are pro
 
 ## How to ask a new feature, report a bug or a security issue ?
 
-If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the Codeberg repository](https://codeberg.org/PatrickPremartin/Delphi-samples) and [open a new issue](https://codeberg.org/PatrickPremartin/Delphi-samples/issues).
+If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the Codeberg repository](https://codeberg.org/DeveloppeurPascal/Delphi-samples) and [open a new issue](https://codeberg.org/DeveloppeurPascal/Delphi-samples/issues).
 
 If you found a security issue please don't report it publicly before a patch is available. Explain the case by [sending a private message to the author](https://developpeur-pascal.fr/nous-contacter.php).
 
@@ -91,14 +92,14 @@ You also can fork the repository and contribute by submitting pull requests if y
 
 ## Support the project and its author
 
-If you think this project is useful and want to support it, please make a donation to [its author](https://github.com/DeveloppeurPascal). It will help to maintain this project and all others.
+If you think this project is useful and want to support it, please make a donation to [its author](https://codeberg.org/PatrickPremartin). It will help to maintain this project and all others.
 
 You can use one of those services :
 
-* [GitHub Sponsors](https://github.com/sponsors/DeveloppeurPascal)
-* Ko-fi [in French](https://ko-fi.com/patrick_premartin_fr) or [in English](https://ko-fi.com/patrick_premartin_en)
 * [Patreon](https://www.patreon.com/patrickpremartin)
+* [GitHub Sponsors](https://github.com/sponsors/DeveloppeurPascal)
 * [Liberapay](https://liberapay.com/PatrickPremartin)
+* Ko-fi [in French](https://ko-fi.com/patrick_premartin_fr) or [in English](https://ko-fi.com/patrick_premartin_en)
 
 You can buy an end user license for [my softwares](https://lic.olfsoftware.fr/products.php?lng=en) and [my video games](https://lic.gamolf.fr/products.php?lng=en) or [a developer license for my libraries](https://lic.developpeur-pascal.fr/products.php?lng=en) if you use them in your projects.
 

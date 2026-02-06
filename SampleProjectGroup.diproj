@@ -4,16 +4,17 @@
   <Summary>Delphi project samples for Windows, Mac, iOS, Android, Linux, internet of things and web</Summary>
   <Author>Patrick PREMARTIN</Author>
   <Email>patrick@premartin.fr</Email>
-  <Copyright>(c) 1995-2025 PATRICK PREMARTIN</Copyright>
+  <Copyright>(c) 1995-2026 PATRICK PREMARTIN</Copyright>
   <Comment/>
   <Language>2057</Language>
   <Charset>1</Charset>
+  <Theme>Learn</Theme>
   <HeaderHtml>&lt;%TopicTitle%&gt;</HeaderHtml>
-  <FooterHtml>&lt;a href="https://samples.developpeur-pascal.fr" target="_blank"&gt;Delphi Sample Projects&lt;/a&gt; (c) 1995-2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
+  <FooterHtml>&lt;a href="https://samples.developpeur-pascal.fr" target="_blank"&gt;Delphi Sample Projects&lt;/a&gt; (c) 1995-2026 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
   <CustomDefines/>
   <GlobalSearchPaths>false</GlobalSearchPaths>
-  <ShowImplementationSection>false</ShowImplementationSection>
-  <ShowPrivateMembers>false</ShowPrivateMembers>
+  <ShowImplementationSection>true</ShowImplementationSection>
+  <ShowPrivateMembers>true</ShowPrivateMembers>
   <ShowProtectedMembers>true</ShowProtectedMembers>
   <ShowInheritedMembers>true</ShowInheritedMembers>
   <ShowPropertyAccessors>true</ShowPropertyAccessors>
@@ -121,6 +122,21 @@
     <Source>.\3rdParty-Samples\TMSSoftware\014-TMSWebCore-DisplayJSON\TMSWebCoreDelphiBooksSample.dpr</Source>
     <Source>.\3rdParty-Samples\CData\003-CDataRSS\CDataRSSDemo.dpr</Source>
     <Source>.\3rdParty-Samples\CData\004-MultiDBSample\MultiDBSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\031-RenderedImageSizeInATGlyph\RenderedImageSizeInATGlyphSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\032-SimpleMediatek\src\SimpleMediatek.dpr</Source>
+    <Source>.\Web-Samples\011-SendPhotoToWebBroker\VCL\VCLSendPhotoToWebBroker.dpr</Source>
+    <Source>.\Web-Samples\011-SendPhotoToWebBroker\WebBroker\ServerSendPhotoToWebBroker.dpr</Source>
+    <Source>..\..\___lib\FMX-Styles-Utils\samples\DarkLightSampleProject\DarkLightSample.dpr</Source>
+    <Source>..\..\___lib\FMX-Styles-Utils\samples\GetStyleInfo\GetStyleInfoSample.dpr</Source>
+    <Source>.\Web-Samples\012-HTMLAjaxInsideDelphi\HTMLAjaxInsideDelphiSample.dpr</Source>
+    <Source>.\FireDAC-Samples\006-PostgreSQL\PostgreSQLFMXFDSample.dpr</Source>
+    <Source>.\FireDAC-Samples\007-PostgreSQL-CustomerOrderDetail\PostgreSQLCustomerOrderDetailFMXFDSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\033-EditButtonListbox\EditButtonListboxFMXSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\034-MenuActionList\MenuActionListFMXSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\035-MessageDlgSyncAsync\MessageDlgSyncAsyncFMXSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\036-ShowModalNormal\ShowModalNormalFMXSample.dpr</Source>
+    <Source>.\Web-Samples\013-WBJSONDatabaseEndpoints\DelphiClient\WBJSONDatabaseEndpointsFMXClient.dpr</Source>
+    <Source>.\Web-Samples\013-WBJSONDatabaseEndpoints\WebBroker\WBJSONDatabaseEndpointsServer.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">

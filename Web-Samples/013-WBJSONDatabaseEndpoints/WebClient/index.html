@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Affichage de données JSON depuis WebBroker</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>Affichage de données JSON depuis WebBroker</h1>
+<p><input type="text" id="edtUrl" placeholder="http://localhost:8080" value=""> <button id="Load">Charger les données</button></p>
+<div id="Result">
+</div>
+<script>
+	document.getElementById('Load').onclick = function () {
+		document.getElementById('Load').hidden = true;
+		url = document.getElementById('edtUrl').value;
+		if ('' == url) {
+			url = document.getElementById('edtUrl').placeholder;
+		}
+		document.getElementById('Result').innerHTML = '<img src="preview.gif">';
+		fetch(url+'/json',{
+			method: 'GET'
+		}).then((reponse) => {
+			if (reponse.ok) {
+				reponse.json().then((json) => {
+					let s = '<TABLE>';
+					for (key in json[0]) {
+							s = s+'<th>';
+							s = s+key;
+							s = s+'</th>';
+					}
+					for (let i = 0; i < json.length; i++) {
+						s = s+'<tr>';
+						for (key in json[i]) {
+							s = s+'<td>';
+							s = s+json[i][key];
+							s = s+'</td>';
+						}
+						s = s+'</tr>';
+					}
+					s = s+'</TABLE>';
+					//document.getElementById('Result').innerText = s;
+					document.getElementById('Result').innerHTML = s;
+				})
+			}
+			document.getElementById('Load').hidden = false;
+		}).catch((err) => {
+			document.getElementById('Result').innerText = err;
+			document.getElementById('Load').hidden = false;
+		});
+	}
+</script>
+</body>
+</html>

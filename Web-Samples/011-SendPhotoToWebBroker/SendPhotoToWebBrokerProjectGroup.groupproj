@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{40FC3BA3-0A34-41D0-88B4-1A351CACA22C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="VCL\VCLSendPhotoToWebBroker.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WebBroker\ServerSendPhotoToWebBroker.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VCLSendPhotoToWebBroker">
+        <MSBuild Projects="VCL\VCLSendPhotoToWebBroker.dproj"/>
+    </Target>
+    <Target Name="VCLSendPhotoToWebBroker:Clean">
+        <MSBuild Projects="VCL\VCLSendPhotoToWebBroker.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLSendPhotoToWebBroker:Make">
+        <MSBuild Projects="VCL\VCLSendPhotoToWebBroker.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ServerSendPhotoToWebBroker">
+        <MSBuild Projects="WebBroker\ServerSendPhotoToWebBroker.dproj"/>
+    </Target>
+    <Target Name="ServerSendPhotoToWebBroker:Clean">
+        <MSBuild Projects="WebBroker\ServerSendPhotoToWebBroker.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ServerSendPhotoToWebBroker:Make">
+        <MSBuild Projects="WebBroker\ServerSendPhotoToWebBroker.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VCLSendPhotoToWebBroker;ServerSendPhotoToWebBroker"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VCLSendPhotoToWebBroker:Clean;ServerSendPhotoToWebBroker:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VCLSendPhotoToWebBroker:Make;ServerSendPhotoToWebBroker:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,524 @@
+object AppMetaData: TAppMetaData
+  VersionControlPath = '%projectdir%\versions'
+  UserOptions.Strings = (
+    'fmGenerateScript_Tables=1'
+    'fmGenerateScript_Indexes=1'
+    'fmGenerateScript_Triggers=0'
+    'fmGenerateScript_Relationships=0'
+    'fmGenerateScript_Domains=0'
+    'fmGenerateScript_Views=0')
+  VersionControl = <
+    item
+      VersionID = 1
+      DateTime = 46013.676219456020000000
+    end>
+  DataDictionary.DatabaseTypeID = 'sqlite3'
+  DataDictionary.NextTableID = 5
+  DataDictionary.NextFieldID = 17
+  DataDictionary.NextConstraintID = 1
+  DataDictionary.NextIndexID = 8
+  DataDictionary.NextRelationshipID = 1
+  DataDictionary.Domains = <>
+  DataDictionary.Tables = <
+    item
+      TableName = 'personnes'
+      TID = 1
+      OidIndex = 0
+      Fields = <
+        item
+          FieldName = 'id'
+          DataTypeName = 'Integer (autoincrement)'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 1
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'nom'
+          DataTypeName = 'VarChar'
+          Size = 50
+          Size2 = 0
+          Required = False
+          FID = 2
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'email'
+          DataTypeName = 'VarChar'
+          Size = 255
+          Size2 = 0
+          Required = False
+          FID = 3
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'tel'
+          DataTypeName = 'VarChar'
+          Size = 50
+          Size2 = 0
+          Required = False
+          FID = 4
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end>
+      Indexes = <
+        item
+          IndexName = 'personnes_par_nom'
+          IndexType = itUniqueKey
+          IndexOrder = ioAscending
+          IID = 4
+          IFields = <
+            item
+              FieldIndex = 1
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 0
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end>
+        end
+        item
+          IndexName = 'personnes_par_email'
+          IndexType = itUniqueKey
+          IndexOrder = ioAscending
+          IID = 5
+          IFields = <
+            item
+              FieldIndex = 2
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 0
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end>
+        end>
+      Constraints = <>
+      Triggers = <>
+      PrimaryKeyIndex.IndexName = 'personnes_par_id'
+      PrimaryKeyIndex.IndexType = itNone
+      PrimaryKeyIndex.IndexOrder = ioAscending
+      PrimaryKeyIndex.IID = 0
+      PrimaryKeyIndex.IFields = <
+        item
+          FieldIndex = 0
+          FieldOrder = ioAsc
+          KeyByRelationship = False
+        end>
+    end
+    item
+      TableName = 'media'
+      TID = 2
+      OidIndex = 0
+      Fields = <
+        item
+          FieldName = 'id'
+          DataTypeName = 'Integer (autoincrement)'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 5
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'titre'
+          DataTypeName = 'VarChar'
+          Size = 255
+          Size2 = 0
+          Required = False
+          FID = 6
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'gencod'
+          DataTypeName = 'VarChar'
+          Size = 50
+          Size2 = 0
+          Required = False
+          FID = 7
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'support_type_id'
+          DataTypeName = 'Integer'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 8
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end>
+      Indexes = <
+        item
+          IndexName = 'media_par_titre'
+          IndexType = itUniqueKey
+          IndexOrder = ioAscending
+          IID = 1
+          IFields = <
+            item
+              FieldIndex = 1
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 0
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end>
+        end
+        item
+          IndexName = 'media_par_gencod'
+          IndexType = itUniqueKey
+          IndexOrder = ioAscending
+          IID = 2
+          IFields = <
+            item
+              FieldIndex = 2
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 0
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end>
+        end>
+      Constraints = <>
+      Triggers = <>
+      PrimaryKeyIndex.IndexName = 'media_par_id'
+      PrimaryKeyIndex.IndexType = itNone
+      PrimaryKeyIndex.IndexOrder = ioAscending
+      PrimaryKeyIndex.IID = 0
+      PrimaryKeyIndex.IFields = <
+        item
+          FieldIndex = 0
+          FieldOrder = ioAsc
+          KeyByRelationship = False
+        end>
+    end
+    item
+      TableName = 'support_type'
+      TID = 3
+      OidIndex = 0
+      Fields = <
+        item
+          FieldName = 'id'
+          DataTypeName = 'Integer (autoincrement)'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 9
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'libelle'
+          DataTypeName = 'VarChar'
+          Size = 50
+          Size2 = 0
+          Required = False
+          FID = 10
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end>
+      Indexes = <
+        item
+          IndexName = 'suptyp_par_libelle'
+          IndexType = itUniqueKey
+          IndexOrder = ioAscending
+          IID = 3
+          IFields = <
+            item
+              FieldIndex = 1
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 0
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end>
+        end>
+      Constraints = <>
+      Triggers = <>
+      PrimaryKeyIndex.IndexName = 'suptyp_par_id'
+      PrimaryKeyIndex.IndexType = itNone
+      PrimaryKeyIndex.IndexOrder = ioAscending
+      PrimaryKeyIndex.IID = 0
+      PrimaryKeyIndex.IFields = <
+        item
+          FieldIndex = 0
+          FieldOrder = ioAsc
+          KeyByRelationship = False
+        end>
+    end
+    item
+      TableName = 'emprunts'
+      TID = 4
+      OidIndex = 0
+      Fields = <
+        item
+          FieldName = 'id'
+          DataTypeName = 'Integer (autoincrement)'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 11
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'date_loc'
+          DataTypeName = 'Date'
+          Size = 0
+          Size2 = 0
+          Required = False
+          FID = 12
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'heure_loc'
+          DataTypeName = 'Time'
+          Size = 0
+          Size2 = 0
+          Required = False
+          FID = 13
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'media_id'
+          DataTypeName = 'Integer'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 14
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'personne_id'
+          DataTypeName = 'Integer'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 15
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end
+        item
+          FieldName = 'rendu'
+          DataTypeName = 'Bit'
+          Size = 0
+          Size2 = 0
+          Required = True
+          FID = 16
+          DefaultValueSpecific = False
+          RequiredSpecific = False
+          ConstraintExprSpecific = False
+          SeedValue = 0
+          IncrementValue = 1
+          GeneratedByRelationship = False
+        end>
+      Indexes = <
+        item
+          IndexName = 'emprunts_par_media'
+          IndexType = itUniqueKey
+          IndexOrder = ioAscending
+          IID = 6
+          IFields = <
+            item
+              FieldIndex = 3
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 1
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 2
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 4
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 0
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end>
+        end
+        item
+          IndexName = 'emprunts_par_personne'
+          IndexType = itUniqueKey
+          IndexOrder = ioAscending
+          IID = 7
+          IFields = <
+            item
+              FieldIndex = 4
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 1
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 2
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 3
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end
+            item
+              FieldIndex = 0
+              FieldOrder = ioAsc
+              KeyByRelationship = False
+            end>
+        end>
+      Constraints = <>
+      Triggers = <>
+      PrimaryKeyIndex.IndexName = 'emprunts_par_id'
+      PrimaryKeyIndex.IndexType = itNone
+      PrimaryKeyIndex.IndexOrder = ioAscending
+      PrimaryKeyIndex.IID = 0
+      PrimaryKeyIndex.IFields = <
+        item
+          FieldIndex = 0
+          FieldOrder = ioAsc
+          KeyByRelationship = False
+        end>
+    end>
+  DataDictionary.Relationships = <>
+  DataDictionary.Categories = <
+    item
+      CategoryType = ctView
+      Objects = <>
+    end>
+  DiagramObj.Diagrams = <
+    item
+      DiagramName = 'Main Diagram'
+      DiagramString = 
+        'object TDiagramClass'#13#10'  NettoExportOffset = 3'#13#10'  AutomaticNodes ' +
+        '= False'#13#10'  AutoScroll = True'#13#10'  Background.Scroll = True'#13#10'  Back' +
+        'ground.Style = biTile'#13#10'  Background.Visible = False'#13#10'  Backgroun' +
+        'd.Gradient.Direction = grTopBottom'#13#10'  Background.Gradient.StartC' +
+        'olor = clWhite'#13#10'  Background.Gradient.EndColor = clYellow'#13#10'  Bac' +
+        'kground.Gradient.Visible = False'#13#10'  Background.PrintGradient = F' +
+        'alse'#13#10'  SnapGrid.Active = False'#13#10'  SnapGrid.Force = False'#13#10'  Sna' +
+        'pGrid.Visible = False'#13#10'  SnapGrid.SizeX = 8.000000000000000000'#13#10 +
+        '  SnapGrid.SizeY = 8.000000000000000000'#13#10'  SnapGrid.Style = gsDo' +
+        'ts'#13#10'  SnapGrid.SnapToRuler = False'#13#10'  LeftRuler.Visible = False'#13 +
+        #10'  LeftRuler.Divisions = 5'#13#10'  LeftRuler.Font.Charset = DEFAULT_C' +
+        'HARSET'#13#10'  LeftRuler.Font.Color = clWindowText'#13#10'  LeftRuler.Font.' +
+        'Height = -9'#13#10'  LeftRuler.Font.Name = '#39'Arial'#39#13#10'  LeftRuler.Font.S' +
+        'tyle = []'#13#10'  LeftRuler.Units = unCenti'#13#10'  LeftRuler.MinorTickLen' +
+        'gth = 4'#13#10'  LeftRuler.MajorTickLength = 6'#13#10'  LeftRuler.Color = cl' +
+        'White'#13#10'  LeftRuler.TickColor = clBlack'#13#10'  LeftRuler.Size = 16'#13#10' ' +
+        ' LeftRuler.AutoFactor = True'#13#10'  LeftRuler.GridColor = clBlack'#13#10' ' +
+        ' TopRuler.Visible = False'#13#10'  TopRuler.Divisions = 5'#13#10'  TopRuler.' +
+        'Font.Charset = DEFAULT_CHARSET'#13#10'  TopRuler.Font.Color = clWindow' +
+        'Text'#13#10'  TopRuler.Font.Height = -9'#13#10'  TopRuler.Font.Name = '#39'Arial' +
+        #39#13#10'  TopRuler.Font.Style = []'#13#10'  TopRuler.Units = unCenti'#13#10'  Top' +
+        'Ruler.MinorTickLength = 4'#13#10'  TopRuler.MajorTickLength = 6'#13#10'  Top' +
+        'Ruler.Color = clWhite'#13#10'  TopRuler.TickColor = clBlack'#13#10'  TopRule' +
+        'r.Size = 16'#13#10'  TopRuler.AutoFactor = True'#13#10'  TopRuler.GridColor ' +
+        '= clBlack'#13#10'  Zoom = 100'#13#10'  BorderColor = clGray'#13#10'  MouseWheelMod' +
+        'e = mwVertical'#13#10'  ActiveLayers = 0'#13#10'  Layers = <>'#13#10'  LinkCursor ' +
+        '= crHandPoint'#13#10'  PanCursor = crHandPoint'#13#10'  ZoomCursor = crDefau' +
+        'lt'#13#10'  IgnoreScreenDPI = False'#13#10'  ShowCrossIndicators = False'#13#10'  ' +
+        'KeyActions = [kaEscape, kaMove, kaPage, kaResize, kaSelect]'#13#10'  S' +
+        'moothMode = smAntiAlias'#13#10'  TextRenderingMode = tmAntiAlias'#13#10'  Se' +
+        'lectionMode = slmMultiple'#13#10'  CanMoveOutOfBounds = True'#13#10'  PageSe' +
+        'ttings.PaperName = '#39'A4'#39#13#10'  PageSettings.PaperId = 9'#13#10'  PageSetti' +
+        'ngs.PaperWidth = 210.015666666666700000'#13#10'  PageSettings.PaperHei' +
+        'ght = 297.010666666666600000'#13#10'  PageSettings.Orientation = dpoPo' +
+        'rtrait'#13#10'  PageSettings.LeftMarginStr = '#39'25.4'#39#13#10'  PageSettings.To' +
+        'pMarginStr = '#39'25.4'#39#13#10'  PageSettings.RightMarginStr = '#39'25.4'#39#13#10'  P' +
+        'ageSettings.BottomMarginStr = '#39'25.4'#39#13#10'  RulerAutoUnit = False'#13#10' ' +
+        ' BorderStyle = bsNone'#13#10'  Color = clWhite'#13#10'  ParentColor = False'#13 +
+        #10'  DisplayRelationshipNames = False'#13#10'  LinkRelationshipsToFields' +
+        ' = False'#13#10'  ShowCaptions = False'#13#10'  StraightRelationshipLines = ' +
+        'True'#13#10'end'#13#10
+    end>
+end

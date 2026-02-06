@@ -104,9 +104,9 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\uConsts.pas"/>
-        <DCCReference Include="..\..\..\Libraries\DelphiZXingQRCode\Source\DelphiZXIngQRCode.pas"/>
-        <DCCReference Include="..\..\..\Libraries\librairies\src\Olf.RTL.Checksum.pas"/>
-        <DCCReference Include="..\..\..\Libraries\librairies\src\u_md5.pas"/>
+        <DCCReference Include="..\..\..\lib-externes\DelphiZXingQRCode\Source\DelphiZXIngQRCode.pas"/>
+        <DCCReference Include="..\..\..\lib-externes\librairies\src\Olf.RTL.Checksum.pas"/>
+        <DCCReference Include="..\..\..\lib-externes\librairies\src\u_md5.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

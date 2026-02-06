@@ -2,16 +2,20 @@
   ***************************************************************************
 
   Delphi Sample Projects
+  Copyright (c) 1995-2026 Patrick PREMARTIN
 
-  Copyright 1995-2025 Patrick Prémartin under AGPL 3.0 license.
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-  DEALINGS IN THE SOFTWARE.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   ***************************************************************************
 
@@ -33,11 +37,11 @@
   https://samples.developpeur-pascal.fr
 
   Project site :
-  https://github.com/DeveloppeurPascal/Delphi-samples
+  https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-02-09T11:12:21.071+01:00
-  Signature : e28808a48f08bb799eb1677c39fa31a906107e7a
+  File last update : 2026-02-06T17:38:57.983+01:00
+  Signature : 2448ca79f4c94bdee51c9c4a78b1bef05575d9ad
   ***************************************************************************
 *)
 
@@ -48,7 +52,7 @@ uses
   ServerModule in 'ServerModule.pas' {UniServerModule: TUniGUIServerModule},
   MainModule in 'MainModule.pas' {UniMainModule: TUniGUIMainModule},
   Main in 'Main.pas' {MainForm: TUniForm},
-  u_urlOpen in '..\..\Libraries\librairies\u_urlOpen.pas';
+  u_urlOpen in '..\..\lib-externes\librairies\u_urlOpen.pas';
 
 {$R *.res}
 

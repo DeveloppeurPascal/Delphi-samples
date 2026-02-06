@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+  <p><button id="btn">Get text from Delphi</button></p>
+  <div id="result"></div>
+<script>
+	document.getElementById('btn').onclick = function () {
+		document.getElementById('btn').hidden = true;
+		document.getElementById('result').innerHTML = '<p>Calling the server...</p>';
+		fetch('http://localhost:8081/',{
+			method: 'GET'
+		}).then((reponse) => {
+			if (reponse.ok) {
+				reponse.json().then((json) => {
+					document.getElementById('result').innerHTML = '<p>'+json.edit1+'</p>';
+				})
+			}
+			document.getElementById('btn').hidden = false;
+		}).catch((err) => {
+			document.getElementById('result').innerHTML = '<p>'+err+'</p>';
+			document.getElementById('btn').hidden = false;
+		});
+	}
+</script>
+  </body>
+</html>
+

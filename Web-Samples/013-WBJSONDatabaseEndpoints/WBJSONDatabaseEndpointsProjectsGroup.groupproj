@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2DF98AEF-5832-4DCD-8C9C-E175AA458A7E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DelphiClient\WBJSONDatabaseEndpointsFMXClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WebBroker\WBJSONDatabaseEndpointsServer.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="WBJSONDatabaseEndpointsFMXClient">
+        <MSBuild Projects="DelphiClient\WBJSONDatabaseEndpointsFMXClient.dproj"/>
+    </Target>
+    <Target Name="WBJSONDatabaseEndpointsFMXClient:Clean">
+        <MSBuild Projects="DelphiClient\WBJSONDatabaseEndpointsFMXClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WBJSONDatabaseEndpointsFMXClient:Make">
+        <MSBuild Projects="DelphiClient\WBJSONDatabaseEndpointsFMXClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WBJSONDatabaseEndpointsServer">
+        <MSBuild Projects="WebBroker\WBJSONDatabaseEndpointsServer.dproj"/>
+    </Target>
+    <Target Name="WBJSONDatabaseEndpointsServer:Clean">
+        <MSBuild Projects="WebBroker\WBJSONDatabaseEndpointsServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WBJSONDatabaseEndpointsServer:Make">
+        <MSBuild Projects="WebBroker\WBJSONDatabaseEndpointsServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="WBJSONDatabaseEndpointsFMXClient;WBJSONDatabaseEndpointsServer"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="WBJSONDatabaseEndpointsFMXClient:Clean;WBJSONDatabaseEndpointsServer:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="WBJSONDatabaseEndpointsFMXClient:Make;WBJSONDatabaseEndpointsServer:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

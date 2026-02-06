@@ -312,8 +312,8 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="uSQL.pas"/>
-        <DCCReference Include="..\..\Libraries\librairies\src\Olf.RTL.GenRandomID.pas"/>
-        <DCCReference Include="..\..\Libraries\librairies\src\Olf.RTL.Params.pas"/>
+        <DCCReference Include="..\..\lib-externes\librairies\src\Olf.RTL.GenRandomID.pas"/>
+        <DCCReference Include="..\..\lib-externes\librairies\src\Olf.RTL.Params.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

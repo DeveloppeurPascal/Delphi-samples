@@ -3,7 +3,7 @@
 [This page in English.](README.md)
 
 > [!WARNING]
-> Suite à la décision de Microsoft de fondre GitHub dans sa division IA à l'été 2025, j'ai pris la décision d'arrêter la maintenance des dépôts ici. Je mettrai à jour ce dépôt de temps en temps par copie des modifications manquantes depuis le dépôt principal désormais sur [Codeberg](https://codeberg.org/PatrickPremartin/Delphi-samples).
+> Suite à la décision de Microsoft de fondre GitHub dans sa division IA à l'été 2025, j'ai pris la décision d'arrêter la maintenance des dépôts ici. Je mettrai à jour ce dépôt de temps en temps par copie des modifications manquantes depuis le dépôt principal désormais sur [Codeberg](https://codeberg.org/DeveloppeurPascal/Delphi-samples).
 
 Ensemble de projets de démonstration des fonctionnalités de l'environnement de développement Delphi, ses librairies et son langage de programmation.
 
@@ -13,7 +13,7 @@ Les programmes sont à jour par rapport à la version [Community Edition](https:
 
 Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
 
-De nombreux dépôts de code proposent d'autres exemples de projets Delphi. Certains sont listés sur [cette page](OtherDelphiSampleRepositories.md). N'hésitez pas à la compléter en [la modifiant directement](CONTRIBUTING.md) ou en [soumettant un ticket](https://codeberg.org/PatrickPremartin/Delphi-samples/issues).
+De nombreux dépôts de code proposent d'autres exemples de projets Delphi. Certains sont listés sur [cette page](OtherDelphiSampleRepositories.md). N'hésitez pas à la compléter en [la modifiant directement](CONTRIBUTING.md) ou en [soumettant un ticket](https://codeberg.org/DeveloppeurPascal/Delphi-samples/issues).
 
 ## Présentations et conférences
 
@@ -23,14 +23,15 @@ Suivez mes streams de développement de logiciels, jeux vidéo, applications mob
 
 ## Installation des codes sources
 
-Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt Codeberg](https://codeberg.org/PatrickPremartin/Delphi-samples).
+Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt Codeberg](https://codeberg.org/DeveloppeurPascal/Delphi-samples).
 
 Ce projet utilise des dépendances sous forme de sous modules. Ils seront absents du fichier ZIP. Vous devrez les télécharger à la main.
 
-* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) doit être installé dans le sous dossier ./Libraries/librairies
-* [DeveloppeurPascal/Socket-Messaging-Library](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) doit être installé dans le sous dossier ./Libraries/Socket-Messaging-Library
-* [Spelt/ZXing.Delphi](https://github.com/Spelt/ZXing.Delphi) doit être installé dans le sous dossier ./Libraries/ZXing.Delphi
-* [foxitsoftware/DelphiZXingQRCode](https://github.com/foxitsoftware/DelphiZXingQRCode) doit être installé dans le sous dossier ./Libraries/DelphiZXingQRCode
+* [DeveloppeurPascal/AboutDialog-Delphi-Component](https://github.com/DeveloppeurPascal/AboutDialog-Delphi-Component) doit être installé dans le sous dossier ./lib-externes/AboutDialog-Delphi-Component
+* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) doit être installé dans le sous dossier ./lib-externes/librairies
+* [DeveloppeurPascal/Socket-Messaging-Library](https://github.com/DeveloppeurPascal/Socket-Messaging-Library) doit être installé dans le sous dossier ./lib-externes/Socket-Messaging-Library
+* [Spelt/ZXing.Delphi](https://github.com/Spelt/ZXing.Delphi) doit être installé dans le sous dossier ./lib-externes/ZXing.Delphi
+* [foxitsoftware/DelphiZXingQRCode](https://github.com/foxitsoftware/DelphiZXingQRCode) doit être installé dans le sous dossier ./lib-externes/DelphiZXingQRCode
 
 Certains projets ont besoin des bases de données de démo installées avec les exemples optionnels de Delphi. Si vous ne les avez pas, vous les trouverez dans le menu "Outils / Gérer les plateformes" puis l'onglet "Autres options" et enfin la rubrique "Samples" à installer.
 
@@ -64,7 +65,7 @@ Normalement mes librairies et composants doivent aussi fonctionner au moins sur 
 
 Aucune garantie de compatibilité avec des versions antérieures n'est fournie même si je m'efforce de faire du code propre et ne pas trop utiliser les nouvelles façons d'écrire dedans (type inference, inline var et multilines strings).
 
-Si vous détectez des anomalies sur des versions antérieures n'hésitez pas à [les rapporter](https://codeberg.org/PatrickPremartin/Delphi-samples/issues) pour que je teste et tente de corriger ou fournir un contournement.
+Si vous détectez des anomalies sur des versions antérieures n'hésitez pas à [les rapporter](https://codeberg.org/DeveloppeurPascal/Delphi-samples/issues) pour que je teste et tente de corriger ou fournir un contournement.
 
 ## Licence d'utilisation de ce dépôt de code et de son contenu
 
@@ -83,7 +84,7 @@ Les codes sources de ce dépôt de code comme leur éventuelle version compilée
 
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 
-Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur Codeberg](https://codeberg.org/PatrickPremartin/Delphi-samples) et [d'ouvrir un ticket](https://codeberg.org/PatrickPremartin/Delphi-samples/issues).
+Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur Codeberg](https://codeberg.org/DeveloppeurPascal/Delphi-samples) et [d'ouvrir un ticket](https://codeberg.org/DeveloppeurPascal/Delphi-samples/issues).
 
 Si vous avez trouvé une faille de sécurité n'en parlez pas en public avant qu'un correctif n'ait été déployé ou soit disponible. [Contactez l'auteur du dépôt en privé](https://developpeur-pascal.fr/nous-contacter.php) pour expliquer votre trouvaille.
 
@@ -91,14 +92,14 @@ Vous pouvez aussi cloner ce dépôt de code et participer à ses évolutions en 
 
 ## Soutenez ce projet et son auteur
 
-Si vous trouvez ce dépôt de code utile et voulez le montrer, merci de faire une donation [à son auteur](https://github.com/DeveloppeurPascal). Ca aidera à maintenir ce projet et tous les autres.
+Si vous trouvez ce dépôt de code utile et voulez le montrer, merci de faire une donation [à son auteur](https://codeberg.org/PatrickPremartin). Ca aidera à maintenir ce projet et tous les autres.
 
 Vous pouvez utiliser l'un de ces services :
 
-* [GitHub Sponsors](https://github.com/sponsors/DeveloppeurPascal)
-* Ko-fi [en français](https://ko-fi.com/patrick_premartin_fr) ou [en anglais](https://ko-fi.com/patrick_premartin_en)
 * [Patreon](https://www.patreon.com/patrickpremartin)
+* [GitHub Sponsors](https://github.com/sponsors/DeveloppeurPascal)
 * [Liberapay](https://liberapay.com/PatrickPremartin)
+* Ko-fi [en français](https://ko-fi.com/patrick_premartin_fr) ou [en anglais](https://ko-fi.com/patrick_premartin_en)
 
 Vous pouvez acheter une licence d'utilisateur pour [mes logiciels](https://lic.olfsoftware.fr/products.php?lng=fr) et [mes jeux vidéo](https://lic.gamolf.fr/products.php?lng=fr) ou [une licence de développeur pour mes bibliothèques](https://lic.developpeur-pascal.fr/products.php?lng=fr) si vous les utilisez dans vos projets.
 

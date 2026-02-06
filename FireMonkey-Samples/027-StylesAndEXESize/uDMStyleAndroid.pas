@@ -2,16 +2,20 @@
   ***************************************************************************
 
   Delphi Sample Projects
+  Copyright (c) 1995-2026 Patrick PREMARTIN
 
-  Copyright 1995-2025 Patrick Prémartin under AGPL 3.0 license.
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-  DEALINGS IN THE SOFTWARE.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   ***************************************************************************
 
@@ -33,11 +37,11 @@
   https://samples.developpeur-pascal.fr
 
   Project site :
-  https://github.com/DeveloppeurPascal/Delphi-samples
+  https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-04-08T09:47:10.585+02:00
-  Signature : 070ceb0a0af14d5dfb5e6126199a65813c7de267
+  File last update : 2026-01-08T11:23:14.565+01:00
+  Signature : 46ef4afef752afc6581e35a7c9eead31c003cf32
   ***************************************************************************
 *)
 
@@ -45,7 +49,6 @@ unit uDMStyleAndroid;
 
 interface
 
-{$IFDEF ANDROID}
 
 uses
   System.SysUtils,
@@ -60,6 +63,7 @@ type
   public
   end;
 
+{$IFDEF ANDROID}
 var
   GStyleAndroid: TdmStyleAndroid;
 
@@ -67,8 +71,9 @@ var
 
 implementation
 
-{$IFDEF ANDROID}
 {%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$IFDEF ANDROID}
 {$R *.dfm}
 {$ENDIF}
 

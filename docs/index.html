@@ -1,122 +1,1304 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html class="layout layout-holy-grail" lang="en-us" dir="ltr">
+
 <head>
-  <title>Delphi Sample Projects</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="generator" content="DocInsight">
-  <link type="text/css" rel="stylesheet" media="all" href="themes/legacy/css/reset.css" />
-  <link type="text/css" rel="stylesheet" media="all" href="themes/legacy/css/smoothness/jquery-ui.css" />
-  <script type="text/javascript" src="themes/legacy/js/jquery.min.js"></script>
-  <script type="text/javascript" src="themes/legacy/js/jquery-migrate.min.js"></script>
-  <script type="text/javascript" src="themes/legacy/js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="themes/legacy/js/splitter.js"></script>
-
-  <style type="text/css">
-    html, body {
-		margin:0;
-		padding:0;
-		height:100%;
-		overflow:hidden;
-    }
-
-    #navigationLayout {
-		min-width: 200px;
-		height: 100%;
-    }
-
-    #contentLayout {
-		min-width: 300px;
-		height: 100%;
-		background-color: #eee;
-    }
-
-    #navigationFrame, #contentFrame {
-      height:100%; width:100%; border:none;
-    }
-
-	#main {
-		height: 100%;
-		width: 100%;
-		border: none;
-	}
-	#main div {
-		overflow-x: auto;
-		overflow-y: hidden;
-	}
-	.vsplitbar {
-		height: 100%;
-		width: 1px;
-		background: #b6b6b6;
-		background-image: url(images/vgrabber.gif);
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-    .cover {
-		position:absolute;
-		width:100%;
-		height:100%;
-		top:0;
-		left:0;
-		z-index:99;
-		background-color:#fff;
-		filter:alpha(opacity=30);
-		opacity:0.01;
-		display:none;
-	}
-
-  </style>
-
-  <script type="text/javascript">
-	var resizeTimer;
-
-	function realignWindow() {
-		if (! $(".vsplitbar").hasClass("active"))
-			$("#main").trigger("resize");
-	}
-
-	$(function() {
-		$("#main").splitter({
-			splitVertical: true,
-			// outline: true,
-            sizeLeft: 300
-        });
-		$(window).resize(
-			function () {
-				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(realignWindow, 10);
-			}
-		);
-	});
-
-  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delphi Sample Projects ProjectGroup</title>
+  <meta name="color-scheme" content="light dark" />
+  <meta name="generator" content="DocInsight" />
+  <meta name="toc-key" content="toc-packages" />
+  <meta name="search-index" content="toc&#x2f;search-index.js" />
+  <meta name="uid" content="index" />
+  <link rel="stylesheet" href="static/css/learn.css" />
+  <script src="static/js/index-learn.js"></script>
+  <script src="toc/toc-packages.js"></script>
 </head>
-<body>
+
+<body id="body" class="layout-body">
+  <header id="header" class="layout-body-header">
+    <div class="site-header display-flex align-items-center ">
+      <span class="margin-left-none icon logo">
+      </span>
+      <a href="index.html" class="site-header-brand padding-left-none">
+        <span>Delphi Sample Projects</span>
+      </a>
+
+      <nav aria-label="site header nav" class="site-header-nav display-flex align-items-center gap-xxs">
+        <ul class="display-none display-flex-tablet justify-content-space-between gap-xxs">
+          <li>
+            <a class="color-text font-size-sm" href="index.html">API Reference</a>
+          </li>
+        </ul>
+
+        <form role="search" aria-label="Search" id="search-container" class="margin-left-xss margin-left-lg-tablet">
+          <div class="autocomplete display-block">
+            <div class="position-relative">
+              <input class="input input-icon input-sm" type="text" placeholder="Search" aria-expanded="true"
+                aria-activedescendant="">
+              <span class="icon search" aria-hidden="true"></span>
+            </div>
+            <ul role="listbox" id="search-suggestions"
+              class="autocomplete-suggestions is-vertically-scrollable padding-xxs" aria-label="Suggestions" hidden>
+            </ul>
+          </div>
+        </form>
+
+        <button id="color-mode-toggle" title="Toggle color mode" class="button button-clear margin-left-auto">
+          <span class="icon color-mode">
+          </span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section id="layout-body-menu" class="layout-body-menu display-flex">
+    <div id="left-container"
+      class="left-container display-none display-block-tablet padding-inline-sm padding-bottom-sm width-full">
+      <nav id="affixed-left-container" class="margin-top-sm-tablet position-sticky display-flex flex-direction-column"
+        aria-label="Primary">
+      </nav>
+    </div>
+  </section>
+
+  <main id="main" role="main" class="layout-body-main">
+    <article class="padding-sm padding-top-none padding-top-sm-tablet">
+      <div id="article-header"
+        class="align-items-center display-flex background-color-body margin-bottom-xs display-none-print">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+          </ol>
+        </nav>
+
+        <div id="page-actions" class="display-flex flex-wrap-no-wrap margin-left-auto">
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>Delphi Sample Projects ProjectGroup</h1>
+
+        <nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
+          aria-label="On this page">
+          <h2 id="on-this-page" class="title is-6 margin-block-xs">
+            On this page
+          </h2>
+          <ol id="content-well-in-this-article-list2" class="border-left padding-left-xxs">
+            <li class="">
+              <a href="#packages">Packages</a>
+            </li>
+          </ol>
+        </nav>
+        
 
 
-<div id="main">
 
-	<div id="navigationLayout">
-		<iframe name="navigationFrame" id="navigationFrame" src="toc.html" seamless="seamless" title="Navigation Frame" frameborder="0">
-		</iframe>
-		<!--
-		-->
-	</div>
 
-	<div id="contentLayout">
-	  <script type="text/javascript">
-		var defaultTopic = "Delphi-Sample-Projects.html";
-		if (location.href.lastIndexOf("?") > 0)
-			defaultTopic = location.href.substring(location.href.lastIndexOf("?")+1,location.href.length).replace(/:/g,"");
-		document.write('<iframe name="contentFrame" id="contentFrame" src="' + defaultTopic + '" seamless="seamless" title="Content Frame" frameborder="0">');
-	  </script>
-	  <noscript>
-		<iframe name="contentFrame" id="contentFrame" src="Delphi-Sample-Projects.html" seamless="seamless" title="Content Frame" frameborder="0">
-		</iframe>
-	  </noscript>
-	</div>
-</div>
-<div class="cover" id="cover"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="member-group">
+  <h2 id="packages">Packages</h2>
+  <div class="has-inner-focus">
+    <table class="table table-sm margin-top-none">
+      <tbody>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="BeaconDetector.html" class="cref">BeaconDetector</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="BeaconFenceDemo.html" class="cref">BeaconFenceDemo</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="BitmapScaleTests.html" class="cref">BitmapScaleTests</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="CDataRSSDemo.html" class="cref">CDataRSSDemo</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="CalendarInPopupSample.html" class="cref">CalendarInPopupSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ClientServerSocketSample.html" class="cref">ClientServerSocketSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ConsoleMenu.html" class="cref">ConsoleMenu</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ContactSheetFMXSample.html" class="cref">ContactSheetFMXSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ContactSheetVCLSample.html" class="cref">ContactSheetVCLSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="CoursesDB.html" class="cref">CoursesDB</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DarkLightSample.html" class="cref">DarkLightSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DataSnapRPCServer.html" class="cref">DataSnapRPCServer</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DelphiMVCSample.html" class="cref">DelphiMVCSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DemoPermissionsAndroid.html" class="cref">DemoPermissionsAndroid</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DialogFMXSample.html" class="cref">DialogFMXSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DialogVCLSample.html" class="cref">DialogVCLSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DisplayFTPFileList.html" class="cref">DisplayFTPFileList</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DisplayImagesFromURL.html" class="cref">DisplayImagesFromURL</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DownloadAndOpenAPDFFile.html" class="cref">DownloadAndOpenAPDFFile</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="DumpRequest.html" class="cref">DumpRequest</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="EditButtonListboxFMXSample.html" class="cref">EditButtonListboxFMXSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="EditToListBoxSample.html" class="cref">EditToListBoxSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="EffectsAndAnimations.html" class="cref">EffectsAndAnimations</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="FMXDragAndDropSample.html" class="cref">FMXDragAndDropSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="FMXProjectStructure.html" class="cref">FMXProjectStructure</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="FMXStylesAnd3D.html" class="cref">FMXStylesAnd3D</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="FireDACSQLiteSample.html" class="cref">FireDACSQLiteSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="FolderOrFileSelect.html" class="cref">FolderOrFileSelect</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="FolderOrFileSelectWithFrame.html" class="cref">FolderOrFileSelectWithFrame</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ForLoopSample.html" class="cref">ForLoopSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="FrequentationMediathequePoitierAPIViewer.html" class="cref">FrequentationMediathequePoitierAPIViewer</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="GetStyleInfoSample.html" class="cref">GetStyleInfoSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="GotoSample.html" class="cref">GotoSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="HTMLAjaxInsideDelphiSample.html" class="cref">HTMLAjaxInsideDelphiSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="HelloWorld.html" class="cref">HelloWorld</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="HelloWorldConsole.html" class="cref">HelloWorldConsole</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="HelloWorldFireMonkey.html" class="cref">HelloWorldFireMonkey</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="HelloWorldVCL.html" class="cref">HelloWorldVCL</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="IWAjaxAndJavaScript.html" class="cref">IWAjaxAndJavaScript</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ImageList.html" class="cref">ImageList</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="InterbaseSample.html" class="cref">InterbaseSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="IntraWebDemo.html" class="cref">IntraWebDemo</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="JoystickViewer.html" class="cref">JoystickViewer</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ListInDB.html" class="cref">ListInDB</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ListOfThings.html" class="cref">ListOfThings</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ListOfthingsStoredInBdD.html" class="cref">ListOfthingsStoredInBdD</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ListOfthingsStoredInJSON.html" class="cref">ListOfthingsStoredInJSON</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ListeArborescence.html" class="cref">ListeArborescence</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="LiveBindingsAndVCLStyles.html" class="cref">LiveBindingsAndVCLStyles</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="LiveBindingsCalc.html" class="cref">LiveBindingsCalc</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="LoadImageFromURLWithUILockSample.html" class="cref">LoadImageFromURLWithUILockSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="LogMainFormEvents.html" class="cref">LogMainFormEvents</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="MDIAPP.html" class="cref">MDIAPP</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="MasterDetailApplication.html" class="cref">MasterDetailApplication</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="MastermindArduino.html" class="cref">MastermindArduino</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="MenuActionListFMXSample.html" class="cref">MenuActionListFMXSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="MessageDlgSyncAsyncFMXSample.html" class="cref">MessageDlgSyncAsyncFMXSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="MultiDBSample.html" class="cref">MultiDBSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="MultiFormOnMobile.html" class="cref">MultiFormOnMobile</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PNGWithAlphaLayerSample.html" class="cref">PNGWithAlphaLayerSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ParallelFor.html" class="cref">ParallelFor</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ParcourtDeLaListe.html" class="cref">ParcourtDeLaListe</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PictureReceiver_FMX.html" class="cref">PictureReceiver_FMX</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PictureReceiver_VCL.html" class="cref">PictureReceiver_VCL</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PictureSender_FMX.html" class="cref">PictureSender_FMX</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PlayWithComponents.html" class="cref">PlayWithComponents</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PopupMenuOnButton.html" class="cref">PopupMenuOnButton</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PostgreSQLCustomerOrderDetailFMXFDSample.html" class="cref">PostgreSQLCustomerOrderDetailFMXFDSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="PostgreSQLFMXFDSample.html" class="cref">PostgreSQLFMXFDSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="QRCodeGenerator_VCL.html" class="cref">QRCodeGenerator_VCL</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="QRCodeReader_FMX.html" class="cref">QRCodeReader_FMX</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="RESTClientSNCF.html" class="cref">RESTClientSNCF</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ReceivePhotoFromAppTetheringFMX.html" class="cref">ReceivePhotoFromAppTetheringFMX</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ReceivePhotoFromAppTetheringVCL.html" class="cref">ReceivePhotoFromAppTetheringVCL</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="Recursivity.html" class="cref">Recursivity</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="RenderedImageSizeInATGlyphSample.html" class="cref">RenderedImageSizeInATGlyphSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="SDIWithDialogBox.html" class="cref">SDIWithDialogBox</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="SOAPClient.html" class="cref">SOAPClient</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="SOAPServer.html" class="cref">SOAPServer</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="SQLiteBlobsSample.html" class="cref">SQLiteBlobsSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ScaledLayoutSample.html" class="cref">ScaledLayoutSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="SearchBTDevices.html" class="cref">SearchBTDevices</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ServerSendPhotoToWebBroker.html" class="cref">ServerSendPhotoToWebBroker</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ShowBeaconCharacteristics.html" class="cref">ShowBeaconCharacteristics</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ShowHideScreenAsLayout.html" class="cref">ShowHideScreenAsLayout</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ShowModalNormalFMXSample.html" class="cref">ShowModalNormalFMXSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ShowSVGInAFolderWithSkia4Delphi.html" class="cref">ShowSVGInAFolderWithSkia4Delphi</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="ShowSelectedItem.html" class="cref">ShowSelectedItem</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="SignatureFMXDemo.html" class="cref">SignatureFMXDemo</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="SimpleMediatek.html" class="cref">SimpleMediatek</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="StringComparison.html" class="cref">StringComparison</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="StructureProgSample.html" class="cref">StructureProgSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="StylesAndEXESizeSample.html" class="cref">StylesAndEXESizeSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TBiometricAuthSample.html" class="cref">TBiometricAuthSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TControlListBiolife.html" class="cref">TControlListBiolife</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TControlList_MultiSelect.html" class="cref">TControlList_MultiSelect</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TFlowLayoutSample.html" class="cref">TFlowLayoutSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TLabel_Shortcut_and_Tabulation.html" class="cref">TLabel_Shortcut_and_Tabulation</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TListSortSample.html" class="cref">TListSortSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TMSWebCoreDelphiBooksSample.html" class="cref">TMSWebCoreDelphiBooksSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TNumberBox_MinValue.html" class="cref">TNumberBox_MinValue</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TTouchKeyboard_with_Style.html" class="cref">TTouchKeyboard_with_Style</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TURLStreamSample.html" class="cref">TURLStreamSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TakeAndSendPhotoWithAppTethering.html" class="cref">TakeAndSendPhotoWithAppTethering</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="TypeInferenceOnADecimalValueSample.html" class="cref">TypeInferenceOnADecimalValueSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="UniGUIDatabaseSample.html" class="cref">UniGUIDatabaseSample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="UniGUISample.html" class="cref">UniGUISample</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="UpperAndLowerCase.html" class="cref">UpperAndLowerCase</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="VCLProjectStructure.html" class="cref">VCLProjectStructure</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="VCLSendPhotoToWebBroker.html" class="cref">VCLSendPhotoToWebBroker</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="VirtualImageList.html" class="cref">VirtualImageList</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="WBJSONDatabaseEndpointsFMXClient.html" class="cref">WBJSONDatabaseEndpointsFMXClient</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="WBJSONDatabaseEndpointsServer.html" class="cref">WBJSONDatabaseEndpointsServer</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="WebBrokerDemo.html" class="cref">WebBrokerDemo</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="WhoisClient.html" class="cref">WhoisClient</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            
+          </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+      </div>
+    </article>
+  </main>
+
+  <aside id="layout-body-aside" class="layout-body-aside" aria-label="Page Outline">
+    <div id="additional-resources" class="right-container padding-sm display-none display-block-desktop height-full"
+      role="complementary" aria-label="Additional resources">
+      <div id="affixed-right-container" class="position-sticky">
+        <nav id="side-doc-outline" class="doc-outline padding-bottom-xs margin-bottom-xs" aria-label="On this page">
+          <h2 class="title is-6 margin-top-xxs margin-bottom-xs">
+            On this page
+          </h2>
+          <ol id="right-rail-on-this-page-list">
+            <li
+              class="border-left-md padding-left-xxs  border-color-primary">
+              <a href="#packages"
+                class="font-weight-semibold color-text">Packages</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+
+  <footer id="footer" class="layout-body-footer footer-layout uhf-container  has-padding
+    border-top" role="contentinfo">
+    <a href="https://samples.developpeur-pascal.fr" target="_blank">Delphi Sample Projects</a> (c) 1995-2026 <a href="https://patrick.premartin.fr" target="_blank">Patrick PREMARTIN</a> - Powered by <a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank">DocInsight</a>
+  </footer>
 
 </body>
-</html>
 
+</html>

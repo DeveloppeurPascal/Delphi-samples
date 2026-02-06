@@ -1,0 +1,170 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Splitter1: TSplitter
+    Align = Top
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 10.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object btnClose: TButton
+    Align = BottomCenter
+    Cancel = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 280.000000000000000000
+    Position.Y = 448.000000000000000000
+    TabOrder = 5
+    Text = 'btnClose'
+    OnClick = btnCloseClick
+  end
+  object lOrders: TLayout
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    object StringGrid1: TStringGrid
+      Align = Client
+      CanFocus = True
+      ClipChildren = True
+      Size.Width = 640.000000000000000000
+      Size.Height = 175.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      RowCount = 6
+      Viewport.Width = 620.000000000000000000
+      Viewport.Height = 134.000000000000000000
+    end
+    object BindNavigator1: TBindNavigator
+      Align = Bottom
+      Position.Y = 175.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      DataSource = BindSourceDB1
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+      xRadius = 4.000000000000000000
+      yRadius = 4.000000000000000000
+    end
+  end
+  object lOrderDeteils: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 228.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    object BindNavigator2: TBindNavigator
+      Align = Bottom
+      Position.Y = 203.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DataSource = BindSourceDB2
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+      xRadius = 4.000000000000000000
+      yRadius = 4.000000000000000000
+    end
+    object StringGrid2: TStringGrid
+      Align = Client
+      CanFocus = True
+      ClipChildren = True
+      Size.Width = 640.000000000000000000
+      Size.Height = 203.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      RowCount = 3
+      Viewport.Width = 636.000000000000000000
+      Viewport.Height = 178.000000000000000000
+    end
+  end
+  object tabOrders: TFDTable
+    Active = True
+    IndexName = 'I_Orders_CustomerID'
+    MasterSource = dsCustomers
+    MasterFields = 'customerid'
+    DetailFields = 'customerid'
+    Connection = DataModule3.FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
+    UpdateOptions.EnableDelete = False
+    UpdateOptions.EnableInsert = False
+    UpdateOptions.EnableUpdate = False
+    TableName = '"Orders"'
+    Left = 184
+    Top = 208
+  end
+  object dsCustomers: TDataSource
+    DataSet = DataModule3.tabCustomers
+    Left = 96
+    Top = 208
+  end
+  object tabOrderDetails: TFDTable
+    Active = True
+    IndexName = 'I_OrderDetails_OrderID'
+    MasterSource = dsOrders
+    MasterFields = 'orderid'
+    DetailFields = 'orderid'
+    Connection = DataModule3.FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
+    UpdateOptions.EnableDelete = False
+    UpdateOptions.EnableInsert = False
+    UpdateOptions.EnableUpdate = False
+    TableName = '"Order Details"'
+    Left = 352
+    Top = 208
+  end
+  object dsOrders: TDataSource
+    DataSet = tabOrders
+    Left = 264
+    Top = 208
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = tabOrders
+    ScopeMappings = <>
+    Left = 176
+    Top = 272
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = StringGrid2
+      Columns = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = tabOrderDetails
+    ScopeMappings = <>
+    Left = 352
+    Top = 280
+  end
+end

@@ -279,9 +279,9 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\SendPicturesOnANetworkWithSockets.pas"/>
-        <DCCReference Include="..\..\..\Libraries\Socket-Messaging-Library\src\Olf.Net.Socket.Messaging.pas"/>
-        <DCCReference Include="..\..\..\Libraries\librairies\src\Olf.FMX.Streams.pas"/>
-        <DCCReference Include="..\..\..\Libraries\librairies\src\Olf.RTL.FileBuffer.pas"/>
+        <DCCReference Include="..\..\..\lib-externes\Socket-Messaging-Library\src\Olf.Net.Socket.Messaging.pas"/>
+        <DCCReference Include="..\..\..\lib-externes\librairies\src\Olf.FMX.Streams.pas"/>
+        <DCCReference Include="..\..\..\lib-externes\librairies\src\Olf.RTL.FileBuffer.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

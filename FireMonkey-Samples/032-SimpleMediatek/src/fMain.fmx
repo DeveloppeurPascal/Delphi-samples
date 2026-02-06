@@ -1,0 +1,152 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object VertScrollBox1: TVertScrollBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnResized = VertScrollBox1Resized
+    Viewport.Width = 640.000000000000000000
+    Viewport.Height = 480.000000000000000000
+    object Label1: TLabel
+      Align = Top
+      StyledSettings = [Family, Size, FontColor]
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Center
+      Text = 'Label1'
+      TabOrder = 0
+    end
+    object FlowLayout1: TFlowLayout
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Justify = Center
+      JustifyLastLine = Center
+      FlowDirection = LeftToRight
+      object btnMedia: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 65.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Media'
+        OnClick = btnMediaClick
+      end
+      object btnEmprunteurs: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 235.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Emprunteurs'
+        OnClick = btnEmprunteursClick
+      end
+      object btnEmprunts: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 405.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Emprunts'
+        OnClick = btnEmpruntsClick
+      end
+      object btnMediaType: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 65.000000000000000000
+        Position.Y = 65.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Types de media'
+        OnClick = btnMediaTypeClick
+      end
+      object btnAbout: TButton
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 235.000000000000000000
+        Position.Y = 65.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'A propos'
+        OnClick = btnAboutClick
+      end
+      object btnExit: TButton
+        Cancel = True
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 405.000000000000000000
+        Position.Y = 65.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Sortir'
+        OnClick = btnExitClick
+      end
+    end
+  end
+  object OlfAboutDialog1: TOlfAboutDialog
+    Titre = 'Simple Mediatek'
+    VersionDate = '2025-12-22'
+    MultiResBitmap = <
+      item
+      end>
+    URL = 'https://samples.developpeur-pascal.fr'
+    Copyright = '(c) 2025 Patrick PREMARTIN'
+    ReplaceMainFormCaption = True
+    Left = 560
+    Top = 144
+  end
+end

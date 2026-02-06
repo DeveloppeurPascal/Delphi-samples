@@ -287,7 +287,7 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\..\Libraries\librairies\u_urlOpen.pas"/>
+        <DCCReference Include="..\..\lib-externes\librairies\u_urlOpen.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
