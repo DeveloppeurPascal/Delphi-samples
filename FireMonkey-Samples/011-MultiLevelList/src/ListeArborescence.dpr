@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2026-02-06T17:38:57.818+01:00
-  Signature : 0e55c8976a4c3200416e67dae022f7931b3f5351
+  File last update : 2026-02-20T12:03:38.000+01:00
+  Signature : 55c37eb8e788fbbfef1026c459d37eed7f8a53c6
   ***************************************************************************
 *)
 
@@ -55,7 +55,7 @@ uses
   uConst in 'uConst.pas',
   uFichiersEtDossiers in 'uFichiersEtDossiers.pas',
   uDBCategories in 'uDBCategories.pas' {dmDBCategories: TDataModule},
-  u_download in '..\..\..\lib-externes\librairies\u_download.pas';
+  u_download in '..\..\..\lib-externes\librairies\src\u_download.pas';
 
 {$R *.res}
 

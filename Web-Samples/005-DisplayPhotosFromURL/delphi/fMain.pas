@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:10.372+02:00
-  Signature : cebcf5ee44caa0d9a8ef4ff5ac8c8291c6c5eb16
+  File last update : 2026-04-03T19:16:02.000+02:00
+  Signature : 5559ffd2e75c90bf1f9b1c8b8e2a19f0aa4fdc44
   ***************************************************************************
 *)
 
@@ -50,10 +50,19 @@ unit fMain;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
   System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Layouts, FMX.Controls.Presentation;
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Layouts,
+  FMX.Controls.Presentation;
 
 type
   TForm1 = class(TForm)
@@ -81,7 +90,13 @@ implementation
 
 {$R *.fmx}
 
-uses u_download, json, System.IOUtils, FMX.Objects, FMX.Effects,
+uses
+  System.Generics.Collections,
+  u_download,
+  json,
+  System.IOUtils,
+  FMX.Objects,
+  FMX.Effects,
   FMX.Filter.Effects;
 
 procedure TForm1.btnChargeImagesClick(Sender: TObject);
@@ -205,18 +220,15 @@ begin
       try
         lblStatus.Text := 'Liste chargée.';
         Application.ProcessMessages;
-        try
-          jso := TJSONObject.ParseJSONValue(tfile.ReadAllText(nom_fichier_json,
+          // don't usecall ProcessMessages() in real projects !!!
+        jso := TJSONObject.ParseJSONValue(tfile.ReadAllText(nom_fichier_json,
             TEncoding.UTF8)) as TJSONObject;
-          if assigned(jso) then
-          begin
-            liste := jso.GetValue('liste') as TJSONArray;
-            for i := 0 to liste.count - 1 do
-              traiter_image(liste.Items[i].Value, i);
-          end;
-        finally
-          if assigned(jso) then
-            jso.Free;
+        if assigned(jso) then
+        begin
+          liste := jso.GetValue('liste') as TJSONArray;
+          for i := 0 to liste.count - 1 do
+            traiter_image(liste.Items[i].Value, i);
+          jso.Free;
         end;
       finally
         // showmessage(nom_fichier_json);
@@ -234,3 +246,4 @@ begin
 end;
 
 end.
+

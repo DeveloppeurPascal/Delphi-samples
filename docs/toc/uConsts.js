@@ -11,13 +11,13 @@ window.DocInsight.toc["uConsts"] =   [
         title: "Constants",
           children:   [
       {
-        id: "uConsts.CPrivateChecksumSalt1",
-        title: "CPrivateChecksumSalt1",
-          href: "uConsts.CPrivateChecksumSalt1.html",
+        id: "uConsts.ClientPort",
+        title: "ClientPort",
+          href: "uConsts.ClientPort.html",
       },      {
-        id: "uConsts.CPrivateChecksumSalt2",
-        title: "CPrivateChecksumSalt2",
-          href: "uConsts.CPrivateChecksumSalt2.html",
+        id: "uConsts.ServerPort",
+        title: "ServerPort",
+          href: "uConsts.ServerPort.html",
       }  ]
 ,
       }  ]

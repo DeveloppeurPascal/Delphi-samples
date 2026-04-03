@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:09.754+02:00
-  Signature : 18b2d04a326b5356bcb7706fd51fddf560ca897c
+  File last update : 2026-04-03T19:06:12.000+02:00
+  Signature : f144ca00ba54fa58ee8939413f09fb0b5c4714cc
   ***************************************************************************
 *)
 
@@ -80,6 +80,9 @@ var
 implementation
 
 {$R *.fmx}
+
+uses
+  System.TimeSpan;
 
 procedure TForm1.ajouter_log(ch: string);
 begin

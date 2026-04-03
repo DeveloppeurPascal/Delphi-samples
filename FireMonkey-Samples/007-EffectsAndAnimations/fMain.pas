@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:09.581+02:00
-  Signature : 9034b014e73a7c9cebab380483ebd39fbcd71397
+  File last update : 2026-04-03T18:11:02.000+02:00
+  Signature : bbe4a2de16438482ee6478ee4bf17150d3b8cc06
   ***************************************************************************
 *)
 
@@ -88,7 +88,8 @@ begin
     Text := FButtonNumber.ToString;
     parent := FlowLayout1;
     onclick := Button1.onclick;
-    AnimateFloat('RotationAngle',FButtonNumber*10 mod 360,5);
+    // deprecated : AnimateFloat('RotationAngle',FButtonNumber*10 mod 360,5);
+    TAnimator.AnimateFloat(Self, 'RotationAngle',FButtonNumber*10 mod 360,5);
   end;
 end;
 

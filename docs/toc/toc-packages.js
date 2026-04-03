@@ -466,5 +466,17 @@ window.DocInsight.toc["toc-packages"] =   [
         id: "WBJSONDatabaseEndpointsServer",
         title: "WBJSONDatabaseEndpointsServer",
           href: "WBJSONDatabaseEndpointsServer.html",
+      },      {
+        id: "UDPClient",
+        title: "UDPClient",
+          href: "UDPClient.html",
+      },      {
+        id: "UDPServer",
+        title: "UDPServer",
+          href: "UDPServer.html",
+      },      {
+        id: "SNMPPrinterTest",
+        title: "SNMPPrinterTest",
+          href: "SNMPPrinterTest.html",
       }  ]
 ;

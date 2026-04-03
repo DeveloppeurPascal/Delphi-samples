@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2026-01-22T18:07:00.000+01:00
-  Signature : 6fd9404ce0cd2f37586b4037bf4e5fad8f8f0990
+  File last update : 2026-04-03T18:27:58.000+02:00
+  Signature : 035b383b508ad08768a63656f582ab74788d6e97
   ***************************************************************************
 *)
 
@@ -92,6 +92,7 @@ procedure TForm1.Button1Click(Sender: TObject);
 var
   ok: boolean;
 begin
+  // deprecated call, see TForm1.Button2Click
   MessageDlg('Etes-vous d''accord ?', TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0, tmsgdlgbtn.mbYes,
     procedure(const ModalResult: TModalResult)
     begin

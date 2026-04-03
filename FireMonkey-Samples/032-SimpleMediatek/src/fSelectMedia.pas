@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-12-24T17:00:46.593+01:00
-  Signature : 797b5cb63ee47069c235d0b296263fc995b03749
+  File last update : 2026-04-03T18:24:14.000+02:00
+  Signature : e3fba5afb83b6b320a2943c66491f7005594f008
   ***************************************************************************
 *)
 
@@ -130,7 +130,8 @@ begin
   Close;
 end;
 
-class function TfrmSelectMedia.Execute(const DoOnClose: TDoOnCloseProc): integer;
+class function TfrmSelectMedia.Execute(const DoOnClose: TDoOnCloseProc):
+  integer;
 var
   f: TfrmSelectMedia;
 begin
@@ -141,6 +142,7 @@ begin
   f.Show;
 {$ELSE}
   // Synchronous
+  result := -1;
   try
     f.ShowModal;
     result := f.SelectedId;

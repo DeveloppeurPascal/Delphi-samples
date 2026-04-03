@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2026-02-06T17:38:57.802+01:00
-  Signature : 0da0d80924c31878911d1c5ae253fd48928a6b5a
+  File last update : 2026-02-20T12:11:38.000+01:00
+  Signature : c8a189ba58aa4a27213fa85700baacec405450bd
   ***************************************************************************
 *)
 
@@ -56,7 +56,7 @@ uses
   uDownloadAndGetFiles in 'uDownloadAndGetFiles.pas',
   uFichiersEtDossiers in 'uFichiersEtDossiers.pas',
   uMainPourAffichage in 'uMainPourAffichage.pas' {frmMain},
-  u_download in '..\..\..\lib-externes\librairies\u_download.pas';
+  u_download in '..\..\..\lib-externes\librairies\src\u_download.pas';
 
 {$R *.res}
 

@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2026-01-22T17:26:06.000+01:00
-  Signature : 779660e9c9fa47b17ffddde6860edd01c6891521
+  File last update : 2026-04-03T18:29:18.000+02:00
+  Signature : 05936337d5f5000332671932e0f79294dc9cee13
   ***************************************************************************
 *)
 
@@ -120,14 +120,16 @@ procedure TForm1.actInputBoxExecute(Sender: TObject);
 var
   s: string;
 begin
+  // InputBox() is deprecated, don't use this function in a real FireMonkey project
   s := InputBox('question', 'what ?', 'else !');
   Label1.Text := s.ToUpper;
 end;
 
 procedure TForm1.actMessageBoxExecute(Sender: TObject);
 begin
-  case MessageDlg('ceci est un message', tmsgdlgtype.mtInformation, [TMsgDlgBtn.mbOK, TMsgDlgBtn.mbCancel], 0, TMsgDlgBtn.mbOK)
-  of
+  // MessageDlg() is deprecated, don't use this function in a real FireMonkey project
+  case MessageDlg('ceci est un message', tmsgdlgtype.mtInformation,
+    [TMsgDlgBtn.mbOK, TMsgDlgBtn.mbCancel], 0, TMsgDlgBtn.mbOK) of
     mrOK: label1.Text := 'ok';
     mrCancel: label1.Text := 'cancel';
   else

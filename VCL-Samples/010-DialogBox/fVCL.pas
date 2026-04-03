@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:10.315+02:00
-  Signature : a050a11cb3e33416ef7727ab7c5e0e6b7d4604ff
+  File last update : 2026-04-03T19:12:54.000+02:00
+  Signature : f97e7355edf50f0d301c099f42bbaf73227741f0
   ***************************************************************************
 *)
 
@@ -70,6 +70,9 @@ var
 implementation
 
 {$R *.dfm}
+
+uses
+  System.UITypes;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin

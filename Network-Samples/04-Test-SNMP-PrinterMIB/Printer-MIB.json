@@ -1,0 +1,4749 @@
+{
+  "imports": {
+    "class": "imports",
+    "HOST-RESOURCES-MIB": [
+      "hrStorageIndex",
+      "hrDeviceIndex"
+    ],
+    "IANA-CHARSET-MIB": [
+      "IANACharset"
+    ],
+    "IANA-PRINTER-MIB": [
+      "PrtConsoleColorTC",
+      "PrtCoverStatusTC",
+      "PrtOutputTypeTC",
+      "PrtAlertCodeTC",
+      "PrtMarkerMarkTechTC",
+      "PrtChannelTypeTC",
+      "PrtAlertTrainingLevelTC",
+      "PrtInputTypeTC",
+      "PrtMediaPathTypeTC",
+      "PrtAlertGroupTC",
+      "PrtMarkerSuppliesTypeTC",
+      "PrtInterpreterLangFamilyTC",
+      "PrtGeneralResetTC",
+      "PrtConsoleDisableTC"
+    ],
+    "IF-MIB": [
+      "InterfaceIndexOrZero"
+    ],
+    "SNMPv2-CONF": [
+      "NOTIFICATION-GROUP",
+      "MODULE-COMPLIANCE",
+      "OBJECT-GROUP"
+    ],
+    "SNMPv2-SMI": [
+      "Counter32",
+      "NOTIFICATION-TYPE",
+      "OBJECT-TYPE",
+      "TimeTicks",
+      "Counter64",
+      "Unsigned32",
+      "MibIdentifier",
+      "MODULE-IDENTITY",
+      "Gauge32",
+      "IpAddress",
+      "Bits",
+      "iso",
+      "mib-2",
+      "Integer32",
+      "OBJECT-IDENTITY"
+    ],
+    "SNMPv2-TC": [
+      "DisplayString",
+      "TEXTUAL-CONVENTION"
+    ]
+  },
+  "printmib": {
+    "name": "printmib",
+    "oid": "1.3.6.1.2.1.43",
+    "class": "moduleidentity",
+    "revisions": [
+      {
+        "revision": "2004-06-02 00:00",
+        "description": "Printer MIB v2. Moved all enum groups to be maintained by IANA into new TCs within the ianaPrinterMIB, which is contained in this document. New TCs created from enums defined within RFC 1759 Objects: PrtPrintOrientationTC, PrtLocalizedDescriptionStringTC, PrtConsoleDescriptionStringTC, PrtChannelStateTC, PrtOutputStackingOrderTC, PrtOutputPageDeliveryOrientationTC, PrtMarkerCounterUnitTC, PrtMarkerSuppliesSupplyUnitTC, PrtMarkerSuppliesClassTC, PrtMarkerAddressabilityUnitTC, PrtMarkerColorantRoleTC, PrtMediaPathMaxSpeedPrintUnitTC, PrtInterpreterTwoWayTC, and PrtAlertSeverityLevelTC. The following four TCs have been deprecated: MediaUnit (replaced by PrtMediaUnitTC), CapacityUnit (replaced by PrtCapacityUnitTC), SubUnitStatus (replaced by PrtSubUnitStatusTC), CodedCharSet (replaced by IANACharset in IANA Charset MIB) Five new OBJECT-GROUPs: prtAuxilliarySheetGroup, prtInputSwitchingGroup, prtGeneralV2Group, prtAlertTableV2Group, prtChannelV2Group. Nine new objects added to those groups: prtAuxiliarySheetStartupPage, prtAuxiliarySheetBannerPage, prtGeneralPrinterName, prtGeneralSerialNumber, prtAlertCriticalEvents, prtAlertAllEvents, prtInputMediaLoadTimeout, prtInputNextIndex, prtChannelInformation. SYNTAX range changed from (0..65535) to (1..65535) for the index objects prtStorageRefSeqNumber, prtDeviceRefSeqNumber, and prtConsoleLightIndex. SYNTAX range changed from (0..65535) to (0..2147483647) for the objects prtStorageRefIndex and prtDeviceRefIndex to agree with the Host Resources MIB. Defined a range for the objects with a SYNTAX of Integer32: prtOutputDefaultIndex, prtInputMediaDimFeedDirDeclared, prtInputMediaDimXFeedDirDeclared, prtInputMaxCapacity, prtInputCurrentLevel, prtInputMediaDimFeedDirChosen, prtInputMediaDimXFeedDirChosen, prtInputMediaWeight, prtInputMediaFormParts, prtOutputIndex, prtOutputMaxCapacity, prtOutputRemainingCapacity, prtOutputMaxDimFeedDir, prtOutputMaxDimXFeedDir, prtOutputMinDimFeedDir, prtOutputMinDimXFeedDir, prtMarkerAddressibilityFeedDir, prtMarkerAddressibilityXFeedDir, prtMarkerNorthMargin, prtMarkerSouthMargin, prtMarkerWestMargin, prtMarkerEastMargin, prtMarkerSuppliesMaxCapacity, prtMarkerSuppliesLevel, prtMarkerColorantTonality, prtMediaPathMaxSpeed, prtMediaPathMaxMediaFeedDir, prtMediaPathMaxMediaXFeedDir, prtMediaPathMinMediaFeedDir, prtMediaPathMinMediaXFeedDir, prtChannelIndex, prtChannelCurrentJobCntlLangIndex, prtInterpreterIndex, prtChannelDefaultPageDescLangIndex, prtConsoleOnTime, prtInterpreterFeedAddressibility, prtConsoleOffTime, prtInterpreterXFeedAddressibility, prtAlertIndex, prtAlertGroupIndex, prtAlertLocation. Changed SYNTAX from Integer32 to InterfaceIndexOrZero for prtChannelIfIndex. Changed MAX-ACCESS of prtAlertIndex from not-accessible to Read-only and added a compliance statement to allow a MIN-ACCESS of accessible-for-notify. One new NOTIFICATION-GROUP: prtAlertTrapGroup which contains printerV2Alert. In MODULE-COMPLIANCE prtMIBCompliance, new OBJECT-GROUPs and the NOTIFICATION_GROUP, all in GROUP (not MANDATORY-GROUP) clauses. The nine new objects are optional, i.e., this document is backward compatible with RFC 1759."
+      },
+      {
+        "revision": "1994-11-25 00:00",
+        "description": "The original version of this MIB, published as RFC1759."
+      }
+    ],
+    "lastupdated": "200406020000Z",
+    "organization": "PWG IEEE/ISTO Printer Working Group",
+    "contactinfo": "Harry Lewis IBM Phone (303) 924-5337 Email: harryl@us.ibm.com http://www.pwg.org/index.html Send comments to the printmib WG using the Printer MIB Project (PMP) Mailing List: pmp@pwg.org For further information, access the PWG web page under 'Printer MIB': http://www.pwg.org/ Implementers of this specification are encouraged to join the pmp mailing list in order to participate in discussions on any clarifications needed and registration proposals being reviewed in order to achieve consensus.",
+    "description": "The MIB module for management of printers. Copyright (C) The Internet Society (2004). This version of this MIB module was published in RFC 3805. For full legal notices see the RFC itself."
+  },
+  "PrtMediaUnitTC": {
+    "name": "PrtMediaUnitTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "tenThousandthsOfInches": 3,
+          "micrometers": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "Units of measure for media dimensions."
+  },
+  "MediaUnit": {
+    "name": "MediaUnit",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "tenThousandthsOfInches": 3,
+          "micrometers": 4
+        }
+      }
+    },
+    "status": "deprecated",
+    "description": "Units of measure for media dimensions."
+  },
+  "PrtCapacityUnitTC": {
+    "name": "PrtCapacityUnitTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "unknown": 2,
+          "tenThousandthsOfInches": 3,
+          "micrometers": 4,
+          "sheets": 8,
+          "feet": 16,
+          "meters": 17,
+          "items": 18,
+          "percent": 19
+        }
+      }
+    },
+    "status": "current",
+    "description": "Units of measure for media capacity."
+  },
+  "CapacityUnit": {
+    "name": "CapacityUnit",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "tenThousandthsOfInches": 3,
+          "micrometers": 4,
+          "sheets": 8,
+          "feet": 16,
+          "meters": 17
+        }
+      }
+    },
+    "status": "deprecated",
+    "description": "Units of measure for media capacity."
+  },
+  "PrtPrintOrientationTC": {
+    "name": "PrtPrintOrientationTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "portrait": 3,
+          "landscape": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "A generic representation for printing orientation on a 'page'."
+  },
+  "PrtSubUnitStatusTC": {
+    "name": "PrtSubUnitStatusTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 126
+          }
+        ]
+      }
+    },
+    "status": "current",
+    "description": "Status of a printer sub-unit. The SubUnitStatus is an integer that is the sum of 5 distinct values, Availability, Non-Critical, Critical, On-line, and Transitioning. These values are: Availability Value Available and Idle 0 0000'b Available and Standby 2 0010'b Available and Active 4 0100'b Available and Busy 6 0110'b Unavailable and OnRequest 1 0001'b Unavailable because Broken 3 0011'b Unknown 5 0101'b Non-Critical No Non-Critical Alerts 0 0000'b Non-Critical Alerts 8 1000'b Critical No Critical Alerts 0 0000'b Critical Alerts 16 1 0000'b On-Line State is On-Line 0 0000'b State is Off-Line 32 10 0000'b Transitioning At intended state 0 0000'b Transitioning to intended state 64 100 0000'b"
+  },
+  "SubUnitStatus": {
+    "name": "SubUnitStatus",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 126
+          }
+        ]
+      }
+    },
+    "status": "deprecated",
+    "description": "Status of a printer sub-unit. The SubUnitStatus is an integer that is the sum of 5 distinct values, Availability, Non-Critical, Critical, On-line, and Transitioning. These values are: Availability Value Available and Idle 0 0000'b Available and Standby 2 0010'b Available and Active 4 0100'b Available and Busy 6 0110'b Unavailable and OnRequest 1 0001'b Unavailable because Broken 3 0011'b Unknown 5 0101'b Non-Critical No Non-Critical Alerts 0 0000'b Non-Critical Alerts 8 1000'b Critical No Critical Alerts 0 0000'b Critical Alerts 16 1 0000'b On-Line State is On-Line 0 0000'b State is Off-Line 32 10 0000'b Transitioning At intended state 0 0000'b Transitioning to intended state 64 100 0000'b"
+  },
+  "PresentOnOff": {
+    "name": "PresentOnOff",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "on": 3,
+          "off": 4,
+          "notPresent": 5
+        }
+      }
+    },
+    "status": "current",
+    "description": "Presence and configuration of a device or feature."
+  },
+  "PrtLocalizedDescriptionStringTC": {
+    "name": "PrtLocalizedDescriptionStringTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 255
+          }
+        ]
+      }
+    },
+    "status": "current",
+    "description": "An object MUST use this TEXTUAL-CONVENTION when its 'charset' is controlled by the value of prtGeneralCurrentLocalization."
+  },
+  "PrtConsoleDescriptionStringTC": {
+    "name": "PrtConsoleDescriptionStringTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 255
+          }
+        ]
+      }
+    },
+    "status": "current",
+    "description": "An object MUST use this TEXTUAL-CONVENTION when its 'charset' is controlled by the value of prtConsoleLocalization."
+  },
+  "CodedCharSet": {
+    "name": "CodedCharSet",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1
+        }
+      }
+    },
+    "status": "deprecated",
+    "description": "The original description clause from RFC 1759 [RFC1759] was technically inaccurate and therefore has been deleted."
+  },
+  "PrtChannelStateTC": {
+    "name": "PrtChannelStateTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "printDataAccepted": 3,
+          "noDataAccepted": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "The state of this print job delivery channel. The value determines whether print data is allowed through this channel."
+  },
+  "PrtOutputStackingOrderTC": {
+    "name": "PrtOutputStackingOrderTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "unknown": 2,
+          "firstToLast": 3,
+          "lastToFirst": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "The current state of the stacking order for the associated output sub-unit. 'firstToLast' means that as pages are output, the front of the next page is placed against the back of the previous page. 'lastToFirst' means that as pages are output, the back of the next page is placed against the front of the previous page."
+  },
+  "PrtOutputPageDeliveryOrientationTC": {
+    "name": "PrtOutputPageDeliveryOrientationTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "faceUp": 3,
+          "faceDown": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "The reading surface that will be 'up' when pages are delivered to the associated output sub-unit. Values are Face-Up and Face Down (Note: interpretation of these values is, in general, context-dependent based on locale; presentation of these values to an end-user should be normalized to the expectations of the user."
+  },
+  "PrtMarkerCounterUnitTC": {
+    "name": "PrtMarkerCounterUnitTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "tenThousandthsOfInches": 3,
+          "micrometers": 4,
+          "characters": 5,
+          "lines": 6,
+          "impressions": 7,
+          "sheets": 8,
+          "dotRow": 9,
+          "hours": 11,
+          "feet": 16,
+          "meters": 17
+        }
+      }
+    },
+    "status": "current",
+    "description": "The unit that will be used by the printer when reporting counter values for this marking sub-unit. The time units of measure are provided for a device like a strip recorder that does not or cannot track the physical dimensions of the media and does not use characters, lines or sheets."
+  },
+  "PrtMarkerSuppliesSupplyUnitTC": {
+    "name": "PrtMarkerSuppliesSupplyUnitTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "unknown": 2,
+          "tenThousandthsOfInches": 3,
+          "micrometers": 4,
+          "impressions": 7,
+          "sheets": 8,
+          "hours": 11,
+          "thousandthsOfOunces": 12,
+          "tenthsOfGrams": 13,
+          "hundrethsOfFluidOunces": 14,
+          "tenthsOfMilliliters": 15,
+          "feet": 16,
+          "meters": 17,
+          "items": 18,
+          "percent": 19
+        }
+      }
+    },
+    "status": "current",
+    "description": "Unit of this marker supply container/receptacle."
+  },
+  "PrtMarkerSuppliesClassTC": {
+    "name": "PrtMarkerSuppliesClassTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "supplyThatIsConsumed": 3,
+          "receptacleThatIsFilled": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "Indicates whether this supply entity represents a supply that is consumed or a receptacle that is filled."
+  },
+  "PrtMarkerColorantRoleTC": {
+    "name": "PrtMarkerColorantRoleTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "process": 3,
+          "spot": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "The role played by this colorant."
+  },
+  "PrtMarkerAddressabilityUnitTC": {
+    "name": "PrtMarkerAddressabilityUnitTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "tenThousandthsOfInches": 3,
+          "micrometers": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "The unit of measure of distances, as applied to the marker's resolution."
+  },
+  "PrtMediaPathMaxSpeedPrintUnitTC": {
+    "name": "PrtMediaPathMaxSpeedPrintUnitTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "tenThousandthsOfInchesPerHour": 3,
+          "micrometersPerHour": 4,
+          "charactersPerHour": 5,
+          "linesPerHour": 6,
+          "impressionsPerHour": 7,
+          "sheetsPerHour": 8,
+          "dotRowPerHour": 9,
+          "feetPerHour": 16,
+          "metersPerHour": 17
+        }
+      }
+    },
+    "status": "current",
+    "description": "The unit of measure used in specifying the speed of all media paths in the printer."
+  },
+  "PrtInterpreterTwoWayTC": {
+    "name": "PrtInterpreterTwoWayTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "yes": 3,
+          "no": 4
+        }
+      }
+    },
+    "status": "current",
+    "description": "Indicates whether or not this interpreter returns information back to the host."
+  },
+  "PrtAlertSeverityLevelTC": {
+    "name": "PrtAlertSeverityLevelTC",
+    "class": "textualconvention",
+    "type": {
+      "type": "INTEGER",
+      "class": "type",
+      "constraints": {
+        "enumeration": {
+          "other": 1,
+          "critical": 3,
+          "warning": 4,
+          "warningBinaryChangeEvent": 5
+        }
+      }
+    },
+    "status": "current",
+    "description": "The level of severity of this alert table entry. The printer determines the severity level assigned to each entry in the table. A critical alert is binary by nature and definition. A warning is defined to be a non-critical alert. The original and most common warning is unary. The binary warning was added later and given a more distinguished name."
+  },
+  "prtGeneral": {
+    "name": "prtGeneral",
+    "oid": "1.3.6.1.2.1.43.5",
+    "class": "objectidentity"
+  },
+  "prtGeneralTable": {
+    "name": "prtGeneralTable",
+    "oid": "1.3.6.1.2.1.43.5.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A table of general information per printer. Objects in this table are defined in various places in the MIB, nearby the groups to which they apply. They are all defined here to minimize the number of tables that would otherwise need to exist."
+  },
+  "prtGeneralEntry": {
+    "name": "prtGeneralEntry",
+    "oid": "1.3.6.1.2.1.43.5.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "An entry exists in this table for each device entry in the host resources MIB device table with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtGeneralConfigChanges": {
+    "name": "prtGeneralConfigChanges",
+    "oid": "1.3.6.1.2.1.43.5.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Counter32",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "Counts configuration changes within the printer. A configuration change is defined to be an action that results in a change to any MIB object other than those that reflect status or level, or those that act as counters or gauges. In addition, any action that results in a row being added or deleted from any table in the Printer MIB is considered a configuration change. Such changes will often affect the capability of the printer to service certain types of print jobs. Management applications may cache infrequently changed configuration information about sub units within the printer. This object should be incremented whenever the agent wishes to notify management applications that any cached configuration information for this device is to be considered 'stale'. At this point, the management application should flush any configuration information cached about this device and fetch new configuration information. The following are examples of actions that would cause the prtGeneralConfigChanges object to be incremented: - Adding an output bin - Changing the media in a sensing input tray - Changing the value of prtInputMediaType Note that the prtGeneralConfigChanges counter would not be incremented when an input tray is temporarily removed to load additional paper or when the level of an input device changes. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtGeneralCurrentLocalization": {
+    "name": "prtGeneralCurrentLocalization",
+    "oid": "1.3.6.1.2.1.43.5.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of the prtLocalizationIndex corresponding to the current language, country, and character set to be used for localized string values that are identified as being dependent on the value of this object. Note that this object does not apply to localized strings in the prtConsole group or to any object that is not explicitly identified as being localized according to prtGeneralCurrentLocalization. When an object's 'charset' is controlled by the value of prtGeneralCurrentLocalization, it MUST specify PrtLocalizedDescriptionStringTC as its syntax. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtGeneralReset": {
+    "name": "prtGeneralReset",
+    "oid": "1.3.6.1.2.1.43.5.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtGeneralResetTC",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "Setting this value to 'powerCycleReset', 'resetToNVRAM', or 'resetToFactoryDefaults' will result in the resetting of the printer. When read, this object will always have the value 'notResetting(3)', and a SET of the value 'notResetting' shall have no effect on the printer. Some of the defined values are optional. However, every implementation must support at least the values 'notResetting' and 'resetToNVRAM'."
+  },
+  "prtGeneralCurrentOperator": {
+    "name": "prtGeneralCurrentOperator",
+    "oid": "1.3.6.1.2.1.43.5.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 127
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The name of the person who is responsible for operating this printer. It is suggested that this string include information that would enable other humans to reach the operator, such as a phone number. As a convention to facilitate automatic notification of the operator by the agent or network management station, the phone number, fax number or email address should be indicated by the URL schemes 'tel:', 'fax:' and 'mailto:', respectively. If either the phone, fax, or email information is not available, then a line should not be included for this information. NOTE: For interoperability purposes, it is advisable to use email addresses formatted according to [RFC2822] requirements. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtGeneralServicePerson": {
+    "name": "prtGeneralServicePerson",
+    "oid": "1.3.6.1.2.1.43.5.1.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 127
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The name of the person responsible for servicing this printer. It is suggested that this string include information that would enable other humans to reach the service person, such as a phone number. As a convention to facilitate automatic notification of the operator by the agent or network management station, the phone number, fax number or email address should be indicated by the URL schemes 'tel:', 'fax:' and 'mailto:', respectively. If either the phone, fax, or email information is not available, then a line should not be included for this information. NOTE: For interoperability purposes, it is advisable to use email addresses formatted per [RFC2822] requirements. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInputDefaultIndex": {
+    "name": "prtInputDefaultIndex",
+    "oid": "1.3.6.1.2.1.43.5.1.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of prtInputIndex corresponding to the default input sub-unit: that is, this object selects the default source of input media."
+  },
+  "prtOutputDefaultIndex": {
+    "name": "prtOutputDefaultIndex",
+    "oid": "1.3.6.1.2.1.43.5.1.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of prtOutputIndex corresponding to the default output sub-unit; that is, this object selects the default output destination."
+  },
+  "prtMarkerDefaultIndex": {
+    "name": "prtMarkerDefaultIndex",
+    "oid": "1.3.6.1.2.1.43.5.1.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of prtMarkerIndex corresponding to the default marker sub-unit; that is, this object selects the default marker."
+  },
+  "prtMediaPathDefaultIndex": {
+    "name": "prtMediaPathDefaultIndex",
+    "oid": "1.3.6.1.2.1.43.5.1.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of prtMediaPathIndex corresponding to the default media path; that is, the selection of the default media path."
+  },
+  "prtConsoleLocalization": {
+    "name": "prtConsoleLocalization",
+    "oid": "1.3.6.1.2.1.43.5.1.1.10",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of the prtLocalizationIndex corresponding to the language, country, and character set to be used for the console. This localization applies both to the actual display on the console as well as the encoding of these console objects in management operations. When an object's 'charset' is controlled by the value of prtConsoleLocalization, it MUST specify PrtConsoleDescriptionStringTC as its syntax. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleNumberOfDisplayLines": {
+    "name": "prtConsoleNumberOfDisplayLines",
+    "oid": "1.3.6.1.2.1.43.5.1.1.11",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The number of lines on the printer's physical display. This value is 0 if there are no lines on the physical display or if there is no physical display"
+  },
+  "prtConsoleNumberOfDisplayChars": {
+    "name": "prtConsoleNumberOfDisplayChars",
+    "oid": "1.3.6.1.2.1.43.5.1.1.12",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The number of characters per line displayed on the physical display. This value is 0 if there are no lines on the physical display or if there is no physical display"
+  },
+  "prtConsoleDisable": {
+    "name": "prtConsoleDisable",
+    "oid": "1.3.6.1.2.1.43.5.1.1.13",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtConsoleDisableTC",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This value indicates how input is (or is not) accepted from the operator console. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAuxiliarySheetStartupPage": {
+    "name": "prtAuxiliarySheetStartupPage",
+    "oid": "1.3.6.1.2.1.43.5.1.1.14",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "Used to enable or disable printing a startup page. If enabled, a startup page will be printed shortly after power-up, when the device is ready. Typical startup pages include test patterns and/or printer configuration information."
+  },
+  "prtAuxiliarySheetBannerPage": {
+    "name": "prtAuxiliarySheetBannerPage",
+    "oid": "1.3.6.1.2.1.43.5.1.1.15",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "Used to enable or disable printing banner pages at the beginning of jobs. This is a master switch which applies to all jobs, regardless of interpreter."
+  },
+  "prtGeneralPrinterName": {
+    "name": "prtGeneralPrinterName",
+    "oid": "1.3.6.1.2.1.43.5.1.1.16",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 127
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "An administrator-specified name for this printer. Depending upon implementation of this printer, the value of this object may or may not be same as the value for the MIB-II 'SysName' object."
+  },
+  "prtGeneralSerialNumber": {
+    "name": "prtGeneralSerialNumber",
+    "oid": "1.3.6.1.2.1.43.5.1.1.17",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 255
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "A recorded serial number for this device that indexes some type device catalog or inventory. This value is usually set by the device manufacturer but the MIB supports the option of writing for this object for site-specific administration of device inventory or tracking."
+  },
+  "prtAlertCriticalEvents": {
+    "name": "prtAlertCriticalEvents",
+    "oid": "1.3.6.1.2.1.43.5.1.1.18",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Counter32",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A running counter of the number of critical alert events that have been recorded in the alert table. The value of this object is RESET in the event of a power cycle operation (i.e., the value is not persistent."
+  },
+  "prtAlertAllEvents": {
+    "name": "prtAlertAllEvents",
+    "oid": "1.3.6.1.2.1.43.5.1.1.19",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Counter32",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A running counter of the total number of alert event entries (critical and non-critical) that have been recorded in the alert table"
+  },
+  "prtCover": {
+    "name": "prtCover",
+    "oid": "1.3.6.1.2.1.43.6",
+    "class": "objectidentity"
+  },
+  "prtCoverTable": {
+    "name": "prtCoverTable",
+    "oid": "1.3.6.1.2.1.43.6.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A table of the covers and interlocks of the printer."
+  },
+  "prtCoverEntry": {
+    "name": "prtCoverEntry",
+    "oid": "1.3.6.1.2.1.43.6.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtCoverIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Information about a cover or interlock. Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtCoverIndex": {
+    "name": "prtCoverIndex",
+    "oid": "1.3.6.1.2.1.43.6.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this Cover sub unit. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new cover sub-units to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtCoverDescription": {
+    "name": "prtCoverDescription",
+    "oid": "1.3.6.1.2.1.43.6.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtLocalizedDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The manufacturer provided cover sub-mechanism name in the localization specified by prtGeneralCurrentLocalization."
+  },
+  "prtCoverStatus": {
+    "name": "prtCoverStatus",
+    "oid": "1.3.6.1.2.1.43.6.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtCoverStatusTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The status of this cover sub-unit."
+  },
+  "prtLocalization": {
+    "name": "prtLocalization",
+    "oid": "1.3.6.1.2.1.43.7",
+    "class": "objectidentity"
+  },
+  "prtLocalizationTable": {
+    "name": "prtLocalizationTable",
+    "oid": "1.3.6.1.2.1.43.7.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "The available localizations in this printer."
+  },
+  "prtLocalizationEntry": {
+    "name": "prtLocalizationEntry",
+    "oid": "1.3.6.1.2.1.43.7.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtLocalizationIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "A description of a localization. Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtLocalizationIndex": {
+    "name": "prtLocalizationIndex",
+    "oid": "1.3.6.1.2.1.43.7.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this localization entry. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new localization data to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtLocalizationLanguage": {
+    "name": "prtLocalizationLanguage",
+    "oid": "1.3.6.1.2.1.43.7.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 2,
+            "max": 2
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A two character language code from ISO 639. Examples en, es, fr, de. NOTE: These examples were shown as upper case in RFC 1759 and are now shown as lower case to agree with ISO 639."
+  },
+  "prtLocalizationCountry": {
+    "name": "prtLocalizationCountry",
+    "oid": "1.3.6.1.2.1.43.7.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 2,
+            "max": 2
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A two character country code from ISO 3166, a blank string (two space characters) shall indicate that the country is not defined. Examples: US, GB, FR, DE, ..."
+  },
+  "prtLocalizationCharacterSet": {
+    "name": "prtLocalizationCharacterSet",
+    "oid": "1.3.6.1.2.1.43.7.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "IANACharset",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The coded character set used for this localization."
+  },
+  "prtStorageRefTable": {
+    "name": "prtStorageRefTable",
+    "oid": "1.3.6.1.2.1.43.5.2",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "This table defines which printer, amongst multiple printers serviced by one agent, owns which storage units. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtStorageRefEntry": {
+    "name": "prtStorageRefEntry",
+    "oid": "1.3.6.1.2.1.43.5.2.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrStorageIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtStorageRefSeqNumber",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "This table will have an entry for each entry in the Host Resources MIB storage table that represents storage associated with a printer managed by this agent. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtStorageRefSeqNumber": {
+    "name": "prtStorageRefSeqNumber",
+    "oid": "1.3.6.1.2.1.43.5.2.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "This value will be unique amongst all entries with a common value of hrStorageIndex. This object allows a storage entry to point to the multiple printer devices with which it is associated."
+  },
+  "prtStorageRefIndex": {
+    "name": "prtStorageRefIndex",
+    "oid": "1.3.6.1.2.1.43.5.2.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The value of the hrDeviceIndex of the printer device that this storageEntry is associated with."
+  },
+  "prtDeviceRefTable": {
+    "name": "prtDeviceRefTable",
+    "oid": "1.3.6.1.2.1.43.5.3",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "This table defines which printer, amongst multiple printers serviced by one agent, is associated with which devices. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtDeviceRefEntry": {
+    "name": "prtDeviceRefEntry",
+    "oid": "1.3.6.1.2.1.43.5.3.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtDeviceRefSeqNumber",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "This table will have an entry for each entry in the Host Resources MIB device table that represents a device associated with a printer managed by this agent. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtDeviceRefSeqNumber": {
+    "name": "prtDeviceRefSeqNumber",
+    "oid": "1.3.6.1.2.1.43.5.3.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "This value will be unique amongst all entries with a common value of hrDeviceIndex. This object allows a device entry to point to the multiple printer devices with which it is associated."
+  },
+  "prtDeviceRefIndex": {
+    "name": "prtDeviceRefIndex",
+    "oid": "1.3.6.1.2.1.43.5.3.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The value of the hrDeviceIndex of the printer device that this deviceEntry is associated with."
+  },
+  "prtInput": {
+    "name": "prtInput",
+    "oid": "1.3.6.1.2.1.43.8",
+    "class": "objectidentity"
+  },
+  "prtInputTable": {
+    "name": "prtInputTable",
+    "oid": "1.3.6.1.2.1.43.8.2",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A table of the devices capable of providing media for input to the printing process."
+  },
+  "prtInputEntry": {
+    "name": "prtInputEntry",
+    "oid": "1.3.6.1.2.1.43.8.2.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Attributes of a device capable of providing media for input to the printing process. Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInputIndex": {
+    "name": "prtInputIndex",
+    "oid": "1.3.6.1.2.1.43.8.2.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this input sub-unit. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new input sub-units to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInputType": {
+    "name": "prtInputType",
+    "oid": "1.3.6.1.2.1.43.8.2.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtInputTypeTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The type of technology (discriminated primarily according to feeder mechanism type) employed by the input sub-unit. Note, the Input Class provides for a descriptor field to further qualify the other choice."
+  },
+  "prtInputDimUnit": {
+    "name": "prtInputDimUnit",
+    "oid": "1.3.6.1.2.1.43.8.2.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMediaUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The unit of measurement for use calculating and relaying dimensional values for this input sub-unit."
+  },
+  "prtInputMediaDimFeedDirDeclared": {
+    "name": "prtInputMediaDimFeedDirDeclared",
+    "oid": "1.3.6.1.2.1.43.8.2.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object provides the value of the declared dimension, in the feed direction, of the media that is (or, if empty, was or will be) in this input sub-unit. The feed direction is the direction in which the media is fed on this sub-unit. This dimension is measured in input sub-unit dimensional units (controlled by prtInputDimUnit, which uses PrtMediaUnitTC). If this input sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed by management requests. Otherwise, the value may be changed. The value (-1) means other and specifically means that this sub-unit places no restriction on this parameter. The value (-2) indicates unknown."
+  },
+  "prtInputMediaDimXFeedDirDeclared": {
+    "name": "prtInputMediaDimXFeedDirDeclared",
+    "oid": "1.3.6.1.2.1.43.8.2.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object provides the value of the declared dimension, in the cross feed direction, of the media that is (or, if empty, was or will be) in this input sub-unit. The cross feed direction is ninety degrees relative to the feed direction associated with this sub-unit. This dimension is measured in input sub-unit dimensional units (controlled by prtInputDimUnit,which uses PrtMediaUnitTC). If this input sub- unit can reliably sense this value, the value is sensed by the printer and may not be changed by management requests. Otherwise, the value may be changed. The value (-1) means other and specifically means that this sub-unit places no restriction on this parameter. The value (-2) indicates unknown."
+  },
+  "prtInputMediaDimFeedDirChosen": {
+    "name": "prtInputMediaDimFeedDirChosen",
+    "oid": "1.3.6.1.2.1.43.8.2.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The printer will act as if media of the chosen dimension (in the feed direction) is present in this input source. Note that this value will be used even if the input tray is empty. Feed dimension measurements are taken relative to the feed direction associated with that sub-unit and are in input sub-unit dimensional units (controlled by prtInputDimUnit, which uses PrtMediaUnitTC). If the printer supports the declared dimension,the granted dimension is the same as the declared dimension. If not, the granted dimension is set to the closest dimension that the printer supports when the declared dimension is set. The value (-1) means other and specifically indicates that this sub-unit places no restriction on this parameter. The value (-2)indicates unknown."
+  },
+  "prtInputMediaDimXFeedDirChosen": {
+    "name": "prtInputMediaDimXFeedDirChosen",
+    "oid": "1.3.6.1.2.1.43.8.2.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The printer will act as if media of the chosen dimension (in the cross feed direction) is present in this input source. Note that this value will be used even if the input tray is empty. The cross feed direction is ninety degrees relative to the feed direction associated with this sub-unit. This dimension is measured in input sub-unit dimensional units (controlled by prtInputDimUnit, which uses PrtMediaUnitTC). If the printer supports the declare dimension, the granted dimension is the same as the declared dimension. If not, the granted dimension is set to the closest dimension that the printer supports when the declared dimension is set. The value (-1) means other and specifically indicates that this sub-unit places no restriction on this parameter. The value (-2) indicates unknown."
+  },
+  "prtInputCapacityUnit": {
+    "name": "prtInputCapacityUnit",
+    "oid": "1.3.6.1.2.1.43.8.2.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtCapacityUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The unit of measurement for use in calculating and relaying capacity values for this input sub-unit."
+  },
+  "prtInputMaxCapacity": {
+    "name": "prtInputMaxCapacity",
+    "oid": "1.3.6.1.2.1.43.8.2.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The maximum capacity of the input sub-unit in input sub-unit capacity units (PrtCapacityUnitTC). There is no convention associated with the media itself so this value reflects claimed capacity. If this input sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed by management requests; otherwise, the value may be written (by a Remote Control Panel or a Management Application). The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown."
+  },
+  "prtInputCurrentLevel": {
+    "name": "prtInputCurrentLevel",
+    "oid": "1.3.6.1.2.1.43.8.2.1.10",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -3,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The current capacity of the input sub-unit in input sub-unit capacity units (PrtCapacityUnitTC). If this input sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed by management requests; otherwise, the value may be written (by a Remote Control Panel or a Management Application). The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. The value (-3) means that the printer knows that at least one unit remains."
+  },
+  "prtInputStatus": {
+    "name": "prtInputStatus",
+    "oid": "1.3.6.1.2.1.43.8.2.1.11",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtSubUnitStatusTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The current status of this input sub-unit."
+  },
+  "prtInputMediaName": {
+    "name": "prtInputMediaName",
+    "oid": "1.3.6.1.2.1.43.8.2.1.12",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "reference": "The PWG Standardized Media Names specification [PWGMEDIA] contains the recommended values for this object. See also RFC 3805 Appendix C,'Media Names', which lists the values Of standardized media names defined in ISO/IEC 10175.",
+    "status": "current",
+    "description": "A description of the media contained in this input sub-unit; This description is to be used by a client to format and Localize a string for display to a human operator. This description is not processed by the printer. It is used to provide information not expressible in terms of the other media attributes (e.g., prtInputMediaDimFeedDirChosen, prtInputMediaDimXFeedDirChosen, prtInputMediaWeight, prtInputMediaType)."
+  },
+  "prtInputName": {
+    "name": "prtInputName",
+    "oid": "1.3.6.1.2.1.43.8.2.1.13",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The name assigned to this input sub-unit."
+  },
+  "prtInputVendorName": {
+    "name": "prtInputVendorName",
+    "oid": "1.3.6.1.2.1.43.8.2.1.14",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The vendor name of this input sub-unit."
+  },
+  "prtInputModel": {
+    "name": "prtInputModel",
+    "oid": "1.3.6.1.2.1.43.8.2.1.15",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The model name of this input sub-unit."
+  },
+  "prtInputVersion": {
+    "name": "prtInputVersion",
+    "oid": "1.3.6.1.2.1.43.8.2.1.16",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The version of this input sub-unit."
+  },
+  "prtInputSerialNumber": {
+    "name": "prtInputSerialNumber",
+    "oid": "1.3.6.1.2.1.43.8.2.1.17",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 32
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The serial number assigned to this input sub-unit."
+  },
+  "prtInputDescription": {
+    "name": "prtInputDescription",
+    "oid": "1.3.6.1.2.1.43.8.2.1.18",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtLocalizedDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A free-form text description of this input sub-unit in the localization specified by prtGeneralCurrentLocalization."
+  },
+  "prtInputSecurity": {
+    "name": "prtInputSecurity",
+    "oid": "1.3.6.1.2.1.43.8.2.1.19",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "Indicates if this input sub-unit has some security associated with it."
+  },
+  "prtInputMediaWeight": {
+    "name": "prtInputMediaWeight",
+    "oid": "1.3.6.1.2.1.43.8.2.1.20",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The weight of the medium associated with this input sub-unit in grams / per meter squared. The value (-2) means unknown."
+  },
+  "prtInputMediaType": {
+    "name": "prtInputMediaType",
+    "oid": "1.3.6.1.2.1.43.8.2.1.21",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "reference": "The PWG Standardized Media Names specification [PWGMEDIA], section 3 Media Type Names, contains the recommended values for this object. Implementers may add additional string values. The naming conventions in ISO 9070 are recommended in order to avoid potential name clashes.",
+    "status": "current",
+    "description": "The name of the type of medium associated with this input sub unit. This name need not be processed by the printer; it might simply be displayed to an operator. NOTE: The above description has been modified from RFC 1759."
+  },
+  "prtInputMediaColor": {
+    "name": "prtInputMediaColor",
+    "oid": "1.3.6.1.2.1.43.8.2.1.22",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "reference": "The PWG Standardized Media Names specification [PWGMEDIA], section 4 Media Color Names, contains the recommended values for this object. Implementers may add additional string values. The naming conventions in ISO 9070 are recommended in order to avoid potential name clashes.",
+    "status": "current",
+    "description": "The name of the color of the medium associated with this input sub-unit using standardized string values. NOTE: The above description has been modified from RFC 1759."
+  },
+  "prtInputMediaFormParts": {
+    "name": "prtInputMediaFormParts",
+    "oid": "1.3.6.1.2.1.43.8.2.1.23",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The number of parts associated with the medium associated with this input sub-unit if the medium is a multi-part form. The value (-1) means other and specifically indicates that the device places no restrictions on this parameter. The value (-2) means unknown."
+  },
+  "prtInputMediaLoadTimeout": {
+    "name": "prtInputMediaLoadTimeout",
+    "oid": "1.3.6.1.2.1.43.8.2.1.24",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "When the printer is not able to print due to a subunit being empty or the requested media must be manually loaded, the printer will wait for the duration (in seconds) specified by this object. Upon expiration of the time-out, the printer will take the action specified by prtInputNextIndex. The event which causes the printer to enter the waiting state is product specific. If the printer is not waiting for manually fed media, it may switch from an empty subunit to a different subunit without waiting for the time-out to expire. A value of (-1) implies 'other' or 'infinite' which translates to 'wait forever'. The action which causes printing to continue is product specific. A value of (-2) implies 'unknown'."
+  },
+  "prtInputNextIndex": {
+    "name": "prtInputNextIndex",
+    "oid": "1.3.6.1.2.1.43.8.2.1.25",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -3,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of prtInputIndex corresponding to the input subunit which will be used when this input subunit is emptied and the time-out specified by prtInputMediaLoadTimeout expires. A value of zero(0) indicates that auto input switching will not occur when this input subunit is emptied. If the time-out specified by prtInputLoadMediaTimeout expires and this value is zero(0), the job will be aborted. A value of (-1) means other. The value (-2)means 'unknown' and specifically indicates that an implementation specific method will determine the next input subunit to use at the time this subunit is emptied and the time out expires. The value(-3) means input switching is not supported for this subunit."
+  },
+  "prtOutput": {
+    "name": "prtOutput",
+    "oid": "1.3.6.1.2.1.43.9",
+    "class": "objectidentity"
+  },
+  "prtOutputTable": {
+    "name": "prtOutputTable",
+    "oid": "1.3.6.1.2.1.43.9.2",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A table of the devices capable of receiving media delivered from the printing process."
+  },
+  "prtOutputEntry": {
+    "name": "prtOutputEntry",
+    "oid": "1.3.6.1.2.1.43.9.2.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Attributes of a device capable of receiving media delivered from the printing process. Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtOutputIndex": {
+    "name": "prtOutputIndex",
+    "oid": "1.3.6.1.2.1.43.9.2.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by this printer to identify this output sub-unit. Although these values may change due to a major reconfiguration of the sub-unit (e.g., the addition of new output devices to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtOutputType": {
+    "name": "prtOutputType",
+    "oid": "1.3.6.1.2.1.43.9.2.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtOutputTypeTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The type of technology supported by this output sub-unit."
+  },
+  "prtOutputCapacityUnit": {
+    "name": "prtOutputCapacityUnit",
+    "oid": "1.3.6.1.2.1.43.9.2.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtCapacityUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The unit of measurement for use in calculating and relaying capacity values for this output sub-unit."
+  },
+  "prtOutputMaxCapacity": {
+    "name": "prtOutputMaxCapacity",
+    "oid": "1.3.6.1.2.1.43.9.2.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The maximum capacity of this output sub-unit in output sub- unit capacity units (PrtCapacityUnitTC). There is no convention associated with the media itself so this value essentially reflects claimed capacity. If this output sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed by management requests; otherwise, the value may be written (by a Remote Control Panel or a Management Application). The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown."
+  },
+  "prtOutputRemainingCapacity": {
+    "name": "prtOutputRemainingCapacity",
+    "oid": "1.3.6.1.2.1.43.9.2.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -3,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The remaining capacity of the possible output sub-unit capacity in output sub-unit capacity units (PrtCapacityUnitTC)of this output sub-unit. If this output sub- unit can reliably sense this value, the value is sensed by the printer and may not be modified by management requests; otherwise, the value may be written (by a Remote Control Panel or a Management Application). The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. The value (-3) means that the printer knows that there remains capacity for at least one unit."
+  },
+  "prtOutputStatus": {
+    "name": "prtOutputStatus",
+    "oid": "1.3.6.1.2.1.43.9.2.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtSubUnitStatusTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The current status of this output sub-unit."
+  },
+  "prtOutputName": {
+    "name": "prtOutputName",
+    "oid": "1.3.6.1.2.1.43.9.2.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The name assigned to this output sub-unit."
+  },
+  "prtOutputVendorName": {
+    "name": "prtOutputVendorName",
+    "oid": "1.3.6.1.2.1.43.9.2.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The vendor name of this output sub-unit."
+  },
+  "prtOutputModel": {
+    "name": "prtOutputModel",
+    "oid": "1.3.6.1.2.1.43.9.2.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The model name assigned to this output sub-unit. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtOutputVersion": {
+    "name": "prtOutputVersion",
+    "oid": "1.3.6.1.2.1.43.9.2.1.10",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The version of this output sub-unit."
+  },
+  "prtOutputSerialNumber": {
+    "name": "prtOutputSerialNumber",
+    "oid": "1.3.6.1.2.1.43.9.2.1.11",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The serial number assigned to this output sub-unit."
+  },
+  "prtOutputDescription": {
+    "name": "prtOutputDescription",
+    "oid": "1.3.6.1.2.1.43.9.2.1.12",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtLocalizedDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A free-form text description of this output sub-unit in the localization specified by prtGeneralCurrentLocalization."
+  },
+  "prtOutputSecurity": {
+    "name": "prtOutputSecurity",
+    "oid": "1.3.6.1.2.1.43.9.2.1.13",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "Indicates if this output sub-unit has some security associated with it and if that security is enabled or not."
+  },
+  "prtOutputDimUnit": {
+    "name": "prtOutputDimUnit",
+    "oid": "1.3.6.1.2.1.43.9.2.1.14",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMediaUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The unit of measurement for use in calculating and relaying dimensional values for this output sub-unit."
+  },
+  "prtOutputMaxDimFeedDir": {
+    "name": "prtOutputMaxDimFeedDir",
+    "oid": "1.3.6.1.2.1.43.9.2.1.15",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The maximum dimensions supported by this output sub-unit for measurements taken parallel relative to the feed direction associated with that sub-unit in output sub-unit dimensional units (controlled by prtOutputDimUnit, which uses PrtMediaUnitTC). If this output sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed with management protocol operations. The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. NOTE: The above description has been modified from RFC 1759 for clarification and to explain the purpose of (-1) and (-2)."
+  },
+  "prtOutputMaxDimXFeedDir": {
+    "name": "prtOutputMaxDimXFeedDir",
+    "oid": "1.3.6.1.2.1.43.9.2.1.16",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The maximum dimensions supported by this output sub-unit for measurements taken ninety degrees relative to the feed direction associated with that sub-unit in output sub-unit dimensional units (controlled by prtOutputDimUnit, which uses PrtMediaUnitTC). If this output sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed with management protocol operations. The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. NOTE: The above description has been modified from RFC 1759 for clarification and to explain the purpose of (-1) and (-2)."
+  },
+  "prtOutputMinDimFeedDir": {
+    "name": "prtOutputMinDimFeedDir",
+    "oid": "1.3.6.1.2.1.43.9.2.1.17",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The minimum dimensions supported by this output sub-unit for measurements taken parallel relative to the feed direction associated with that sub-unit in output sub-unit dimensional units (controlled by prtOutputDimUnit, which uses PrtMediaUnitTC). If this output sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed with management protocol operations. The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. NOTE: The above description has been modified from RFC 1759 for clarification and to explain the purpose of (-1) and (-2)."
+  },
+  "prtOutputMinDimXFeedDir": {
+    "name": "prtOutputMinDimXFeedDir",
+    "oid": "1.3.6.1.2.1.43.9.2.1.18",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The minimum dimensions supported by this output sub-unit for measurements taken ninety degrees relative to the feed direction associated with that sub-unit in output sub-unit dimensional units (controlled by prtOutputDimUnit, which uses PrtMediaUnitTC). If this output sub-unit can reliably sense this value, the value is sensed by the printer and may not be changed with management protocol operations. The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. NOTE: The above description has been modified from RFC 1759 for clarification and to explain the purpose of (-1) and (-2)."
+  },
+  "prtOutputStackingOrder": {
+    "name": "prtOutputStackingOrder",
+    "oid": "1.3.6.1.2.1.43.9.2.1.19",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtOutputStackingOrderTC",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The current state of the stacking order for the associated output sub-unit. 'FirstToLast' means that as pages are output the front of the next page is placed against the back of the previous page. 'LasttoFirst' means that as pages are output the back of the next page is placed against the front of the previous page."
+  },
+  "prtOutputPageDeliveryOrientation": {
+    "name": "prtOutputPageDeliveryOrientation",
+    "oid": "1.3.6.1.2.1.43.9.2.1.20",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtOutputPageDeliveryOrientationTC",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The reading surface that will be 'up' when pages are delivered to the associated output sub-unit. Values are faceUp and faceDown. (Note: interpretation of these values is in general context-dependent based on locale; presentation of these values to an end-user should be normalized to the expectations of the user)."
+  },
+  "prtOutputBursting": {
+    "name": "prtOutputBursting",
+    "oid": "1.3.6.1.2.1.43.9.2.1.21",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object indicates that the outputting sub-unit supports bursting, and if so, whether the feature is enabled. Bursting is the process by which continuous media is separated into individual sheets, typically by bursting along pre-formed perforations."
+  },
+  "prtOutputDecollating": {
+    "name": "prtOutputDecollating",
+    "oid": "1.3.6.1.2.1.43.9.2.1.22",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object indicates that the output supports decollating, and if so, whether the feature is enabled. Decollating is the process by which the individual parts within a multi-part form are separated and sorted into separate stacks for each part."
+  },
+  "prtOutputPageCollated": {
+    "name": "prtOutputPageCollated",
+    "oid": "1.3.6.1.2.1.43.9.2.1.23",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object indicates that the output sub-unit supports page collation, and if so, whether the feature is enabled. See RFC 3805 Appendix A, Glossary Of Terms, for definition of how this document defines collation. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtOutputOffsetStacking": {
+    "name": "prtOutputOffsetStacking",
+    "oid": "1.3.6.1.2.1.43.9.2.1.24",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PresentOnOff",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object indicates that the output supports offset stacking,and if so, whether the feature is enabled. See RFC 3805 Appendix A, Glossary Of Terms, for how Offset Stacking is defined by this document. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarker": {
+    "name": "prtMarker",
+    "oid": "1.3.6.1.2.1.43.10",
+    "class": "objectidentity"
+  },
+  "prtMarkerTable": {
+    "name": "prtMarkerTable",
+    "oid": "1.3.6.1.2.1.43.10.2",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "The marker table provides a description of each marker sub-unit contained within the printer. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerEntry": {
+    "name": "prtMarkerEntry",
+    "oid": "1.3.6.1.2.1.43.10.2.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Entries in this table define the characteristics and status of each marker sub-unit in the printer. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerIndex": {
+    "name": "prtMarkerIndex",
+    "oid": "1.3.6.1.2.1.43.10.2.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this marking SubUnit. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new marking sub-units to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerMarkTech": {
+    "name": "prtMarkerMarkTech",
+    "oid": "1.3.6.1.2.1.43.10.2.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMarkerMarkTechTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The type of marking technology used for this marking sub-unit."
+  },
+  "prtMarkerCounterUnit": {
+    "name": "prtMarkerCounterUnit",
+    "oid": "1.3.6.1.2.1.43.10.2.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMarkerCounterUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The unit that will be used by the printer when reporting counter values for this marking sub-unit. The time units of measure are provided for a device like a strip recorder that does not or cannot track the physical dimensions of the media and does not use characters, lines or sheets."
+  },
+  "prtMarkerLifeCount": {
+    "name": "prtMarkerLifeCount",
+    "oid": "1.3.6.1.2.1.43.10.2.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Counter32",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The count of the number of units of measure counted during the life of printer using units of measure as specified by prtMarkerCounterUnit. Note: This object should be implemented as a persistent object with a reliable value throughout the lifetime of the printer."
+  },
+  "prtMarkerPowerOnCount": {
+    "name": "prtMarkerPowerOnCount",
+    "oid": "1.3.6.1.2.1.43.10.2.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Counter32",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The count of the number of units of measure counted since the equipment was most recently powered on using units of measure as specified by prtMarkerCounterUnit."
+  },
+  "prtMarkerProcessColorants": {
+    "name": "prtMarkerProcessColorants",
+    "oid": "1.3.6.1.2.1.43.10.2.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The number of process colors supported by this marker. A process color of 1 implies monochrome. The value of this object and prtMarkerSpotColorants cannot both be 0. The value of prtMarkerProcessColorants must be 0 or greater. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerSpotColorants": {
+    "name": "prtMarkerSpotColorants",
+    "oid": "1.3.6.1.2.1.43.10.2.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The number of spot colors supported by this marker. The value of this object and prtMarkerProcessColorants cannot both be 0. Must be 0 or greater. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerAddressabilityUnit": {
+    "name": "prtMarkerAddressabilityUnit",
+    "oid": "1.3.6.1.2.1.43.10.2.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMarkerAddressabilityUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The unit of measure of distances, as applied to the marker's resolution. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerAddressabilityFeedDir": {
+    "name": "prtMarkerAddressabilityFeedDir",
+    "oid": "1.3.6.1.2.1.43.10.2.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The maximum number of addressable marking positions in the feed direction per 10000 units of measure specified by prtMarkerAddressabilityUnit. A value of (-1) implies 'other' or 'infinite' while a value of (-2) implies 'unknown'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerAddressabilityXFeedDir": {
+    "name": "prtMarkerAddressabilityXFeedDir",
+    "oid": "1.3.6.1.2.1.43.10.2.1.10",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The maximum number of addressable marking positions in the cross feed direction in 10000 units of measure specified by prtMarkerAddressabilityUnit. A value of (-1) implies 'other' or 'infinite' while a value of (-2) implies 'unknown'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerNorthMargin": {
+    "name": "prtMarkerNorthMargin",
+    "oid": "1.3.6.1.2.1.43.10.2.1.11",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The margin, in units identified by prtMarkerAddressabilityUnit, from the leading edge of the medium as the medium flows through the marking engine with the side to be imaged facing the observer. The leading edge is the North edge and the other edges are defined by the normal compass layout of directions with the compass facing the observer. Printing within the area bounded by all four margins is guaranteed for all interpreters. The value (-2) means unknown."
+  },
+  "prtMarkerSouthMargin": {
+    "name": "prtMarkerSouthMargin",
+    "oid": "1.3.6.1.2.1.43.10.2.1.12",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The margin from the South edge (see prtMarkerNorthMargin) of the medium in units identified by prtMarkerAddressabilityUnit. Printing within the area bounded by all four margins is guaranteed for all interpreters. The value (-2) means unknown."
+  },
+  "prtMarkerWestMargin": {
+    "name": "prtMarkerWestMargin",
+    "oid": "1.3.6.1.2.1.43.10.2.1.13",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The margin from the West edge (see prtMarkerNorthMargin) of the medium in units identified by prtMarkerAddressabilityUnit. Printing within the area bounded by all four margins is guaranteed for all interpreters. The value (-2) means unknown."
+  },
+  "prtMarkerEastMargin": {
+    "name": "prtMarkerEastMargin",
+    "oid": "1.3.6.1.2.1.43.10.2.1.14",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The margin from the East edge (see prtMarkerNorthMargin) of the medium in units identified by prtMarkerAddressabilityUnit. Printing within the area bounded by all four margins is guaranteed for all interpreters. The value (-2) means unknown."
+  },
+  "prtMarkerStatus": {
+    "name": "prtMarkerStatus",
+    "oid": "1.3.6.1.2.1.43.10.2.1.15",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtSubUnitStatusTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The current status of this marker sub-unit."
+  },
+  "prtMarkerSupplies": {
+    "name": "prtMarkerSupplies",
+    "oid": "1.3.6.1.2.1.43.11",
+    "class": "objectidentity"
+  },
+  "prtMarkerSuppliesTable": {
+    "name": "prtMarkerSuppliesTable",
+    "oid": "1.3.6.1.2.1.43.11.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A table of the marker supplies available on this printer."
+  },
+  "prtMarkerSuppliesEntry": {
+    "name": "prtMarkerSuppliesEntry",
+    "oid": "1.3.6.1.2.1.43.11.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Attributes of a marker supply. Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerSuppliesIndex": {
+    "name": "prtMarkerSuppliesIndex",
+    "oid": "1.3.6.1.2.1.43.11.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this marker supply. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new marker supplies to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerSuppliesMarkerIndex": {
+    "name": "prtMarkerSuppliesMarkerIndex",
+    "oid": "1.3.6.1.2.1.43.11.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The value of prtMarkerIndex corresponding to the marking sub unit with which this marker supply sub-unit is associated."
+  },
+  "prtMarkerSuppliesColorantIndex": {
+    "name": "prtMarkerSuppliesColorantIndex",
+    "oid": "1.3.6.1.2.1.43.11.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The value of prtMarkerColorantIndex corresponding to the colorant with which this marker supply sub-unit is associated. This value shall be 0 if there is no colorant table or if this supply does not depend on a single specified colorant. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerSuppliesClass": {
+    "name": "prtMarkerSuppliesClass",
+    "oid": "1.3.6.1.2.1.43.11.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMarkerSuppliesClassTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "Indicates whether this supply entity represents a supply that is consumed or a receptacle that is filled. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerSuppliesType": {
+    "name": "prtMarkerSuppliesType",
+    "oid": "1.3.6.1.2.1.43.11.1.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMarkerSuppliesTypeTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The type of this supply."
+  },
+  "prtMarkerSuppliesDescription": {
+    "name": "prtMarkerSuppliesDescription",
+    "oid": "1.3.6.1.2.1.43.11.1.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtLocalizedDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The description of this supply container/receptacle in the localization specified by prtGeneralCurrentLocalization."
+  },
+  "prtMarkerSuppliesSupplyUnit": {
+    "name": "prtMarkerSuppliesSupplyUnit",
+    "oid": "1.3.6.1.2.1.43.11.1.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMarkerSuppliesSupplyUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "Unit of measure of this marker supply container/receptacle. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerSuppliesMaxCapacity": {
+    "name": "prtMarkerSuppliesMaxCapacity",
+    "oid": "1.3.6.1.2.1.43.11.1.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The maximum capacity of this supply container/receptacle expressed in prtMarkerSuppliesSupplyUnit. If this supply container/receptacle can reliably sense this value, the value is reported by the printer and is read-only; otherwise, the value may be written (by a Remote Control Panel or a Management Application). The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown."
+  },
+  "prtMarkerSuppliesLevel": {
+    "name": "prtMarkerSuppliesLevel",
+    "oid": "1.3.6.1.2.1.43.11.1.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -3,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The current level if this supply is a container; the remaining space if this supply is a receptacle. If this supply container/receptacle can reliably sense this value, the value is reported by the printer and is read-only; otherwise, the value may be written (by a Remote Control Panel or a Management Application). The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. A value of (-3) means that the printer knows that there is some supply/remaining space, respectively."
+  },
+  "prtMarkerColorant": {
+    "name": "prtMarkerColorant",
+    "oid": "1.3.6.1.2.1.43.12",
+    "class": "objectidentity"
+  },
+  "prtMarkerColorantTable": {
+    "name": "prtMarkerColorantTable",
+    "oid": "1.3.6.1.2.1.43.12.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A table of all of the colorants available on the printer."
+  },
+  "prtMarkerColorantEntry": {
+    "name": "prtMarkerColorantEntry",
+    "oid": "1.3.6.1.2.1.43.12.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerColorantIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Attributes of a colorant available on the printer. Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerColorantIndex": {
+    "name": "prtMarkerColorantIndex",
+    "oid": "1.3.6.1.2.1.43.12.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this colorant. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new colorants to the printer) , values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMarkerColorantMarkerIndex": {
+    "name": "prtMarkerColorantMarkerIndex",
+    "oid": "1.3.6.1.2.1.43.12.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The value of prtMarkerIndex corresponding to the marker sub unit with which this colorant entry is associated."
+  },
+  "prtMarkerColorantRole": {
+    "name": "prtMarkerColorantRole",
+    "oid": "1.3.6.1.2.1.43.12.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMarkerColorantRoleTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The role played by this colorant."
+  },
+  "prtMarkerColorantValue": {
+    "name": "prtMarkerColorantValue",
+    "oid": "1.3.6.1.2.1.43.12.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 255
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The name of the color of this colorant using standardized string names from ISO 10175 (DPA) and ISO 10180 (SPDL) such as: other unknown white red green blue cyan magenta yellow black Implementers may add additional string values. The naming conventions in ISO 9070 are recommended in order to avoid potential name clashes"
+  },
+  "prtMarkerColorantTonality": {
+    "name": "prtMarkerColorantTonality",
+    "oid": "1.3.6.1.2.1.43.12.1.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The distinct levels of tonality realizable by a marking sub unit when using this colorant. This value does not include the number of levels of tonal difference that an interpreter can obtain by techniques such as half toning. This value must be at least 2."
+  },
+  "prtMediaPath": {
+    "name": "prtMediaPath",
+    "oid": "1.3.6.1.2.1.43.13",
+    "class": "objectidentity"
+  },
+  "prtMediaPathTable": {
+    "name": "prtMediaPathTable",
+    "oid": "1.3.6.1.2.1.43.13.4",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "The media path table includes both physical and logical paths within the printer. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMediaPathEntry": {
+    "name": "prtMediaPathEntry",
+    "oid": "1.3.6.1.2.1.43.13.4.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Entries may exist in the table for each device index with a device type of 'printer' Each entry defines the physical characteristics of and the status of the media path. The data provided indicates the maximum throughput and the media size limitations of these subunits. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMediaPathIndex": {
+    "name": "prtMediaPathIndex",
+    "oid": "1.3.6.1.2.1.43.13.4.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this media path. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new media paths to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMediaPathMaxSpeedPrintUnit": {
+    "name": "prtMediaPathMaxSpeedPrintUnit",
+    "oid": "1.3.6.1.2.1.43.13.4.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMediaPathMaxSpeedPrintUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The unit of measure used in specifying the speed of all media paths in the printer."
+  },
+  "prtMediaPathMediaSizeUnit": {
+    "name": "prtMediaPathMediaSizeUnit",
+    "oid": "1.3.6.1.2.1.43.13.4.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMediaUnitTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The units of measure of media size for use in calculating and relaying dimensional values for all media paths in the printer."
+  },
+  "prtMediaPathMaxSpeed": {
+    "name": "prtMediaPathMaxSpeed",
+    "oid": "1.3.6.1.2.1.43.13.4.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The maximum printing speed of this media path expressed in prtMediaPathMaxSpeedUnit's. A value of (-1) implies 'other'."
+  },
+  "prtMediaPathMaxMediaFeedDir": {
+    "name": "prtMediaPathMaxMediaFeedDir",
+    "oid": "1.3.6.1.2.1.43.13.4.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The maximum physical media size in the feed direction of this media path expressed in units of measure specified by PrtMediaPathMediaSizeUnit. A value of (-1) implies 'unlimited' a value of (-2) implies 'unknown'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMediaPathMaxMediaXFeedDir": {
+    "name": "prtMediaPathMaxMediaXFeedDir",
+    "oid": "1.3.6.1.2.1.43.13.4.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The maximum physical media size across the feed direction of this media path expressed in units of measure specified by prtMediaPathMediaSizeUnit. A value of (-2) implies 'unknown'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMediaPathMinMediaFeedDir": {
+    "name": "prtMediaPathMinMediaFeedDir",
+    "oid": "1.3.6.1.2.1.43.13.4.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The minimum physical media size in the feed direction of this media path expressed in units of measure specified by prtMediaPathMediaSizeUnit. A value of (-2) implies 'unknown'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMediaPathMinMediaXFeedDir": {
+    "name": "prtMediaPathMinMediaXFeedDir",
+    "oid": "1.3.6.1.2.1.43.13.4.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The minimum physical media size across the feed direction of this media path expressed in units of measure specified by prtMediaPathMediaSizeUnit. A value of (-2) implies 'unknown'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtMediaPathType": {
+    "name": "prtMediaPathType",
+    "oid": "1.3.6.1.2.1.43.13.4.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtMediaPathTypeTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The type of the media path for this media path."
+  },
+  "prtMediaPathDescription": {
+    "name": "prtMediaPathDescription",
+    "oid": "1.3.6.1.2.1.43.13.4.1.10",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtLocalizedDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The manufacturer-provided description of this media path in the localization specified by prtGeneralCurrentLocalization."
+  },
+  "prtMediaPathStatus": {
+    "name": "prtMediaPathStatus",
+    "oid": "1.3.6.1.2.1.43.13.4.1.11",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtSubUnitStatusTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The current status of this media path."
+  },
+  "prtChannel": {
+    "name": "prtChannel",
+    "oid": "1.3.6.1.2.1.43.14",
+    "class": "objectidentity"
+  },
+  "prtChannelTable": {
+    "name": "prtChannelTable",
+    "oid": "1.3.6.1.2.1.43.14.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "The channel table represents the set of input data sources which can provide print data to one or more of the interpreters available on a printer. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtChannelEntry": {
+    "name": "prtChannelEntry",
+    "oid": "1.3.6.1.2.1.43.14.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Entries may exist in the table for each device index with a device type of 'printer'. Each channel table entry is characterized by a unique protocol stack and/or addressing. The channel may also have printer dependent features that are associated with a printing language. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtChannelIndex": {
+    "name": "prtChannelIndex",
+    "oid": "1.3.6.1.2.1.43.14.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this data channel. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new data channels to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtChannelType": {
+    "name": "prtChannelType",
+    "oid": "1.3.6.1.2.1.43.14.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtChannelTypeTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The type of this print data channel. This object provides the linkage to ChannelType-specific groups that may (conceptually) extend the prtChannelTable with additional details about that channel."
+  },
+  "prtChannelProtocolVersion": {
+    "name": "prtChannelProtocolVersion",
+    "oid": "1.3.6.1.2.1.43.14.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 63
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The version of the protocol used on this channel. The format used for version numbering depends on prtChannelType."
+  },
+  "prtChannelCurrentJobCntlLangIndex": {
+    "name": "prtChannelCurrentJobCntlLangIndex",
+    "oid": "1.3.6.1.2.1.43.14.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of prtInterpreterIndex corresponding to the Control Language Interpreter for this channel. This interpreter defines the syntax used for control functions, such as querying or changing environment variables and identifying job boundaries (e.g., PJL, PostScript, NPAP). A value of zero indicates that there is no current Job Control Language Interpreter for this channel. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtChannelDefaultPageDescLangIndex": {
+    "name": "prtChannelDefaultPageDescLangIndex",
+    "oid": "1.3.6.1.2.1.43.14.1.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of prtInterpreterIndex corresponding to the Page Description Language Interpreter for this channel. This interpreter defines the default Page Description Language interpreter to be used for the print data unless the Control Language is used to select a specific interpreter (e.g., PCL, PostScript Language, auto-sense). A value of zero indicates that there is no default page description language interpreter for this channel. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtChannelState": {
+    "name": "prtChannelState",
+    "oid": "1.3.6.1.2.1.43.14.1.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtChannelStateTC",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The state of this print data channel. The value determines whether control information and print data is allowed through this channel or not."
+  },
+  "prtChannelIfIndex": {
+    "name": "prtChannelIfIndex",
+    "oid": "1.3.6.1.2.1.43.14.1.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "InterfaceIndexOrZero",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The value of ifIndex in the ifTable; see the Interfaces Group MIB [RFC2863] which corresponds to this channel. When more than one row of the ifTable is relevant, this is the index of the row representing the topmost layer in the interface hierarchy. A value of zero indicates that no interface is associated with this channel. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtChannelStatus": {
+    "name": "prtChannelStatus",
+    "oid": "1.3.6.1.2.1.43.14.1.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtSubUnitStatusTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The current status of the channel."
+  },
+  "prtChannelInformation": {
+    "name": "prtChannelInformation",
+    "oid": "1.3.6.1.2.1.43.14.1.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 255
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "Auxiliary information to allow a printing application to use the channel for data submission to the printer. An application capable of using a specific PrtChannelType should be able to use the combined information from the prtChannelInformation and other channel and interface group objects to 'bootstrap' its use of the channel. prtChannelInformation is not intended to provide a general channel description, nor to provide information that is available once the channel is in use. The encoding and interpretation of the prtChannelInformation object is specific to channel type. The description of each PrtChannelType enum value for which prtChannelInformation is defined specifies the appropriate encoding and interpretation, including interaction with other objects. For channel types that do not specify a prtChannelInformation value, its value shall be null (0 length). When a new PrtChannelType enumeration value is registered, its accompanying description must specify the encoding and interpretation of the prtChannelInformation value for the channel type. prtChannelInformation semantics for an existing PrtChannelType may be added or amended in the same manner as described in section 2.4.1 for type 2 enumeration values. The prtChannelInformation specifies values for a collection of channel attributes, represented as text according to the following rules: 1. The prtChannelInformation is not affected by localization. 2. The prtChannelInformation is a list of entries representing the attribute values. Each entry consists of the following items, in order: a. A keyword, composed of alphabetic characters (A-Z, a-z) represented by their NVT ASCII [RFC854] codes, that identifies a channel attribute, b. The NVT ASCII code for an Equals Sign (=) (code 61) to delimit the keyword, c. A data value encoded using rules specific to the PrtChannelType to with the prtChannelInformation applies which must in no case allow an octet with value 10 (the NVT ASCII Line Feed code), d. the NVT ASCII code for a Line Feed character (code 10) to delimit the data value. No other octets shall be present. Keywords are case-sensitive. Conventionally, keywords are capitalized (including each word of a multi-word keyword) and since they occupy space in the prtChannelInformation, they are kept short. 3. If a channel attribute has multiple values, it is represented by multiple entries with the same keyword, each specifying one value. Otherwise, there shall be at most one entry for each attribute. 4. By default, entries may appear in any order. If there are ordering constraints for particular entries, these must be specified in their definitions. 5. The prtChannelInformation value by default consists of text represented by NVT ASCII graphics character codes. However, other representations may be specified: a. In cases where the prtChannelInformation value contains information not normally coded in textual form, whatever symbolic representation is conventionally used for the information should be used for encoding the prtChannelInformation value. (For instance, a binary port value might be represented as a decimal number using NVT ASCII codes.) Such encoding must be specified in the definition of the value. b. The value may contain textual information in a character set other than NVT ASCII graphics characters. (For instance, an identifier might consist of ISO 10646 text encoded using the UTF-8 encoding scheme.) Such a character set and its encoding must be specified in the definition of the value. 6. For each PrtChannelType for which prtChannelInformation entries are defined, the descriptive text associated with the PrtChannelType enumeration value shall specify the following information for each entry: Title: Brief description phrase, e.g.: 'Port name', 'Service Name', etc. Keyword: The keyword value, e.g.: 'Port' or 'Service' Syntax: The encoding of the entry value if it cannot be directly represented by NVT ASCII. Status: 'Mandatory', 'Optional', or 'Conditionally Mandatory' Multiplicity: 'Single' or 'Multiple' to indicate whether the entry may be present multiple times. Description: Description of the use of the entry, other information required to complete the definition (e.g.: ordering constraints, interactions between entries). Applications that interpret prtChannelInformation should ignore unrecognized entries, so they are not affected if new entry types are added."
+  },
+  "prtInterpreter": {
+    "name": "prtInterpreter",
+    "oid": "1.3.6.1.2.1.43.15",
+    "class": "objectidentity"
+  },
+  "prtInterpreterTable": {
+    "name": "prtInterpreterTable",
+    "oid": "1.3.6.1.2.1.43.15.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "The interpreter table is a table representing the interpreters in the printer. An entry shall be placed in the interpreter table for each interpreter on the printer. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInterpreterEntry": {
+    "name": "prtInterpreterEntry",
+    "oid": "1.3.6.1.2.1.43.15.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Entries may exist in the table for each device index with a device type of 'printer'. Each table entry provides a complete description of the interpreter, including version information, rendering resolutions, default character sets, output orientation, and communication capabilities. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInterpreterIndex": {
+    "name": "prtInterpreterIndex",
+    "oid": "1.3.6.1.2.1.43.15.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value for each PDL or control language for which there exists an interpreter or emulator in the printer. The value is used to identify this interpreter. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new interpreters to the printer), values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInterpreterLangFamily": {
+    "name": "prtInterpreterLangFamily",
+    "oid": "1.3.6.1.2.1.43.15.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtInterpreterLangFamilyTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The family name of a Page Description Language (PDL) or control language which this interpreter in the printer can interpret or emulate. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInterpreterLangLevel": {
+    "name": "prtInterpreterLangLevel",
+    "oid": "1.3.6.1.2.1.43.15.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 31
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The level of the language which this interpreter is interpreting or emulating. This might contain a value like '5e'for an interpreter which is emulating level 5e of the PCL language. It might contain '2' for an interpreter which is emulating level 2 of the PostScript language. Similarly it might contain '2' for an interpreter which is emulating level 2 of the HPGL language."
+  },
+  "prtInterpreterLangVersion": {
+    "name": "prtInterpreterLangVersion",
+    "oid": "1.3.6.1.2.1.43.15.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 31
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The date code or version of the language which this interpreter is interpreting or emulating."
+  },
+  "prtInterpreterDescription": {
+    "name": "prtInterpreterDescription",
+    "oid": "1.3.6.1.2.1.43.15.1.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtLocalizedDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A string to identify this interpreter in the localization specified by prtGeneralCurrentLocalization as opposed to the language which is being interpreted. It is anticipated that this string will allow manufacturers to unambiguously identify their interpreters."
+  },
+  "prtInterpreterVersion": {
+    "name": "prtInterpreterVersion",
+    "oid": "1.3.6.1.2.1.43.15.1.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "OCTET STRING",
+      "class": "type",
+      "constraints": {
+        "size": [
+          {
+            "min": 0,
+            "max": 31
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The date code, version number, or other product specific information tied to this interpreter. This value is associated with the interpreter, rather than with the version of the language which is being interpreted or emulated."
+  },
+  "prtInterpreterDefaultOrientation": {
+    "name": "prtInterpreterDefaultOrientation",
+    "oid": "1.3.6.1.2.1.43.15.1.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtPrintOrientationTC",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The current orientation default for this interpreter. This value may be overridden for a particular job (e.g., by a command in the input data stream)."
+  },
+  "prtInterpreterFeedAddressability": {
+    "name": "prtInterpreterFeedAddressability",
+    "oid": "1.3.6.1.2.1.43.15.1.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The maximum interpreter addressability in the feed direction in 10000 prtMarkerAddressabilityUnits (as specified by prtMarkerDefaultIndex) for this interpreter. The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInterpreterXFeedAddressability": {
+    "name": "prtInterpreterXFeedAddressability",
+    "oid": "1.3.6.1.2.1.43.15.1.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The maximum interpreter addressability in the cross feed direction in 10000 prtMarkerAddressabilityUnits (as specified by prtMarkerDefaultIndex) for this interpreter. The value (-1) means other and specifically indicates that the sub-unit places no restrictions on this parameter. The value (-2) means unknown. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtInterpreterDefaultCharSetIn": {
+    "name": "prtInterpreterDefaultCharSetIn",
+    "oid": "1.3.6.1.2.1.43.15.1.1.10",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "IANACharset",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The default coded character set for input octets encountered outside a context in which the Page Description Language established the interpretation of the octets. (Input octets are presented to the interpreter through a path defined in the channel group.)"
+  },
+  "prtInterpreterDefaultCharSetOut": {
+    "name": "prtInterpreterDefaultCharSetOut",
+    "oid": "1.3.6.1.2.1.43.15.1.1.11",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "IANACharset",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The default character set for data coming from this interpreter through the printer's output channel (i.e. the 'backchannel')."
+  },
+  "prtInterpreterTwoWay": {
+    "name": "prtInterpreterTwoWay",
+    "oid": "1.3.6.1.2.1.43.15.1.1.12",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtInterpreterTwoWayTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "Indicates whether or not this interpreter returns information back to the host."
+  },
+  "prtConsoleDisplayBuffer": {
+    "name": "prtConsoleDisplayBuffer",
+    "oid": "1.3.6.1.2.1.43.16",
+    "class": "objectidentity"
+  },
+  "prtConsoleDisplayBufferTable": {
+    "name": "prtConsoleDisplayBufferTable",
+    "oid": "1.3.6.1.2.1.43.16.5",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "Physical display buffer for printer console display or operator panel NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleDisplayBufferEntry": {
+    "name": "prtConsoleDisplayBufferEntry",
+    "oid": "1.3.6.1.2.1.43.16.5.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleDisplayBufferIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "This table contains one entry for each physical line on the display. Lines cannot be added or deleted. Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleDisplayBufferIndex": {
+    "name": "prtConsoleDisplayBufferIndex",
+    "oid": "1.3.6.1.2.1.43.16.5.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value for each console line in the printer. The value is used to identify this console line. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new console lines to the printer). Values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleDisplayBufferText": {
+    "name": "prtConsoleDisplayBufferText",
+    "oid": "1.3.6.1.2.1.43.16.5.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtConsoleDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "The content of a line in the logical display buffer of the operator's console of the printer. When a write operation occurs, normally a critical message, to one of the LineText strings, the agent should make that line displayable if a physical display is present. Writing a zero length string clears the line. It is an implementation- specific matter as to whether the agent allows a line to be overwritten before it has been cleared. Printer generated strings shall be in the localization specified by prtConsoleLocalization.Management Application generated strings should be localized by the Management Application."
+  },
+  "prtConsoleLights": {
+    "name": "prtConsoleLights",
+    "oid": "1.3.6.1.2.1.43.17",
+    "class": "objectidentity"
+  },
+  "prtConsoleLightTable": {
+    "name": "prtConsoleLightTable",
+    "oid": "1.3.6.1.2.1.43.17.6",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "The console light table provides a description and state information for each light present on the printer console. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleLightEntry": {
+    "name": "prtConsoleLightEntry",
+    "oid": "1.3.6.1.2.1.43.17.6.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleLightIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleLightIndex": {
+    "name": "prtConsoleLightIndex",
+    "oid": "1.3.6.1.2.1.43.17.6.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 65535
+          }
+        ]
+      }
+    },
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "A unique value used by the printer to identify this light. Although these values may change due to a major reconfiguration of the device (e.g., the addition of new lights to the printer). Values SHOULD remain stable across successive printer power cycles. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleOnTime": {
+    "name": "prtConsoleOnTime",
+    "oid": "1.3.6.1.2.1.43.17.6.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object, in conjunction with prtConsoleOffTime, defines the current status of the light. If both prtConsoleOnTime and prtConsoleOffTime are non-zero, the lamp is blinking and the values presented define the on time and off time, respectively, in milliseconds. If prtConsoleOnTime is zero and prtConsoleOffTime is non-zero, the lamp is off. If prtConsoleOffTime is zero and prtConsoleOnTime is non-zero, the lamp is on. If both values are zero the lamp is off. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleOffTime": {
+    "name": "prtConsoleOffTime",
+    "oid": "1.3.6.1.2.1.43.17.6.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 0,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-write",
+    "status": "current",
+    "description": "This object, in conjunction with prtConsoleOnTime, defines the current status of the light. If both prtConsoleOnTime and prtConsoleOffTime are non-zero, the lamp is blinking and the values presented define the on time and off time, respectively, in milliseconds. If prtConsoleOnTime is zero and prtConsoleOffTime is non-zero, the lamp is off. If prtConsoleOffTime is zero and prtConsoleOnTime is non-zero, the lamp is on. If both values are zero the lamp is off. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtConsoleColor": {
+    "name": "prtConsoleColor",
+    "oid": "1.3.6.1.2.1.43.17.6.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtConsoleColorTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The color of this light."
+  },
+  "prtConsoleDescription": {
+    "name": "prtConsoleDescription",
+    "oid": "1.3.6.1.2.1.43.17.6.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtConsoleDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The vendor description or label of this light in the localization specified by prtConsoleLocalization."
+  },
+  "prtAlert": {
+    "name": "prtAlert",
+    "oid": "1.3.6.1.2.1.43.18",
+    "class": "objectidentity"
+  },
+  "prtAlertTable": {
+    "name": "prtAlertTable",
+    "oid": "1.3.6.1.2.1.43.18.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "status": "current",
+    "description": "The prtAlertTable lists all the critical and non-critical alerts currently active in the printer. A critical alert is one that stops the printer from printing immediately and printing can not continue until the critical alert condition is eliminated. Non-critical alerts are those items that do not stop printing but may at some future time. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAlertEntry": {
+    "name": "prtAlertEntry",
+    "oid": "1.3.6.1.2.1.43.18.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "maxaccess": "not-accessible",
+    "indices": [
+      {
+        "module": "HOST-RESOURCES-MIB",
+        "object": "hrDeviceIndex",
+        "implied": 0
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertIndex",
+        "implied": 0
+      }
+    ],
+    "status": "current",
+    "description": "Entries may exist in the table for each device index with a device type of 'printer'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAlertIndex": {
+    "name": "prtAlertIndex",
+    "oid": "1.3.6.1.2.1.43.18.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": 1,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The index value used to determine which alerts have been added or removed from the alert table. This is an incrementing integer initialized to 1 when the printer is reset. (i.e., The first event placed in the alert table after a reset of the printer shall have an index value of 1.) When the printer adds an alert to the table, that alert is assigned the next higher integer value from the last item entered into the table. If the index value reaches its maximum value, the next index value used must be 1. NOTE: The management application will read the alert table when a trap or event notification occurs or at a periodic rate and then parse the table to determine if any new entries were added by comparing the last known index value with the current highest index value. The management application will then update its copy of the alert table. When the printer discovers that an alert is no longer active, the printer shall remove the row for that alert from the table and shall reduce the number of rows in the table. The printer may add or delete any number of rows from the table at any time. The management station can detect when binary change alerts have been deleted by requesting an attribute of each alert, and noting alerts as deleted when that retrieval is not possible. The objects 'prtAlertCriticalEvents'and 'prtAlertAllEvents' in the 'prtGeneralTable' reduce the need for management applications to scan the 'prtAlertTable'. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAlertSeverityLevel": {
+    "name": "prtAlertSeverityLevel",
+    "oid": "1.3.6.1.2.1.43.18.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtAlertSeverityLevelTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The level of severity of this alert table entry. The printer determines the severity level assigned to each entry into the table."
+  },
+  "prtAlertTrainingLevel": {
+    "name": "prtAlertTrainingLevel",
+    "oid": "1.3.6.1.2.1.43.18.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtAlertTrainingLevelTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "See TEXTUAL-CONVENTION PrtAlertTrainingLevelTC. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAlertGroup": {
+    "name": "prtAlertGroup",
+    "oid": "1.3.6.1.2.1.43.18.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtAlertGroupTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The type of sub-unit within the printer model that this alert is related. Input, output, and markers are examples of printer model groups, i.e., examples of types of sub-units. Wherever possible, these enumerations match the sub-identifier that identifies the relevant table in the printmib."
+  },
+  "prtAlertGroupIndex": {
+    "name": "prtAlertGroupIndex",
+    "oid": "1.3.6.1.2.1.43.18.1.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -1,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The low-order index of the row within the table identified by prtAlertGroup that represents the sub-unit of the printer that caused this alert, or -1 if not applicable. The combination of the prtAlertGroup and the prtAlertGroupIndex defines exactly which printer sub-unit caused the alert; for example, Input #3, Output#2, and Marker #1. Every object in this MIB is indexed with hrDeviceIndex and optionally, another index variable. If this other index variable is present in the table that generated the alert, it will be used as the value for this object. Otherwise, this value shall be -1. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAlertLocation": {
+    "name": "prtAlertLocation",
+    "oid": "1.3.6.1.2.1.43.18.1.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type",
+      "constraints": {
+        "range": [
+          {
+            "min": -2,
+            "max": 2147483647
+          }
+        ]
+      }
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The sub-unit location that is defined by the printer manufacturer to further refine the location of this alert within the designated sub-unit. The location is used in conjunction with the Group and GroupIndex values; for example, there is an alert in Input #2 at location number 7. The value (-2) indicates unknown. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAlertCode": {
+    "name": "prtAlertCode",
+    "oid": "1.3.6.1.2.1.43.18.1.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtAlertCodeTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "See associated TEXTUAL-CONVENTION PrtAlertCodeTC. NOTE: The above description has been modified from RFC 1759 for clarification."
+  },
+  "prtAlertDescription": {
+    "name": "prtAlertDescription",
+    "oid": "1.3.6.1.2.1.43.18.1.1.8",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "PrtLocalizedDescriptionStringTC",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "A description of this alert entry in the localization specified by prtGeneralCurrentLocalization. The description is provided by the printer to further elaborate on the enumerated alert or provide information in the case where the code is classified as 'other' or 'unknown'. The printer is required to return a description string but the string may be a null string."
+  },
+  "prtAlertTime": {
+    "name": "prtAlertTime",
+    "oid": "1.3.6.1.2.1.43.18.1.1.9",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "TimeTicks",
+      "class": "type"
+    },
+    "maxaccess": "read-only",
+    "status": "current",
+    "description": "The value of sysUpTime at the time that this alert was generated."
+  },
+  "printerV1Alert": {
+    "name": "printerV1Alert",
+    "oid": "1.3.6.1.2.1.43.18.2",
+    "class": "objectidentity",
+    "status": "current",
+    "description": "The value of the enterprise-specific OID in an SNMPv1 trap sent signaling a critical event in the prtAlertTable."
+  },
+  "printerV2AlertPrefix": {
+    "name": "printerV2AlertPrefix",
+    "oid": "1.3.6.1.2.1.43.18.2.0",
+    "class": "objectidentity"
+  },
+  "printerV2Alert": {
+    "name": "printerV2Alert",
+    "oid": "1.3.6.1.2.1.43.18.2.0.1",
+    "class": "notificationtype",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertSeverityLevel"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertGroup"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertGroupIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertLocation"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertCode"
+      }
+    ],
+    "status": "current",
+    "description": "This trap is sent whenever a critical event is added to the prtAlertTable. NOTE: The prtAlertIndex object was redundantly included in the bindings of the 'printerV2Alert' notification in RFC 1759, even though the value exists in the instance qualifier of all the other bindings. This object has been retained to provide compatiblity with existing RFC 1759 implementaions."
+  },
+  "prtMIBConformance": {
+    "name": "prtMIBConformance",
+    "oid": "1.3.6.1.2.1.43.2",
+    "class": "objectidentity"
+  },
+  "prtMIBCompliance": {
+    "name": "prtMIBCompliance",
+    "oid": "1.3.6.1.2.1.43.2.1",
+    "class": "modulecompliance",
+    "modulecompliance": [
+      {
+        "object": "prtGeneralGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtInputGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtOutputGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtMarkerGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtMediaPathGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtChannelGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtInterpreterGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtConsoleGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtAlertTableGroup",
+        "module": "Printer-MIB"
+      }
+    ],
+    "status": "current",
+    "description": "The compliance statement for agents that implement the printer MIB as defined by RFC 1759."
+  },
+  "prtMIB2Compliance": {
+    "name": "prtMIB2Compliance",
+    "oid": "1.3.6.1.2.1.43.2.3",
+    "class": "modulecompliance",
+    "modulecompliance": [
+      {
+        "object": "prtGeneralGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtInputGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtOutputGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtMarkerGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtMediaPathGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtChannelGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtInterpreterGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtConsoleGroup",
+        "module": "Printer-MIB"
+      },
+      {
+        "object": "prtAlertTableGroup",
+        "module": "Printer-MIB"
+      }
+    ],
+    "status": "current",
+    "description": "The compliance statement for agents that implement the printer MIB V2."
+  },
+  "prtMIBGroups": {
+    "name": "prtMIBGroups",
+    "oid": "1.3.6.1.2.1.43.2.2",
+    "class": "objectidentity"
+  },
+  "prtGeneralGroup": {
+    "name": "prtGeneralGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.1",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtGeneralConfigChanges"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtGeneralCurrentLocalization"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtGeneralReset"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtCoverDescription"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtCoverStatus"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtLocalizationLanguage"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtLocalizationCountry"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtLocalizationCharacterSet"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtStorageRefIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtDeviceRefIndex"
+      }
+    ],
+    "status": "current",
+    "description": "The general printer group."
+  },
+  "prtResponsiblePartyGroup": {
+    "name": "prtResponsiblePartyGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.2",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtGeneralCurrentOperator"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtGeneralServicePerson"
+      }
+    ],
+    "status": "current",
+    "description": "The responsible party group contains contact information for humans responsible for the printer."
+  },
+  "prtInputGroup": {
+    "name": "prtInputGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.3",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputDefaultIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputType"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputDimUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaDimFeedDirDeclared"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaDimXFeedDirDeclared"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaDimFeedDirChosen"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaDimXFeedDirChosen"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputCapacityUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMaxCapacity"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputCurrentLevel"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputStatus"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaName"
+      }
+    ],
+    "status": "current",
+    "description": "The input group."
+  },
+  "prtExtendedInputGroup": {
+    "name": "prtExtendedInputGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.4",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputName"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputVendorName"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputModel"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputVersion"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputSerialNumber"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputDescription"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputSecurity"
+      }
+    ],
+    "status": "current",
+    "description": "The extended input group."
+  },
+  "prtInputMediaGroup": {
+    "name": "prtInputMediaGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.5",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaWeight"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaType"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaColor"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaFormParts"
+      }
+    ],
+    "status": "current",
+    "description": "The input media group."
+  },
+  "prtOutputGroup": {
+    "name": "prtOutputGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.6",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputDefaultIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputType"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputCapacityUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputMaxCapacity"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputRemainingCapacity"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputStatus"
+      }
+    ],
+    "status": "current",
+    "description": "The output group."
+  },
+  "prtExtendedOutputGroup": {
+    "name": "prtExtendedOutputGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.7",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputName"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputVendorName"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputModel"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputVersion"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputSerialNumber"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputDescription"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputSecurity"
+      }
+    ],
+    "status": "current",
+    "description": "The extended output group."
+  },
+  "prtOutputDimensionsGroup": {
+    "name": "prtOutputDimensionsGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.8",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputDimUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputMaxDimFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputMaxDimXFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputMinDimFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputMinDimXFeedDir"
+      }
+    ],
+    "status": "current",
+    "description": "The output dimensions group"
+  },
+  "prtOutputFeaturesGroup": {
+    "name": "prtOutputFeaturesGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.9",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputStackingOrder"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputPageDeliveryOrientation"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputBursting"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputDecollating"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputPageCollated"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtOutputOffsetStacking"
+      }
+    ],
+    "status": "current",
+    "description": "The output features group."
+  },
+  "prtMarkerGroup": {
+    "name": "prtMarkerGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.10",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerDefaultIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerMarkTech"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerCounterUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerLifeCount"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerPowerOnCount"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerProcessColorants"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSpotColorants"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerAddressabilityUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerAddressabilityFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerAddressabilityXFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerNorthMargin"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSouthMargin"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerWestMargin"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerEastMargin"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerStatus"
+      }
+    ],
+    "status": "current",
+    "description": "The marker group."
+  },
+  "prtMarkerSuppliesGroup": {
+    "name": "prtMarkerSuppliesGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.11",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesMarkerIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesColorantIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesClass"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesType"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesDescription"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesSupplyUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesMaxCapacity"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerSuppliesLevel"
+      }
+    ],
+    "status": "current",
+    "description": "The marker supplies group."
+  },
+  "prtMarkerColorantGroup": {
+    "name": "prtMarkerColorantGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.12",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerColorantMarkerIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerColorantRole"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerColorantValue"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMarkerColorantTonality"
+      }
+    ],
+    "status": "current",
+    "description": "The marker colorant group."
+  },
+  "prtMediaPathGroup": {
+    "name": "prtMediaPathGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.13",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathDefaultIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathMaxSpeedPrintUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathMediaSizeUnit"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathMaxSpeed"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathMaxMediaFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathMaxMediaXFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathMinMediaFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathMinMediaXFeedDir"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathType"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathDescription"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtMediaPathStatus"
+      }
+    ],
+    "status": "current",
+    "description": "The media path group."
+  },
+  "prtChannelGroup": {
+    "name": "prtChannelGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.14",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelType"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelProtocolVersion"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelCurrentJobCntlLangIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelDefaultPageDescLangIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelState"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelIfIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelStatus"
+      }
+    ],
+    "status": "current",
+    "description": "The channel group."
+  },
+  "prtInterpreterGroup": {
+    "name": "prtInterpreterGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.15",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterLangFamily"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterLangLevel"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterLangVersion"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterDescription"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterVersion"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterDefaultOrientation"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterFeedAddressability"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterXFeedAddressability"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterDefaultCharSetIn"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterDefaultCharSetOut"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInterpreterTwoWay"
+      }
+    ],
+    "status": "current",
+    "description": "The interpreter group."
+  },
+  "prtConsoleGroup": {
+    "name": "prtConsoleGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.16",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleLocalization"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleNumberOfDisplayLines"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleNumberOfDisplayChars"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleDisable"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleDisplayBufferText"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleOnTime"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleOffTime"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleColor"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtConsoleDescription"
+      }
+    ],
+    "status": "current",
+    "description": "The console group."
+  },
+  "prtAlertTableGroup": {
+    "name": "prtAlertTableGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.17",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertSeverityLevel"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertTrainingLevel"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertGroup"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertGroupIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertLocation"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertCode"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertDescription"
+      }
+    ],
+    "status": "current",
+    "description": "The alert table group."
+  },
+  "prtAlertTimeGroup": {
+    "name": "prtAlertTimeGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.18",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertTime"
+      }
+    ],
+    "status": "current",
+    "description": "The alert time group. Implementation of prtAlertTime is strongly RECOMMENDED."
+  },
+  "prtMIB2Groups": {
+    "name": "prtMIB2Groups",
+    "oid": "1.3.6.1.2.1.43.2.4",
+    "class": "objectidentity"
+  },
+  "prtAuxiliarySheetGroup": {
+    "name": "prtAuxiliarySheetGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.19",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtAuxiliarySheetStartupPage"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAuxiliarySheetBannerPage"
+      }
+    ],
+    "status": "current",
+    "description": "The auxiliary sheet group."
+  },
+  "prtInputSwitchingGroup": {
+    "name": "prtInputSwitchingGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.20",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputMediaLoadTimeout"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtInputNextIndex"
+      }
+    ],
+    "status": "current",
+    "description": "The input switching group."
+  },
+  "prtGeneralV2Group": {
+    "name": "prtGeneralV2Group",
+    "oid": "1.3.6.1.2.1.43.2.2.21",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtGeneralPrinterName"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtGeneralSerialNumber"
+      }
+    ],
+    "status": "current",
+    "description": "The general printer group with new v2 objects."
+  },
+  "prtAlertTableV2Group": {
+    "name": "prtAlertTableV2Group",
+    "oid": "1.3.6.1.2.1.43.2.2.22",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertIndex"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertCriticalEvents"
+      },
+      {
+        "module": "Printer-MIB",
+        "object": "prtAlertAllEvents"
+      }
+    ],
+    "status": "current",
+    "description": "The alert table group with new v2 objects and prtAlertIndex changed to MAX-ACCESS of 'read-only' for inclusion in the trap bindings (as originally defined in RFC 1759)."
+  },
+  "prtChannelV2Group": {
+    "name": "prtChannelV2Group",
+    "oid": "1.3.6.1.2.1.43.2.2.23",
+    "class": "objectgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "prtChannelInformation"
+      }
+    ],
+    "status": "current",
+    "description": "The channel group with a new v2 object."
+  },
+  "prtAlertTrapGroup": {
+    "name": "prtAlertTrapGroup",
+    "oid": "1.3.6.1.2.1.43.2.2.24",
+    "class": "notificationgroup",
+    "objects": [
+      {
+        "module": "Printer-MIB",
+        "object": "printerV2Alert"
+      }
+    ],
+    "status": "current",
+    "description": "The alert trap group."
+  },
+  "meta": {
+    "comments": [
+      "ASN.1 source file:///Users/neermitt/kusanagi/mibs.snmplabs.com/asn1/Printer-MIB",
+      "Produced by pysmi-0.3.4 at Fri May 24 18:51:44 2019",
+      "On host NEERMITT-M-J0NV platform Darwin version 18.6.0 by user neermitt",
+      "Using Python version 3.7.3 (default, Mar 27 2019, 09:23:15) "
+    ],
+    "module": "Printer-MIB"
+  }
+}

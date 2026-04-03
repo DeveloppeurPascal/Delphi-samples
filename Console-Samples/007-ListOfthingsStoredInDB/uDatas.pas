@@ -1,4 +1,4 @@
-(* C2PP
+﻿(* C2PP
   ***************************************************************************
 
   Delphi Sample Projects
@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:09.481+02:00
-  Signature : 3d878846c2e931f65b3aceaa70d94fe4b38313bd
+  File last update : 2026-04-03T18:05:40.000+02:00
+  Signature : 31b12848a0d00a654e554c68b36b1ce90c39b48f
   ***************************************************************************
 *)
 
@@ -104,6 +104,7 @@ begin
   qry.FieldByName('libelle').AsString := libelle;
   qry.Post;
   qry.Refresh;
+  result := qry.FieldByName('id').AsInteger;
 end;
 
 procedure modifier(id: integer; libelle: string);

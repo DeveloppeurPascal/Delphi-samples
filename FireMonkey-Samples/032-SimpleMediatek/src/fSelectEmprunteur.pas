@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-12-24T17:00:46.587+01:00
-  Signature : 6366cc157175915a0721d2eca643454b28006c19
+  File last update : 2026-04-03T18:24:10.000+02:00
+  Signature : afe15cd5285c951dce66ef28f49a432ed0198b02
   ***************************************************************************
 *)
 
@@ -115,7 +115,8 @@ type
     property OnDoOnClose: TDoOnCloseProc read FOnDoOnClose write SetOnDoOnClose;
     property media_id: integer read Fmedia_id write Setmedia_id;
     property SelectedId: integer read FSelectedId write SetSelectedId;
-    class function Execute(const DoOnClose: TDoOnCloseProc = nil; const media_id: integer = -1): integer;
+    class function Execute(const DoOnClose: TDoOnCloseProc = nil; const
+      media_id: integer = -1): integer;
   end;
 
 implementation
@@ -127,7 +128,8 @@ begin
   Close;
 end;
 
-class function TfrmSelectEmprunteur.Execute(const DoOnClose: TDoOnCloseProc; const media_id: integer): integer;
+class function TfrmSelectEmprunteur.Execute(const DoOnClose: TDoOnCloseProc;
+  const media_id: integer): integer;
 var
   f: TfrmSelectEmprunteur;
 begin
@@ -139,6 +141,7 @@ begin
   f.Show;
 {$ELSE}
   // Synchronous
+  result := -1;
   try
     f.ShowModal;
     result := f.SelectedId;
@@ -150,7 +153,8 @@ begin
 {$ENDIF}
 end;
 
-procedure TfrmSelectEmprunteur.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TfrmSelectEmprunteur.FormClose(Sender: TObject; var Action:
+  TCloseAction);
 begin
 {$IF Defined(IOS) or Defined(ANDROID)}
   TThread.ForceQueue(nil, procedure

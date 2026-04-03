@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:10.293+02:00
-  Signature : 5f197b28bd354fb8db46ef7973e0bb4e27aa1854
+  File last update : 2026-04-03T19:12:04.000+02:00
+  Signature : 172975f7f96266685bc503e9d120ba886531ad25
   ***************************************************************************
 *)
 
@@ -50,8 +50,17 @@ unit fItem;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Vcl.Buttons;
 
 type
   TLigne = class(TFrame)
@@ -70,7 +79,9 @@ implementation
 
 {$R *.dfm}
 
-uses fMain;
+uses
+  System.UITypes,
+  fMain;
 
 procedure TLigne.btnModifierClick(Sender: TObject);
 var
@@ -87,7 +98,8 @@ end;
 
 procedure TLigne.btnSupprimerClick(Sender: TObject);
 begin
-  if MessageDlg('Supprimer la liste ?', tmsgdlgtype.mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrYes then
+  if MessageDlg('Supprimer la liste ?', tmsgdlgtype.mtConfirmation, [mbYes,
+    mbNo], 0, mbYes) = mrYes then
   begin
     if (parent.parent.parent is TForm1) then
       (parent.parent.parent as TForm1).listemodifiee := true;
@@ -96,3 +108,4 @@ begin
 end;
 
 end.
+

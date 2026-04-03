@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:09.465+02:00
-  Signature : a6d5e5273ca23c0eb9fc67e04172a1ecf5310bd0
+  File last update : 2026-04-03T18:02:02.000+02:00
+  Signature : 3261e262bded516aa50f24521531a445698f6535
   ***************************************************************************
 *)
 
@@ -87,7 +87,6 @@ end;
 
 var
   nb1, nb2: integer;
-  ch: string;
 
 begin
   try

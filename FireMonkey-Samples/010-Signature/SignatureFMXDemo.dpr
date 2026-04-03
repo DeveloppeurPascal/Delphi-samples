@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2026-02-06T17:38:57.844+01:00
-  Signature : d4af115b250a22d7210bc4f1ff32f97b52936758
+  File last update : 2026-02-20T12:03:10.000+01:00
+  Signature : bbe579087b253b06f0160202d1ab3dc7250892d3
   ***************************************************************************
 *)
 
@@ -52,7 +52,7 @@ uses
   FMX.Forms,
   fMain in 'fMain.pas' {Form1},
   uCADSignatureFMX in 'uCADSignatureFMX.pas' {SignatureFMX: TFrame},
-  u_urlOpen in '..\..\lib-externes\librairies\u_urlOpen.pas';
+  u_urlOpen in '..\..\lib-externes\librairies\src\u_urlOpen.pas';
 
 {$R *.res}
 

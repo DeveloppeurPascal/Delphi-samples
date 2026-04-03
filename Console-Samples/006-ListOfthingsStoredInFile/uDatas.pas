@@ -1,4 +1,4 @@
-(* C2PP
+﻿(* C2PP
   ***************************************************************************
 
   Delphi Sample Projects
@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-10-25T20:59:09.470+02:00
-  Signature : 82744c1195bbe87905e32ea51345da08ec0f0adc
+  File last update : 2026-04-03T18:04:48.000+02:00
+  Signature : 441207387f9d430e7989b351e898a4b416d21e40
   ***************************************************************************
 *)
 
@@ -69,7 +69,8 @@ function lister: TListe;
 implementation
 
 uses
-  system.ioutils;
+  System.SysUtils,
+  System.IOUtils;
 
 const
   FichName = 'Presentation-RADStudio-Delphi.rcd';
@@ -83,15 +84,13 @@ var
   liste_modifiee: boolean;
 
 function ajouter(libelle: string): integer;
-var
-  num: integer;
 begin
   inc(id_max);
-  num := length(liste);
-  setlength(liste, num + 1);
-  liste[num].id := id_max;
-  liste[num].libelle := libelle;
-  liste[num].coche := false;
+  result := length(liste);
+  setlength(liste, result + 1);
+  liste[result].id := id_max;
+  liste[result].libelle := libelle;
+  liste[result].coche := false;
   liste_modifiee := true;
 end;
 

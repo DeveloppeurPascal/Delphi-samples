@@ -137,6 +137,9 @@
     <Source>.\FireMonkey-Samples\036-ShowModalNormal\ShowModalNormalFMXSample.dpr</Source>
     <Source>.\Web-Samples\013-WBJSONDatabaseEndpoints\DelphiClient\WBJSONDatabaseEndpointsFMXClient.dpr</Source>
     <Source>.\Web-Samples\013-WBJSONDatabaseEndpoints\WebBroker\WBJSONDatabaseEndpointsServer.dpr</Source>
+    <Source>.\Network-Samples\03-Socket-UDP\UDPClient.dpr</Source>
+    <Source>.\Network-Samples\03-Socket-UDP\UDPServer.dpr</Source>
+    <Source>.\Network-Samples\04-Test-SNMP-PrinterMIB\SNMPPrinterTest.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">

@@ -8,7 +8,7 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 * [Delphi CE Bootcamp (2018 edition)](https://github.com/Embarcadero/DelphiCEBootcamp)
 * [Delphi Collection repositories](https://github.com/walwalwalides?tab=repositories&q=Delphi-Collection&type=&language=&sort=)
 * [Delphi Examples](https://github.com/marciomichelluzzi/delphiExamples)
-* [Delphi FMX Game Snippets](https://github.com/DeveloppeurPascal/DelphiFMXGameSnippets)
+* [Delphi FMX Game Snippets](https://codeberg.org/DeveloppeurPascal/Delphi-FMX-Game-Snippets)
 * [Duck Journey Animation](https://github.com/DeveloppeurPascal/Duck-Animation-Sidaction2021)
 * [Embarcadero RAD Studio 10.3 Rio demos](https://github.com/Embarcadero/RADStudio10.3Demos)
 * [Embarcadero RAD Studio 10.3.2 Rio demos](https://github.com/Embarcadero/RADStudio10.3.2Demos)
@@ -31,12 +31,12 @@ List of dome Delphi projects repositories (samples, demos and learning resources
 * [RAD Server demos and doc](https://github.com/Embarcadero/RADServer-Docs)
 * [WebStencils official demos](https://github.com/Embarcadero/WebStencilsDemos)
 
-* try looking at "[delphi-sample](https://github.com/topics/delphi-sample)" topic on GitHub to find more samples on VCL, FireMonkey, Pascal Language...
+* try looking at the topic ["delphi-sample" on GitHub](https://github.com/topics/delphi-sample) or ["delphi-sample" on Codeberg](https://codeberg.org/explore/repos?q=delphi-sample&topic=1) to find more samples on VCL, FireMonkey, Pascal Language...
 
-* try looking at "[delphi-tutorials](https://github.com/topics/delphi-tutorials)" topic on GitHub to find more samples and explanations on how to use Delphi features and libraries available on Internet
+* try looking at the topic ["delphi-tutorials" on GitHub](https://github.com/topics/delphi-tutorials)"  or ["delphi-tutorials" on Codeberg](https://codeberg.org/explore/repos?q=delphi-tutorials&topic=1)" to find more samples and explanations on how to use Delphi features and libraries available on Internet
 
-* try looking at "[delphi-game](https://github.com/topics/delphi-game)" topic on GitHub to find games developped in Delphi
+* try looking at the topic ["delphi-game" on GitHub](https://github.com/topics/delphi-game) or ["delphi-game" on Codeberg](https://codeberg.org/explore/repos?q=delphi-game&topic=1)  to find games developped in Delphi
 
 * If you are looking for more than just samples but also libraries, components, full applications, game engines, ... you can go to the project [Fr0sT-Brutal/awesome-pascal](https://github.com/Fr0sT-Brutal/awesome-pascal) or the catalog [Torry Delphi Developers Library](https://torry.net).
 
-You know other samples repositories ? Please add them to this list (submit [an issue](https://github.com/DeveloppeurPascal/Delphi-samples/issues) or a [PULL REQUEST](CONTRIBUTING.md)).
+You know other samples repositories ? Please add them to this list (submit [an issue](https://codeberg.org/DeveloppeurPascal/Delphi-samples/issues) or a [PULL REQUEST](CONTRIBUTING.md)).

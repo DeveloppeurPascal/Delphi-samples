@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2026-02-06T17:38:57.770+01:00
-  Signature : 8dd9af30faebe9eecd9dba5ff6eea2d69ce147af
+  File last update : 2026-02-20T12:34:14.000+01:00
+  Signature : a71d827b84eecc77a7916c6c973d756d252d0040
   ***************************************************************************
 *)
 
@@ -51,7 +51,7 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   fMain in 'fMain.pas' {Form1},
-  u_download in '..\..\..\lib-externes\librairies\u_download.pas';
+  u_download in '..\..\..\lib-externes\librairies\src\u_download.pas';
 
 {$R *.res}
 

@@ -40,8 +40,8 @@
   https://codeberg.org/DeveloppeurPascal/Delphi-samples
 
   ***************************************************************************
-  File last update : 2025-12-02T16:48:23.996+01:00
-  Signature : 88ccd6bebbeeaa9b703b13f5c25b4faf644f4f6e
+  File last update : 2026-04-03T19:17:26.000+02:00
+  Signature : a18e0154deb5eb1ceda4dfbde8130d9760efcd74
   ***************************************************************************
 *)
 
@@ -54,6 +54,8 @@ procedure SendFileToServer(const AFileName, AURL, AEndPoint: string);
 implementation
 
 uses
+  System.Net.URLClient,
+  System.NetConsts,
   System.Net.HttpClient,
   System.Net.Mime,
   System.SysUtils,
@@ -75,7 +77,8 @@ begin
           server.ContentType := 'multipart/form-data';
           response := server.Post(aurl + '/' + aendpoint, param);
           if response.StatusCode <> 200 then
-            raise Exception.Create('Error ' + response.StatusCode.ToString + ' : ' + response.StatusText);
+            raise Exception.Create('Error ' + response.StatusCode.ToString +
+              ' : ' + response.StatusText);
         finally
           server.free;
         end;
