@@ -1,0 +1,100 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Show FireDAC Field Types For A Database'
+  ClientHeight = 431
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object VertScrollBox1: TVertScrollBox
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 421.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnResized = VertScrollBox1Resized
+    Viewport.Width = 614.000000000000000000
+    Viewport.Height = 421.000000000000000000
+    object StringGrid1: TStringGrid
+      Align = Top
+      CanFocus = True
+      ClipChildren = True
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 37.000000000000000000
+      Size.Width = 604.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      RowCount = 2
+      OnResized = StringGrid1Resized
+      Viewport.Width = 600.000000000000000000
+      Viewport.Height = 175.000000000000000000
+      object StringColumn1: TStringColumn
+        Header = 'Catalogs'
+        HeaderSettings.TextSettings.WordWrap = False
+      end
+      object StringColumn2: TStringColumn
+        Header = 'Schemas'
+        HeaderSettings.TextSettings.WordWrap = False
+      end
+      object StringColumn3: TStringColumn
+        Header = 'Tables'
+        HeaderSettings.TextSettings.WordWrap = False
+      end
+    end
+    object Button1: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 604.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      TextSettings.WordWrap = True
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 247.000000000000000000
+      Size.Width = 604.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Viewport.Width = 600.000000000000000000
+      Viewport.Height = 196.000000000000000000
+    end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=SQLite_Demo')
+    Left = 440
+    Top = 200
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 437
+    Top = 133
+  end
+end
