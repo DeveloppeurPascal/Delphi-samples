@@ -87,6 +87,9 @@
         <Projects Include="FireDAC-Samples\007-PostgreSQL-CustomerOrderDetail\PostgreSQLCustomerOrderDetailFMXFDSample.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="FireDAC-Samples\008-TestMariaDB\TestMariaDBSample.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="FireMonkey-Samples\001-HelloWorld\HelloWorldFireMonkey.dproj">
             <Dependencies/>
         </Projects>
@@ -199,6 +202,27 @@
             <Dependencies/>
         </Projects>
         <Projects Include="FireMonkey-Samples\036-ShowModalNormal\ShowModalNormalFMXSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\037-TForm_OnSaveState\TForm_OnSaveStateSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\038-SystemMessaging\SystemMessagingSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\039-PaintingPaintEvents\PaintingPaintEventsSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\040-SaveStateMsg\SaveStateMsgSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\041-AndroidSafeArea\AndroidSafeAreaSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\042-Rotation\RotationSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireMonkey-Samples\043-ShowFireDACFieldTypesForADatabase\ShowFireDACFieldTypesForADatabaseSample.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="IoT-Samples\001-BeaconDetect\BeaconDetector.dproj">
@@ -587,6 +611,15 @@
     <Target Name="PostgreSQLCustomerOrderDetailFMXFDSample:Make">
         <MSBuild Projects="FireDAC-Samples\007-PostgreSQL-CustomerOrderDetail\PostgreSQLCustomerOrderDetailFMXFDSample.dproj" Targets="Make"/>
     </Target>
+    <Target Name="TestMariaDBSample">
+        <MSBuild Projects="FireDAC-Samples\008-TestMariaDB\TestMariaDBSample.dproj"/>
+    </Target>
+    <Target Name="TestMariaDBSample:Clean">
+        <MSBuild Projects="FireDAC-Samples\008-TestMariaDB\TestMariaDBSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestMariaDBSample:Make">
+        <MSBuild Projects="FireDAC-Samples\008-TestMariaDB\TestMariaDBSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="HelloWorldFireMonkey">
         <MSBuild Projects="FireMonkey-Samples\001-HelloWorld\HelloWorldFireMonkey.dproj"/>
     </Target>
@@ -928,6 +961,69 @@
     </Target>
     <Target Name="ShowModalNormalFMXSample:Make">
         <MSBuild Projects="FireMonkey-Samples\036-ShowModalNormal\ShowModalNormalFMXSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TForm_OnSaveStateSample">
+        <MSBuild Projects="FireMonkey-Samples\037-TForm_OnSaveState\TForm_OnSaveStateSample.dproj"/>
+    </Target>
+    <Target Name="TForm_OnSaveStateSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\037-TForm_OnSaveState\TForm_OnSaveStateSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TForm_OnSaveStateSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\037-TForm_OnSaveState\TForm_OnSaveStateSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SystemMessagingSample">
+        <MSBuild Projects="FireMonkey-Samples\038-SystemMessaging\SystemMessagingSample.dproj"/>
+    </Target>
+    <Target Name="SystemMessagingSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\038-SystemMessaging\SystemMessagingSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SystemMessagingSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\038-SystemMessaging\SystemMessagingSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PaintingPaintEventsSample">
+        <MSBuild Projects="FireMonkey-Samples\039-PaintingPaintEvents\PaintingPaintEventsSample.dproj"/>
+    </Target>
+    <Target Name="PaintingPaintEventsSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\039-PaintingPaintEvents\PaintingPaintEventsSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PaintingPaintEventsSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\039-PaintingPaintEvents\PaintingPaintEventsSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SaveStateMsgSample">
+        <MSBuild Projects="FireMonkey-Samples\040-SaveStateMsg\SaveStateMsgSample.dproj"/>
+    </Target>
+    <Target Name="SaveStateMsgSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\040-SaveStateMsg\SaveStateMsgSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SaveStateMsgSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\040-SaveStateMsg\SaveStateMsgSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AndroidSafeAreaSample">
+        <MSBuild Projects="FireMonkey-Samples\041-AndroidSafeArea\AndroidSafeAreaSample.dproj"/>
+    </Target>
+    <Target Name="AndroidSafeAreaSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\041-AndroidSafeArea\AndroidSafeAreaSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AndroidSafeAreaSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\041-AndroidSafeArea\AndroidSafeAreaSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RotationSample">
+        <MSBuild Projects="FireMonkey-Samples\042-Rotation\RotationSample.dproj"/>
+    </Target>
+    <Target Name="RotationSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\042-Rotation\RotationSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RotationSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\042-Rotation\RotationSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ShowFireDACFieldTypesForADatabaseSample">
+        <MSBuild Projects="FireMonkey-Samples\043-ShowFireDACFieldTypesForADatabase\ShowFireDACFieldTypesForADatabaseSample.dproj"/>
+    </Target>
+    <Target Name="ShowFireDACFieldTypesForADatabaseSample:Clean">
+        <MSBuild Projects="FireMonkey-Samples\043-ShowFireDACFieldTypesForADatabase\ShowFireDACFieldTypesForADatabaseSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ShowFireDACFieldTypesForADatabaseSample:Make">
+        <MSBuild Projects="FireMonkey-Samples\043-ShowFireDACFieldTypesForADatabase\ShowFireDACFieldTypesForADatabaseSample.dproj" Targets="Make"/>
     </Target>
     <Target Name="BeaconDetector">
         <MSBuild Projects="IoT-Samples\001-BeaconDetect\BeaconDetector.dproj"/>
@@ -1308,13 +1404,13 @@
         <MSBuild Projects="Web-Samples\013-WBJSONDatabaseEndpoints\WebBroker\WBJSONDatabaseEndpointsServer.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="SOAPClient;SOAPServer;CoursesDB;ShowSelectedItem;TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL;PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL;QRCodeGenerator_VCL;QRCodeReader_FMX;HelloWorldConsole;ConsoleMenu;Recursivity;ForLoopSample;StructureProgSample;ListOfThings;ListInDB;TListSortSample;TypeInferenceOnADecimalValueSample;StringComparison;GotoSample;FireDACSQLiteSample;InterbaseSample;SQLiteBlobsSample;PostgreSQLFMXFDSample;PostgreSQLCustomerOrderDetailFMXFDSample;HelloWorldFireMonkey;UpperAndLowerCase;PopupMenuOnButton;MasterDetailApplication;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;DemoPermissionsAndroid;SignatureFMXDemo;ListeArborescence;ParcourtDeLaListe;ShowHideScreenAsLayout;BitmapScaleTests;DialogFMXSample;FolderOrFileSelect;FolderOrFileSelectWithFrame;TLabel_Shortcut_and_Tabulation;TBiometricAuthSample;TFlowLayoutSample;ScaledLayoutSample;LogMainFormEvents;ContactSheetFMXSample;ShowSVGInAFolderWithSkia4Delphi;CalendarInPopupSample;DownloadAndOpenAPDFFile;PlayWithComponents;FMXDragAndDropSample;StylesAndEXESizeSample;ParallelFor;LoadImageFromURLWithUILockSample;MultiFormOnMobile;RenderedImageSizeInATGlyphSample;SimpleMediatek;EditButtonListboxFMXSample;MenuActionListFMXSample;MessageDlgSyncAsyncFMXSample;ShowModalNormalFMXSample;BeaconDetector;BeaconFenceDemo;SearchBTDevices;MastermindArduino;JoystickViewer;ShowBeaconCharacteristics;ClientServerSocketSample;TURLStreamSample;UDPClient;UDPServer;SNMPPrinterTest;HelloWorldVCL;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;VCLProjectStructure;LiveBindingsAndVCLStyles;ListOfthingsStoredInJSON;EditToListBoxSample;ImageList;VirtualImageList;DialogVCLSample;TNumberBox_MinValue;TControlList_MultiSelect;TTouchKeyboard_with_Style;TControlListBiolife;DelphiMVCSample;PNGWithAlphaLayerSample;ContactSheetVCLSample;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;DisplayImagesFromURL;RESTClientSNCF;DataSnapRPCServer;DumpRequest;WhoisClient;VCLSendPhotoToWebBroker;ServerSendPhotoToWebBroker;HTMLAjaxInsideDelphiSample;WBJSONDatabaseEndpointsFMXClient;WBJSONDatabaseEndpointsServer"/>
+        <CallTarget Targets="SOAPClient;SOAPServer;CoursesDB;ShowSelectedItem;TakeAndSendPhotoWithAppTethering;ReceivePhotoFromAppTetheringFMX;ReceivePhotoFromAppTetheringVCL;PictureSender_FMX;PictureReceiver_FMX;PictureReceiver_VCL;QRCodeGenerator_VCL;QRCodeReader_FMX;HelloWorldConsole;ConsoleMenu;Recursivity;ForLoopSample;StructureProgSample;ListOfThings;ListInDB;TListSortSample;TypeInferenceOnADecimalValueSample;StringComparison;GotoSample;FireDACSQLiteSample;InterbaseSample;SQLiteBlobsSample;PostgreSQLFMXFDSample;PostgreSQLCustomerOrderDetailFMXFDSample;TestMariaDBSample;HelloWorldFireMonkey;UpperAndLowerCase;PopupMenuOnButton;MasterDetailApplication;FMXProjectStructure;FMXStylesAnd3D;EffectsAndAnimations;ListOfthingsStoredInBdD;DemoPermissionsAndroid;SignatureFMXDemo;ListeArborescence;ParcourtDeLaListe;ShowHideScreenAsLayout;BitmapScaleTests;DialogFMXSample;FolderOrFileSelect;FolderOrFileSelectWithFrame;TLabel_Shortcut_and_Tabulation;TBiometricAuthSample;TFlowLayoutSample;ScaledLayoutSample;LogMainFormEvents;ContactSheetFMXSample;ShowSVGInAFolderWithSkia4Delphi;CalendarInPopupSample;DownloadAndOpenAPDFFile;PlayWithComponents;FMXDragAndDropSample;StylesAndEXESizeSample;ParallelFor;LoadImageFromURLWithUILockSample;MultiFormOnMobile;RenderedImageSizeInATGlyphSample;SimpleMediatek;EditButtonListboxFMXSample;MenuActionListFMXSample;MessageDlgSyncAsyncFMXSample;ShowModalNormalFMXSample;TForm_OnSaveStateSample;SystemMessagingSample;PaintingPaintEventsSample;SaveStateMsgSample;AndroidSafeAreaSample;RotationSample;ShowFireDACFieldTypesForADatabaseSample;BeaconDetector;BeaconFenceDemo;SearchBTDevices;MastermindArduino;JoystickViewer;ShowBeaconCharacteristics;ClientServerSocketSample;TURLStreamSample;UDPClient;UDPServer;SNMPPrinterTest;HelloWorldVCL;LiveBindingsCalc;MDIAPP;SDIWithDialogBox;VCLProjectStructure;LiveBindingsAndVCLStyles;ListOfthingsStoredInJSON;EditToListBoxSample;ImageList;VirtualImageList;DialogVCLSample;TNumberBox_MinValue;TControlList_MultiSelect;TTouchKeyboard_with_Style;TControlListBiolife;DelphiMVCSample;PNGWithAlphaLayerSample;ContactSheetVCLSample;WebBrokerDemo;DisplayFTPFileList;FrequentationMediathequePoitierAPIViewer;DisplayImagesFromURL;RESTClientSNCF;DataSnapRPCServer;DumpRequest;WhoisClient;VCLSendPhotoToWebBroker;ServerSendPhotoToWebBroker;HTMLAjaxInsideDelphiSample;WBJSONDatabaseEndpointsFMXClient;WBJSONDatabaseEndpointsServer"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="SOAPClient:Clean;SOAPServer:Clean;CoursesDB:Clean;ShowSelectedItem:Clean;TakeAndSendPhotoWithAppTethering:Clean;ReceivePhotoFromAppTetheringFMX:Clean;ReceivePhotoFromAppTetheringVCL:Clean;PictureSender_FMX:Clean;PictureReceiver_FMX:Clean;PictureReceiver_VCL:Clean;QRCodeGenerator_VCL:Clean;QRCodeReader_FMX:Clean;HelloWorldConsole:Clean;ConsoleMenu:Clean;Recursivity:Clean;ForLoopSample:Clean;StructureProgSample:Clean;ListOfThings:Clean;ListInDB:Clean;TListSortSample:Clean;TypeInferenceOnADecimalValueSample:Clean;StringComparison:Clean;GotoSample:Clean;FireDACSQLiteSample:Clean;InterbaseSample:Clean;SQLiteBlobsSample:Clean;PostgreSQLFMXFDSample:Clean;PostgreSQLCustomerOrderDetailFMXFDSample:Clean;HelloWorldFireMonkey:Clean;UpperAndLowerCase:Clean;PopupMenuOnButton:Clean;MasterDetailApplication:Clean;FMXProjectStructure:Clean;FMXStylesAnd3D:Clean;EffectsAndAnimations:Clean;ListOfthingsStoredInBdD:Clean;DemoPermissionsAndroid:Clean;SignatureFMXDemo:Clean;ListeArborescence:Clean;ParcourtDeLaListe:Clean;ShowHideScreenAsLayout:Clean;BitmapScaleTests:Clean;DialogFMXSample:Clean;FolderOrFileSelect:Clean;FolderOrFileSelectWithFrame:Clean;TLabel_Shortcut_and_Tabulation:Clean;TBiometricAuthSample:Clean;TFlowLayoutSample:Clean;ScaledLayoutSample:Clean;LogMainFormEvents:Clean;ContactSheetFMXSample:Clean;ShowSVGInAFolderWithSkia4Delphi:Clean;CalendarInPopupSample:Clean;DownloadAndOpenAPDFFile:Clean;PlayWithComponents:Clean;FMXDragAndDropSample:Clean;StylesAndEXESizeSample:Clean;ParallelFor:Clean;LoadImageFromURLWithUILockSample:Clean;MultiFormOnMobile:Clean;RenderedImageSizeInATGlyphSample:Clean;SimpleMediatek:Clean;EditButtonListboxFMXSample:Clean;MenuActionListFMXSample:Clean;MessageDlgSyncAsyncFMXSample:Clean;ShowModalNormalFMXSample:Clean;BeaconDetector:Clean;BeaconFenceDemo:Clean;SearchBTDevices:Clean;MastermindArduino:Clean;JoystickViewer:Clean;ShowBeaconCharacteristics:Clean;ClientServerSocketSample:Clean;TURLStreamSample:Clean;UDPClient:Clean;UDPServer:Clean;SNMPPrinterTest:Clean;HelloWorldVCL:Clean;LiveBindingsCalc:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;VCLProjectStructure:Clean;LiveBindingsAndVCLStyles:Clean;ListOfthingsStoredInJSON:Clean;EditToListBoxSample:Clean;ImageList:Clean;VirtualImageList:Clean;DialogVCLSample:Clean;TNumberBox_MinValue:Clean;TControlList_MultiSelect:Clean;TTouchKeyboard_with_Style:Clean;TControlListBiolife:Clean;DelphiMVCSample:Clean;PNGWithAlphaLayerSample:Clean;ContactSheetVCLSample:Clean;WebBrokerDemo:Clean;DisplayFTPFileList:Clean;FrequentationMediathequePoitierAPIViewer:Clean;DisplayImagesFromURL:Clean;RESTClientSNCF:Clean;DataSnapRPCServer:Clean;DumpRequest:Clean;WhoisClient:Clean;VCLSendPhotoToWebBroker:Clean;ServerSendPhotoToWebBroker:Clean;HTMLAjaxInsideDelphiSample:Clean;WBJSONDatabaseEndpointsFMXClient:Clean;WBJSONDatabaseEndpointsServer:Clean"/>
+        <CallTarget Targets="SOAPClient:Clean;SOAPServer:Clean;CoursesDB:Clean;ShowSelectedItem:Clean;TakeAndSendPhotoWithAppTethering:Clean;ReceivePhotoFromAppTetheringFMX:Clean;ReceivePhotoFromAppTetheringVCL:Clean;PictureSender_FMX:Clean;PictureReceiver_FMX:Clean;PictureReceiver_VCL:Clean;QRCodeGenerator_VCL:Clean;QRCodeReader_FMX:Clean;HelloWorldConsole:Clean;ConsoleMenu:Clean;Recursivity:Clean;ForLoopSample:Clean;StructureProgSample:Clean;ListOfThings:Clean;ListInDB:Clean;TListSortSample:Clean;TypeInferenceOnADecimalValueSample:Clean;StringComparison:Clean;GotoSample:Clean;FireDACSQLiteSample:Clean;InterbaseSample:Clean;SQLiteBlobsSample:Clean;PostgreSQLFMXFDSample:Clean;PostgreSQLCustomerOrderDetailFMXFDSample:Clean;TestMariaDBSample:Clean;HelloWorldFireMonkey:Clean;UpperAndLowerCase:Clean;PopupMenuOnButton:Clean;MasterDetailApplication:Clean;FMXProjectStructure:Clean;FMXStylesAnd3D:Clean;EffectsAndAnimations:Clean;ListOfthingsStoredInBdD:Clean;DemoPermissionsAndroid:Clean;SignatureFMXDemo:Clean;ListeArborescence:Clean;ParcourtDeLaListe:Clean;ShowHideScreenAsLayout:Clean;BitmapScaleTests:Clean;DialogFMXSample:Clean;FolderOrFileSelect:Clean;FolderOrFileSelectWithFrame:Clean;TLabel_Shortcut_and_Tabulation:Clean;TBiometricAuthSample:Clean;TFlowLayoutSample:Clean;ScaledLayoutSample:Clean;LogMainFormEvents:Clean;ContactSheetFMXSample:Clean;ShowSVGInAFolderWithSkia4Delphi:Clean;CalendarInPopupSample:Clean;DownloadAndOpenAPDFFile:Clean;PlayWithComponents:Clean;FMXDragAndDropSample:Clean;StylesAndEXESizeSample:Clean;ParallelFor:Clean;LoadImageFromURLWithUILockSample:Clean;MultiFormOnMobile:Clean;RenderedImageSizeInATGlyphSample:Clean;SimpleMediatek:Clean;EditButtonListboxFMXSample:Clean;MenuActionListFMXSample:Clean;MessageDlgSyncAsyncFMXSample:Clean;ShowModalNormalFMXSample:Clean;TForm_OnSaveStateSample:Clean;SystemMessagingSample:Clean;PaintingPaintEventsSample:Clean;SaveStateMsgSample:Clean;AndroidSafeAreaSample:Clean;RotationSample:Clean;ShowFireDACFieldTypesForADatabaseSample:Clean;BeaconDetector:Clean;BeaconFenceDemo:Clean;SearchBTDevices:Clean;MastermindArduino:Clean;JoystickViewer:Clean;ShowBeaconCharacteristics:Clean;ClientServerSocketSample:Clean;TURLStreamSample:Clean;UDPClient:Clean;UDPServer:Clean;SNMPPrinterTest:Clean;HelloWorldVCL:Clean;LiveBindingsCalc:Clean;MDIAPP:Clean;SDIWithDialogBox:Clean;VCLProjectStructure:Clean;LiveBindingsAndVCLStyles:Clean;ListOfthingsStoredInJSON:Clean;EditToListBoxSample:Clean;ImageList:Clean;VirtualImageList:Clean;DialogVCLSample:Clean;TNumberBox_MinValue:Clean;TControlList_MultiSelect:Clean;TTouchKeyboard_with_Style:Clean;TControlListBiolife:Clean;DelphiMVCSample:Clean;PNGWithAlphaLayerSample:Clean;ContactSheetVCLSample:Clean;WebBrokerDemo:Clean;DisplayFTPFileList:Clean;FrequentationMediathequePoitierAPIViewer:Clean;DisplayImagesFromURL:Clean;RESTClientSNCF:Clean;DataSnapRPCServer:Clean;DumpRequest:Clean;WhoisClient:Clean;VCLSendPhotoToWebBroker:Clean;ServerSendPhotoToWebBroker:Clean;HTMLAjaxInsideDelphiSample:Clean;WBJSONDatabaseEndpointsFMXClient:Clean;WBJSONDatabaseEndpointsServer:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="SOAPClient:Make;SOAPServer:Make;CoursesDB:Make;ShowSelectedItem:Make;TakeAndSendPhotoWithAppTethering:Make;ReceivePhotoFromAppTetheringFMX:Make;ReceivePhotoFromAppTetheringVCL:Make;PictureSender_FMX:Make;PictureReceiver_FMX:Make;PictureReceiver_VCL:Make;QRCodeGenerator_VCL:Make;QRCodeReader_FMX:Make;HelloWorldConsole:Make;ConsoleMenu:Make;Recursivity:Make;ForLoopSample:Make;StructureProgSample:Make;ListOfThings:Make;ListInDB:Make;TListSortSample:Make;TypeInferenceOnADecimalValueSample:Make;StringComparison:Make;GotoSample:Make;FireDACSQLiteSample:Make;InterbaseSample:Make;SQLiteBlobsSample:Make;PostgreSQLFMXFDSample:Make;PostgreSQLCustomerOrderDetailFMXFDSample:Make;HelloWorldFireMonkey:Make;UpperAndLowerCase:Make;PopupMenuOnButton:Make;MasterDetailApplication:Make;FMXProjectStructure:Make;FMXStylesAnd3D:Make;EffectsAndAnimations:Make;ListOfthingsStoredInBdD:Make;DemoPermissionsAndroid:Make;SignatureFMXDemo:Make;ListeArborescence:Make;ParcourtDeLaListe:Make;ShowHideScreenAsLayout:Make;BitmapScaleTests:Make;DialogFMXSample:Make;FolderOrFileSelect:Make;FolderOrFileSelectWithFrame:Make;TLabel_Shortcut_and_Tabulation:Make;TBiometricAuthSample:Make;TFlowLayoutSample:Make;ScaledLayoutSample:Make;LogMainFormEvents:Make;ContactSheetFMXSample:Make;ShowSVGInAFolderWithSkia4Delphi:Make;CalendarInPopupSample:Make;DownloadAndOpenAPDFFile:Make;PlayWithComponents:Make;FMXDragAndDropSample:Make;StylesAndEXESizeSample:Make;ParallelFor:Make;LoadImageFromURLWithUILockSample:Make;MultiFormOnMobile:Make;RenderedImageSizeInATGlyphSample:Make;SimpleMediatek:Make;EditButtonListboxFMXSample:Make;MenuActionListFMXSample:Make;MessageDlgSyncAsyncFMXSample:Make;ShowModalNormalFMXSample:Make;BeaconDetector:Make;BeaconFenceDemo:Make;SearchBTDevices:Make;MastermindArduino:Make;JoystickViewer:Make;ShowBeaconCharacteristics:Make;ClientServerSocketSample:Make;TURLStreamSample:Make;UDPClient:Make;UDPServer:Make;SNMPPrinterTest:Make;HelloWorldVCL:Make;LiveBindingsCalc:Make;MDIAPP:Make;SDIWithDialogBox:Make;VCLProjectStructure:Make;LiveBindingsAndVCLStyles:Make;ListOfthingsStoredInJSON:Make;EditToListBoxSample:Make;ImageList:Make;VirtualImageList:Make;DialogVCLSample:Make;TNumberBox_MinValue:Make;TControlList_MultiSelect:Make;TTouchKeyboard_with_Style:Make;TControlListBiolife:Make;DelphiMVCSample:Make;PNGWithAlphaLayerSample:Make;ContactSheetVCLSample:Make;WebBrokerDemo:Make;DisplayFTPFileList:Make;FrequentationMediathequePoitierAPIViewer:Make;DisplayImagesFromURL:Make;RESTClientSNCF:Make;DataSnapRPCServer:Make;DumpRequest:Make;WhoisClient:Make;VCLSendPhotoToWebBroker:Make;ServerSendPhotoToWebBroker:Make;HTMLAjaxInsideDelphiSample:Make;WBJSONDatabaseEndpointsFMXClient:Make;WBJSONDatabaseEndpointsServer:Make"/>
+        <CallTarget Targets="SOAPClient:Make;SOAPServer:Make;CoursesDB:Make;ShowSelectedItem:Make;TakeAndSendPhotoWithAppTethering:Make;ReceivePhotoFromAppTetheringFMX:Make;ReceivePhotoFromAppTetheringVCL:Make;PictureSender_FMX:Make;PictureReceiver_FMX:Make;PictureReceiver_VCL:Make;QRCodeGenerator_VCL:Make;QRCodeReader_FMX:Make;HelloWorldConsole:Make;ConsoleMenu:Make;Recursivity:Make;ForLoopSample:Make;StructureProgSample:Make;ListOfThings:Make;ListInDB:Make;TListSortSample:Make;TypeInferenceOnADecimalValueSample:Make;StringComparison:Make;GotoSample:Make;FireDACSQLiteSample:Make;InterbaseSample:Make;SQLiteBlobsSample:Make;PostgreSQLFMXFDSample:Make;PostgreSQLCustomerOrderDetailFMXFDSample:Make;TestMariaDBSample:Make;HelloWorldFireMonkey:Make;UpperAndLowerCase:Make;PopupMenuOnButton:Make;MasterDetailApplication:Make;FMXProjectStructure:Make;FMXStylesAnd3D:Make;EffectsAndAnimations:Make;ListOfthingsStoredInBdD:Make;DemoPermissionsAndroid:Make;SignatureFMXDemo:Make;ListeArborescence:Make;ParcourtDeLaListe:Make;ShowHideScreenAsLayout:Make;BitmapScaleTests:Make;DialogFMXSample:Make;FolderOrFileSelect:Make;FolderOrFileSelectWithFrame:Make;TLabel_Shortcut_and_Tabulation:Make;TBiometricAuthSample:Make;TFlowLayoutSample:Make;ScaledLayoutSample:Make;LogMainFormEvents:Make;ContactSheetFMXSample:Make;ShowSVGInAFolderWithSkia4Delphi:Make;CalendarInPopupSample:Make;DownloadAndOpenAPDFFile:Make;PlayWithComponents:Make;FMXDragAndDropSample:Make;StylesAndEXESizeSample:Make;ParallelFor:Make;LoadImageFromURLWithUILockSample:Make;MultiFormOnMobile:Make;RenderedImageSizeInATGlyphSample:Make;SimpleMediatek:Make;EditButtonListboxFMXSample:Make;MenuActionListFMXSample:Make;MessageDlgSyncAsyncFMXSample:Make;ShowModalNormalFMXSample:Make;TForm_OnSaveStateSample:Make;SystemMessagingSample:Make;PaintingPaintEventsSample:Make;SaveStateMsgSample:Make;AndroidSafeAreaSample:Make;RotationSample:Make;ShowFireDACFieldTypesForADatabaseSample:Make;BeaconDetector:Make;BeaconFenceDemo:Make;SearchBTDevices:Make;MastermindArduino:Make;JoystickViewer:Make;ShowBeaconCharacteristics:Make;ClientServerSocketSample:Make;TURLStreamSample:Make;UDPClient:Make;UDPServer:Make;SNMPPrinterTest:Make;HelloWorldVCL:Make;LiveBindingsCalc:Make;MDIAPP:Make;SDIWithDialogBox:Make;VCLProjectStructure:Make;LiveBindingsAndVCLStyles:Make;ListOfthingsStoredInJSON:Make;EditToListBoxSample:Make;ImageList:Make;VirtualImageList:Make;DialogVCLSample:Make;TNumberBox_MinValue:Make;TControlList_MultiSelect:Make;TTouchKeyboard_with_Style:Make;TControlListBiolife:Make;DelphiMVCSample:Make;PNGWithAlphaLayerSample:Make;ContactSheetVCLSample:Make;WebBrokerDemo:Make;DisplayFTPFileList:Make;FrequentationMediathequePoitierAPIViewer:Make;DisplayImagesFromURL:Make;RESTClientSNCF:Make;DataSnapRPCServer:Make;DumpRequest:Make;WhoisClient:Make;VCLSendPhotoToWebBroker:Make;ServerSendPhotoToWebBroker:Make;HTMLAjaxInsideDelphiSample:Make;WBJSONDatabaseEndpointsFMXClient:Make;WBJSONDatabaseEndpointsServer:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
