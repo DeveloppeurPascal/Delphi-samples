@@ -43,6 +43,10 @@ window.DocInsight.toc["Olf.RTL.GenRandomID"] =   [
         id: "Olf.RTL.GenRandomID.TOlfRandomIDGenerator.getIDBase62",
         title: "getIDBase62",
           href: "Olf.RTL.GenRandomID.TOlfRandomIDGenerator.getIDBase62.html",
+      },      {
+        id: "M:Olf.RTL.GenRandomID.TOlfRandomIDGenerator.getPassword",
+        title: "getPassword",
+          href: "Olf.RTL.GenRandomID.TOlfRandomIDGenerator.getPassword.html",
       }  ]
 ,
       }  ]

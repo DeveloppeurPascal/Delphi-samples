@@ -136,7 +136,7 @@
 
 <div class="summaryHolder">
   <div class="summary clearFix has-text-wrap">
-    <p>Change the folder where is the parameter file.
+    <p>Change the file path (folder + filename) of the parameter file.
 
 </p>
 
@@ -155,7 +155,7 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class procedure setFilePath(AFilePath: string; AReload: boolean = True)</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class procedure setFilePath(AFilePath: string; AReload: boolean = True; AExceptionIfFolderNotExist: boolean = True)</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
@@ -184,6 +184,22 @@
     </dd>
   </dl>
   <p>If set to True (by default), call Load procedure after changing the file path.
+
+</p>
+
+
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      AExceptionIfFolderNotExist
+    </dt>
+    <dd>
+      Boolean
+    </dd>
+  </dl>
+  <p>Check if the folder of the new path exists. If not, an exception is raized.
+ On iOS and Android, if an exception is sent before the GUI has started, it will crash the app.
 
 </p>
 

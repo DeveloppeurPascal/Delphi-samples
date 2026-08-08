@@ -517,11 +517,27 @@ If uncrypted, the file is saved as a JSON text file.
         <tr>
           <td>
             <span class="break-text">
-              <a href="Olf.RTL.Params.TParamsFile.InitDefaultFileNameV2.html" class="cref">InitDefaultFileNameV2(string, string, Boolean)</a>
+              <a href="Olf.RTL.Params.TParamsFile.InitDefaultFileNameV2.html#InitDefaultFileNameV2(string,string,boolean)" class="cref">InitDefaultFileNameV2(string, string, Boolean)</a>
             </span>
           </td>
           <td class="has-text-wrap">
-            <p>Initialise the folder and the filename with a new default tree:
+            <p>Initialize the folder with a new default tree:
+=&gt; &quot;Documents &#x2f; Editor &#x2f; Software&quot; for DEBUG and iOS
+=&gt; &quot;AppData (HomePath) &#x2f; Editor &#x2f; Software&quot; in RELEASE (except iOS)
+
+</p>
+
+
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="Olf.RTL.Params.TParamsFile.InitDefaultFileNameV2.html#InitDefaultFileNameV2(string,string,string,boolean)" class="cref">InitDefaultFileNameV2(string, string, string, Boolean)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            <p>Initialize the folder and the filename with a new default tree:
 =&gt; &quot;Documents &#x2f; Editor &#x2f; Software&quot; for DEBUG and iOS
 =&gt; &quot;AppData (HomePath) &#x2f; Editor &#x2f; Software&quot; in RELEASE (except iOS)
 
@@ -837,6 +853,20 @@ If uncrypted, the file is saved as a JSON text file.
         <tr>
           <td>
             <span class="break-text">
+              <a href="Olf.RTL.Params.TParamsFile.getValue.html#getValue(string,TDateTimeStorrageFormat,TDateTime)" class="cref">getValue(string, TDateTimeStorrageFormat, TDateTime)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            <p>Get the TDateTime value for key parameter with December 30th 1899 at 12:00  as default value
+
+</p>
+
+
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
               <a href="Olf.RTL.Params.TParamsFile.getValue.html#getValue(string,TJSONValue)" class="cref">getValue(string, TJSONValue)</a>
             </span>
           </td>
@@ -865,11 +895,26 @@ If uncrypted, the file is saved as a JSON text file.
         <tr>
           <td>
             <span class="break-text">
-              <a href="Olf.RTL.Params.TParamsFile.setFilePath.html" class="cref">setFilePath(string, Boolean)</a>
+              <a href="Olf.RTL.Params.TParamsFile.getValue(T).html#getValue-1(string,T)" class="cref">getValue&lt;T&gt;(string, T)</a>
             </span>
           </td>
           <td class="has-text-wrap">
-            <p>Change the folder where is the parameter file.
+            <p>Try to get the value of &quot;Key&quot; as type T.
+Returns the Default value if it doesn&#x27;t work.
+
+</p>
+
+
+          </td>
+          </tr>
+        <tr>
+          <td>
+            <span class="break-text">
+              <a href="Olf.RTL.Params.TParamsFile.setFilePath.html" class="cref">setFilePath(string, Boolean, Boolean)</a>
+            </span>
+          </td>
+          <td class="has-text-wrap">
+            <p>Change the file path (folder + filename) of the parameter file.
 
 </p>
 
@@ -959,7 +1004,7 @@ If uncrypted, the file is saved as a JSON text file.
         <tr>
           <td>
             <span class="break-text">
-              <a href="Olf.RTL.Params.TParamsFile.setValue.html#setValue(string,TDateTime)" class="cref">setValue(string, TDateTime)</a>
+              <a href="Olf.RTL.Params.TParamsFile.setValue.html#setValue(string,TDateTime,TDateTimeStorrageFormat)" class="cref">setValue(string, TDateTime, TDateTimeStorrageFormat)</a>
             </span>
           </td>
           <td class="has-text-wrap">

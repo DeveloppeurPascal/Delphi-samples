@@ -100,10 +100,13 @@
               <a href="#overloads">Overloads</a>
             </li>
             <li class="">
-              <a href="#get(string,string,string,string,string,string,boolean)">get(string, string, string, string, string, string, Boolean)</a>
+              <a href="#get(TStringDynArray,boolean)">get(TStringDynArray, Boolean)</a>
             </li>
             <li class="">
-              <a href="#get(TOlfChecksumVerifParamList,string,string,string,string,string)">get(TOlfChecksumVerifParamList, string, string, string, string, string)</a>
+              <a href="#get(TStringDynArray)">get(TStringDynArray)</a>
+            </li>
+            <li class="">
+              <a href="#get(TOlfChecksumVerifParamList,string,string,string,string,string,boolean)">get(TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)</a>
             </li>
             <li class="">
               <a href="#get(string,string,string,string,string,string)">get(string, string, string, string, string, string)</a>
@@ -147,7 +150,7 @@
       <tr>
         <td>
           <span class="break-text">
-            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.get.html#get(string,string,string,string,string,string,boolean)" class="cref">get(string, string, string, string, string, string, Boolean)</a>
+            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.get.html#get(TStringDynArray,boolean)" class="cref">get(TStringDynArray, Boolean)</a>
           </span>
         </td>
         <td class="has-text-wrap">
@@ -157,7 +160,17 @@
       <tr>
         <td>
           <span class="break-text">
-            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.get.html#get(TOlfChecksumVerifParamList,string,string,string,string,string)" class="cref">get(TOlfChecksumVerifParamList, string, string, string, string, string)</a>
+            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.get.html#get(TStringDynArray)" class="cref">get(TStringDynArray)</a>
+          </span>
+        </td>
+        <td class="has-text-wrap">
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="break-text">
+            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.get.html#get(TOlfChecksumVerifParamList,string,string,string,string,string,boolean)" class="cref">get(TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)</a>
           </span>
         </td>
         <td class="has-text-wrap">
@@ -194,8 +207,8 @@
 <div>
   <div class="heading-wrapper" data-heading-level="h2">
     <a class="anchor-link" href="#"></a>
-    <h2 id="get(string,string,string,string,string,string,boolean)" class="memberNameHolder heading-anchor">
-      get(string, string, string, string, string, string, Boolean)
+    <h2 id="get(TStringDynArray,boolean)" class="memberNameHolder heading-anchor">
+      get(TStringDynArray, Boolean)
     </h2>
   </div>
   <div class="memberInfo">
@@ -214,72 +227,17 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function get(param: string; key1: string; key2: string; key3: string; key4: string; key5: string; isPublic: boolean): string</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function get(const params: TStringDynArray; const isPublic: boolean): string</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
 <div class="propertyInfo">
   <dl class="parameterList">
     <dt>
-      param
+      params
     </dt>
     <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      key1
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      key2
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      key3
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      key4
-    </dt>
-    <dd>
-      string
-    </dd>
-  </dl>
-  
-</div>
-<div class="propertyInfo stack">
-  <dl class="parameterList">
-    <dt>
-      key5
-    </dt>
-    <dd>
-      string
+      <a href="Olf.RTL.Checksum.TStringDynArray.html" data-linktype="relative-path">TStringDynArray</a>
     </dd>
   </dl>
   
@@ -319,8 +277,8 @@
 <div>
   <div class="heading-wrapper" data-heading-level="h2">
     <a class="anchor-link" href="#"></a>
-    <h2 id="get(TOlfChecksumVerifParamList,string,string,string,string,string)" class="memberNameHolder heading-anchor">
-      get(TOlfChecksumVerifParamList, string, string, string, string, string)
+    <h2 id="get(TStringDynArray)" class="memberNameHolder heading-anchor">
+      get(TStringDynArray)
     </h2>
   </div>
   <div class="memberInfo">
@@ -339,7 +297,66 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function get(param: TOlfChecksumVerifParamList; key1: string = &#x27;&#x27;; key2: string = &#x27;&#x27;; key3: string = &#x27;&#x27;; key4: string = &#x27;&#x27;; key5: string = &#x27;&#x27;): string</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function get(const params: TStringDynArray): string</code></pre>
+
+
+<h4 class="propertyInfoTitle stack">Parameters</h4>
+<div class="propertyInfo">
+  <dl class="parameterList">
+    <dt>
+      params
+    </dt>
+    <dd>
+      <a href="Olf.RTL.Checksum.TStringDynArray.html" data-linktype="relative-path">TStringDynArray</a>
+    </dd>
+  </dl>
+  
+</div>
+
+<h4 class="propertyInfoTitle stack">Returns</h4>
+<div class="propertyInfo">
+  string
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+<div>
+  <div class="heading-wrapper" data-heading-level="h2">
+    <a class="anchor-link" href="#"></a>
+    <h2 id="get(TOlfChecksumVerifParamList,string,string,string,string,string,boolean)" class="memberNameHolder heading-anchor">
+      get(TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)
+    </h2>
+  </div>
+  <div class="memberInfo">
+    
+
+
+
+
+<div class="code-block-header margin-top-sm">
+  <span class="code-block-header-language">Delphi</span>
+  <button type="button" class="button button-sm action inner-focus display-none-print">
+    <span class="icon copy has-text-subtle margin-right-xxs" aria-hidden="true">
+    </span>
+    <span>Copy</span>
+  </button>
+</div>
+
+<pre
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function get(const param: TOlfChecksumVerifParamList; const key1: string = &#x27;&#x27;; const key2: string = &#x27;&#x27;; const key3: string = &#x27;&#x27;; const key4: string = &#x27;&#x27;; const key5: string = &#x27;&#x27;; const FreeParam: boolean = True): string</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
@@ -409,6 +426,17 @@
   </dl>
   
 </div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      FreeParam
+    </dt>
+    <dd>
+      Boolean
+    </dd>
+  </dl>
+  
+</div>
 
 <h4 class="propertyInfoTitle stack">Returns</h4>
 <div class="propertyInfo">
@@ -453,7 +481,7 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function get(param: string; key1: string = &#x27;&#x27;; key2: string = &#x27;&#x27;; key3: string = &#x27;&#x27;; key4: string = &#x27;&#x27;; key5: string = &#x27;&#x27;): string</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function get(const param: string; const key1: string = &#x27;&#x27;; const key2: string = &#x27;&#x27;; const key3: string = &#x27;&#x27;; const key4: string = &#x27;&#x27;; const key5: string = &#x27;&#x27;): string</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
@@ -567,13 +595,18 @@
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#get(string,string,string,string,string,string,boolean)"
-                class="color-text-subtle">get(string, string, string, string, string, string, Boolean)</a>
+              <a href="#get(TStringDynArray,boolean)"
+                class="color-text-subtle">get(TStringDynArray, Boolean)</a>
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#get(TOlfChecksumVerifParamList,string,string,string,string,string)"
-                class="color-text-subtle">get(TOlfChecksumVerifParamList, string, string, string, string, string)</a>
+              <a href="#get(TStringDynArray)"
+                class="color-text-subtle">get(TStringDynArray)</a>
+            </li>
+            <li
+              class="border-left-md padding-left-xxs  border-color-transparent">
+              <a href="#get(TOlfChecksumVerifParamList,string,string,string,string,string,boolean)"
+                class="color-text-subtle">get(TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)</a>
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">

@@ -100,10 +100,13 @@
               <a href="#overloads">Overloads</a>
             </li>
             <li class="">
-              <a href="#check(string,TOlfChecksumVerifParamList,string,string,string,string,string)">check(string, TOlfChecksumVerifParamList, string, string, string, string, string)</a>
+              <a href="#check(string,TOlfChecksumVerifParamList,string,string,string,string,string,boolean)">check(string, TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)</a>
             </li>
             <li class="">
               <a href="#check(string,string,string,string,string,string,string)">check(string, string, string, string, string, string, string)</a>
+            </li>
+            <li class="">
+              <a href="#check(string,TStringDynArray)">check(string, TStringDynArray)</a>
             </li>
           </ol>
         </nav>
@@ -144,7 +147,7 @@
       <tr>
         <td>
           <span class="break-text">
-            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.check.html#check(string,TOlfChecksumVerifParamList,string,string,string,string,string)" class="cref">check(string, TOlfChecksumVerifParamList, string, string, string, string, string)</a>
+            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.check.html#check(string,TOlfChecksumVerifParamList,string,string,string,string,string,boolean)" class="cref">check(string, TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)</a>
           </span>
         </td>
         <td class="has-text-wrap">
@@ -155,6 +158,16 @@
         <td>
           <span class="break-text">
             <a href="Olf.RTL.Checksum.TOlfChecksumVerif.check.html#check(string,string,string,string,string,string,string)" class="cref">check(string, string, string, string, string, string, string)</a>
+          </span>
+        </td>
+        <td class="has-text-wrap">
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="break-text">
+            <a href="Olf.RTL.Checksum.TOlfChecksumVerif.check.html#check(string,TStringDynArray)" class="cref">check(string, TStringDynArray)</a>
           </span>
         </td>
         <td class="has-text-wrap">
@@ -181,8 +194,8 @@
 <div>
   <div class="heading-wrapper" data-heading-level="h2">
     <a class="anchor-link" href="#"></a>
-    <h2 id="check(string,TOlfChecksumVerifParamList,string,string,string,string,string)" class="memberNameHolder heading-anchor">
-      check(string, TOlfChecksumVerifParamList, string, string, string, string, string)
+    <h2 id="check(string,TOlfChecksumVerifParamList,string,string,string,string,string,boolean)" class="memberNameHolder heading-anchor">
+      check(string, TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)
     </h2>
   </div>
   <div class="memberInfo">
@@ -201,7 +214,7 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function check(verif: string; param: TOlfChecksumVerifParamList; key1: string = &#x27;&#x27;; key2: string = &#x27;&#x27;; key3: string = &#x27;&#x27;; key4: string = &#x27;&#x27;; key5: string = &#x27;&#x27;): boolean</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function check(const verif: string; const param: TOlfChecksumVerifParamList; const key1: string = &#x27;&#x27;; const key2: string = &#x27;&#x27;; const key3: string = &#x27;&#x27;; const key4: string = &#x27;&#x27;; const key5: string = &#x27;&#x27;; const FreeParam: boolean = True): boolean</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
@@ -282,6 +295,17 @@
   </dl>
   
 </div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      FreeParam
+    </dt>
+    <dd>
+      Boolean
+    </dd>
+  </dl>
+  
+</div>
 
 <h4 class="propertyInfoTitle stack">Returns</h4>
 <div class="propertyInfo">
@@ -326,7 +350,7 @@
 </div>
 
 <pre
-  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function check(verif: string; param: string; key1: string = &#x27;&#x27;; key2: string = &#x27;&#x27;; key3: string = &#x27;&#x27;; key4: string = &#x27;&#x27;; key5: string = &#x27;&#x27;): boolean</code></pre>
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function check(const verif: string; const param: string; const key1: string = &#x27;&#x27;; const key2: string = &#x27;&#x27;; const key3: string = &#x27;&#x27;; const key4: string = &#x27;&#x27;; const key5: string = &#x27;&#x27;): boolean</code></pre>
 
 
 <h4 class="propertyInfoTitle stack">Parameters</h4>
@@ -428,6 +452,76 @@
 
   </div>
 </div>
+<div>
+  <div class="heading-wrapper" data-heading-level="h2">
+    <a class="anchor-link" href="#"></a>
+    <h2 id="check(string,TStringDynArray)" class="memberNameHolder heading-anchor">
+      check(string, TStringDynArray)
+    </h2>
+  </div>
+  <div class="memberInfo">
+    
+
+
+
+
+<div class="code-block-header margin-top-sm">
+  <span class="code-block-header-language">Delphi</span>
+  <button type="button" class="button button-sm action inner-focus display-none-print">
+    <span class="icon copy has-text-subtle margin-right-xxs" aria-hidden="true">
+    </span>
+    <span>Copy</span>
+  </button>
+</div>
+
+<pre
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class function check(const verif: string; const params: TStringDynArray): boolean</code></pre>
+
+
+<h4 class="propertyInfoTitle stack">Parameters</h4>
+<div class="propertyInfo">
+  <dl class="parameterList">
+    <dt>
+      verif
+    </dt>
+    <dd>
+      string
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      params
+    </dt>
+    <dd>
+      <a href="Olf.RTL.Checksum.TStringDynArray.html" data-linktype="relative-path">TStringDynArray</a>
+    </dd>
+  </dl>
+  
+</div>
+
+<h4 class="propertyInfoTitle stack">Returns</h4>
+<div class="propertyInfo">
+  Boolean
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
 
 
 
@@ -451,13 +545,18 @@
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
-              <a href="#check(string,TOlfChecksumVerifParamList,string,string,string,string,string)"
-                class="color-text-subtle">check(string, TOlfChecksumVerifParamList, string, string, string, string, string)</a>
+              <a href="#check(string,TOlfChecksumVerifParamList,string,string,string,string,string,boolean)"
+                class="color-text-subtle">check(string, TOlfChecksumVerifParamList, string, string, string, string, string, Boolean)</a>
             </li>
             <li
               class="border-left-md padding-left-xxs  border-color-transparent">
               <a href="#check(string,string,string,string,string,string,string)"
                 class="color-text-subtle">check(string, string, string, string, string, string, string)</a>
+            </li>
+            <li
+              class="border-left-md padding-left-xxs  border-color-transparent">
+              <a href="#check(string,TStringDynArray)"
+                class="color-text-subtle">check(string, TStringDynArray)</a>
             </li>
           </ol>
         </nav>

@@ -11,50 +11,62 @@ window.DocInsight.toc["Unit1"] =   [
         title: "Classes",
           children:   [
       {
-        id: "Unit1.TDataModule1",
-        title: "TDataModule1",
-          href: "Unit1.TDataModule1.html",
+        id: "Unit1.TForm1",
+        title: "TForm1",
+          href: "Unit1.TForm1.html",
           children:   [
       {
-        id: "Unit1.TDataModule1-Methods",
+        id: "Unit1.TForm1-Methods",
         title: "Methods",
           children:   [
       {
-        id: "Unit1.TDataModule1.DataModuleCreate",
-        title: "DataModuleCreate",
-          href: "Unit1.TDataModule1.DataModuleCreate.html",
+        id: "Unit1.TForm1.Button1Click",
+        title: "Button1Click",
+          href: "Unit1.TForm1.Button1Click.html",
+      },      {
+        id: "Unit1.TForm1.DoSomethingAfterReceivingTheMessage",
+        title: "DoSomethingAfterReceivingTheMessage",
+          href: "Unit1.TForm1.DoSomethingAfterReceivingTheMessage.html",
+      },      {
+        id: "Unit1.TForm1.FormCreate",
+        title: "FormCreate",
+          href: "Unit1.TForm1.FormCreate.html",
+      },      {
+        id: "Unit1.TForm1.FormDestroy",
+        title: "FormDestroy",
+          href: "Unit1.TForm1.FormDestroy.html",
       }  ]
 ,
       },      {
-        id: "Unit1.TDataModule1-Fields",
+        id: "Unit1.TForm1-Fields",
         title: "Fields",
           children:   [
       {
-        id: "Unit1.TDataModule1.DataSource1",
-        title: "DataSource1",
-          href: "Unit1.TDataModule1.DataSource1.html",
+        id: "Unit1.TForm1.Button1",
+        title: "Button1",
+          href: "Unit1.TForm1.Button1.html",
       },      {
-        id: "Unit1.TDataModule1.EmployeeConnection",
-        title: "EmployeeConnection",
-          href: "Unit1.TDataModule1.EmployeeConnection.html",
-      },      {
-        id: "Unit1.TDataModule1.EmployeeTable",
-        title: "EmployeeTable",
-          href: "Unit1.TDataModule1.EmployeeTable.html",
-      }  ]
-,
+        id: "Unit1.TForm1.Memo1",
+        title: "Memo1",
+          href: "Unit1.TForm1.Memo1.html",
       }  ]
 ,
       }  ]
 ,
       },      {
-        id: "Unit1-Routines",
-        title: "Routines",
+        id: "Unit1.TMyMessage",
+        title: "TMyMessage",
+          href: "Unit1.TMyMessage.html",
+      }  ]
+,
+      },      {
+        id: "Unit1-Variables",
+        title: "Variables",
           children:   [
       {
-        id: "Unit1.DataModule1",
-        title: "DataModule1",
-          href: "Unit1.DataModule1.html",
+        id: "Unit1.Form1",
+        title: "Form1",
+          href: "Unit1.Form1.html",
       }  ]
 ,
       }  ]

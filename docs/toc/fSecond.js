@@ -11,32 +11,64 @@ window.DocInsight.toc["fSecond"] =   [
         title: "Classes",
           children:   [
       {
-        id: "fSecond.TForm2",
-        title: "TForm2",
-          href: "fSecond.TForm2.html",
+        id: "fSecond.TfrmSecond",
+        title: "TfrmSecond",
+          href: "fSecond.TfrmSecond.html",
           children:   [
       {
-        id: "fSecond.TForm2-Methods",
+        id: "fSecond.TfrmSecond-Methods",
         title: "Methods",
           children:   [
       {
-        id: "fSecond.TForm2.Button1Click",
-        title: "Button1Click",
-          href: "fSecond.TForm2.Button1Click.html",
+        id: "fSecond.TfrmSecond.CloseQuery",
+        title: "CloseQuery",
+          href: "fSecond.TfrmSecond.CloseQuery.html",
+      },      {
+        id: "fSecond.TfrmSecond.FormClose",
+        title: "FormClose",
+          href: "fSecond.TfrmSecond.FormClose.html",
+      },      {
+        id: "fSecond.TfrmSecond.FormCreate",
+        title: "FormCreate",
+          href: "fSecond.TfrmSecond.FormCreate.html",
+      },      {
+        id: "fSecond.TfrmSecond.FormSaveState",
+        title: "FormSaveState",
+          href: "fSecond.TfrmSecond.FormSaveState.html",
+      },      {
+        id: "fSecond.TfrmSecond.btnCloseClick",
+        title: "btnCloseClick",
+          href: "fSecond.TfrmSecond.btnCloseClick.html",
+      },      {
+        id: "fSecond.TfrmSecond.btnTerminateClick",
+        title: "btnTerminateClick",
+          href: "fSecond.TfrmSecond.btnTerminateClick.html",
       }  ]
 ,
       },      {
-        id: "fSecond.TForm2-Fields",
+        id: "fSecond.TfrmSecond-Fields",
         title: "Fields",
           children:   [
       {
-        id: "fSecond.TForm2.Button1",
-        title: "Button1",
-          href: "fSecond.TForm2.Button1.html",
+        id: "fSecond.TfrmSecond.Edit1",
+        title: "Edit1",
+          href: "fSecond.TfrmSecond.Edit1.html",
       },      {
-        id: "fSecond.TForm2.Label1",
-        title: "Label1",
-          href: "fSecond.TForm2.Label1.html",
+        id: "fSecond.TfrmSecond.IsClosedByUser",
+        title: "IsClosedByUser",
+          href: "fSecond.TfrmSecond.IsClosedByUser.html",
+      },      {
+        id: "fSecond.TfrmSecond.Memo1",
+        title: "Memo1",
+          href: "fSecond.TfrmSecond.Memo1.html",
+      },      {
+        id: "fSecond.TfrmSecond.btnClose",
+        title: "btnClose",
+          href: "fSecond.TfrmSecond.btnClose.html",
+      },      {
+        id: "fSecond.TfrmSecond.btnTerminate",
+        title: "btnTerminate",
+          href: "fSecond.TfrmSecond.btnTerminate.html",
       }  ]
 ,
       }  ]
@@ -48,9 +80,9 @@ window.DocInsight.toc["fSecond"] =   [
         title: "Variables",
           children:   [
       {
-        id: "fSecond.Form2",
-        title: "Form2",
-          href: "fSecond.Form2.html",
+        id: "fSecond.frmSecond",
+        title: "frmSecond",
+          href: "fSecond.frmSecond.html",
       }  ]
 ,
       }  ]

@@ -158,7 +158,7 @@ window.DocInsight.toc["Olf.RTL.Params"] =   [
         title: "HasChanged",
           href: "Olf.RTL.Params.TParams.HasChanged.html",
       },      {
-        id: "Olf.RTL.Params.TParams.InitDefaultFileNameV2",
+        id: "M:Olf.RTL.Params.TParams.InitDefaultFileNameV2",
         title: "InitDefaultFileNameV2",
           href: "Olf.RTL.Params.TParams.InitDefaultFileNameV2.html",
       },      {
@@ -367,7 +367,7 @@ window.DocInsight.toc["Olf.RTL.Params"] =   [
         title: "HasChanged",
           href: "Olf.RTL.Params.TParamsFile.HasChanged.html",
       },      {
-        id: "Olf.RTL.Params.TParamsFile.InitDefaultFileNameV2",
+        id: "M:Olf.RTL.Params.TParamsFile.InitDefaultFileNameV2",
         title: "InitDefaultFileNameV2",
           href: "Olf.RTL.Params.TParamsFile.InitDefaultFileNameV2.html",
       },      {
@@ -457,7 +457,7 @@ window.DocInsight.toc["Olf.RTL.Params"] =   [
       },      {
         id: "M:Olf.RTL.Params.TParamsFile.getValue",
         title: "getValue",
-          href: "Olf.RTL.Params.TParamsFile.getValue.html",
+          href: "Olf.RTL.Params.TParamsFile.getValue(T).html",
       },      {
         id: "Olf.RTL.Params.TParamsFile.setFilePath",
         title: "setFilePath",
@@ -554,6 +554,31 @@ window.DocInsight.toc["Olf.RTL.Params"] =   [
           href: "Olf.RTL.Params.TParamsFile.FonDecryptProc.html",
       }  ]
 ,
+      }  ]
+,
+      }  ]
+,
+      },      {
+        id: "Olf.RTL.Params-Enumerations",
+        title: "Enumerations",
+          children:   [
+      {
+        id: "Olf.RTL.Params.TDateTimeStorrageFormat",
+        title: "TDateTimeStorrageFormat",
+          href: "Olf.RTL.Params.TDateTimeStorrageFormat.html",
+          children:   [
+      {
+        id: "Olf.RTL.Params.TDateTimeStorrageFormat.Delphi",
+        title: "Delphi",
+          href: "Olf.RTL.Params.TDateTimeStorrageFormat.Delphi.html",
+      },      {
+        id: "Olf.RTL.Params.TDateTimeStorrageFormat.ISO8601",
+        title: "ISO8601",
+          href: "Olf.RTL.Params.TDateTimeStorrageFormat.ISO8601.html",
+      },      {
+        id: "Olf.RTL.Params.TDateTimeStorrageFormat.RFC822",
+        title: "RFC822",
+          href: "Olf.RTL.Params.TDateTimeStorrageFormat.RFC822.html",
       }  ]
 ,
       }  ]

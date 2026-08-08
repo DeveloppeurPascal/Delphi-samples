@@ -97,13 +97,18 @@
           </h2>
           <ol id="content-well-in-this-article-list2" class="border-left padding-left-xxs">
             <li class="">
-              <a href="#definition">Definition</a>
+              <a href="#overloads">Overloads</a>
+            </li>
+            <li class="">
+              <a href="#InitDefaultFileNameV2(string,string,boolean)">InitDefaultFileNameV2(string, string, Boolean)</a>
+            </li>
+            <li class="">
+              <a href="#InitDefaultFileNameV2(string,string,string,boolean)">InitDefaultFileNameV2(string, string, string, Boolean)</a>
             </li>
           </ol>
         </nav>
-        <h2 id="definition">Definition</h2>
-
-<div class="metadata">
+        
+<div class="metadata margin-top-md">
   <dl class="attributeList">
     <dt>Unit:</dt>
     <dd>
@@ -131,9 +136,74 @@
 </div>
 
 
+
+<h2 id="overloads">Overloads</h2>
+<div class="has-inner-focus">
+  <table class="table table-sm margin-top-none">
+    <tbody>
+      <tr>
+        <td>
+          <span class="break-text">
+            <a href="Olf.RTL.Params.TParams.InitDefaultFileNameV2.html#InitDefaultFileNameV2(string,string,boolean)" class="cref">InitDefaultFileNameV2(string, string, Boolean)</a>
+          </span>
+        </td>
+        <td class="has-text-wrap">
+          <p>Initialize the folder with a new default tree:
+=&gt; &quot;Documents &#x2f; Editor &#x2f; Software&quot; for DEBUG and iOS
+=&gt; &quot;AppData (HomePath) &#x2f; Editor &#x2f; Software&quot; in RELEASE (except iOS)
+
+</p>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="break-text">
+            <a href="Olf.RTL.Params.TParams.InitDefaultFileNameV2.html#InitDefaultFileNameV2(string,string,string,boolean)" class="cref">InitDefaultFileNameV2(string, string, string, Boolean)</a>
+          </span>
+        </td>
+        <td class="has-text-wrap">
+          <p>Initialize the folder and the filename with a new default tree:
+=&gt; &quot;Documents &#x2f; Editor &#x2f; Software&quot; for DEBUG and iOS
+=&gt; &quot;AppData (HomePath) &#x2f; Editor &#x2f; Software&quot; in RELEASE (except iOS)
+
+</p>
+
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <div class="heading-wrapper" data-heading-level="h2">
+    <a class="anchor-link" href="#"></a>
+    <h2 id="InitDefaultFileNameV2(string,string,boolean)" class="memberNameHolder heading-anchor">
+      InitDefaultFileNameV2(string, string, Boolean)
+    </h2>
+  </div>
+  <div class="memberInfo">
+    
+
+
 <div class="summaryHolder">
   <div class="summary clearFix has-text-wrap">
-    <p>Initialise the folder and the filename with a new default tree:
+    <p>Initialize the folder with a new default tree:
 =&gt; &quot;Documents &#x2f; Editor &#x2f; Software&quot; for DEBUG and iOS
 =&gt; &quot;AppData (HomePath) &#x2f; Editor &#x2f; Software&quot; in RELEASE (except iOS)
 
@@ -205,6 +275,109 @@
 
 
 
+  </div>
+</div>
+<div>
+  <div class="heading-wrapper" data-heading-level="h2">
+    <a class="anchor-link" href="#"></a>
+    <h2 id="InitDefaultFileNameV2(string,string,string,boolean)" class="memberNameHolder heading-anchor">
+      InitDefaultFileNameV2(string, string, string, Boolean)
+    </h2>
+  </div>
+  <div class="memberInfo">
+    
+
+
+<div class="summaryHolder">
+  <div class="summary clearFix has-text-wrap">
+    <p>Initialize the folder and the filename with a new default tree:
+=&gt; &quot;Documents &#x2f; Editor &#x2f; Software&quot; for DEBUG and iOS
+=&gt; &quot;AppData (HomePath) &#x2f; Editor &#x2f; Software&quot; in RELEASE (except iOS)
+
+</p>
+
+
+  </div>
+</div>
+
+
+<div class="code-block-header margin-top-sm">
+  <span class="code-block-header-language">Delphi</span>
+  <button type="button" class="button button-sm action inner-focus display-none-print">
+    <span class="icon copy has-text-subtle margin-right-xxs" aria-hidden="true">
+    </span>
+    <span>Copy</span>
+  </button>
+</div>
+
+<pre
+  class="wrap has-inner-focus"><code class="Delphi language-Delphi" dir="ltr">class procedure InitDefaultFileNameV2(const AEditor: string; const ASoftware: string; const AFileName: string; AReload: boolean = True)</code></pre>
+
+
+<h4 class="propertyInfoTitle stack">Parameters</h4>
+<div class="propertyInfo">
+  <dl class="parameterList">
+    <dt>
+      AEditor
+    </dt>
+    <dd>
+      string
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      ASoftware
+    </dt>
+    <dd>
+      string
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      AFileName
+    </dt>
+    <dd>
+      string
+    </dd>
+  </dl>
+  
+</div>
+<div class="propertyInfo stack">
+  <dl class="parameterList">
+    <dt>
+      AReload
+    </dt>
+    <dd>
+      Boolean
+    </dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
       </div>
     </article>
   </main>
@@ -220,8 +393,18 @@
           <ol id="right-rail-on-this-page-list">
             <li
               class="border-left-md padding-left-xxs  border-color-primary">
-              <a href="#definition"
-                class="font-weight-semibold color-text">Definition</a>
+              <a href="#overloads"
+                class="font-weight-semibold color-text">Overloads</a>
+            </li>
+            <li
+              class="border-left-md padding-left-xxs  border-color-transparent">
+              <a href="#InitDefaultFileNameV2(string,string,boolean)"
+                class="color-text-subtle">InitDefaultFileNameV2(string, string, Boolean)</a>
+            </li>
+            <li
+              class="border-left-md padding-left-xxs  border-color-transparent">
+              <a href="#InitDefaultFileNameV2(string,string,string,boolean)"
+                class="color-text-subtle">InitDefaultFileNameV2(string, string, string, Boolean)</a>
             </li>
           </ol>
         </nav>

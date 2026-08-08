@@ -478,5 +478,37 @@ window.DocInsight.toc["toc-packages"] =   [
         id: "SNMPPrinterTest",
         title: "SNMPPrinterTest",
           href: "SNMPPrinterTest.html",
+      },      {
+        id: "TForm_OnSaveStateSample",
+        title: "TForm_OnSaveStateSample",
+          href: "TForm_OnSaveStateSample.html",
+      },      {
+        id: "SystemMessagingSample",
+        title: "SystemMessagingSample",
+          href: "SystemMessagingSample.html",
+      },      {
+        id: "PaintingPaintEventsSample",
+        title: "PaintingPaintEventsSample",
+          href: "PaintingPaintEventsSample.html",
+      },      {
+        id: "SaveStateMsgSample",
+        title: "SaveStateMsgSample",
+          href: "SaveStateMsgSample.html",
+      },      {
+        id: "TestMariaDBSample",
+        title: "TestMariaDBSample",
+          href: "TestMariaDBSample.html",
+      },      {
+        id: "AndroidSafeAreaSample",
+        title: "AndroidSafeAreaSample",
+          href: "AndroidSafeAreaSample.html",
+      },      {
+        id: "RotationSample",
+        title: "RotationSample",
+          href: "RotationSample.html",
+      },      {
+        id: "ShowFireDACFieldTypesForADatabaseSample",
+        title: "ShowFireDACFieldTypesForADatabaseSample",
+          href: "ShowFireDACFieldTypesForADatabaseSample.html",
       }  ]
 ;

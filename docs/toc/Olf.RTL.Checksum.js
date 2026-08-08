@@ -58,5 +58,15 @@ window.DocInsight.toc["Olf.RTL.Checksum"] =   [
 ,
       }  ]
 ,
+      },      {
+        id: "Olf.RTL.Checksum-Types",
+        title: "Types",
+          children:   [
+      {
+        id: "Olf.RTL.Checksum.TStringDynArray",
+        title: "TStringDynArray",
+          href: "Olf.RTL.Checksum.TStringDynArray.html",
+      }  ]
+,
       }  ]
 ;
