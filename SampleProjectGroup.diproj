@@ -140,6 +140,14 @@
     <Source>.\Network-Samples\03-Socket-UDP\UDPClient.dpr</Source>
     <Source>.\Network-Samples\03-Socket-UDP\UDPServer.dpr</Source>
     <Source>.\Network-Samples\04-Test-SNMP-PrinterMIB\SNMPPrinterTest.dpr</Source>
+    <Source>.\FireMonkey-Samples\037-TForm_OnSaveState\TForm_OnSaveStateSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\038-SystemMessaging\SystemMessagingSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\039-PaintingPaintEvents\PaintingPaintEventsSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\040-SaveStateMsg\SaveStateMsgSample.dpr</Source>
+    <Source>.\FireDAC-Samples\008-TestMariaDB\TestMariaDBSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\041-AndroidSafeArea\AndroidSafeAreaSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\042-Rotation\RotationSample.dpr</Source>
+    <Source>.\FireMonkey-Samples\043-ShowFireDACFieldTypesForADatabase\ShowFireDACFieldTypesForADatabaseSample.dpr</Source>
   </Sources>
   <Outputs>
     <Output Type="HTML">
